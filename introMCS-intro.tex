@@ -1,0 +1,112 @@
+
+% introMCS - very first section
+
+\documentclass[Chap1main.tex]{subfiles}
+
+% Load any packages needed for this document
+\begin{document}
+\newpage
+\section{Introduction}
+The problem of assessing the agreement between two or more methods
+of measurement is ubiquitous in scientific research, and is
+commonly referred to as a `method comparison study'. Published
+examples of method comparison studies can be found in disciplines
+as diverse as pharmacology \citep{ludbrook97}, anaesthesia
+\citep{Myles}, and cardiac imaging methods \citep{Krumm}.
+\smallskip
+
+To illustrate the characteristics of a typical method comparison
+study consider the data in Table I \citep{Grubbs73}. In each of
+twelve experimental trials, a single round of ammunition was fired
+from a 155mm gun and its velocity was measured simultaneously (and
+independently) by three chronographs devices, identified here by
+the labels `Fotobalk', `Counter' and `Terma'.
+\smallskip
+
+
+\newpage
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrr}
+  \hline
+  Round& Fotobalk [F] & Counter [C]& Terma [T]\\
+  \hline
+  1 & 793.8 & 794.6 & 793.2 \\
+  2 & 793.1 & 793.9 & 793.3 \\
+  3 & 792.4 & 793.2 & 792.6 \\
+  4 & 794.0 & 794.0 & 793.8 \\
+  5 & 791.4 & 792.2 & 791.6 \\
+  6 & 792.4 & 793.1 & 791.6 \\
+  7 & 791.7 & 792.4 & 791.6 \\
+  8 & 792.3 & 792.8 & 792.4 \\
+  9 & 789.6 & 790.2 & 788.5 \\
+  10 & 794.4 & 795.0 & 794.7 \\
+  11 & 790.9 & 791.6 & 791.3 \\
+  12 & 793.5 & 793.8 & 793.5 \\
+   \hline
+\end{tabular}
+\caption{Velocity measurement from the three chronographs (Grubbs
+1973).}
+\end{center}
+\end{table}
+
+An important aspect of the these data is that all three methods of
+measurement are assumed to have an attended measurement error, and
+the velocities reported in Table 1.1 can not be assumed to be
+`true values' in any absolute sense.
+
+%While lack of
+%agreement between two methods is inevitable, the question , as
+%posed by \citet{BA83}, is 'do the two methods of measurement agree
+%sufficiently closely?'
+
+A method of measurement should ideally be both accurate and
+precise. \citet{Barnhart} describes agreement as being a broader
+term that contains both of those qualities. An accurate
+measurement method will give results close to the unknown `true
+value'. The precision of a method is indicated by how tightly
+measurements obtained under identical conditions are distributed
+around their mean measurement value. A precise and accurate method
+will yield results consistently close to the true value. Of course
+a method may be accurate, but not precise, if the average of its
+measurements is close to the true value, but those measurements
+are highly dispersed. Conversely a method that is not accurate may
+be quite precise, as it consistently indicates the same level of
+inaccuracy. The tendency of a method of measurement to
+consistently give results above or below the true value is a
+source of systematic bias. The smaller the systematic bias, the
+greater the accuracy of the method.
+
+% The FDA define precision as the closeness of agreement (degree of
+% scatter) between a series of measurements obtained from multiple
+% sampling of the same homogeneous sample under prescribed
+% conditions. \citet{Barnhart} describes precision as being further
+% subdivided as either within-run, intra-batch precision or
+% repeatability (which assesses precision during a single analytical
+% run), or between-run, inter-batch precision or repeatability
+%(which measures precision over time).
+
+In the context of the agreement of two methods, there is also a
+tendency of one measurement method to consistently give results
+above or below the other method. Lack of agreement is a
+consequence of the existence of `inter-method bias'. For two
+methods to be considered in good agreement, the inter-method bias
+should be in the region of zero. A simple estimation of the
+inter-method bias can be calculated using the differences of the
+paired measurements. The data in Table 1.2 are a good example of
+possible inter-method bias; the `Fotobalk' consistently recording
+smaller velocities than the `Counter' method. Consequently one
+would conclude that there is lack of agreement between the two
+methods.
+
+The absence of inter-method bias by itself is not sufficient to
+establish whether two measurement methods agree. The two methods
+must also have equivalent levels of precision. Should one method
+yield results considerably more variable than those of the other,
+they can not be considered to be in agreement. With this in mind a
+methodology is required that allows an analyst to estimate the
+inter-method bias, and to compare the precision of both methods of
+measurement.
+
+\end{document}
