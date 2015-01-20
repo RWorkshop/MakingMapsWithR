@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Chap1main.aux
 The style file: chicago.bst
 I couldn't open database file transferbib.bib
----line 59 of file Chap1main.aux
+---line 67 of file Chap1main.aux
  : \bibdata{transferbib
  :                     }
 I'm skipping whatever remains of this command

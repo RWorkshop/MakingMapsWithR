@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  20 JAN 2015 19:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  20 JAN 2015 22:14
 entering extended mode
 **Chap1main.tex
 (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.tex
@@ -387,99 +387,154 @@ Missing character: There is no ™ in font cmr10!
 Package natbib Warning: Citation `Grubbs73' on page 1 undefined on input line 1
 26.
 
-[1] [2] [3] [4]
+[1]
 
-Package natbib Warning: Citation `BA83' on page 5 undefined on input line 254.
+Package natbib Warning: Citation `BA83' on page 2 undefined on input line 167.
+
+[2] [3] [4]
+
+Package natbib Warning: Citation `BA83' on page 5 undefined on input line 253.
 
 
-Package natbib Warning: Citation `BA83' on page 5 undefined on input line 262.
+Package natbib Warning: Citation `BA83' on page 5 undefined on input line 261.
 
 
-Overfull \hbox (1.08398pt too wide) in paragraph at lines 257--263
+Overfull \hbox (1.08398pt too wide) in paragraph at lines 256--262
 []\OT1/cmr/m/n/10 Furthermore they pro-posed their sim-ple method-ol-ogy specif
 -i-cally con-structed
  []
 
+<GrubbsScatter.jpeg, id=34, 655.44875pt x 655.44875pt>
+File: GrubbsScatter.jpeg Graphic file (type jpg)
 
-Package natbib Warning: Citation `BA83' on page 5 undefined on input line 284.
+<use GrubbsScatter.jpeg>
+Package pdftex.def Info: GrubbsScatter.jpeg used on input line 277.
+(pdftex.def)             Requested size: 369.88582pt x 369.88918pt.
 
-[5]
-Overfull \hbox (9.91733pt too wide) in paragraph at lines 305--323
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 277--278
  [] 
  []
 
-[6]
 
-Package natbib Warning: Citation `BA83' on page 7 undefined on input line 342.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Package natbib Warning: Citation `BA83' on page 5 undefined on input line 283.
+
+[5]
+Overfull \hbox (9.91733pt too wide) in paragraph at lines 304--322
+ [] 
+ []
+
+<GrubbsBAplot.jpeg, id=40, 1027.84pt x 694.595pt>
+File: GrubbsBAplot.jpeg Graphic file (type jpg)
+ <use GrubbsBAplot.jpeg>
+Package pdftex.def Info: GrubbsBAplot.jpeg used on input line 329.
+(pdftex.def)             Requested size: 341.43306pt x 230.73267pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `BA83' on page 6 undefined on input line 339.
+
+[6 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/GrubbsScatter.jpeg>]
 
 Package natbib Warning: Citation `ludbrook97' on page 7 undefined on input line
- 361.
+ 357.
 
-[7]
+[7 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/GrubbsBAplot.jpeg>]
+<BAFanEffect.jpeg, id=47, 1027.84pt x 694.595pt>
+File: BAFanEffect.jpeg Graphic file (type jpg)
+ <use BAFanEffect.jpeg>
+Package pdftex.def Info: BAFanEffect.jpeg used on input line 362.
+(pdftex.def)             Requested size: 355.65944pt x 240.34564pt.
 
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 408.
+Overfull \hbox (10.65944pt too wide) in paragraph at lines 362--363
+ [] 
+ []
+
+<PropBias.jpeg, id=48, 1027.84pt x 694.595pt>
+File: PropBias.jpeg Graphic file (type jpg)
+ <use PropBias.jpeg>
+Package pdftex.def Info: PropBias.jpeg used on input line 369.
+(pdftex.def)             Requested size: 355.65944pt x 240.34564pt.
+
+Overfull \hbox (10.65944pt too wide) in paragraph at lines 369--370
+ [] 
+ []
 
 
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 411.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/BAFanEffect.jpeg>]
+
+Package natbib Warning: Citation `BA99' on page 9 undefined on input line 404.
 
 
-Package natbib Warning: Citation `BA86' on page 8 undefined on input line 416.
+Package natbib Warning: Citation `BA99' on page 9 undefined on input line 407.
 
 
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 422.
+Package natbib Warning: Citation `BA86' on page 9 undefined on input line 412.
+
+[9 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/PropBias.jpeg>]
+
+Package natbib Warning: Citation `BA99' on page 10 undefined on input line 418.
 
 
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 429.
+
+Package natbib Warning: Citation `BA99' on page 10 undefined on input line 425.
 
 
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 432.
 
-[8]
+Package natbib Warning: Citation `BA99' on page 10 undefined on input line 428.
+
+
 Missing character: There is no Â in font cmti10!
 Missing character: There is no ” in font cmti10!
- [9] [10]
+[10] [11]
 
-Package natbib Warning: Citation `BA86' on page 11 undefined on input line 592.
-
-
-
-Package natbib Warning: Citation `BA99' on page 11 undefined on input line 603.
+Package natbib Warning: Citation `BA86' on page 12 undefined on input line 588.
 
 
-[11] (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\introMCS-intro.tex [12]
+[12]
 
-Package natbib Warning: Citation `ludbrook97' on page 13 undefined on input lin
-e 14.
-
-
-Package natbib Warning: Citation `Myles' on page 13 undefined on input line 15.
+Package natbib Warning: Citation `BA99' on page 13 undefined on input line 599.
 
 
+(C:\Users\Kevin\Documents\GitHub\MCS-Chap1\introMCS-intro.tex [13]
 
-Package natbib Warning: Citation `Krumm' on page 13 undefined on input line 15.
+Package natbib Warning: Citation `ludbrook97' on page 14 undefined on input lin
+e 12.
+
+
+Package natbib Warning: Citation `Myles' on page 14 undefined on input line 13.
 
 
 
-Package natbib Warning: Citation `Grubbs73' on page 13 undefined on input line 
-19.
+Package natbib Warning: Citation `Krumm' on page 14 undefined on input line 13.
 
-[13]
 
-Package natbib Warning: Citation `Barnhart' on page 14 undefined on input line 
-65.
 
-[14]) (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\introMCS-grubbsdata.tex
-[15]) [16]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 652.
+Package natbib Warning: Citation `Grubbs73' on page 14 undefined on input line 
+16.
+
+[14]
+
+Package natbib Warning: Citation `Barnhart' on page 15 undefined on input line 
+58.
+
+[15]) (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\introMCS-grubbsdata.tex
+[16]) [17]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 648.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 652.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 648.
 
-(C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.bbl [17]
+(C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.bbl [18]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
@@ -487,17 +542,17 @@ Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
 Package natbib Warning: There were undefined citations.
 
-[18
+[19
 
 ] (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.aux) ) 
 Here is how much of TeX's memory you used:
- 5126 strings out of 493921
- 73613 string characters out of 3144875
- 143348 words of memory out of 3000000
- 8297 multiletter control sequences out of 15000+200000
+ 5151 strings out of 493921
+ 74058 string characters out of 3144875
+ 143388 words of memory out of 3000000
+ 8317 multiletter control sequences out of 15000+200000
  8774 words of font info for 33 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 67i,8n,45p,401b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,8n,45p,430b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86
@@ -508,9 +563,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Chap1main.pdf (23 pages, 154537 bytes).
+Output written on Chap1main.pdf (24 pages, 465438 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
