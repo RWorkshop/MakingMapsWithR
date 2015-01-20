@@ -30,6 +30,7 @@
 		\item	Repeatability (Bland Altman 1999)
 		\item	Remarks in Barnhart's Paper
 		\item	Regression Techniques (i.e. Orthonormal Regression and Deming Regression)
+		\item   Bradley and Blackwood's, and Bartko's Techniques
 	    \item   Coefficient of Repeatability
 	\end{itemize}	
 	
@@ -40,7 +41,7 @@
 	\begin{itemize}	
 		\item	Bland and Altman 1983 and 1986
 		\item	Limits of Agreement
-		\item	
+		\item	Variants of the Bland-Altman Technique
 		\item   Prevalence and Usage of BA's approach
 		\item   Discussion of ShinyMCS appendix
 	\end{itemize}
@@ -74,6 +75,7 @@
 		\item	Review of Model Diagnostics for Linear Models
 		\item	Model Diagnostics for LME Models
 		\item	Applications to MCS problems
+		\item   The influence.MCS R package
 	\end{itemize}		
 	
 	
@@ -94,6 +96,7 @@
 		\item Why use Shiny for MCS?
 		\item Technology Acceptance Model
 		\item Design Considerations and Deployment
+		\item Citation of a Shiny Web Application
 	\end{itemize}
 \end{itemize}		
 \newpage
@@ -110,20 +113,20 @@ The first chapter will consider the topic of Method Comparison Studies, and disc
 
 
 \section{Introduction}
-The problem of assessing the agreement between two or more methods
-of measurement is ubiquitous in scientific research, and is
-commonly referred to as a `method comparison study'. Published
-examples of method comparison studies can be found in disciplines
-as diverse as Pharmacology \citep{ludbrook97}, Anaesthesia
-\citep{Myles}, and cardiac imaging methods \citep{Krumm}.
+The problem of assessing the agreement between two or more methods of measurement is ubiquitous in scientific research, and is commonly referred to as a `method comparison study'. Published examples of method comparison studies can be found in disciplines
+as diverse as Pharmacology \citep{ludbrook97}, Anaesthesia \citep{Myles}, and cardiac imaging methods \citep{Krumm}.
+\smallskip
+Method Comparison Studies is a branch of statistics used to compare the results of two different method of measurement, measuring the same subject samples. Consider a set of n samples. Measurements are taken on each of the n samples using both methods. This will enable comparison of the method used.
+\smallskip
+In many cases the purpose of the study is to calibrate a new method of measurement against a ‘Gold Standard’ method. A ‘Gold Standard’ method is the known method that is considered most precise in its measurement. It should not be assumed that there is no error present in its measurements.
+\smallskip
+The Gold Standard may not be financially feasible for general use, and therefore more economical methods, of suitable levels of precisions, must be devised. Method Comparison studies is used to ascertain the levels of precision of such methods.
 \smallskip
 
-To illustrate the characteristics of a typical method comparison
-study consider the data in Table I, taken from \citet{Grubbs73}.
-In each of twelve experimental trials a single round of ammunition
-was fired from a 155mm gun, and its velocity was measured
-simultaneously (and independently) by three chronographs devices,
-referred to here as `Fotobalk', `Counter' and `Terma'.
+To illustrate the characteristics of a typical method comparison study consider the data in Table I, taken from \citet{Grubbs73}.
+\smallskip
+In each of twelve experimental trials a single round of ammunition was fired from a 155mm gun, and its velocity was measured
+simultaneously (and independently) by three chronographs devices, referred to here as `Fotobalk', `Counter' and `Terma'.
 \smallskip
 
 

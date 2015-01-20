@@ -1,0 +1,622 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm, amsmath}
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Research notes: linear mixed effects models}
+\author{ } \date{ }
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Updating techniques for LME models}
+
+\addcontentsline{toc}{section}{Bibliography}
+
+%-----------------------------------------------------------------------------------------%
+
+
+Let $y_{mir} $ be the $r$th replicate measurement on the $i$th item by the $m$th method, where $m=1,2,$ $i=1,\ldots,N,$ and $r = 1,\ldots,n_i.$ When the design is balanced and there is no ambiguity we can set $n_i=n.$ The LME model underpinning Roy's approach can be written
+\begin{equation}
+y_{mir} = \beta_{0} + \beta_{m} + b_{mi} + \epsilon_{mir}.
+\end{equation}
+Here $\beta_0$ and $\beta_m$ are fixed-effect terms representing, respectively, a model intercept and an overall effect for method $m.$
+The $\beta$ terms can be gathered together into (fixed effect) intercept terms $\alpha_m=\beta_0+\beta_m.$ The $b_{1i}$ and $b_{2i}$ terms are correlated random effect parameters having $\mathrm{E}(b_{mi})=0$ with $\mathrm{Var}(b_{mi})=g^2_m$ and $\mathrm{Cov}(b_{mi}, b_{m^\prime i})=g_{12}.$ The random error term for each response is denoted $\epsilon_{mir}$ having $\mathrm{E}(\epsilon_{mir})=0$, $\mathrm{Var}(\epsilon_{mir})=\sigma^2_m$, $\mathrm{Cov}(b_{mir}, b_{m^\prime ir})=\sigma_{12}$, $\mathrm{Cov}(\epsilon_{mir}, \epsilon_{mir^\prime})= 0$ and $\mathrm{Cov}(\epsilon_{mir}, \epsilon_{m^\prime ir^\prime})= 0.$ Two methods of measurement are in complete agreement if the null hypotheses $\mathrm{H}_1\colon \beta_1 = \beta_2$ and $\mathrm{H}_2\colon \sigma^2_1 = \sigma^2_2 $ and $\mathrm{H}_3\colon g^2_1= g^2_2$ hold simultaneously. \citet{roy} proposes a Bonferroni correction to control the familywise error rate for tests of $\{\mathrm{H}_1, \mathrm{H}_2, \mathrm{H}_3\}$ and account for difficulties arising due to multiple testing. Let $\omega^2_m = \sigma^2_m + g^2_m$ represent the overall variability of method $m.$  Roy also integrates $\mathrm{H}_2$ and $\mathrm{H}_3$ into a single testable hypothesis $\mathrm{H}_4\colon \omega^2_1=\omega^2_2.$ CONCERNS?
+
+\bigskip
+
+% Complete paragraph by specifying variances and covariances for epsilons.
+% I thing that these are your sigmas?
+% Also, state equality of the parameters in this model when each of the three hypotheses above are true.
+\citet{Roy} demonstrates how to implement a method comparison study further to model (1) using the SAS proc mixed package.
+%------------------------------------------------------------------------------------------------%
+\citet{BXC2008} demonstrates how to construct limits of agreement using SAS, STATA and R. In the case of SAS, the PROC MIXED procedure is used.
+Implementation in R is performed using the nlme package \citep{pb2000}.
+
+\citet{BXC2008} remarks that the implementation using R is quite ``arcane".
+
+As R is freely available, this paper demonstrates an implementation of Roy's model using R.
+
+The R statistical software package is freely available.
+
+%------------------------------------------------------------------------------------------------%
+The LME model is very easy to implement using PROC MIXED of SAS and the results are also easy to interpret.
+The SAS proc mixed procedure has very simple syntax.
+
+As the required code to fit the models is complex, R code necessary to fit the models is provided. 
+
+A demonstration is provided on how to use the output to perform the tests, and to compute limits of agreement.
+
+
+
+We assume the data are formatted as a dataset with four columns named:
+
+	meth, method of measurement, the number of methods being M,
+	item, items (persons, samples) measured by each method, of which there are I,
+	repl, replicate indicating repeated measurement of the same item by the same method, and
+	y, the measurement.
+
+
+
+
+
+\newpage
+\section{regression based approaches to MCS}
+
+Evaluation of regression procedures for methods comparison studies
+\\
+K.Linnet
+
+\section{Regression Of Differences On Averages}
+Further to Carstensen, we can formulate the two measurements
+$y_{1}$ and $y_{2}$ as follows:
+\\
+$y_{1} = \alpha + \beta\mu + \epsilon_{1}$
+\\
+$y_{2} = \alpha + \beta\mu + \epsilon_{2}$
+
+\section{Mean Centering}
+Hayes et al take a further step in applying mean centering to this
+regression approach.
+
+\section{Prediction Intervals}
+Hayes et al take a further step in applying mean centering to this
+regression approach
+
+
+
+
+
+
+
+
+
+\newpage
+\subsection{Remarks on the Multivariate Normal Distribution}
+
+Diligence is required when considering the models. Carstensen specifies his models in terms of the univariate normal distribution. Roy's model is specified using the bivariate normal distribution.
+This gives rises to a key difference between the two model, in that a bivariate model accounts for covariance between the variables of interest.
+The multivariate normal distribution of a $k$-dimensional random vector $X = [X_1, X_2, \ldots, X_k]$
+can be written in the following notation:
+\[
+    X\ \sim\ \mathcal{N}(\mu,\, \Sigma),
+\]
+or to make it explicitly known that $X$ is $k$-dimensional,
+\[
+    X\ \sim\ \mathcal{N}_k(\mu,\, \Sigma).
+\]
+with $k$-dimensional mean vector
+\[ \mu = [ \operatorname{E}[X_1], \operatorname{E}[X_2], \ldots, \operatorname{E}[X_k]] \]
+and $k \times k$ covariance matrix
+\[ \Sigma = [\operatorname{Cov}[X_i, X_j]], \; i=1,2,\ldots,k; \; j=1,2,\ldots,k \]
+
+\bigskip
+
+\begin{enumerate}
+\item Univariate Normal Distribution
+
+\[
+    X\ \sim\ \mathcal{N}(\mu,\, \sigma^2),
+\]
+
+\item Bivariate Normal Distribution
+
+\begin{itemize}
+\item[(a)] \[  X\ \sim\ \mathcal{N}_2(\mu,\, \Sigma), \vspace{1cm}\]
+\item[(b)] \[    \mu = \begin{pmatrix} \mu_x \\ \mu_y \end{pmatrix}, \quad
+    \Sigma = \begin{pmatrix} \sigma_x^2 & \rho \sigma_x \sigma_y \\
+                             \rho \sigma_x \sigma_y  & \sigma_y^2 \end{pmatrix}.\]
+\end{itemize}
+\end{enumerate}
+\newpage
+
+\subsection{Note 1: Coefficient of Repeatability}
+The coefficient of repeatability is a measure of how well a
+measurement method agrees with itself over replicate measurements
+\citep{BA99}. Once the within-item variability is known, the
+computation of the coefficients of repeatability for both methods
+is straightforward.
+
+\subsection{Note 2: Carstensen model in the single measurement case}
+\citet{BXC2004} presents a model to describe the relationship between a value of measurement and its real value.
+The non-replicate case is considered first, as it is the context of the Bland-Altman plots.
+This model assumes that inter-method bias is the only difference between the two methods.
+
+
+\begin{equation}
+y_{mi}  = \alpha_{m} + \mu_{i} + e_{mi} \qquad  e_{mi} \sim \mathcal{N}(0,\sigma^{2}_{m})
+\end{equation}
+
+The differences are expressed as $d_{i} = y_{1i} - y_{2i}$.
+
+For the replicate case, an interaction term $c$ is added to the model, with an associated variance component.
+
+
+
+
+\subsection{Note 3: Model terms}
+It is important to note the following characteristics of this model.
+\begin{itemize}
+\item Let the number of replicate measurements on each item $i$ for both methods be $n_i$, hence $2 \times n_i$ responses. However, it is assumed that there may be a different number of replicates made for different items. Let the maximum number of replicates be $p$. An item will have up to $2p$ measurements, i.e. $\max(n_{i}) = 2p$.
+
+% \item $\boldsymbol{y}_i$ is the $2n_i \times 1$ response vector for measurements on the $i-$th item.
+% \item $\boldsymbol{X}_i$ is the $2n_i \times  3$ model matrix for the fixed effects for observations on item $i$.
+% \item $\boldsymbol{\beta}$ is the $3 \times  1$ vector of fixed-effect coefficients, one for the true value for item $i$, and one effect each for both methods.
+
+\item Later on $\boldsymbol{X}_i$ will be reduced to a $2 \times 1$ matrix, to allow estimation of terms. This is due to a shortage of rank. The fixed effects vector can be modified accordingly.
+\item $\boldsymbol{Z}_i$ is the $2n_i \times  2$ model matrix for the random effects for measurement methods on item $i$.
+\item $\boldsymbol{b}_i$ is the $2 \times  1$ vector of random-effect coefficients on item $i$, one for each method.
+\item $\boldsymbol{\epsilon}$  is the $2n_i \times  1$ vector of residuals for measurements on item $i$.
+\item $\boldsymbol{G}$ is the $2 \times  2$ covariance matrix for the random effects.
+\item $\boldsymbol{R}_i$ is the $2n_i \times  2n_i$ covariance matrix for the residuals on item $i$.
+\item The expected value is given as $\mbox{E}(\boldsymbol{y}_i) = \boldsymbol{X}_i\boldsymbol{\beta}.$ \citep{hamlett}
+\item The variance of the response vector is given by $\mbox{Var}(\boldsymbol{y}_i)  = \boldsymbol{Z}_i \boldsymbol{G} \boldsymbol{Z}_i^{\prime} + \boldsymbol{R}_i$ \citep{hamlett}.
+\end{itemize}
+\newpage
+
+%\chapter{Limits of Agreement}
+
+%\section{Modelling Agreement with LME Models}
+
+% Carstensen pages 22-23
+
+
+Roys uses and LME model approach to provide a set of formal tests for method comparison studies.\\
+
+Four candidates models are fitted to the data.\\
+
+These models are similar to one another, but for the imposition of equality constraints.\\
+
+These tests are the pairwise comparison of candidate models, one formulated without constraints, the other with a constraint.\\
+
+
+Roy's model uses fixed effects $\beta_0 + \beta_1$ and $\beta_0 + \beta_1$ to specify the mean of all observationsby \\ methods 1 and 2 respectuively.
+
+
+
+
+
+Roy adheres to Random Effect ideas in ANOVA
+
+Roy treats items as a sample from a population.\\
+
+Allocation of fixed effects and random effects are very different in each model\\
+
+Carstensen's interest lies in the difference between the population from which they were drawn.\\
+
+Carstensen's model is a mixed effects ANOVA.\\
+
+\[
+Y_{mir}  =  \alpha_m + \mu_i + c_{mi} + e_{mir}, \qquad c_{mi} \sim \mathcal{\tau^2_m}, \qquad e_{mir} \sim \mathcal{\sigma^2_m},
+\]
+
+This model includes a method by item iteration term.\\
+
+Carstensen presents two models. One for the case where the replicates, and a second for when they are linked.\\
+
+Carstensen's model does not take into account either between-item or within-item covariance between methods.\\
+
+
+In the presented example, it is shown that Roy's LoAs are lower than those of Carstensen.
+Carstensen makes some interesting remarks in this regard.
+
+\begin{quote}
+The only slightly non-standard (meaning "not often used") feature is the differing residual variances between methods.
+\end{quote}
+
+
+
+\makeindex
+\begin{document}
+\author{Kevin O'Brien}
+\title{November 2011 Version A}
+
+\addcontentsline{toc}{section}{Bibliography}
+
+
+%---------------------------------------------------------------------------%
+% - 1. Model Diagnostics
+% - 2. Zewotir's paper (including Haslett)
+% - 3. Augmented GLMS
+% - 4. Applying Diagnostics to MCS
+% - 5. Extra Material
+%---------------------------------------------------------------------------%
+\chapter{Model Diagnostics}
+%---------------------------------------------------------------------------%
+%1.1 Introduction to Influence Analysis
+%1.2 Extension of techniques to LME Models
+%1.3 Residual Diagnostics
+%1.4 Standardized and studentized residuals
+%1.5 Covariance Parameters
+%1.6 Case Deletion Diagnostics
+%1.7 Influence Analysis
+%1.8 Terminology for Case Deletion
+%1.9 Cook's Distance (Classical Case)
+%1.10 Cook's Distance (LME Case)
+%1.11 Likelihood Distance
+%1.12 Other Measures
+%1.13 CPJ Paper
+%1.14 Matrix Notation of Case Deletion
+%1.15 CPJ's Three Propositions
+%1.16 Other measures of Influence
+%---------------------------------------------------------------------------%
+\section{Introduction}%1.1
+In classical linear models model diagnostics have been become a required part of any statistical analysis, and the methods are commonly available in statistical packages and standard textbooks on applied regression. However it has been noted by several papers that model diagnostics do not often accompany LME model analyses.
+Model diagnostic techniques determine whether or not the distributional assumptions are satisfied, and to assess the influence of unusual observations.
+
+\subsection{Model Data Agreement} %1.1.1
+\citet{schabenberger} describes the examination of model-data agreement as comprising several elements; residual analysis, goodness of fit, collinearity diagnostics and influence analysis.
+
+\subsection{Influence Diagnostics: Basic Idea and Statistics} %1.1.2
+%http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_mixed_sect024.htm
+
+The general idea of quantifying the influence of one or more observations relies on computing parameter estimates based on all data points, removing the cases in question from the data, refitting the model, and computing statistics based on the change between full-data and reduced-data estimation. 
+
+
+
+
+
+%---------------------------------------------------------------------------%
+\newpage
+\section{Extension of techniques to LME Models} %1.2
+
+Model diagnostic techniques, well established for classical models, have since been adapted for use with linear mixed effects models.Diagnostic techniques for LME models are inevitably more difficult to implement, due to the increased complexity.
+
+Beckman, Nachtsheim and Cook (1987) \citet{Beckman} applied the \index{local influence}local influence method of Cook (1986) to the analysis of the linear mixed model.
+
+While the concept of influence analysis is straightforward, implementation in mixed models is more complex. Update formulae for fixed effects models are available only when the covariance parameters are assumed to be known.
+
+If the global measure suggests that the points in $U$ are influential, the nature of that influence should be determined. In particular, the points in $U$ can affect the following
+
+\begin{itemize}
+\item the estimates of fixed effects,
+\item the estimates of the precision of the fixed effects,
+\item the estimates of the covariance parameters,
+\item the estimates of the precision of the covariance parameters,
+\item fitted and predicted values.
+\end{itemize}
+
+
+%---------------------------------------------------------------------------%
+\newpage
+\section{Covariance Parameters} %1.5
+The unknown variance elements are referred to as the covariance parameters and collected in the vector $\theta$.
+% - where is this coming from?
+% - where is it used again?
+% - Has this got anything to do with CovTrace etc?
+%---------------------------------------------------------------------------%
+
+
+
+\subsection{Methods and Measures}
+The key to making deletion diagnostics useable is the development of efficient computational formulas, allowing one to obtain the \index{case deletion diagnostics} case deletion diagnostics by making use of basic building blocks, computed only once for the full model.
+
+\citet{Zewotir} lists several established methods of analyzing influence in LME models. These methods include \begin{itemize}
+\item Cook's distance for LME models,
+\item \index{likelihood distance} likelihood distance,
+\item the variance (information) ration,
+\item the \index{Cook-Weisberg statistic} Cook-Weisberg statistic,
+\item the \index{Andrews-Prebigon statistic} Andrews-Prebigon statistic.
+\end{itemize}
+
+
+
+
+
+
+
+\chapter{Zewotir's Paper}
+
+% 2.1 Efficient Updating Theorem
+% 2.2 Zewotir Measures of Influence in LME Models (section 4 of paper)
+% 2.3 Computation and Notation 
+% 2.4 Measures 2
+%2.5 Haslett Analysis
+
+\section{Efficient Updating Theorem} %2.1
+\citet{Zewotir} describes the basic theorem of efficient updating.
+\begin{itemize}
+\item \[ m_i = {1 \over c_{ii}}\]
+%\item
+%item
+%\item
+\end{itemize}
+
+%-------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------Chapter 3------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------------%
+
+\chapter{Application to Method Comparison Studies} % Chapter 4
+
+
+%---------------------------------------------------------------------------%
+% - 1. Application to MCS
+% - 2. Grubbs' Data
+% - 3. R implementation
+% - 4. Influence measures using R
+%---------------------------------------------------------------------------%
+
+\section{Application to MCS} %4.1
+
+Let $\hat{\beta}$ denote the least square estimate of $\beta$
+based upon the full set of observations, and let
+$\hat{\beta}^{(k)}$ denoted the estimate with the $k^{th}$ case
+excluded.
+
+
+\section{Grubbs' Data} %4.2
+
+For the Grubbs data the $\hat{\beta}$ estimated are
+$\hat{\beta}_{0}$ and $\hat{\beta}_{1}$ respectively. Leaving the
+fourth case out, i.e. $k=4$ the corresponding estimates are
+$\hat{\beta}_{0}^{-4}$ and $\hat{\beta}_{1}^{-4}$
+
+
+\begin{equation}
+Y^{-Q} = \hat{\beta}^{-Q}X^{-Q}
+\end{equation}
+
+When considering the regression of case-wise differences and averages, we write $D^{-Q} = \hat{\beta}^{-Q}A^{-Q}$
+
+
+\newpage
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & F & C & D & A \\
+  \hline
+1 & 793.80 & 794.60 & -0.80 & 794.20 \\
+  2 & 793.10 & 793.90 & -0.80 & 793.50 \\
+  3 & 792.40 & 793.20 & -0.80 & 792.80 \\
+  4 & 794.00 & 794.00 & 0.00 & 794.00 \\
+  5 & 791.40 & 792.20 & -0.80 & 791.80 \\
+  6 & 792.40 & 793.10 & -0.70 & 792.75 \\
+  7 & 791.70 & 792.40 & -0.70 & 792.05 \\
+  8 & 792.30 & 792.80 & -0.50 & 792.55 \\
+  9 & 789.60 & 790.20 & -0.60 & 789.90 \\
+  10 & 794.40 & 795.00 & -0.60 & 794.70 \\
+  11 & 790.90 & 791.60 & -0.70 & 791.25 \\
+  12 & 793.50 & 793.80 & -0.30 & 793.65 \\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\newpage
+
+\begin{equation}
+Y^{(k)} = \hat{\beta}^{(k)}X^{(k)}
+\end{equation}
+
+Consider two sets of measurements , in this case F and C , with the vectors of case-wise averages $A$ and case-wise differences $D$ respectively. A regression model of differences on averages can be fitted with the view to exploring some characteristics of the data.
+
+When considering the regression of case-wise differences and averages, we write
+
+\begin{equation}
+D^{-Q} = \hat{\beta}^{-Q}A^{-Q}
+\end{equation}
+Let $\hat{\beta}$ denote the least square estimate of $\beta$ based upon the full set of observations, and let $\hat{\beta}^{(k)}$ denoted the estimate with the $k^{th}$ case excluded.
+
+For the Grubbs data the $\hat{\beta}$ estimated are $\hat{\beta}_{0}$ and $\hat{\beta}_{1}$ respectively. Leaving the
+fourth case out, i.e. $k=4$ the corresponding estimates are $\hat{\beta}_{0}^{-4}$ and $\hat{\beta}_{1}^{-4}$
+
+\begin{equation}
+Y^{(k)} = \hat{\beta}^{(k)}X^{(k)}
+\end{equation}
+
+Consider two sets of measurements , in this case F and C , with the vectors of case-wise averages $A$ and case-wise differences $D$ respectively. A regression model of differences on averages can be fitted with the view to exploring some characteristics of the data.
+
+\begin{verbatim}
+Call: lm(formula = D ~ A)
+
+Coefficients: (Intercept)            A
+  -37.51896      0.04656
+
+\end{verbatim}
+
+
+
+
+When considering the regression of case-wise differences and averages, we write
+
+\begin{equation}
+D^{-Q} = \hat{\beta}^{-Q}A^{-Q}
+\end{equation}
+
+
+
+\subsection{Influence measures using R} %4.4
+\texttt{R} provides the following influence measures of each observation.
+
+%Influence measures: This suite of functions can be used to compute
+%some of the regression (leave-one-out deletion) diagnostics for
+%linear and generalized linear models discussed in Belsley, Kuh and
+% Welsch (1980), Cook and Weisberg (1982)
+
+
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+  \hline
+ & dfb.1\_ & dfb.A & dffit & cov.r & cook.d & hat \\
+  \hline
+1 & 0.42 & -0.42 & -0.56 & 1.13 & 0.15 & 0.18 \\
+  2 & 0.17 & -0.17 & -0.34 & 1.14 & 0.06 & 0.11 \\
+  3 & 0.01 & -0.01 & -0.24 & 1.17 & 0.03 & 0.08 \\
+  4 & -1.08 & 1.08 & 1.57 & 0.24 & 0.56 & 0.16 \\
+  5 & -0.14 & 0.14 & -0.24 & 1.30 & 0.03 & 0.13 \\
+  6 & -0.00 & 0.00 & -0.11 & 1.31 & 0.01 & 0.08 \\
+  7 & -0.04 & 0.04 & -0.08 & 1.37 & 0.00 & 0.11 \\
+  8 & 0.02 & -0.02 & 0.15 & 1.28 & 0.01 & 0.09 \\
+  9 & 0.69 & -0.68 & 0.75 & 2.08 & 0.29 & 0.48 \\
+  10 & 0.18 & -0.18 & -0.22 & 1.63 & 0.03 & 0.27 \\
+  11 & -0.03 & 0.03 & -0.04 & 1.53 & 0.00 & 0.19 \\
+  12 & -0.25 & 0.25 & 0.44 & 1.05 & 0.09 & 0.12 \\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+%-------------------------------------------------------------------------------------------------------%
+\chapter{Appendices} % Chapter 5
+%---------------------------------------------------------------------------------------------------------%
+% Appendices
+% - The Hat Matrix (5.1)
+% - Sherman Morrison Woodbury Formula (5.2)
+% -  Hat Matrix applied to MCS (5.3)
+% - Cross Validation (Updating standard deviation) (5.4)
+% - Updating Estimates (5.5)
+% - Lesaffre's paper (5.6)
+%---------------------------------------------------------------------------------------------------------%
+%------------------------------------------------------------------------%
+\newpage
+\section{The Hat Matrix} %5.1
+
+The projection matrix $H$ (also known as the hat matrix), is a
+well known identity that maps the fitted values $\hat{Y}$ to the
+observed values $Y$, i.e. $\hat{Y} = HY$.
+
+\begin{equation}
+H =\quad X(X^{T}X)^{-1}X^{T}
+\end{equation}
+
+$H$ describes the influence each observed value has on each fitted
+value. The diagonal elements of the $H$ are the `leverages', which
+describe the influence each observed value has on the fitted value
+for that same observation. The residuals ($R$) are related to the
+observed values by the following formula:
+\begin{equation}
+R = (I-H)Y
+\end{equation}
+
+The variances of $Y$ and $R$ can be expressed as:
+\begin{eqnarray}
+\mbox{var}(Y) = H\sigma^{2} \nonumber\\
+\mbox{var}(R) = (I-H)\sigma^{2}
+\end{eqnarray}
+
+Updating techniques allow an economic approach to recalculating
+the projection matrix, $H$, by removing the necessity to refit the
+model each time it is updated. However this approach is known for
+numerical instability in the case of down-dating.
+
+\section{Sherman Morrison Woodbury Formula} % 5.2
+
+The `Sherman Morrison Woodbury' Formula is a well known result in
+linear algebra;
+\begin{equation}
+(A+a^{T}B)^{-1} \quad = \quad A^{-1}-
+A^{-1}a^{T}(I-bA^{-1}a^{T})^{-1}bA^{-1}
+\end{equation}
+
+This result is highly useful for analyzing regression diagnostics,
+and for matrices inverses in general. Consider a $p \times p$
+matrix $X$, from which a row $x_{i}^{T}$ is to be added or
+deleted. \citet{CookWeisberg} sets $A = X^{T}X$, $a=-x_{i}^{T}$
+and $b=x_{i}^{T}$, and writes the above equation as
+
+\begin{equation}
+(X^{T}X \pm x_{i}x_{i}^{T})^{-1} = \quad(X^{T}X )^{-1} \mp \quad
+\frac{(X^{T}X)^{-1}(x_{i}x_{i}^{T}(X^{T}X)^{-1}}{1-x_{i}^{T}(X^{T}X)^{-1}x_{i}}
+\end{equation}
+
+The projection matrix $H$ (also known as the hat matrix), is a
+well known identity that maps the fitted values $\hat{Y}$ to the
+observed values $Y$, i.e. $\hat{Y} = HY$.
+
+\begin{equation}
+H =\quad X(X^{T}X)^{-1}X^{T}
+\end{equation}
+
+$H$ describes the influence each observed value has on each fitted value. The diagonal elements of the $H$ are the `leverages', which describe the influence each observed value has on the fitted value for that same observation. The residuals ($R$) are related to the observed values by the following formula:
+\begin{equation}
+R = (I-H)Y
+\end{equation}
+
+The variances of $Y$ and $R$ can be expressed as:
+\begin{eqnarray}
+\mbox{var}(Y) = H\sigma^{2} \nonumber\\
+\mbox{var}(R) = (I-H)\sigma^{2}
+\end{eqnarray}
+
+Updating techniques allow an economic approach to recalculating the projection matrix, $H$, by removing the necessity to refit the model each time it is updated. However this approach is known for
+numerical instability in the case of down-dating.
+
+
+
+\subsection{Hat Values for MCS regression}
+
+With A as the averages and D as the casewise differences.
+\begin{verbatim}
+fit = lm(D~A)
+\end{verbatim}
+
+\begin{displaymath}
+H = A \left(A^\top  A\right)^{-1} A^\top ,
+\end{displaymath}
+
+
+
+
+\printindex
+\bibliographystyle{chicago}
+\bibliography{DB-txfrbib}
+\newpage
+\bibliography{DB-txfrbib}
+\end{document}

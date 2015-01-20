@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  20 JAN 2015 19:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  20 JAN 2015 18:34
 entering extended mode
-**Chap1main.tex
-(C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.tex
+**IntroductoryDefinitions.tex
+(C:\Users\Kevin\Documents\GitHub\MCS-Chap1\IntroductoryDefinitions.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,6 +13,16 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
+(C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\latex\subfiles\subfiles.cls
+Document Class: subfiles 2012/05/23 Federico Garcia
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks14
+\verbatim@line=\toks15
+\verbatim@in@stream=\read1
+)
+Preamble taken from file `Chap1main.tex'
+(C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.tex
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
@@ -50,8 +60,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-\XKV@toks=\toks14
-\XKV@tempa@toks=\toks15
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
 \XKV@depth=\count88
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 
@@ -159,7 +169,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks16
+\@emptytoks=\toks18
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -170,22 +180,22 @@ Package: amsbsy 1999/11/29 v1.2d
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks17
+\@emptytoks=\toks19
 \ex@=\dimen115
 )
 \pmbraise@=\dimen116
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2004/08/06 v2.20
-\thm@style=\toks18
-\thm@bodyfont=\toks19
-\thm@headfont=\toks20
-\thm@notefont=\toks21
-\thm@headpunct=\toks22
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
 \thm@preskip=\skip43
 \thm@postskip=\skip44
 \thm@headsep=\skip45
-\dth@everypar=\toks23
+\dth@everypar=\toks25
 )
 (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
@@ -226,21 +236,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip10
 \c@parentequation=\count100
 \dspbrk@lvl=\count101
-\tag@help=\toks24
+\tag@help=\toks26
 \row@=\count102
 \column@=\count103
 \maxfields@=\count104
-\andhelp@=\toks25
+\andhelp@=\toks27
 \eqnshift@=\dimen122
 \alignsep@=\dimen123
 \tagshift@=\dimen124
 \tagwidth@=\dimen125
 \totwidth@=\dimen126
 \lineht@=\dimen127
-\@envbody=\toks26
+\@envbody=\toks28
 \multlinegap=\skip48
 \multlinetaggap=\skip49
-\mathdisplay@stack=\toks27
+\mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -253,13 +263,7 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\latex\subfiles\subfiles.sty
 Package: subfiles 2012/05/23 Federico Garcia
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks28
-\verbatim@line=\toks29
-\verbatim@in@stream=\read1
-))
+)
 (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
 Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
 
@@ -309,22 +313,25 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 \AM@toc@title=\toks30
 \c@AM@survey=\count109
 \AM@templatesizebox=\box32
-)
-(C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+)))
+(C:\Users\Kevin\Documents\GitHub\MCS-Chap1\IntroductoryDefinitions.aux
 
-(C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+LaTeX Warning: Label `PropBias' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+ (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count110
 \scratchdimen=\dimen130
@@ -339,178 +346,238 @@ LaTeX Font Info:    ... okay on input line 20.
 \everyMPtoPDFconversion=\toks32
 )
 \AtBeginShipoutBox=\box34
- (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+
+
+Package natbib Warning: Citation `ludbrook97' on page 1 undefined on input line
+ 13.
+
+
+Package natbib Warning: Citation `Myles' on page 1 undefined on input line 13.
+
+
+Package natbib Warning: Citation `Krumm' on page 1 undefined on input line 13.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Package natbib Warning: Citation `Grubbs73' on page 1 undefined on input line 2
+2.
+
+[1
+
+{C:/Users/Kevin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write3
- [1
+) [2] [3]
+[4]
+
+Package natbib Warning: Citation `BA83' on page 5 undefined on input line 150.
 
 
-{C:/Users/Kevin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
-Chapter 1.
-[4
-
-] [1]
-
-Package natbib Warning: Citation `ludbrook97' on page 1 undefined on input line
- 117.
+Package natbib Warning: Citation `BA83' on page 5 undefined on input line 158.
 
 
-Package natbib Warning: Citation `Myles' on page 1 undefined on input line 117.
-
-
-
-Package natbib Warning: Citation `Krumm' on page 1 undefined on input line 117.
-
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-
-Package natbib Warning: Citation `Grubbs73' on page 1 undefined on input line 1
-26.
-
-[1] [2] [3] [4]
-
-Package natbib Warning: Citation `BA83' on page 5 undefined on input line 254.
-
-
-Package natbib Warning: Citation `BA83' on page 5 undefined on input line 262.
-
-
-Overfull \hbox (1.08398pt too wide) in paragraph at lines 257--263
+Overfull \hbox (1.08398pt too wide) in paragraph at lines 153--159
 []\OT1/cmr/m/n/10 Furthermore they pro-posed their sim-ple method-ol-ogy specif
 -i-cally con-structed
  []
 
 
-Package natbib Warning: Citation `BA83' on page 5 undefined on input line 284.
+LaTeX Warning: File `GrubbsScatter.jpeg' not found on input line 174.
 
-[5]
-Overfull \hbox (9.91733pt too wide) in paragraph at lines 305--323
+
+! Package pdftex.def Error: File `GrubbsScatter.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 ...graphics[width=130mm]{GrubbsScatter.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 174--175
  [] 
  []
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `BA83' on page 5 undefined on input line 180.
+
+[5]
+Overfull \hbox (9.91733pt too wide) in paragraph at lines 201--219
+ [] 
+ []
+
+
+Package natbib Warning: Citation `BA83' on page 6 undefined on input line 238.
+
 [6]
 
-Package natbib Warning: Citation `BA83' on page 7 undefined on input line 342.
-
-
 Package natbib Warning: Citation `ludbrook97' on page 7 undefined on input line
- 361.
+ 257.
+
+
+LaTeX Warning: File `BAFanEffect.jpeg' not found on input line 262.
+
+
+! Package pdftex.def Error: File `BAFanEffect.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.262 ...degraphics[width=125mm]{BAFanEffect.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (10.65944pt too wide) in paragraph at lines 262--263
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: File `PropBias.jpeg' not found on input line 269.
+
+
+! Package pdftex.def Error: File `PropBias.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.269 ...cludegraphics[width=125mm]{PropBias.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (10.65944pt too wide) in paragraph at lines 269--270
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7]
 
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 408.
+LaTeX Warning: File `BAOutliers.jpeg' not found on input line 290.
 
 
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 411.
+! Package pdftex.def Error: File `BAOutliers.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290 ...udegraphics[width=125mm]{BAOutliers.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `BA86' on page 8 undefined on input line 416.
+Overfull \hbox (10.65944pt too wide) in paragraph at lines 290--291
+ [] 
+ []
 
 
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 422.
-
-
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 429.
-
-
-Package natbib Warning: Citation `BA99' on page 8 undefined on input line 432.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8]
+
+Package natbib Warning: Citation `BA99' on page 9 undefined on input line 304.
+
+
+Package natbib Warning: Citation `BA99' on page 9 undefined on input line 307.
+
+
+Package natbib Warning: Citation `BA86' on page 9 undefined on input line 312.
+
+[9]
+
+Package natbib Warning: Citation `BA99' on page 10 undefined on input line 318.
+
+
+
+Package natbib Warning: Citation `BA99' on page 10 undefined on input line 325.
+
+
+[10]
+
+Package natbib Warning: Citation `BA99' on page 11 undefined on input line 328.
+
+
 Missing character: There is no Â in font cmti10!
 Missing character: There is no ” in font cmti10!
- [9] [10]
+[11] [12]
 
-Package natbib Warning: Citation `BA86' on page 11 undefined on input line 592.
-
-
-
-Package natbib Warning: Citation `BA99' on page 11 undefined on input line 603.
-
-
-[11] (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\introMCS-intro.tex [12]
-
-Package natbib Warning: Citation `ludbrook97' on page 13 undefined on input lin
-e 14.
-
-
-Package natbib Warning: Citation `Myles' on page 13 undefined on input line 15.
+Package natbib Warning: Citation `BA86' on page 13 undefined on input line 488.
 
 
 
-Package natbib Warning: Citation `Krumm' on page 13 undefined on input line 15.
+Package natbib Warning: Citation `BA99' on page 13 undefined on input line 499.
 
-
-
-Package natbib Warning: Citation `Grubbs73' on page 13 undefined on input line 
-19.
 
 [13]
-
-Package natbib Warning: Citation `Barnhart' on page 14 undefined on input line 
-65.
-
-[14]) (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\introMCS-grubbsdata.tex
-[15]) [16]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 652.
-
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 652.
-
-(C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.bbl [17]
-
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
-
-)
+No file IntroductoryDefinitions.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[18
+[14] (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\IntroductoryDefinitions.aux)
 
-] (C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Chap1main.aux) ) 
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5126 strings out of 493921
- 73613 string characters out of 3144875
- 143348 words of memory out of 3000000
- 8297 multiletter control sequences out of 15000+200000
- 8774 words of font info for 33 fonts, out of 3000000 for 9000
+ 5117 strings out of 493921
+ 73422 string characters out of 3144875
+ 141386 words of memory out of 3000000
+ 8292 multiletter control sequences out of 15000+200000
+ 7730 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 67i,8n,45p,401b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Chap1main.pdf (23 pages, 154537 bytes).
+ 76i,8n,47p,439b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on IntroductoryDefinitions.pdf (14 pages, 155002 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,17 @@
+Assessing equivalence of two assays using sensitivity and specificity.
+Quiroz J1, Burdick RK.
+
+% http://www.ncbi.nlm.nih.gov/pubmed/17479392
+%----------------------------------------------------------------------------%
+
+The equivalence of two assays is determined using the sensitivity and specificity relative to a gold standard.
+The equivalence-testing criterion is based on a misclassification rate proposed by Burdick et al. (2005) and
+the intersection-union test (IUT) method proposed by Berger (1982). 
+
+Using a variance components model and IUT methods, we construct bounds for the sensitivity and specificity 
+relative to the gold standard assay based on generalized confidence intervals. We conduct a simulation study 
+to assess whether the bounds maintain the stated test size. 
+
+We present a computational example to demonstrate the method described in the paper.
+
+%----------------------------------------------------------------------------%

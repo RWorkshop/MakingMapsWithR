@@ -1,0 +1,94 @@
+
+\chapter{Augmented GLMs} 
+
+
+%---------------------------------------------------------------------------%
+% - 3. Augmented GLMS
+%---------------------------------------------------------------------------%
+
+
+Generalized linear models are a generalization of classical linear  models.
+
+\section{Augmented GLMs} %3.1
+
+With the use of h-likihood, a random effected model of the form can be viewed as an `augmented GLM' with the response varaibkes $(y^t, \phi^t_m)^t$, (with $\mu = E(y)$,$ u = E(\phi)$, $var(y) = \theta V (\mu)$.
+The augmented linear predictor is \[\eta_{ma}  = (\eta^t, \eta^t_m)^t) = T\omega. \].
+
+
+
+%Augmented Generalized linear models.
+% Youngjo et al page 154
+
+The subscript $M$ is a label referring to the mean model.
+\begin{equation}
+\left(%
+\begin{array}{c}
+  Y \\
+  \psi_{M} \\
+\end{array}%
+\right) = \left(
+\begin{array}{cc}
+  X & Z \\
+  0 & I \\
+\end{array}\right) \left(%
+\begin{array}{c}
+  \beta \\
+  \nu \\
+\end{array}%
+\right)+ e^{*}
+\end{equation}
+
+
+%Augmented Generalized linear models.
+
+
+The error term $e^{*}$ is normal with mean zero. The variance matrix of the error term is given by
+\begin{equation}
+\Sigma_{a} = \left(%
+\begin{array}{cc}
+  \Sigma & 0 \\
+  0 & D \\
+\end{array}%
+\right).
+\end{equation}
+
+$y_{a} = T \delta + e^{*}$
+
+Weighted least squares equation
+
+
+% Youngjo et al page 154
+
+
+\subsection{The Augmented Model Matrix}  %3.2
+\begin{equation}
+X = \left(%
+\begin{array}{cc}
+  T & Z \\
+  0 & I \\
+\end{array}%
+\right)
+\delta = \left(%
+\begin{array}{c}
+  \beta  \\
+  \nu  \\
+\end{array}%
+\right)
+\end{equation}
+
+
+
+\subsection{Importance-Weighted Least-Squares (IWLS)}  %3.3
+
+
+\subsection{Hierarchical likelihood} %3.4
+
+ Inferential method was developled for the mixed linear model via Lee and Nelder's (1996) hierarchical-likelihood (h-likelihood).
+
+
+%-------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------Chapter 4------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------------%
+
