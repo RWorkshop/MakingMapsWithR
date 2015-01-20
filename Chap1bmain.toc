@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {0.1}Other Types of Studies}{1}
+\contentsline {section}{\numberline {0.2}Measurement Error Models}{3}
+\contentsline {section}{\numberline {0.3}Other Types of Studies}{4}
+\contentsline {section}{\numberline {0.4}Methods of assessing agreement}{7}
+\contentsline {subsection}{\numberline {0.4.1}Equivalence and Interchangeability}{7}
+\contentsline {section}{\numberline {0.5}Bland Altman Plots In Literature}{8}
+\contentsline {subsection}{\numberline {0.5.1}Gold Standard}{9}
+\contentsline {section}{\numberline {0.6}Discussion on Method Comparison Studies}{9}
+\contentsline {subsection}{\numberline {0.6.1}Agreement}{10}
+\contentsline {subsection}{\numberline {0.6.2}Lack Of Agreement}{10}
+\contentsline {section}{\numberline {0.7}Bland Altman Plot}{11}
+\contentsline {subsection}{\numberline {0.7.1}Bland Altman plots using 'Gold Standard' raters}{11}
+\contentsline {subsection}{\numberline {0.7.2}Bias Detection}{11}
+\contentsline {section}{Bibliography}{11}
