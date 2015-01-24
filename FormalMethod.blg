@@ -1,0 +1,25 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: FormalMethod.aux
+The style file: chicago.bst
+Case mismatch error between cite keys morgan and Morgan
+---line 42 of file FormalMethod.aux
+ : \citation{morgan
+ :                 }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys pitman and Pitman
+---line 43 of file FormalMethod.aux
+ : \citation{pitman
+ :                 }
+I'm skipping whatever remains of this command
+I found no \bibdata command---while reading file FormalMethod.aux
+Warning--I didn't find a database entry for "Kinsella"
+Warning--I didn't find a database entry for "Grubbs48"
+Warning--I didn't find a database entry for "Thompson"
+Warning--I didn't find a database entry for "Bartko"
+Warning--I didn't find a database entry for "BB89"
+Warning--I didn't find a database entry for "BA83"
+Warning--I didn't find a database entry for "Pitman"
+Warning--I didn't find a database entry for "Morgan"
+Warning--I didn't find a database entry for "Cohen"
+Warning--I didn't find a database entry for "BA99"
+Warning--I didn't find a database entry for "Grubbs73"
+(There were 3 error messages)
