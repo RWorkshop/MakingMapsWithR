@@ -1,0 +1,349 @@
+\documentclass[]{article}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		Center for Quality and Applied Statistics
+		Kate Gleason College of Engineering
+		Rochester Institute of Technology
+		Technical Report 2005—3
+		May 12, 2005
+		A Study of the Bland-Altman Plot
+		and its Associated Methodology
+		Joseph G. Voelkel Bruce E. Siskowski
+		Center for Quality and Applied Statistics Reichert, Inc.
+		Rochester Institute of Technology bsiskowski@reichert.com
+		joseph.voelkel@rit.edu
+		
+	\end{abstract}
+	
+	\section{}
+	
+
+
+
+
+
+
+\subsection*{A Study of the Bland-Altman Plot and its Associated Methodology}
+by
+Joseph G. Voelkel and Bruce E. Siskowski
+
+\begin{itemize}
+\item Consider the situation in which two measurement devices are compared but no “true” value exists. For this problem, when a set of subjects are measured with both de-
+vices, Bland and Altman have strongly criticized several methods of analysis. They advocated a plot of the differences in each subject’s readings versus the average of
+such readings and statistics associated with it. 
+\item They recommended this plot both for
+checking assumptions, such as homogeneity of variances, and for assessing the agree-
+ment between the devices. 
+\item They also advocated several other methods associated
+with such comparisons. We argue that a sound comparison of devices should do more
+than measure agreement—for example, every comparison of devices should also com-
+pare the repeatability of the devices, a measure that cannot be obtained by simply measuring agreement. We show how the Bland-Altman plot and associated meth-
+ods can itself be misleading through several examples. 
+\item We propose another method,
+structural equation modeling, as the mathematical framework for such studies. We
+critique another method suggested by Bland and Altman for measuring agreement
+when the devices are measuring the phenomenon on different scales that are thought
+to be linearly related, and suggest alternative methods. We continue to advocate
+the use of the Bland-Altman plot, when used cautiously, as one of several ways for
+checking model adequacy.
+\end{itemize}
+\subsection*{1 Introduction}
+An important consideration in many areas of medicine is the comparison of measurement devices, especially when no “true” value can be measured. As Bland and
+Altman (1986) noted, “Clinicians often wish to have data on, for example, cardiac stroke volume or blood pressure where direct measurement without adverse effects is
+difficult or impossible. The true values remain unknown. Instead indirect methods are used, and a new method has to be evaluated by comparison with an established
+technique rather than with the true quantity. If the new method agrees sujﬁciently well with the old, the old may be replaced, This is very different from calibration,
+where known quantities are measured by a new method and the result compared
+1
+
+
+
+with the true value or with measurements made by a highly accurate method.
+
+%===================================================================================== %
+\begin{itemize}
+\item When two methods are compared neither provides an unequivocally correct measurement, so we try to assess the degree of agreement. But how?" (Italics ours.) The idea of agreement plays a key role in Bland and Altman analyses of device comparisons, a
+point to which we will return later.
+\item Earlier, Altman and Bland (1983) had addressed this question because of the statistically incorrect methods of analysis they had witnessed in the medical literature,
+including correlation analysis, regression analysis, and hypothesis tests to compare means. 
+\item To correct these deﬁciencies, they proposed a simple graphical technique that
+has become widely used in the medical literature. A set of subjects is selected, preferably at random from the population of interest, but at least to cover the range of
+values over which the devices should be compared. 
+\item Each subject’s feature is measured
+on each of the two devices in such a way that it is reasonable to compare the measure-
+ments. A graph is then made of (a) the differences Y — X between the two readings
+vs (b) the average (X + Y) /2 of the two readings. Note that this basic plot is based
+on exactly one measurement from each device for each subject we refer to this as
+the one-measurement case. 
+\item This plot, commonly called the Bland-Altman plot, has
+gained wide acceptance in the medical literature. Similarly, their recommendations
+for investigating the data using this plot, as well as related recommendations, may
+be called the Bland-Altman method.
+
+\item The plot and the method underlying it does essentially examine the agreement
+between the two techniques—large differences (where “large” should be clinically
+determined) indicate the two device do not agree well. 
+\item Altman and Bland (1983)
+continued their argument by stating “[t]he main emphasis in method comparison
+studies clearly rests on a direct comparison of the results obtained by the alternative
+methods. 
+\item The question to be answered is whether the methods are comparable to
+the extent that one might replace the other with suﬁicient accuracy for the intended
+purpose of measurement.“ (Italics ours.)
+\item 
+By using this plot instead of a plot of Y vs. X, Altman and Bland (1983) noted
+that it is “much easier to assess the magnitude of the disagreement (both error and
+bias)” as well as other features in the data such as outliers and to “see if there is
+any trend, for example an increase in Y — X for high values.” (Bland and Altman
+used A and B instead of Y and X, but we substitute our terminology in their quotes
+for consistency in this paper.) 
+\item If such an increase (or decrease) takes place, they
+suggested attempting a transformation of the raw data. They continue, “[i]n the
+absence of a suitable transformation it may be reasonable to describe the differences
+between the method by regressing Y — X on (X + Y) /2.” 
+\item The same point is stated
+in Bland and Altman (1995): \textit{“There may also be a trend in the bias, a tendency
+for the mean difference to rise or fall with increasing magnitude. . . In [the] ﬁgure . . .
+for example, therc is an increase in bias with magnitude, shown by the positive slope
+of the regression line.”} 
+\item They again suggest that a transformation may eliminate this
+effect. The model they appear to have considered in their article will be shown in Section 3.
+\end{itemize}
+%============================================================================= %
+% 2
+
+
+
+
+The 1983 article, which included a number of excellent insights on measurement
+studies from the view of applied statistics, had a strong impact on the ways in which
+such studies were analyzed. The purposes of our article are to review this plot and
+the associated methodology proposed by Bland and Altman, to note some difficulties
+with this methodology, and to recommend alternative analyses.
+\newpage
+\section*{2 On Comparing Measurement Devices}
+In our experience, a measurement-device study is usually conducted to address the
+following questions:
+\begin{itemize}
+\item[1.] Are the devices identical in their ability? This is equivalent to the word “inter-
+changeability” used in ﬁelds of testing and instrumentation.
+\item[2.] If they are not identical as is,  can they be made so after calibration? Or (b)
+are they measuring the same features but with different precision?
+\item[3.] If they are not identical even after calibration or allowing for different precision,
+are they measuring the same features on the subjects, after calibration and
+allowing for different precision?
+\item[4.] If they are not measuring the same features, to what extent are they measuring
+diﬁerent features on the subjects?
+\end{itemize}
+From the italicized section of the Bland—Altman quotes that we have cited, and
+from the extensive writings of Bland and Altman, their key emphasis is to try to assess
+the extent to which the devices agree. “The question to be answered is whether the
+methods are comparable to the extent that one might replace the other with sufficient
+accuracy for the intended purpose of measurement.”
+
+Whether two measurements are close enough must be determined from clinical
+considerations, so suppose that “close” has been deﬁned. If a study is conducted that
+can address the four questions we pose, then it can address the questions posed by
+Bland and Altman. However, if the study only addresses the question posed by Bland
+and Altman, it can not necessarily address the questions we have posed.
+
+Consider the one-measurement case. The assumption that the current device
+provides consistent readings cannot be ascertained from the one-measurement case,
+so it is possible that the current device does not agree very well with (is not “close to”)
+itself. If the current measurement device is not particularly precise, it is possible—
+using the BA method—that the new device is more precise than the old one, but
+cannot be used to replace it.
+% 3
+
+\newpage
+\subsection*{3 Mathematical Model}
+The model we use in this paper is the common and useful structural model (e.g.
+Fuller(l987)). This is a natural model for the comparison of two devices. See, e.g.,
+Mandel (1984), who used this technique on data from the U.S. National Institute
+of Standards and Technology (NIST). This model is a simple example of structural
+equations with latent variables, e.g. Bollen (1989).
+
+Consider the case of two measuring devices. Let 90,  represents the long—term
+average (“true”) value of the measurement for the it,‘ subject when measured on
+the ac-device (y-device) at a some ﬁxed point in time. (The “ﬁxed point in time" is
+needed in the medical ﬁeld, because the underlying values often change over time for
+subjects.) The structural model assumes that these  yi) values lie on a straight
+line this means that the two devices are measuring the same feature on a given
+subject except that a possible linear calibration needs to be made. 
+
+\end{document}
+However, we
+cannot observe the values directly. Instead, we only observe readings X ,4 and Yji,
+$j : 1, \ldots , J$, for each subject. 
+
+%The associated model that is used is the following,
+%where i _ 1, ...,N.
+%3/1' = 50 ‘t /31151 (1)
+%$0,;  ind N (um, 02,)
+%._  + 6]-,-, 6], ~ ind N (0, rig)
+%Yb I yi time in ~iI1d N (0» ‘Til
+%all {($14}, {.214} are independent
+
+
+When $J > 1$, we are considering the ease in which the same observer is making
+repeat measurements over a short period of time. We will not consider more complex,
+yet important cases here, such as when the study is designed to include measurements
+by multiple observers  topic avoided by Bland and Altman as well, e.g. (2003).)
+
+\begin{itemize}
+\item Assuming we have a data set rich enough to estimate all parameters, this model
+allows us to address questions l—3 that we had posed. For example, we would say the
+two devices are identical if [30 : 0,[i1 : 1, and rig : 0%.
+\item The case in which the (mi, 7,/,3) values do not lie on a straight line is also important.
+In particular the larger model in which we replace the ﬁrst line in (1) with
+711‘ : 50 +/319% +§i=§i N ind N (07 U?) (2)
+should usually be considered as well, as this addresses question 4 above. We will use
+this model only in Section 8. We will refer to this model as the extended structural
+model in this paper. 
+\item This model is a general alternative to the ﬁrst line in (1), so it
+will have some power in detecting smooth non-linear alternatives, random differences
+from the linear ﬁt, and occasional outliers.
+\end{itemize}
+4
+
+
+
+When we follow the examples typically presented by Bland and Altman, we need
+to consider the one-mearsurement case in which J I 1, and here we write X, and Y;
+instead of X], and 
+Let “Jill/N (pf, 2')” represent a multivariate normal distribution with mean vec-
+tor /d' and variance-covariance matrix Z)’. From the model, it is straightforward to
+show that (X, Y) has a bivariate normal distribution:
+X , /“L1 U§+J2 5115
+lYl ~ t"V”<i/30+/ml” lsymé r>’%<»i+vZl> (3)
+2
+N M‘/N H1 M 2 [1 +R5_,L, 51 7
+(l /10 + we “I sym 11% + R§:cRg5
+where we write R5,», I 0'5/0'1 and R5,; I 05/0,; to denote key ratios of standard
+deviations. Note that R51 I 0 corresponds to no measurement error for the 1' device,
+and R5,; I 1 corresponds to equally precise devices. (We will not consider the R5, I O
+case, but doing so would require that RMRE5 (the only way in which R55 appears) be
+rewritten as 05/0,)
+It follows that the data used in the BA plot is a sample from a bivariate normal
+distribution:
+[ Y — X
+(Y+X)/2 l ~MvN(ii, 2:),
+where
+_ 5 + (6 — 1)/it
+” * k@@O+<@11+1>i,>/il (4)
+_ U'g(/6 —1)2+J2+0Z <73_.(ﬂ2—1)/2+(<7Z—U2)/2
+2 * l 1 sym 6 vi </111+ 1>2/4+ (0% +52) /4i (5)
+_ 2 [(51 —1)2+R§¢(Rg6‘l'1)  _1‘l'R§1(RZa_1)) ] (6)
+J: 2 2
+\_/in
+\~
+as
+* ' sym (»31+1l+R§1(R5s‘l‘1)
+Using a sample of data, (X,-,Y¢), i I 1,2, ...,N, we can calculate the sample
+mean and variance-covariance matrix of the original data, or equivalently of the data
+corresponding to the BA plot (Y, — Xi, (Y1; + X,-) /2), i I 1,2, ...,N. Either set of the sample means and variance-covariance matrix provide minimal suﬂicient statistics
+for the mathematical model. Mathematically, this minimal suﬂiciency holds for the normal distribution—from a more general point of view, we could consider any case
+where we believe the sample mean and variance-covariance matrix provide a good summary of the data.
+
+%======================================================================================================================= %
+% Page 5
+
+\begin{itemize}
+\item There is an immediate problem here. It is well known that the parameter estimation in the model based on (1) is indeterminate (not identiﬁable) in the one-
+measurement case. 
+\item The reason is clear—there are six parameters that need to be estimated in the model, but the sufﬁcient statistics only provide ﬁve quantities. It is
+therefore also true that the sufficient statistics associated with (4)-(5), and therefore
+the Bland-Altman plot of the associated raw data, can not provide enough information to estimate the parameters. We refer to this as the p7‘0bl677L of imleterminacy. \item Altman
+and Bland (e.g., 1983) discuss the usefulness of estimating repeatability (which can be done in the multiple-measurement case for which J > 1). 
+\item However, their word-
+ing suggests that they view repeatability as somehow distinct from a comparison of methods. It is true that repeatability estimates for a device require only that device. However, a comparison of methods needs to include information on repeatability, not be isolated from it. 
+\end{itemize}
+%============================================================================== %
+\subsubsection*{Normality Assumption}
+The normality assumption on the 6 and 5 error terms is common, theoretically
+defensible, and is reasonable for many data sets. 
+The normality assumption on the .r
+term is also reasonable, although situations may arise in which it is questionable. For example, the researcher may wish to screen subjects to try to make an .r distribution
+that is more uniform over the range of values. In such a case, a theoretical difficulty immediately arises. If all the assumptions of (1) hold except that ac is non-normal
+(but is still sampled from a continuous distribution), then the regression of Y on X is no longer linear (Lindley, 1947). This means that non-linear features observed in such a graph may reflect only how the 9; values were sampled, an awkward situation for a data analyst. We have not investigated to what extent this non-linearity is of
+practical importance for the problem at hand. The normality assumption also plays a role in the non-identiﬁability problem. For example, Reiersr/ll (1950) showed that [31 is identiﬁable if 1 is non-normal. However, this appears to be mostly of theoretical interest. See Spiegelman (1979) and the
+references contained therein for details on estimation of this parameter. 4 Bland and Altman Papers: A Review
+We shall examine several publications to which one or both of these authors contributed, with an emphasis based on the modeling that underlies their work.
+
+In the Altman and Bland (1983) paper, the model they refer to in their Appendix is restricted to 61 : 1 and [30 : 0. They essentially employ means, variances, and covariances (or correlations, or looking for trend in the BA plot) in their paper,
+although they do refer to the normal distribution on occasion. In their analysis,
+however, they clearly don’t restrict themselves to 50 : 0, and it appears that the ﬂl = 1 restriction is assumed to be tested by the data through the BA plot. For
+example, when comparing the BA plot to the Y vs. X plot, they use the phrase “...it
+is much easier to...see whether there is any trend, for example an increase in Y — X
+for high values [of (X + Y) /2].” However, they do not appear to say What such a
+trend means, except to note that a test of /1y_Xv(X+y)/2 I O is equivalent to a test of
+a§( : 0%,. This statement, although true, does not directly aid the user in comparing
+6
+
+
+
+the two measurement devices because the test “O'§( = 0?,” is equivalent to the test
+“oi + 0? : 5%; + erg” see  Unless the analyst is simply Willing to assume that
+ﬂl = 1 or that rig = 0?, the results of this test do not lend themselves to simple
+interpretation. For example, Maloney and Rastogi (1970), based on earlier Work of
+Pitman (1939) and Morgan (1939), test HO : cg 7 cg, but assume [31 : 1 in doing so.
+The sample standard deviation of Y —X is said to be “the estimate of error“ (ital-
+ics theirs), although “error” is not deﬁned there, for example in terms of parameters.
+. . 2 2
+Based on the structural model their error term estimates ,/J2 (Q — 1) + 0' + 02
+1 at 1 6 5»
+which also does not lend itself to simple interpretation unless the user wants to as-
+sume artiﬁcially that that ﬂl = 1. It is reasonable to state that, if this error term
+is suitably small (clinically), the methods could likely be used interchangeably in a
+clinical setting even here, though, estimates of all the parameters in the structural
+equation model would provide additional scientiﬁc insight. Of course, one doesn’t
+have this information When the study is being designed.
+It is also not clear to us Altman and Bland proposed that “[ilf there is an asso-
+ciation between the differences and the size of the measurements, then as before, a
+transformation (of the raw data) may be successfully employed.” Unless larger mea-
+surements are associated with larger repeatability values or unless the association is
+nonlinear, a nonlinear transformation appears unwarranted.
+%========================================================================================================================== %
+\begin{itemize}
+The authors noted, after a review of some incorrect methods of analysis that We
+mentioned earlier in this article, \textit{“[n]one of the previously discussed approaches tells
+	us Whether the methods can be considered equivalent.”} Unfortunately, neither does
+theirs. \textbf{SEM} It is precisely the use of structural equation models (including the extended
+model as a starting point) along with checks of assumptions, that can answer the
+equivalence question directly.
+\item \textbf{SEM} We do not agree with Altman and Bland (1983), who rejected structural equation models as being too complex. Good researchers should use the best techniques avail able that can directly answer the questions We have posed for measurement studies—
+the fact that many researchers do not should not dissuade us. As those authors
+correctly note, “[i]t is difﬁcult to produce a method that will be appropriate for all
+circumstances...clearly the various possible complexities that could arise might require
+a modiﬁed approach, involving additional or even alternate analyses.” The authors’
+claim that “[t]he majority of medical method comparison studies seem to be carried
+out Without the beneﬁt of professional statistical expertise” suggests to us that such
+expertise should be obtained.
+\item Bland and Altman (2003) cited more recent references in medical statistics jour-
+nals to again point out the errors of the use of correlation and regression analysis.
+\item \textbf{Single Measurements:} All the examples, unfortunately, seem to be the one-measurement case, for which
+no method of analysis can address the questions that should be answered in such a
+study. The authors provide a nice example, using fetal lung measurements, of the
+use of the BA plot in checking assumptions. In this example, a non-constant variance
+was evident. 
+\item However, their statement, “when X and Y have the same SD, as they
+should if they are measurements of the same thing, Y —X and (Y + X) / 2 should not
+be correlated at all in the absence of a true relationship," is not quite accurate, as
+(5) indicates. (They stated this more carefully in Bland and Altman (1995).) They
+noted the design they mentioned in their 1986 paper in which replicate measurements
+were taken on each subject and \textit{“regret that this has not been more Widely adopted
+by researchers.”}
+\item  In that paper, they also suggested an “appropriate use of regression” for the case
+in which a new method has different units than the old method (but, presumably,
+is linearly related in some sense). We examine that recommendation later in this
+article.
+\end{itemize}
+
+%========================================================================================== %
