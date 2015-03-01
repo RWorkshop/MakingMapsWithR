@@ -1,0 +1,79 @@
+\documentclass[]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+\section{Bartko's Bradley-Blackwood Test}
+This is a regression based
+approach that performs a simultaneous test for the equivalence of
+means and variances of the respective methods.We have identified
+this approach  to be examined to see if it can be used as a
+foundation for a test perform a test on
+means and variances individually.
+\begin{equation}
+D = (X_{1}-X_{2})
+\end{equation}
+\begin{equation}
+M = (X_{1} + X_{2}) /2
+\end{equation}
+The Bradley Blackwood Procedure fits D on M as follows:\\
+\begin{equation}
+D = \beta_{0} + \beta_{1}M
+\end{equation}
+\begin{itemize}
+\item The Bradley Blackwood test is a simultaneous test for bias and
+precision. They propose a regression approach which fits D on M,
+where D is the difference and average of a pair of results.
+\item Both beta values, the intercept and slope, are derived from the respective means and
+standard deviations of their respective data sets.
+\item We determine if the respective means and variances are equal if
+both beta values are simultaneously equal to zero. The Test is
+conducted using an F test, calculated from the results of a
+regression of D on M.
+\item We have identified this approach  to be examined to see if it can
+be used as a foundation for a test perform a test on means and
+variances individually.
+\item Russell et al have suggested this method be used in conjunction
+with a paired t-test , with estimates of slope and intercept.
+\end{itemize}
+%subsection{t-test}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%  Blackwood Bradley Model         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Blackwood Bradley Model} 
+
+Bradley and Blackwood have developed a regression based approach
+assessing the agreement.
+
+
+
+
+\newpage
+\section{Bradley-Blackwood Test (Kevin Hayes Talk)}
+%--------------------------------------------------------------------------------%
+% KH - UW
+
+This work considers the problem of testing $\mu_1$ = $\mu_2$ and $\sigma^2_1 = \sigma^2_2$ using a random sample from a bivariate normal distribution with parameters $(\mu_1, \mu_2, \sigma^2_1, \sigma^2_2, \rho)$. 
+
+The new contribution is a decomposition of the Bradley-Blackwood test statistic (\textit{Bradley and Blackwood, 1989})for the simultaneous test of {$\mu_1$ = $\mu_2$; $\sigma^2_1 = \sigma^2_2$}  as a sum of two statistics. 
+
+One is equivalent to the Pitman-Morgan (\textit{Pitman, 1939; Morgan, 1939}) test statistic 
+for $\sigma^2_1 = \sigma^2_2$ and the other one is a new alternative to the standard paired-t test of $\mu_D = \mu_1 = \mu_2 = 0$. 
+
+Surprisingly, the classic Student paired-t test makes no assumptions about the equality (or otherwise) of the 
+variance parameters. 
+
+The power functions for these tests are quite easy to derive, and show that when $\sigma^2_1 = \sigma^2_2$, 
+the paired t-test has a slight advantage over the new alternative in terms of power, but when $\sigma^2_1 \neq \sigma^2_2$, the 
+new test has substantially higher power than the paired-t test.
+
+While Bradley and Blackwood provide a test on the joint hypothesis of equal means and equal variances their regression based approach does not separate these two issues.
+
+The rejection of the joint hypothesis may be 
+due to two groups with unequal means and unequal variances; unequal means and equal variances, or equal means and unequal variances. We propose an approach for resolving this (model selection) problem in a manner controlling the magnitudes of the relevant type I error probabilities.
+
+
+\end{document}

@@ -1,0 +1,21 @@
+Roy2013
+
+http://business.utsa.edu/wps/MSS/0017MSS-253-2013.pdf
+
+
+Testing the Equality of Mean Vectors for Paired Doubly 
+Multivariate Observations 
+
+
+Example 2. (Mineral Data): This data set is taken from Johnson and Wichern (2007, p. 43).
+An investigator measured the mineral content of bones (radius, humerus and ulna) by photon
+absorptiometry to examine whether dietary supplements would slow bone loss in 25 older women.
+Measurements were recorded for three bones on the dominant and nondominant sides. Thus,
+the data is doubly multivariate and clearly u = 2 and q = 3.
+The bone mineral contents for the ﬁrst 24 women one year after their participation in an
+experimental program is given in Johnson and Wichern (2007, p. 353). Thus, for our analysis
+we take only ﬁrst 24 women in the ﬁrst data set. We test whether there has been a bone loss
+considering the data as doubly multivariate and has BCS structure. We rearrange the variables
+in the data set by grouping together the mineral content of the dominant sides of radius, humerus
+and ulna as the ﬁrst three variables, that is, the variables in the ﬁrst location (u = 1) and then
+the mineral contents for the non-dominant side of the same bones (u = 2)

@@ -1,0 +1,5 @@
+3. Non-constant difference
+3.1. Model
+If it is observed that the assumption of constant difference between methods is violated, i.e. if there is clear slope in the
+Bland–Altman plot, the differences can be regressed on the averages (or sums) and the results used to construct prediction
+intervals of the difference between two future measurements.

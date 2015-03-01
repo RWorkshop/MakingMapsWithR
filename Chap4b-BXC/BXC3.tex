@@ -1,0 +1,79 @@
+\documentclass[Chap4bmain.tex]{subfiles}
+\begin{document}
+
+\subsection{Carstensen Methods}
+Bendix Carstensen et al. proposed the use of LME models to allow for a more statistically rigourous approach to computing Limits of Agreement.  The respective papers also discuss several shortcoming for techniques for dealing with replicate measurements, as proposed by Bland-Altman 1999.
+
+%---------------------------------------------------------------%
+Components
+
+\begin{verbatim}
+Carstensen’s LME model
+LoA as computed by Carstensen’s LME model
+Papers
+
+Carstensen et Al 2006
+Carstensen et al 2008
+
+Bendix Carstensen 2010
+
+Bendix Carstensen 2010
+Section 5.3 Models for replicate measurements
+Section 7 A general model for method comparisons.
+Section 7.2 Interpretation of Random effects
+
+
+Section 5.3 Models for replicate measurements
+Section 5 Replicate measurements.
+
+Carstensen page 56
+%----------------------------------------------------------------%
+air extra random effect that does not depend on method.
+It is treated as an extension of i.
+The variance of air represents the variation between replication condition (common for all methods), within items, .
+\end{verbatim}
+\[ymir=m+i+cmi+emir\]
+
+\[cmi=N(0,m2)\]
+
+\[emir=N(0,m2)\]
+
+\begin{verbatim}
+Carstensen page 58
+
+var(y10-y20) =12+22+12+22
+
+1-2222+12+22
+
+Roy further to Carstensen
+
+ymir=m+i+cmi+emir
+
+\end{verbatim}
+%-----------------------------------------------------------------%
+
+
+Section 7 A general model for method comparisons.
+
+Carstensen discusses the model and its use as if all parameter estimates are available.
+
+In this model, intermethod bias is assumed to be constant at all measurement levels.
+
+i : True value for item i
+
+The parameter i can be thought of as the underlying, but unobtainable, true measurement for item i.
+
+m: Fixed effect for method m
+
+%-----------------------------------------------------------------%
+
+\subsection{7.2 Interpretation of Random effects}
+
+\begin{itemize}
+\item method by item
+\item item by replicate
+\item method by item by replicate
+\end{itemize}
+%-----------------------------------------------------------------%
+
+\end{document}

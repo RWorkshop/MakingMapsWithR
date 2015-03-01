@@ -1,0 +1,161 @@
+\documentclass[Chap4main.tex]{subfiles}
+
+% Load any packages needed for this document
+\begin{document}
+\newpage
+%\section{VC Matrix Types}
+%-----------------------------------------------------------------------------------%
+\newpage
+\subsection{Variance Covariance Matrices }
+
+Under Roy's model, random effects are defined using a bivariate normal distribution. Consequently, the variance-covariance structures can be described using $2 \times 2$  matrices. A discussion of the various structures a variance-covariance matrix can be specified under is required before progressing. The following structures are relevant: the identity structure, the compound symmetric structure and the symmetric structure.
+
+The identity structure is simply an abstraction of the identity matrix. The compound symmetric structure and symmetric structure can be described with reference to the following matrix (here in the context of the overall covariance Block-$\boldsymbol{\Omega}_i$, but equally applicable to the component variabilities $\boldsymbol{G}$ and $\boldsymbol{\Sigma}$);
+
+\[\left( \begin{array}{cc}
+              \omega^2_1  & \omega_{12} \\
+              \omega_{12} & \omega^2_2 \\
+\end{array}\right) \]
+
+Symmetric structure requires the equality of all the diagonal terms, hence $\omega^2_1 = \omega^2_2$. Conversely compound symmetry make no such constraint on the diagonal elements. Under the identity structure, $\omega_{12} = 0$.
+A comparison of a model fitted using symmetric structure with that of a model fitted using the compound symmetric structure is equivalent to a test of the equality of variance.
+
+
+%In the presented example, it is shown that Roy's LOAs are lower than those of (\ref{BXC-model}), when covariance between methods is present.
+
+\subsection{Identity Matrix}
+\subsection{Symmetry}
+\subsection{Compound Symmetry}
+
+
+%\section{VC structures}
+
+There is three alternative structures for
+$\boldsymbol{\Psi}$, the diagonal form, the identity form and the general form.
+\[
+\boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi^2_1 & 0  \\
+  0 & \psi^2_2  \\
+\end{array}%
+\right)\qquad \mathrm{or} \qquad \boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi_{11} & \psi_{12}  \\
+  \psi_{21} & \psi_{22}  \\
+\end{array}%
+\right)
+\qquad \mathrm{or} \qquad \boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi_{11} & \psi_{12}  \\
+  \psi_{21} & \psi_{22}  \\
+\end{array}%
+\right)
+\]
+
+ $\boldsymbol{\Psi}$ is the variance-covariance matrix of the random effects ,
+with $2 \times 2$ dimensions.
+\begin{equation}
+\boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi_{11} & \psi_{12}  \\
+  \psi_{21} & \psi_{22}  \\
+\end{array}%
+\right)
+\end{equation}
+
+%------------------------------------------------------------- %
+
+
+\newpage
+
+
+\begin{equation}
+\left( \begin{array}{cc}
+  \omega^2_{e} & \omega^{en} \\
+  \omega_{en} & \omega^2_{n} \\
+\end{array}\right)
+=
+\left( \begin{array}{cc}
+  \psi^2_{e} & \psi^{en} \\
+  \psi_{en} & \psi^2_{n} \\
+\end{array}\right)
++
+\left( \begin{array}{cc}
+  \sigma^2_{e} & \sigma^{en} \\
+  \sigma_{en} & \sigma^2_{n} \\
+\end{array}\right)
+\end{equation}
+
+\newpage
+
+
+%----------------------------------------------------------- %
+\section{VC structures}
+
+There is three alternative structures for
+$\boldsymbol{\Psi}$, the diagonal form, the identity form and the general form.
+\[
+\boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi^2_1 & 0  \\
+  0 & \psi^2_2  \\
+\end{array}%
+\right)\qquad \mathrm{or} \qquad \boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi_{11} & \psi_{12}  \\
+  \psi_{21} & \psi_{22}  \\
+\end{array}%
+\right)
+\qquad \mathrm{or} \qquad \boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi_{11} & \psi_{12}  \\
+  \psi_{21} & \psi_{22}  \\
+\end{array}%
+\right)
+\]
+
+ $\boldsymbol{\Psi}$ is the variance-covariance matrix of the random effects ,
+with $2 \times 2$ dimensions.
+\begin{equation}
+\boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi_{11} & \psi_{12}  \\
+  \psi_{21} & \psi_{22}  \\
+\end{array}%
+\right)
+\end{equation}
+
+
+%--------------------------------------------------------- %
+
+\newpage
+
+
+\begin{equation}
+\left( \begin{array}{cc}
+  \omega^2_{e} & \omega^{en} \\
+  \omega_{en} & \omega^2_{n} \\
+\end{array}\right)
+=
+\left( \begin{array}{cc}
+  \psi^2_{e} & \psi^{en} \\
+  \psi_{en} & \psi^2_{n} \\
+\end{array}\right)
++
+\left( \begin{array}{cc}
+  \sigma^2_{e} & \sigma^{en} \\
+  \sigma_{en} & \sigma^2_{n} \\
+\end{array}\right)
+\end{equation}
+%\end{enumerate}
+
+%---------------------------------------------------------------------------------%
+\end{document}

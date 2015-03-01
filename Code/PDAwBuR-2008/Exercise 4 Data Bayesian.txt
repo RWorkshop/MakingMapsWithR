@@ -1,0 +1,42 @@
+WinBUGS code for question 1 of exercise 4
+
+The single observation of y = 3 asthma deaths in a city of 200,000 is assumed to be a realisation of a Poisson random variable with mean 2.0*theta (the "2" is for the 2 x 100,000 people where theta is the rate per 100,000 persons per year) where theta represents the true long-term underlying astha rate in this city (measured in cases per 100,000 persons per year):
+
+	y ~ Poisson(lamdba)
+	lambda <- 2*theta
+
+in the code below we replace the "2" in "2*theta" with "(n/100000)*theta" where n is 200,000 since it will be easier to generalise when preparing code for part (b) of the question.  Gelman et al. use a gamma(3.0,5.0) prior distribution for the asthma mortality rate:
+
+	theta ~ dgamma(3.0,5.0)
+	
+	BUGS language for calculating the posterior probability that the rate is bigger than 2 per 100,000 persons per year:
+
+Data 
+
+	list(y  = c(3), n= c(200000))
+	
+Inits  
+
+	list(theta = c(1.5)) 
+
+иииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииии
+WinBUGS code for question 2 of exercise 4
+
+The single observation of y = 3 asthma deaths in a city of 200,000 is assumed to be a realisation of a Poisson random variable with mean 2.0*theta (the "2" is for the 2 x 100,000 people where theta is the rate per 100,000 persons per year) where theta represents the true long-term underlying astha rate in this city (measured in cases per 100,000 persons per year).  The Australian rate in 2002 was 397 deaths for a population of about 20 million.  We declare y[1] and y[2] to be the number of asthma deaths in the hypothetical city of n[1] = 200,000 people and Australia (n[2] = 20 million people) respectively.  The parameters theta[1] and theta[2] are the corresponding rates per 100,000 persons per year, with lambda[i], the product of the population and rate representing the Poisson parameter:
+
+	y[i] ~ Poisson(lamdba[i])
+	lambda[i] <- n[i]*theta[i]
+
+Gelman et al. use a gamma(3.0,5.0) prior distribution for the asthma mortality rate, and we'll use this for theta[1] and theta[2]:
+
+	theta[i] ~ dgamma(3.0,5.0)
+	
+	BUGS language:
+
+Data 
+
+	list(y  = c(3,397), n = c(200000,20000000))
+	
+Inits  
+
+	list(theta = c(1.5,2)) 
