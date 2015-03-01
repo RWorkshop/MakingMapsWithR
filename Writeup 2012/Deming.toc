@@ -1,0 +1,35 @@
+\contentsline {chapter}{\numberline {1}Errors-in-variables Regression}{3}
+\contentsline {section}{\numberline {1.1}Simple Linear Regression}{3}
+\contentsline {subsubsection}{Regression Analysis}{4}
+\contentsline {subsubsection}{The Identity Plot}{4}
+\contentsline {subsubsection}{Advantages of Regression Approaches for MCS}{4}
+\contentsline {subsubsection}{Disadvantages}{4}
+\contentsline {section}{\numberline {1.2}Errors-in-variables models}{5}
+\contentsline {section}{\numberline {1.3}Deming Regression}{5}
+\contentsline {subsection}{\numberline {1.3.1}Introduction}{5}
+\contentsline {subsection}{\numberline {1.3.2}Origin of Deming Regression}{5}
+\contentsline {subsection}{\numberline {1.3.3}Comparison to SLR}{5}
+\contentsline {subsection}{\numberline {1.3.4}Deming Regression for MCS}{6}
+\contentsline {subsection}{\numberline {1.3.5}Implementations}{6}
+\contentsline {subsection}{\numberline {1.3.6}Drawbacks of Deming Regression}{6}
+\contentsline {subsection}{\numberline {1.3.7}Diagnostics}{7}
+\contentsline {subsection}{\numberline {1.3.8}Single measurements}{7}
+\contentsline {subsection}{\numberline {1.3.9}Performance in the presence of outliers}{7}
+\contentsline {subsection}{\numberline {1.3.10}Weighted Deming Regression}{8}
+\contentsline {subsubsection}{Weighted Linear Regression}{8}
+\contentsline {subsection}{\numberline {1.3.11}Deming Regression : Parameters and Estimation}{8}
+\contentsline {subsubsection}{RMSE}{8}
+\contentsline {subsubsection}{Estimating the Variance ratio}{8}
+\contentsline {subsection}{\numberline {1.3.12}Using LME models to estimate the ratio (BXC) }{9}
+\contentsline {subsection}{\numberline {1.3.13}Estimating the variance ratio (Linnet)}{10}
+\contentsline {section}{\numberline {1.4}Other Regression Approaches}{10}
+\contentsline {subsection}{\numberline {1.4.1}Model I and II Regression}{10}
+\contentsline {subsection}{\numberline {1.4.2}Constant and Proportional Bias}{10}
+\contentsline {subsection}{\numberline {1.4.3}Cornbleet - Cochran }{10}
+\contentsline {section}{\numberline {1.5}Advanced Regression Methods}{11}
+\contentsline {subsection}{\numberline {1.5.1}A regression based approach based on Bland Altman Analysis}{11}
+\contentsline {subsection}{\numberline {1.5.2}Bivariate Least Squares Regression}{12}
+\contentsline {subsection}{\numberline {1.5.3}Least Products Regression}{12}
+\contentsline {section}{\numberline {1.6} Regression Based Approaches }{13}
+\contentsline {subsection}{\numberline {1.6.1}Comparison of Model II regressions}{13}
+\contentsline {section}{Bibliography}{14}

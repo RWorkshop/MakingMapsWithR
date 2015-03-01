@@ -1,0 +1,285 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Research notes: linear mixed effects models}
+\author{ } \date{ }
+
+
+\begin{document}
+
+\section*{Exam overview}
+
+\begin{itemize}
+\item[Part I] Probability
+   \begin{itemize}
+    \item[Q1] Probability
+    \item[Q2] Probability
+    \item[Q3] Probability
+    \end{itemize}
+\item[Part II] Statistics
+
+    \begin{itemize}
+    \item[Q4] Probability
+    \item[Q5] Probability
+    \item[Q6] Probability
+    \end{itemize}
+    \end{itemize}
+\subsection*{Formulae}
+Familiarize yourself thoroughly with the Statistical Formulae (See Module Website)
+\newline
+%---------------------------------%
+\section*{Question 1}
+Tampered Dice
+
+What is the prior distribution of X before learning that the event B has occurred
+
+The posterior probability
+
+Probability Mass Function (pmf)
+
+
+\[P(X \mbox{ is even}) = P(X=2) + P(X=4) + P(X=6)\]
+
+P(X=2)  = 2/9
+P(X=4)  = 2/9
+P(X=6)  = 2/9
+
+\[P(X = x|B))\]
+$X$ is the variable name
+$x$ is a specific value
+
+%---------------------------------%
+\newpage
+\section*{Question 2}
+
+Ohm's Law: $U = IR$
+
+\begin{itemize}
+\item U: Potential (also known as Voltage)
+\item I: Current
+\item R: Resistance
+\end{itemize}
+
+Computing the Expected Value $E[X]$
+
+\begin{itemize}
+\item $X \sim U(a,b)$
+\item $Var[X] = E[X^2] - (E[X]^2)$
+\end{itemize}
+
+Find the covariance $Cov(I,U)$
+
+
+
+\begin{itemize}
+\item $\sigma_I$ =1.005 [A]
+\item $\sigma_U$ =1.2 [V]
+\end{itemize}
+
+\[ Cov(I,U) = E[ I \times U] - (E[I]\times E[U])\]
+
+Evaluate the correlation coefficient between I and U
+
+\[ Cor(I,U) = \frac{Cov(I,U)}{S(I) \times S(U)} \]
+
+\[ Cor(I,U) = \frac{0.778}{1.2 \times 1.005} = 0.64521 \]
+
+
+%---------------------------------%
+\newpage
+\section*{Question 3}
+\begin{itemize}
+\item The prior distribution of L is Gaussian (Normal ``Bell Curve")
+\item The posterior distribution of L is Gaussian (Normal ``Bell Curve")
+\end{itemize}
+
+\subsection*{Part 3}
+\begin{itemize}
+\item Mean: $\mu = 52.12$
+\item Variance: $\sigma^2 = 2.7403$
+\item $L|W = 3900 ~ N(52.13,2.7403)$ \\ Given tthat the W = 3900, L is normally distributed with mean and variance of 52.12 and 2.7403 respectitvely.
+
+
+\end{itemize}
+
+\subsection*{Part 4}
+
+\textbf{Three Sigma Rule}: The estimate for $\sigma$ is the sample standard deviation $S$.
+
+\[(\bar{X} \pm 3\sigma) = [57.16,57.09]\]
+
+\subsection*{Part 5}
+Which of these guesses is more accurate, the one
+based on the prior distribution or the one given in the posterior
+
+\begin{itemize}
+\item
+\end{itemize}
+%---------------------------------%
+\newpage
+\section*{Question 4}
+\subsection*{Part 1}
+
+\subsection*{Part 2}
+Log  likelihood is
+
+\[log l(\theta)\]
+\subsection*{Part 3}
+\textbf{emph{Derive the maximum likelihood estimator $\theta$}}
+The first derivative is equal to zero if 
+\[ \frac{2n}{\theta} -  \sum x_i = 0\]
+
+Solving \[ \hat{\theta} = {2 \over \bar{x}} \]
+
+Since the second derivative is negative, we conclude that $\theta$ corresponds to the maximum likelihood.
+
+It is the maximum likelihood of $\theta$.
+
+
+\subsection*{Part 4}
+
+For the particular data set $\bar{x} = (137 + 314 + \ldots + 357)/5 = 342$ so that $\hat{\theta} = {2 \over 342} = 0.0058$
+
+%---------------------------------%
+\newpage
+\section*{Question 5}
+\begin{itemize}
+\item The Poisson Distribution
+\item The null hypothesis
+\end{itemize}
+
+
+\subsection*{Part 1}
+Formulate a hypothesis to be test.
+
+$H_0$ Hypothesis is that the data are taken from a Poisson distribution with some parameter $\lambda$.
+
+
+\subsection*{Part 2}
+In 576 districts, there were 532 occurrences.Compute the average number of occurrences.
+
+\[\hat{\lambda} = 532/576  = 0.9323\]
+
+
+\subsection*{Part 3}
+Chi-Square goodness of fit test of the hypothesis.
+
+\[ Q = \sum\frac{n_i -np_i}{np_i}\]
+
+\[ 
+\frac{(229-226.74)^2}{226.74} +
+\frac{(211-211.39)^2}{211.39} +
+\frac{(93-98.54)^2}{98.54} + \frac{(35-30.62)^2}{30.62} + \frac{(8-8.69)^2}{8.69^2} \]
+The value of the Pearson's statistic $Q$ is 1.016.
+\subsection*{Part 4}
+\begin{itemize} \item The number of classes is 5.
+\item The number of estimated parameters is 1.\item The number of degrees of freedom is $5 - 1 - 1 = 3$
+    \end{itemize}
+\subsection*{Part 5}
+The $95\%$ quantile of the chi-square distribution with 3 df is given as 7.81.
+
+Thus we examine if $Q \geq 7.81$, which is not the case.
+
+\subsection*{Part 6}
+\textbf{\emph{Formulate the proper conclusion to the test.}}
+
+Since the test statistic $Q$ is less than the Critical Value, we can not reject that the bombing was made at targets that were randomly picked up.
+%------------------------------------------------%
+\newpage
+\section*{Question 6}
+
+\subsection*{Part 1}
+
+First, we compute the mean value $\bar{X}$ of the sample. \\ Sum all the values and divide by sample size $n$.
+\[\bar{X} = {\sum X \over n} = {48.5 + 45.4 + 49.9 + \ldots + 48.0 + 51.1 \over 12 }= 49.383 [\mbox{cm}] \]
+
+\subsection*{Part 2}
+\[S = \sqrt{ {\sum (X-\bar{X})^2 \over n-1}} \] 
+
+~= {(48.5-49.38)^2 + (45.4-49.38)^2
+ + 
+(49.9-49.38)^2 + \ldots  \over 11} }= 1.90 [\mbox{cm}] \]
+\begin{itemize}
+\item S = 1.9083
+\end{itemize}
+
+[48.17,50.95]
+
+Estimate the standard deviation of the length
+s= 1.9083[cm]
+\subsection*{Part 4}
+The confidence interval for the variance is given by
+
+\[ \frac{(n-1)S^2}{\chi^2_{1-\alpha/2}}, \frac{(n-1)S^2}{\chi^2_{\alpha/2}} \]
+
+$95\%$ Confidence means that significance value $\alpha = 0.05$
+
+
+
+Firstly, we have to find to the degrees of freedom $k$
+
+$k$ = n-1, where $n$ is the sample size
+
+$\alpha = 0.05$
+$\alpha/2 = 0.025$
+$1-\alpha/2 = 0.975$
+
+The code is given for the relevant $\chi^2$ quantiles for df = 8,9,10,11 and 12.
+\begin{itemize}
+\item $\chi^2_{1-\alpha/2,n-1} = \chi^2_{0.975,11} =3.8157 $
+\item $\chi^2_{\alpha/2,n-1} = \chi^2_{0.025,11} = 21.920$
+\end{itemize}
+\subsection*{Part 5}
+What assumption do you need about these data for the confidence intervals to be valid.
+
+\subsection*{Part 6}
+\subsection*{Part 7}
+ Recall, the $95\%$ confidence interval of the mean birth weights was computed as $[48.171,50.595]$
+
+
+
+
+
+
+
+%---------------------------------------------------- %
+
+
+
+
+
+
+
+
+
+\end{document} 

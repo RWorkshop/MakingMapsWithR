@@ -1,0 +1,116 @@
+\contentsline {chapter}{\numberline {1}Introduction to Method Comparison Studies}{7}
+\contentsline {section}{\numberline {1.1}What is a method comparison study?}{8}
+\contentsline {subsection}{\numberline {1.1.1}Inappropriate assessment of Agreement}{11}
+\contentsline {subsubsection}{Paired T tests}{11}
+\contentsline {subsubsection}{Inappropriate Methodologies}{11}
+\contentsline {subsubsection}{Pearson's Correlation Coefficient}{12}
+\contentsline {subsection}{\numberline {1.1.2}Inappropriate use of the Correlation Coefficient}{12}
+\contentsline {section}{\numberline {1.2}Agreement}{13}
+\contentsline {section}{\numberline {1.3}Constant and Proportional Bias}{14}
+\contentsline {section}{\numberline {1.4}Normality of Case-wise Differences}{14}
+\contentsline {section}{\numberline {1.5}Inappropriate assessment of Agreement}{18}
+\contentsline {subsection}{\numberline {1.5.1}Paired T tests}{18}
+\contentsline {subsection}{\numberline {1.5.2}Inappropriate Methodologies}{19}
+\contentsline {subsection}{\numberline {1.5.3}Pearson's Correlation Coefficient}{19}
+\contentsline {subsection}{\numberline {1.5.4}Lack Of Agreement}{20}
+\contentsline {section}{\numberline {1.6}Other Types of Studies}{22}
+\contentsline {section}{\numberline {1.7}Other Types of Studies}{22}
+\contentsline {section}{\numberline {1.8}Methods of assessing agreement}{26}
+\contentsline {subsection}{\numberline {1.8.1}Equivalence and Interchangeability}{26}
+\contentsline {subsection}{\numberline {1.8.2}Gold Standard}{27}
+\contentsline {section}{\numberline {1.9}Discussion on Method Comparison Studies}{27}
+\contentsline {subsection}{\numberline {1.9.1}Agreement}{28}
+\contentsline {subsection}{\numberline {1.9.2}Lack Of Agreement}{28}
+\contentsline {section}{\numberline {1.10}Bland Altman Plot}{29}
+\contentsline {subsection}{\numberline {1.10.1}Bland Altman plots using 'Gold Standard' raters}{29}
+\contentsline {subsection}{\numberline {1.10.2}Bias Detection}{29}
+\contentsline {chapter}{\numberline {2}Review of MCS Methodologies}{34}
+\contentsline {section}{\numberline {2.1}Bland-Altman methodology}{34}
+\contentsline {subsection}{\numberline {2.1.1}Bland-Altman plots}{37}
+\contentsline {subsection}{\numberline {2.1.2}Bland-Altman plots for the Grubbs data}{38}
+\contentsline {subsection}{\numberline {2.1.3}Adverse features}{41}
+\contentsline {chapter}{\numberline {3}Limits of Agreement}{44}
+\contentsline {section}{\numberline {3.1}Limits of Agreement}{44}
+\contentsline {section}{\numberline {3.2}Interpretation of Limits Of Agreement}{46}
+\contentsline {subsection}{\numberline {3.2.1}Formal Definition of Limits of Agreement}{46}
+\contentsline {section}{\numberline {3.3}Limits of Agreement for Replicate Measurements}{48}
+\contentsline {subsubsection}{Precision of Limits of Agreement}{48}
+\contentsline {subsection}{\numberline {3.3.1}Appropriate Use of Limits of Agreement}{48}
+\contentsline {section}{\numberline {3.4}Coefficient of Repeatability}{50}
+\contentsline {subsection}{\numberline {3.4.1}Repeatability}{50}
+\contentsline {subsection}{\numberline {3.4.2}Repeatability coefficient}{50}
+\contentsline {chapter}{\numberline {4}Outlier Detection for the BA plot}{51}
+\contentsline {section}{\numberline {4.1}Bland-Altman Correlation test}{51}
+\contentsline {section}{\numberline {4.2}Outlier Detection}{51}
+\contentsline {subsection}{\numberline {4.2.1}Inferences on Bland-Altman estimates}{53}
+\contentsline {subsection}{\numberline {4.2.2}Bland-Altman correlation test}{54}
+\contentsline {subsection}{\numberline {4.2.3}Identifiability}{54}
+\contentsline {subsection}{\numberline {4.2.4}Replicate Measurements}{61}
+\contentsline {subsection}{\numberline {4.2.5}Identifiability}{61}
+\contentsline {chapter}{\numberline {5}Regression Methods for MCS}{63}
+\contentsline {section}{\numberline {5.1}Blackwood Bradley Model}{66}
+\contentsline {section}{\numberline {5.2}Bartko's Bradley-Blackwood Test}{66}
+\contentsline {section}{\numberline {5.3}Bradley-Blackwood Test (Kevin Hayes Talk)}{68}
+\contentsline {section}{\numberline {5.4}Regression Methods (duplication)}{68}
+\contentsline {section}{\numberline {5.5}Conclusions about Existing Methodologies}{70}
+\contentsline {subsection}{\numberline {5.5.1}Contention }{70}
+\contentsline {subsection}{\numberline {5.5.2}A regression based approach based on Bland Altman Analysis}{71}
+\contentsline {section}{\numberline {5.6}Regression Methods}{71}
+\contentsline {chapter}{\numberline {6}Deming Regression}{77}
+\contentsline {section}{\numberline {6.1}Deming Regression}{77}
+\contentsline {subsection}{\numberline {6.1.1}Deming Regression}{78}
+\contentsline {subsection}{\numberline {6.1.2}Inference Procedures}{79}
+\contentsline {subsection}{\numberline {6.1.3}Example}{79}
+\contentsline {section}{\numberline {6.2}Regression Methods}{80}
+\contentsline {subsection}{\numberline {6.2.1}Deming's Regression}{82}
+\contentsline {subsection}{\numberline {6.2.2}Kummel's Estimates}{82}
+\contentsline {section}{\numberline {6.3}Deming Regression}{86}
+\contentsline {section}{\numberline {6.4}Errors-in-variables Regression}{86}
+\contentsline {subsection}{\numberline {6.4.1}Simple Linear Regression}{86}
+\contentsline {subsubsection}{Regression Analysis}{87}
+\contentsline {subsubsection}{The Identity Plot}{87}
+\contentsline {subsubsection}{Advantages of Regression Approaches for MCS}{88}
+\contentsline {subsubsection}{Disadvantages}{88}
+\contentsline {section}{\numberline {6.5}Errors-in-variables models}{88}
+\contentsline {section}{\numberline {6.6}Deming Regression}{88}
+\contentsline {section}{\numberline {6.7}Deming Regression}{90}
+\contentsline {subsection}{\numberline {6.7.1}Introduction}{90}
+\contentsline {subsection}{\numberline {6.7.2}Origin of Deming Regression}{90}
+\contentsline {subsection}{\numberline {6.7.3}Comparison to SLR}{90}
+\contentsline {subsection}{\numberline {6.7.4}Deming Regression for MCS}{91}
+\contentsline {subsection}{\numberline {6.7.5}Implementations}{91}
+\contentsline {subsection}{\numberline {6.7.6}Drawbacks of Deming Regression}{91}
+\contentsline {subsection}{\numberline {6.7.7}Diagnostics}{91}
+\contentsline {subsection}{\numberline {6.7.8}Single measurements}{92}
+\contentsline {subsection}{\numberline {6.7.9}Performance in the presence of outliers}{92}
+\contentsline {subsection}{\numberline {6.7.10}Weighted Deming Regression}{92}
+\contentsline {subsubsection}{Weighted Linear Regression}{92}
+\contentsline {subsection}{\numberline {6.7.11}Deming Regression : Parameters and Estimation}{93}
+\contentsline {subsubsection}{RMSE}{93}
+\contentsline {subsubsection}{Estimating the Variance ratio}{93}
+\contentsline {subsection}{\numberline {6.7.12}Using LME models to estimate the ratio (BXC) }{94}
+\contentsline {subsection}{\numberline {6.7.13}Estimating the variance ratio (Linnet)}{94}
+\contentsline {section}{\numberline {6.8}Other Regression Approaches}{95}
+\contentsline {subsection}{\numberline {6.8.1}Model I and II Regression}{95}
+\contentsline {subsection}{\numberline {6.8.2}Constant and Proportional Bias}{95}
+\contentsline {subsection}{\numberline {6.8.3}Cornbleet - Cochran }{95}
+\contentsline {section}{\numberline {6.9}Advanced Regression Methods}{96}
+\contentsline {subsection}{\numberline {6.9.1}A regression based approach based on Bland Altman Analysis}{96}
+\contentsline {subsection}{\numberline {6.9.2}Bivariate Least Squares Regression}{96}
+\contentsline {subsection}{\numberline {6.9.3}Least Products Regression}{97}
+\contentsline {section}{\numberline {6.10} Regression Based Approaches }{97}
+\contentsline {subsection}{\numberline {6.10.1}Comparison of Model II regressions}{97}
+\contentsline {subsection}{\numberline {6.10.2}Linnet - References}{98}
+\contentsline {subsection}{\numberline {6.10.3}Drawbacks}{98}
+\contentsline {chapter}{\numberline {7}Variations and Alternative Graphical Methods}{99}
+\contentsline {section}{\numberline {7.1}Dewitte et al }{100}
+\contentsline {section}{\numberline {7.2}Bartko's Ellipse}{102}
+\contentsline {section}{\numberline {7.3}Survival Agreement Plot (Luiz et al)}{105}
+\contentsline {section}{\numberline {7.4}Mountain Plot}{105}
+\contentsline {chapter}{\numberline {8}Agreement Indices}{112}
+\contentsline {section}{\numberline {8.1}Alternative Agreement Indices}{112}
+\contentsline {subsection}{\numberline {8.1.1}Prevalence of the Bland-Altman plot}{119}
+\contentsline {section}{\numberline {8.2}Bland Altman Plots In Literature}{119}
+\contentsline {chapter}{\numberline {9}Technology Acceptance Model}{121}
+\contentsline {subsection}{\numberline {9.0.1}Prevalence of the Bland-Altman plot}{121}
+\contentsline {section}{\numberline {9.1}The Technology Acceptance Model}{121}

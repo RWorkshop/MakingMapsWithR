@@ -1,0 +1,62 @@
+\contentsline {chapter}{\numberline {1}Method Comparison Studies}{4}
+\contentsline {section}{\numberline {1.1}Introduction}{4}
+\contentsline {section}{\numberline {1.2}Repeatability}{7}
+\contentsline {subsection}{\numberline {1.2.1}Repeatability and Gold Standards}{8}
+\contentsline {chapter}{\numberline {2}Review of Current Methodologies}{10}
+\contentsline {section}{\numberline {2.1}Bland-Altman Approach}{10}
+\contentsline {subsection}{\numberline {2.1.1}Bland-Altman plots}{13}
+\contentsline {subsection}{\numberline {2.1.2}Bland-Altman plots for the Grubbs data}{14}
+\contentsline {subsection}{\numberline {2.1.3}Prevalence of the Bland-Altman plot}{17}
+\contentsline {subsection}{\numberline {2.1.4}Adverse features}{18}
+\contentsline {section}{\numberline {2.2}Limits of Agreement}{23}
+\contentsline {subsection}{\numberline {2.2.1}Inferences on Bland-Altman estimates}{25}
+\contentsline {subsection}{\numberline {2.2.2}Formal definition of limits of agreement}{25}
+\contentsline {subsection}{\numberline {2.2.3}Alternative Agreement Indices}{26}
+\contentsline {section}{\numberline {2.3}Variations and Alternative Graphical Methods}{30}
+\contentsline {subsection}{\numberline {2.3.1}Variants of the Bland-Altman Plot}{31}
+\contentsline {subsubsection}{Bartko's Ellipse}{33}
+\contentsline {subsubsection}{Survival-Agreement Plot}{36}
+\contentsline {subsubsection}{Mountain Plot}{36}
+\contentsline {subsection}{\numberline {2.3.2}Replicate Measurements}{37}
+\contentsline {subsection}{\numberline {2.3.3}Prevalence of the Bland-Altman plot}{38}
+\contentsline {section}{\numberline {2.4}The Technology Acceptance Model}{38}
+\contentsline {section}{\numberline {2.5}Formal Models and Tests}{40}
+\contentsline {subsection}{\numberline {2.5.1}Morgan Pitman Testing}{42}
+\contentsline {subsection}{\numberline {2.5.2}Paired sample \emph {t} test}{42}
+\contentsline {section}{\numberline {2.6}Blackwood Bradley Model}{43}
+\contentsline {subsection}{\numberline {2.6.1}Bland-Altman correlation test}{44}
+\contentsline {subsection}{\numberline {2.6.2}Identifiability}{45}
+\contentsline {section}{\numberline {2.7}Regression Methods for Method Comparison}{46}
+\contentsline {section}{\numberline {2.8}Regression Methods (duplication)}{47}
+\contentsline {subsection}{\numberline {2.8.1}Deming Regression}{49}
+\contentsline {section}{\numberline {2.9}Other Types of Studies}{51}
+\contentsline {chapter}{\numberline {3}Linear Mixed effects Models}{54}
+\contentsline {section}{\numberline {3.1}Linear Mixed effects Models}{54}
+\contentsline {subsection}{\numberline {3.1.1}Estimation}{56}
+\contentsline {subsubsection}{Henderson's equations}{56}
+\contentsline {subsubsection}{Estimation of the fixed parameters}{57}
+\contentsline {subsubsection}{Estimation of the random effects}{58}
+\contentsline {subsubsection}{Algorithms for likelihood function optimization}{58}
+\contentsline {subsubsection}{The extended likelihood}{59}
+\contentsline {subsubsection}{The LME model as a general linear model}{60}
+\contentsline {section}{\numberline {3.2}Repeated measurements in LME models}{61}
+\contentsline {subsection}{\numberline {3.2.1}Formulation of the Response Vector}{61}
+\contentsline {subsection}{\numberline {3.2.2}Decomposition of the response covariance matrix}{62}
+\contentsline {subsection}{\numberline {3.2.3}Correlation terms}{63}
+\contentsline {section}{\numberline {3.3}Using LME for method comparison}{65}
+\contentsline {subsection}{\numberline {3.3.1}Roy's Approach}{65}
+\contentsline {subsection}{\numberline {3.3.2}Likelihood Ratio Tests}{66}
+\contentsline {subsection}{\numberline {3.3.3}Testing Procedures}{67}
+\contentsline {subsection}{\numberline {3.3.4}Correlation}{68}
+\contentsline {subsection}{\numberline {3.3.5}Variability test 1}{69}
+\contentsline {subsection}{\numberline {3.3.6}Variability test 2}{69}
+\contentsline {subsection}{\numberline {3.3.7}Variability test 3}{70}
+\contentsline {subsection}{\numberline {3.3.8}Demonstration of Roy's testing}{70}
+\contentsline {section}{\numberline {3.4}Limits of agreement in LME models}{73}
+\contentsline {subsection}{\numberline {3.4.1}Linked replicates}{74}
+\contentsline {section}{\numberline {3.5}Implementation in R}{77}
+\contentsline {chapter}{\numberline {4}Extending Current Methodologies}{81}
+\contentsline {section}{\numberline {4.1}Extension of Roy's methodology}{81}
+\contentsline {section}{\numberline {4.2}Conclusion}{82}
+\contentsline {section}{\numberline {4.3}Outline of Thesis}{83}
+\contentsline {section}{Bibliography}{83}

@@ -1,0 +1,247 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Roy's Methodology}
+\author{ } \date{ }
+
+\begin{document}
+%----------------------------------------------------------------------------------------%
+\tableofcontents
+\newpage
+\section{Roy's LME approach}
+
+\newpage
+
+
+
+The methodology uses a linear mixed effects regression fit using
+compound symmetry (CS) correlation structure on \textbf{V}.
+
+
+$\Lambda = \frac{\mbox{max}_{H_{0}}L}{\mbox{max}_{H_{1}}L}$
+
+\newpage
+
+\citet{ARoy2009} considers the problem of assessing the agreement
+between two methods with replicate observations in a doubly
+multivariate set-up using linear mixed effects models.
+
+
+\citet{ARoy2009} uses examples from \citet{BA86} to be able to
+compare both types of analysis.
+
+
+
+For the the RV-IC comparison, $\hat{D}$ is given by
+
+
+\begin{equation}
+\hat{D}= \left[ \begin{array}{cc}
+  1.6323 & 1.1427  \\
+  1.1427 & 1.4498 \\
+\end{array} \right]
+\end{equation}
+
+The estimate for the within-subject variance covariance matrix is
+given by
+\begin{equation}
+\hat{\Sigma}= \left[ \begin{array}{cc}
+  0.1072 & 0.0372  \\
+  0.0372 & 0.1379  \\
+\end{array}\right]
+\end{equation}
+The estimated overall variance covariance matrix for the the 'RV
+vs IC' comparison is given by
+\begin{equation}
+Block \Omega_{i}= \left[ \begin{array}{cc}
+  1.7396 & 1.1799  \\
+  1.1799 & 1.5877  \\
+\end{array} \right].
+\end{equation}
+
+ The power of the
+likelihood ratio test may depends on specific sample size and the
+specific number of  replications, and the author proposes
+simulation studies to examine this further.
+
+\section{Roy's LME methodology for assessing agreement}
+
+\citet{Barnhart}  describes the sources of disagreement as
+differing population means, different between-subject variances,
+different within-subject variances between two methods and poor
+correlation between measurements of two methods.
+
+
+\citet{ARoy2009}proposes the use of LME models to perform a test
+on two methods of agreement to determine whether they can be used
+interchangeably.
+
+Bivariate correlation coefficients have been shown to be of
+limited use in method comparison studies \citep{BA86}. However,
+recently correlation analysis has been developed to cope with
+repeated measurements, enhancing their potential usefulness. Roy
+incorporates the use of correlation into his methodology.
+
+
+\citet{ARoy2009} considers the problem of assessing the agreement
+between two methods with replicate observations in a doubly
+multivariate set-up using linear mixed effects models.
+
+
+\citet{ARoy2009} uses examples from \citet{BA86} to be able to
+compare both types of analysis.
+
+\citet{ARoy2009} proposes a LME based approach with Kronecker
+product covariance structure with doubly multivariate setup to
+assess the agreement between two methods. This method is designed
+such that the data may be unbalanced and with unequal numbers of
+replications for each subject.
+
+\citet{ARoy2009} considers four independent hypothesis tests.
+\begin{itemize}
+\item Testing of hypotheses of differences between the means of
+two methods\item Testing of hypotheses in between subject
+variabilities in two methods, \item Testing of hypotheses of
+differences in within-subject variability of the two methods,
+\item Testing of hypotheses in differences in overall variability
+of the two methods.
+\end{itemize}
+
+
+\section{Replicates}
+Measurements taken in quick succession by the same observer using the same instrument on the same subject can be considered true replicates. \citet{Roy2009} notes that some measurements may not be `true' replicates.
+
+Roy's methodology assumes the use of `true replicates'. However data may not be collected in this way. In such cases, the correlation matrix on the replicates may require a different structure, such as the autoregressive order one $AR(1)$ structure. However determining MLEs with such a structure would be computational intense, if possible at all.
+
+\section{Roy's methodology with single measurements}
+
+\section{Correlation indices}
+\citet{roy} remarks that PROC MIXED only gives overall correlation coefficients, but not their variances. Consequently it is not possible to carry out inferences based on all overall correlation coefficients.
+
+
+\section{Roy's examples}
+Roy provides three case studies, using data sets well known in method comparison studies, to demonstrate how the methodology should be used.
+
+
+%--------------------------------------------------------------------------Example 1a  ----  JSR Data %
+
+The first case study is the Systolic blood pressure data, taken from \citet{BA99}.
+
+
+%--------------------------------------------------------------------------Example 1b  ----  JSR Data %
+
+To complete the study, the relevant values are provided for the $R \mbox{vs} S$ comparison also.
+
+%--------------------------------------------------------------------------Example 2  ----  PEFR Data %
+
+The second data set, a comparison of two peak expiratory flow rate measurements, is referenced by \citet{BA86}.
+
+
+%--------------------------------------------------------------------------Example 3 Cardiac Ejection Fraction Data %
+The last case study is also based on a data set from  \citet{BA99}. It contains the measurements of left ventricular cardiac eject fraction, measured by impedance cartography and radionuclide ventriculography, on twelve patients.
+The number of replicated differs for each patient.
+
+The bias is shown to be $0.7040$, with a p-value of $0.0204$. The MLEa of the between-method and within-method variance-covariance matrices of methods $RV$ and $IC$ are given by
+
+\begin{equation}\hat{D}=\left(
+                                      \begin{array}{cc}
+                                        1.6323 & 1.1427 \\
+                                        1.1427 & 1.4498 \\
+                                      \end{array}
+                                    \right),
+\end{equation}
+
+
+
+\begin{equation}\hat{\Sigma}=\left(
+                                      \begin{array}{cc}
+                                        1.6323 & 1.1427 \\
+                                        1.1427 & 1.4498 \\
+                                      \end{array}
+                                    \right).
+\end{equation}
+
+\citet{roy} notes that these are the same estimate for variance as given by \citet{BA99}.
+
+
+The repeatability coefficients are determined to be $0.9080$ for the RV method and $1.0293$ for the IC method.
+
+From the estimated $\boldsymbol{\Omega_{i}}$ correlation matrix, the overall correlation coefficient is $0.7100$.
+The overall correllation coefficients between two methods RV and IC are $0.9384$ and $0.9131$ respectively.
+
+\citet{roy} concludes that is appropriate to switch between the two methods if needed.
+
+%--------------------------------------------------------------------------Example 4 Coronary Artery Calcium data%
+
+\citet{haber}
+
+\citet{roy} recommends to not switch between the two method.
+
+\section{LME}
+
+Fitting model according to Roy
+
+\newpage
+\begin{verbatim}
+Linear mixed-effects model fit by REML
+ Data: BA99
+       AIC      BIC    logLik
+  4319.707 4336.629 -2155.853
+
+Random effects:
+ Formula: ~1 | subj
+        (Intercept) Residual
+StdDev:    29.39085 12.44454
+
+Fixed effects: ob.js ~ method
+                Value Std.Error  DF  t-value p-value
+(Intercept) 127.40784  3.281757 424 38.82306       0
+
+methodS     15.61961   1.102107 424 14.17250       0
+
+ Correlation:
+        (Intr)
+methodS -0.168
+
+Standardized Within-Group Residuals:
+        Min          Q1         Med          Q3         Max
+-3.61292639 -0.42538402 -0.02467651  0.40166235  4.84280044
+
+Number of Observations: 510 Number of Groups: 85
+
+\end{verbatim}
+
+%---------------------------------------------------------------------------------------------------%
+\newpage
+\bibliography{transferbib}
+\end{document}

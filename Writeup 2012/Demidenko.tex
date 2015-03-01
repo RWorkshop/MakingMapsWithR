@@ -1,0 +1,49 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{natbib}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm, amsmath}
+%\usepackage[dvips]{graphicx}
+\bibliographystyle{chicago}
+\renewcommand{\baselinestretch}{1.8}
+% left top textwidth textheight headheight % headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+\pagenumbering{arabic}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Mixed Effects Models (Demidenko)}
+\date{\today}
+\maketitle
+\tableofcontents \setcounter{tocdepth}{2}
+
+\newpage
+\section{REML [pg 58]}
+Demidenko[pg58]
+
+\newpage
+\section{Likelihood Ratio Tests[pg 135]}
+Statistical testing of the presence of random effects.
+\newpage
+\section{Errors in Variables[pg 118]}
+\begin{itemize}
+\item[Identifiability]
+Conditions user which LME model is identifiable are set out in section 2.2. Identifiability is a necessary, but not sufficient, property for the adequacy of any statistical model.
+\item[Confidence Intervals] Construction and statistical testings on beta parameters in the LME model are based on the asymptotic covariance matrix [given as 3.9].
+    \begin{itemize}
+    \item Remark upon the association with Wald testing (Wald CIs).
+    \item Use of profile-likelihood (PL) intervals by contrast to Wald CIs in non-linear statistical models.
+    \end{itemize}
+\end{itemize}
+
+\addcontentsline{toc}{section}{Bibliography}
+
+\bibliography{2012bib}
+
+\end{document} 

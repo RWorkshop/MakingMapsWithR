@@ -1,0 +1,108 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Research notes: linear mixed effects models}
+\author{ } \date{ }
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{LME Estimation and Algorithms}
+
+\tableofcontents \setcounter{tocdepth}{2}
+
+%------------------------------------------------%
+\newpage
+
+\section{Algorithms}
+Maximum likelihood estimation is a method of obtaining estimates
+of unknown parameters by optimizing a likelihood function. The ML
+parameter estimates are the values of the argument that maximise
+the likelihood function, i.e. the estimates that make the observed
+values of the dependent variable most likely, given the
+distributional assumptions
+
+The most common iterative algorithms used for the optimization
+problem in the context of LMEs are the EM algoritm, fisher scoring
+algorithm and NR algorithm, which [cite:West] commends as the
+preferred method.
+
+A mixed model is an extension of the general linear models that
+can specify additional random effects terms.
+
+Parameter of the mixed model can be estimated using either ML or
+REML, while the AIC and the BIC can be used as measures of
+"goodness of fit" for particular models, where smaller values are
+considered preferable.
+
+%--------------------------------------------------------------------%
+
+\newpage
+
+\subsection{ML v REML}
+(\textbf{\emph{Wikipedia}})The restricted (or residual, or reduced) maximum likelihood (REML) approach is a particular form of maximum likelihood estimation which does not base estimates on a maximum likelihood fit of all the information, but instead uses a likelihood function calculated from a transformed set of data, so that nuisance parameters have no effect.
+
+In contrast to the earlier maximum likelihood estimation, REML can produce unbiased estimates of variance and covariance parameters.
+
+%-----------------------------------------------------------------------------------------%
+\newpage
+\section{ML procedures for LME}
+
+The maximum likelihood procedure of Hartley and Rao yields
+simultaneous estimates for both the fixed effects and the random
+effect, by maximising the likelihood of $\boldsymbol{y}$ with
+respect to each element of $\boldsymbol{\beta}$ and
+$\boldsymbol{b}$.
+
+%-----------------------------------------------------------------------------------------%
+\newpage
+\section{Estimation of random effects}
+
+Estimation of random effects for LME models in the NLME package is accomplished through use
+of both EM (Expectation-Maximization) algorithms and Newton-Raphson algorithms.
+\begin{itemize}
+\item EM iterations bring estimates of the parameters into the region of the optimum very quickly, but
+convergence to the optimum is slow when near the optimum.
+\item Newton-Raphson iterations are computationally intensive and can be unstable when far from the
+optimum. However, close to the optimum they converge quickly.
+\item The LME function implements a hybrid approach, using 25 EM iterations to quickly get near the
+optimum, then switching to Newton-Raphson iterations to quickly converge to the optimum. \item If
+convergence problems occur, the ``control” argument in LME can be used to change the way the
+model arrives at the optimum.
+\end{itemize}
+
+
+%------------------------------------------------%
+\newpage
+\addcontentsline{toc}{section}{Bibliography}
+\bibliography{2012bib}
+\end{document} 

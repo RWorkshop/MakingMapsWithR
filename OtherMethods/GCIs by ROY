@@ -1,0 +1,17 @@
+
+%-------------------------------------------------------------------------%
+% ROY
+% http://www.sciencedirect.com/science/article/pii/S0047259X08002716
+
+Generalized confidence intervals provide confidence intervals for complicated parametric functions 
+in many common practical problems. They do not have exact frequentist coverage in general, but often
+provide coverage close to the nominal value and have the correct asymptotic coverage. 
+
+However, in many applications generalized confidence intervals do not have satisfactory finite sample 
+performance. We derive expansions of coverage probabilities of one-sided generalized confidence intervals 
+and use the expansions to explain the nonuniform performance of the generalized intervals. 
+
+We then show how to use these expansions to obtain improved coverage by suitable calibration.
+The benefits of the proposed modification are illustrated via several examples.
+
+%-------------------------------------------------------------------------%

@@ -1,0 +1,9 @@
+A replicate measurement case for the conversion problem may be investigated by using a data simulated on the
+
+here we add make three copies of the both data sets, and add a small amount of noise to a numeric vector ( colloquially known as 
+"jitter" to each)
+
+jitter(lewis)
+
+
+

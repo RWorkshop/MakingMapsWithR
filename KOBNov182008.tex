@@ -1,0 +1,149 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{amsfont}
+\usepackage{graphicx}
+\begin{document}
+
+Kevin O'Brien 18 November 2008
+
+\section*{Multiple Comparison Procedures.}
+
+
+
+
+\subsection*{Classification of Hypotheses }
+
+\begin{tabular}{ c | c | c | c}
+\hline
+  & declared non-significant&  declared significant & Total   \\\hline
+
+  true null hypotheses & U & V & m.o \\ \hline
+
+  non-true null hypotheses & T & S &  m-m.o \\ \hline
+
+  Total & m-R & R & m \\\hline
+
+\hline\end{tabular}
+\subsubsection*{Legend }
+ \begin{list}{}
+ \item m.0 is the number of true null hypotheses
+ \item m - m.0 is the number of false null hypotheses
+ \item V is the number of Type I errors (hypotheses declared significant
+when they are actually from the null distribution).
+ \item T is the number of Type II errors (hypotheses declared not significant when
+they are actually from the alternative distribution).
+ \item  R is an observable random variable.
+ \item  S, T , U, and V are unobservable random variables.
+ \begin{list}{}
+ \item U is the number of true negatives
+ \item V is the number of false positives
+ \item T is the number of false negatives
+ \item S is the number of true positives
+ \end{list}.
+
+  \end{list}.
+
+\subsection*{Key Definitions of Hypotheses }
+\subsubsection*{Familywise Error Rate(FWER) }
+Familywise error rate (FWER) is the probability of making one or
+more type I errors among all the hypotheses when performing
+multiple pairwise tests. Further to the classification table
+previously we define it as follows:
+
+\[ FWER = 1- P(V = 0 ) \]
+
+\subsubsection*{False Discovery Rate(FDR) }
+The False Discovery Rate (FDR) of a set of hypotheses is the
+expected proportions of false positives in the set of hypotheses.
+(Controls based on other methods are based on controlling the
+chance of any false positives). FDR is more sensitive than
+previous approaches on account of the fact it takes a more lenient
+approach to false positives. Benjamini Hochberg define a variable
+Q which is the proportion of errors committed by falsely rejected
+null hypotheses, and furthermore they define the FDR as the
+expected value of Q.
+\[ FDR = E(Q)= E(V/R ) \]
+
+
+\subsection*{Difficulties with Classical MCPs }
+Benjamini and Hochberg(1995) Set out several flaws with the
+classical MCP approaches. One in particular is that often control
+of the FWER is not particularly needed. Another issue is that
+classical procedures that control the FWER in the strong sense, at
+levels convention to single-comparsion, tend to have substantially
+less power than procedures based on each comparison individually,
+at the same level of significance.
+
+
+\subsection*{Some Approaches in Literature}
+
+We look at Multiple comparison procedures to ascertain whether or
+not it is possible to examine the methodologies described in the
+relevant academic papers.
+
+
+ \begin{list}{}
+ \item Hochberg (1998)
+ \item Simes (1986)
+ \item Hommel (1988)
+ \end{list}
+
+Benjamini Hochberg (1995) state that these procedures overcome the
+difficulties mentioned previously, while maintaining use of FWER
+control. This paper proposes the FDR as an alternative to the
+FWER.
+
+\subsection*{Bonferroni Procedure }
+In several of the papers, the Bonferroni correction is cited as
+'very conservative'.It is also referred to as the classical
+approach.Benjamini remarks  hat the Bonferroni procedure requires
+control over the FWER in the strong sense, a conservative type I
+error rate control against any configuration of the hypotheses
+tested.
+
+
+\subsection*{Simes(1986) }
+Simes proposed a modified Bonferroni procedure for a test of an
+overall hypothesis, which a composite of several component
+hypotheses.He bases his method on ordered p-values of individual
+tests (P(1)=...=P(N)). \\Following the closure principle, however,
+it may be used as a step-down procedure as a multiple testing
+procedureIt is a less conservative procedure than the classical
+Bonferroni procedure. It is suitable for testing multiple
+hypotheses testing where the hypotheses are strongly correlated.
+it is comparatively simpler to apply.
+
+\subsection*{Hommel(1988) - Multiple Test Procedure}
+Further to Simes (1986), Hommel proposes a multiple test procedure
+based on the individual hypotheses. He remarks that it is not
+strictly less powerful than Holm's procedure , and that in many
+cases it is more powerful.
+
+\subsection*{Shaffer(1986)}
+Hommel remarks that Shaffer (1976) makes improvements on Holms
+General procedure.
+
+\subsection*{Principle of Closed Test Procedures}.
+This principles , which was postulated by Marcus et al (1976)
+
+\subsection*{Coherence}
+Coherence is an logical property for multiple tests postulated by
+Gabriel (1969). It states that if a hypothesis is retained, all of
+its implications also have to be retained.
+
+\section*{Other Matters.}
+\subsection*{Bayesian computation with R - Jim Alberts}
+Further to your study group proposal , I have begun working on the
+Alberts book , concentrating on the first five chapter.
+\subsection*{Statistical events in 2009}
+further to the conversation in the Castletroy hotel, I have made
+some provisional arrangements for the conference in Vancouver in
+May 2009. Is there any other events you suggest? I am considering
+going to the R users Conference in Rennes , France in July 2009.
+
+\subsection*{Literary Review}
+Would you suggest I also start writing a formal literary review.
+
+
+\end{document}

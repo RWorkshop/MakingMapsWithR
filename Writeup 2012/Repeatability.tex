@@ -1,0 +1,50 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{natbib}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm, amsmath}
+%\usepackage[dvips]{graphicx}
+\bibliographystyle{chicago}
+\renewcommand{\baselinestretch}{1.8}
+% left top textwidth textheight headheight % headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+\pagenumbering{arabic}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Repeatability}
+\date{\today}
+\maketitle
+\section{Repeatability}
+A measurement method can be said to have a good level of repeatability if there is consistency in repeated measurements on the same subject using that method. Conversely, a method has poor repeatability if there is considerable variation in repeated measurements.
+
+This is relevant to method comparison studies because the `repeatabilities' of the two methods of measurement affects the level of agreement of those methods. Poor repeatability in one method would result in poor agreement. More so if there is poor repeatability in both methods.
+
+\subsection{Relevance of Repeatability} Repeatability of two method limit the amount of agreement that is possible.If one method has poor repeatability, the agreement is bound to be poor. If both methods have poor repeatability, agreement is even worse.
+
+The British standards Insitute [$1979$] define a coefficient of
+repeatability  as \emph{the value below which the difference
+between two single test results....may be expected to lie within a
+specified probability.} Unless otherwise instructed, the
+probability is assumed to be $95\%$.
+
+The Bland Altman method offers the analyst a measurement on the repeatability of the methods. The \emph{Coefficient of Repeatability} (CR) can be calculated as 1.96 (or 2) times the standard deviations of the differences between the two measurements (d2 and d1).
+
+
+\citet{BA99} strongly recommends the simultaneous estimation of repeatability and agreement be collecting replicated data. \citet{ARoy2009} notes the lack of convenience in such calculations.
+
+
+If one method has poor repeatability in the sense of considerable variability, then agreement between two methods is bound to be poor \citep{ARoy2009}.
+
+It is important to report repeatability when assessing measurement, because it measures the purest form of random error not influenced by other factors \citep{Barnhart}.
+\addcontentsline{toc}{section}{Bibliography}
+
+\bibliography{2012bib}
+\end{document} 

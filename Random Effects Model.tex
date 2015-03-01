@@ -1,0 +1,112 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{natbib}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{amsbsy}
+\usepackage{amsthm, amsmath}
+%\usepackage[dvips]{graphicx}
+\bibliographystyle{chicago}
+\renewcommand{\baselinestretch}{1.4}
+
+% left top textwidth textheight headheight % headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\pagenumbering{arabic}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Roy's Candidate models}
+The original Bland Altman Method was developed for two sets of
+measurements done on one occasion (i.e. independent data), and so
+this approach is not suitable for repeated measures data. However,
+as a naïve analysis, it may be used to explore the data because of
+the simplicity of the method. Myles states that such misuse of the
+standards Bland Altman method is widespread in Anaesthetic and
+critical care literature.
+\\
+\\
+Bland and Altman have provided a modification for analysing
+repeated measures under stable or chaninging conditions, where
+repeated data is collected over a period of time. Myers proposes
+an alternative Random effects model for this purpose.
+\\
+\\
+ with repeated measures data, we can
+calculate the mean of the repeated measurements by each method on
+each individuals. \emph{ The pairs of means can then be used to
+compare the two methods based on the 95\% limits of agreement for
+the difference of means. The bias between the two methods will not
+be affected by averaging the repeated measurements.}.However the
+variation of the differences will be underestimated by this
+practice because the measurement error is, to some extent,
+removed. Some advanced statistical calculations are needed to take
+into account these measurement errors. \emph{Random effects models
+can be used to estimate the within-subject variation after
+accounting for other observed and unobserved variations, in which
+each subject has a different intercept and slope over the
+observation period .On the basis of the within-subject variance
+estimated by the random effects model, we can then create an
+appropriate Bland Altman Plot.}The sequence or the time of the
+measurement over the observation period can be taken as a random
+effect.
+\section{Random effects Model} \citet{Myles} proposes the use of
+Random effects models to address the issue of repeated
+measurement. Myles proposes a formulation of the Bland–Altman
+plot, using the within-subject variance estimated by the random
+effects model, with the time of the measurement taken as a random
+effect. He states that \emph{random effects models account for the
+dependent nature of the data, and additional explanatory
+variables, to provide reliable estimates of agreement in this
+setting.}
+\\
+Agreement between methods is reflected by the between-subject
+variation.The Random Effects Model takes this into account before
+calculating the within-subject standard deviation.
+\subsection{Myers Random Effects Model} The presentation of the
+95\% limits of agreement is for visual judgement of how well two
+methods of measurement agree. The smaller the range between the
+two, the better the agreement is The question of small is small is
+a question of clinical judgement
+\\
+\\
+Repeated measurements for each subjects are often used in clinical
+research.
+
+\subsection{Random Effects Modelling}
+Random effects models are used to examine the within-subject
+variation after adjusting for known and unknown variables, in
+which each subject has a different intercept and slope over a time
+period period.
+\\
+\\
+\citet{Myles} remarks that the random effects model is an
+extension of the analysis of variance method, accounting for more
+covariates.
+\\
+\\
+A random effect (in Myles's case, time of measurement) is chosen
+to reflect the different intercept and slope for each subject with
+respect to their change of measurements over the time period.
+\\
+\\
+In Myles's methodology, the standard deviation of difference
+between the means of the repeated measurements can be calculated
+based on the within-subject standard deviation estimates.
+
+A random effects model (also variance components model)is a type
+of hierarchical linear model. Hierarchical linear modelling (HLM)
+is a more advanced form of simple linear regression and multiple
+linear regression. HLM is appropriate for use with nested
+data.\\Faraway comments that the random effects approach is
+\emph{more ambitious than the LME model in that it attempts to say
+something about the wider population beyond the particular
+sample}.
+
+
+\end{document} 

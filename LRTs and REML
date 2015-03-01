@@ -1,0 +1,66 @@
+Likelihood Ratio Tests
+$L= - 2ln$ is approximately distributed as 2 under $H_0$ for large sample size and under the normality assumption.
+
+The power of the likelihood ratio test may depends on specific sample size and the specific number of replications, and [Roy 2009] proposes simulation studies to examine this further.
+
+%--------------------------------------------------%
+\section{REML}
+
+In statistics, the restricted (or residual, or reduced) maximum likelihood (REML) approach is a particular form of maximum likelihood estimation which does not base estimates on a maximum likelihood fit of all the information, but instead uses a likelihood function calculated from a transformed set of data, so that nuisance parameters have no effect.[1]
+
+In the case of variance component estimation, the original data set is replaced by a set of contrasts calculated from the data, and the likelihood function is calculated from the probability distribution of these contrasts, according to the model for the complete data set. In particular, REML is used as a method for fitting linear mixed models. In contrast to the earlier maximum likelihood estimation, REML can produce unbiased estimates of variance and covariance parameters.[2]
+
+%--------------------------------------------------%
+
+% http://www.stats.ox.ac.uk/~ripley/LME4.pdf
+
+REML estimates minimize
+
+\[ (Y-X\beta)^{T}V^{-1}(\omega)(Y-X\beta) + \mbox{log}|V(\omega)|
++ \mbox{log}|X^{T}V^{-1}(\omega)X| \]
+
+The REML estimator of $\beta$ is GLS.
+
+%---------------------------------------------------%
+REML fit criterion is the marginal likelihood, integrating $\beta$
+
+%---------------------------------------------------%
+
+\section{Best linear unbiased predictions}
+In an LME it is not clear what ﬁtted values and hence residuals are.
+Our best prediction for subject i is not given by the mean relationship. We need to specify just what is
+common with an example we have already seen.
+
+BLUPs replace the random effects b by their conditional means $\hat{b}$ given the data, and then make
+predictions using those values,
+\[ \hat{Y} = X\hat{\beta}+ Z\hat{b}\]
+%--------------------------------------------------%
+\subsection{Estimation Methods}
+Nested LME models, fitted by ML estimation, can be compared using the likelihood ratio test [Lehmann (1986)].
+Models fitted using REML estimation can also be compared, but only if both were fitted using REML, and both have the same fixed effects specifications.
+
+Likelihood ratio tests are generally used to test the significance of terms in the random effects structure.
+%--------------------------------------------------%
+\subsection{Information Criteria}
+Additionally nested models may be compared by using the Akaike Information Criterion,(AIC) and the Bayesian Information Criterion (BIC).
+
+When comparing the respective scores for nested models, the model with the smaller score is considered to be the preferable model.
+ML / REML [Morrell 1998]
+%--------------------------------------------------------------------------------%
+The variance components in the LME model may be estimated by ML or REML.
+Maximum Likelihood estimates do not take into account the estimation of fixed effects and so
+are biased downwards.
+REML estimates accounts for the presence of these nuisance parameters by maximising the linearly independent error contrasts to obtain more unbiased estimates.
+Treatment of items as fixed effects
+
+[Pinheiro Bates 2000] addresses the issue of treating items as fixed effects. Such a specification is useful only for the specific sample of items, rather than the population of items, where the interest would naturally lie.
+
+[Pinheiro Bates 2000] advises the specification of random effects to correspond to items; treating the item effects as random deviations from the population mean.
+
+Indeed [Roy 2009] follows this approach.
+%----------------------------------------------------------------------------------%
+\subsection{Grubb’s One Way Classification Model }
+Carstensen develops a model that accords with a well-established method comparison methodology, that of Grubbs’ 1946 paper.
+
+
+

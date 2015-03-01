@@ -1,0 +1,527 @@
+
+\documentclass[12pt, a4paper]{report}
+\usepackage{natbib}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{amsbsy}
+\usepackage{amsthm, amsmath}
+%\usepackage[dvips]{graphicx}
+\bibliographystyle{chicago}
+\renewcommand{\baselinestretch}{1.8}
+
+% left top textwidth textheight headheight % headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\pagenumbering{arabic}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Transfer Report}
+\date{\today}
+\maketitle
+
+\tableofcontents \setcounter{tocdepth}{2}
+
+\newpage
+\chapter{Introduction}
+
+\section{Introduction}
+
+\chapter{Proposal of Research}
+
+\section{The Linear Mixed Effects Model}
+The linear mixed effects model is given by
+\begin{equation}
+Y = X\beta + Zu + \epsilon
+\end{equation}
+
+
+\textbf{Y} is the vector of $n$ observations, with dimension $n
+\times 1$. \textbf{b} is a vector of fixed $p$ effects, and has
+dimension $p \times 1$. It is composed of coefficients, with the
+first element being the population mean.  \textbf{X} is known as
+the design `matrix', model matrix for fixed effects, and comprises
+$0$s or $1$s, depending on whether the relevant fixed effects have
+any effect on the observation is question. \textbf{X} has
+dimension $n \times p$. \textbf{e} is the vector of residuals with
+dimension $n \times 1$.
+
+The random effects models can be specified similarly. \textbf{Z}
+is known as the `model matrix for random effects', and also
+comprises $0$s or $1$s. It has dimension $n \times q$. \textbf{u
+}is a vector of random $q$ effects, and has dimension $q \times
+1$.
+
+
+% \subsection{Formulation of the Variance Matrix V}
+\textbf{V} , the variance matrix of \textbf{Y}, can be expressed
+as follows;
+\begin{eqnarray}
+\textbf{V}= var ( \textbf{Xb} + \textbf{Zu} + \textbf{e})\\
+\textbf{V}= var ( \textbf{Xb} ) + var (\textbf{Zu}) +
+var(\textbf{e}))
+\end{eqnarray}
+
+$\mbox{var}(\textbf{Xb})$ is known to be zero. The variance of the
+random effects $\mbox{var}(\textbf{Zu})$ can be written as
+$Z\mbox{var}(\textbf{u})Z^{T}$.
+
+By letting var$(u) = G$ (i.e $\textbf{u} ~ N(0,\textbf{G})$), this
+becomes $ZGZ^{T}$. This specifies the covariance due to random
+effects. The residual covariance matrix $var(e)$ is denoted as
+$R$, ($\textbf{e} ~ N(0,\textbf{R})$). Residual are uncorrelated,
+hence \textbf{R} is equivalent to $\sigma^{2}$\textbf{I}, where
+\textbf{I} is the identity matrix. The variance matrix \textbf{V}
+can therefore be written as;
+
+\begin{equation}
+\textbf{V}  = ZGZ^{T} + \textbf{R}
+\end{equation}
+
+%\subsection{Estimators and Predictors}
+
+The best linear unbiased predictor (BLUP) is used to estimating
+random effects, i.e to derive \textbf{u}. The best linear unbiased
+estimator (BLUE) is used to estimate the fixed effects,
+\textbf{b}. They were formulated in a paper by \cite{Henderson59},
+which provides the derivations of both. Inferences about fixed
+effects have come to be called `estimates', whereas inferences
+about random effects have come be called `predictions`. hence the
+naming of BLUP is to reinforce distinction between the two , but
+it is essentially the same principal involved in both cases
+\citep{Robinson}. The BLUE of \textbf{b}, and the BLUP of
+\textbf{u} can be shown to be;
+
+\begin{equation}
+\hat{b} = (X^{T}V^{-1}X)^{-1}X^{T}V^{-1}y
+\end{equation}
+\begin{equation}
+\hat{u} = GZ^{T}V^{-1}(y-X\hat{b})
+\end{equation}
+
+The practical application of both expressions requires that the
+variance components be known. An estimate for the variance
+components must be derived to  either maximum likelihood (ML) or
+more commonly restricted maximum likelihood (REML).
+
+Importantly calculations based on the above formulae require the
+calculation of the inverse of \textbf{V}. In simple examples
+$V^{-1}$ is a straightforward calculation, but with higher
+dimensions it becomes a very complex calculation.
+
+\section{LME models in method comparison studies}
+%With the greater computing power available for scientific
+%analysis, it is inevitable that complex models such as linear
+%mixed effects models should be applied to method comparison
+%studies.
+
+Linear mixed effects (LME) models can facilitate greater
+understanding of the potential causes of bias and differences in
+precision between two sets of measurement. \citet{LaiShiao} views
+the uses of linear mixed effects models as an expansion on the
+Bland-Altman methodology, rather than as a replacement.
+\citet{BXC2008} remarks that modern statistical computation, such
+as that used for LME models, greatly improve the efficiency of
+calculation compared to previous `by-hand' methods. In this
+chapter various LME approaches to method comparison studies shall
+be examined.
+
+\newpage
+
+\section{Roy's LME methodology for assessing agreement}
+
+\citet{ARoy2009} proposes the use of LME models to perform a test
+on two methods of agreement to determine whether they can be used
+interchangeably.
+
+Bivariate correlation coefficients have been shown to be of
+limited use in method comparison studies \citep{BA86}. However,
+recently correlation analysis has been developed to cope with
+repeated measurements, enhancing their potential usefulness. Roy
+incorporates the use of correlation into his methodology.
+
+Roy's method considers two methods to be in agreement if three
+conditions are met.
+
+\begin{itemize}
+\item no significant bias, i.e. the difference between the two
+mean readings is not "statistically significant",
+
+\item high overall correlation coefficient,
+
+\item the agreement between the two methods by testing their
+repeatability coefficients.
+
+\end{itemize}
+
+The methodology uses a linear mixed effects regression fit using
+compound symmetry (CS) correlation structure on \textbf{V}.
+
+
+$\Lambda = \frac{\mbox{max}_{H_{0}}L}{\mbox{max}_{H_{1}}L}$
+
+\newpage
+
+\citet{ARoy2009} considers the problem of assessing the agreement
+between two methods with replicate observations in a doubly
+multivariate set-up using linear mixed effects models.
+
+\citet{ARoy2009} uses examples from \citet{BA86} to be able to
+compare both types of analysis.
+
+\citet{ARoy2009} proposes a LME based approach with Kronecker
+product covariance structure with doubly multivariate setup to
+assess the agreement between two methods. This method is designed
+such that the data may be unbalanced and with unequal numbers of
+replications for each subject.
+
+The maximum likelihood estimate of the between-subject variance
+covariance matrix of two methods is given as $D$. The estimate for
+the within-subject variance covariance matrix is $\hat{\Sigma}$.
+The estimated overall variance covariance matrix `Block
+$\Omega_{i}$' is the addition of $\hat{D}$ and $\hat{\Sigma}$.
+
+
+\begin{equation}
+\mbox{Block  }\Omega_{i} = \hat{D} + \hat{\Sigma}
+\end{equation}
+
+For the the RV-IC comparison, $\hat{D}$ is given by
+
+
+\begin{equation}
+\hat{D}= \left[ \begin{array}{cc}
+  1.6323 & 1.1427  \\
+  1.1427 & 1.4498 \\
+\end{array} \right]
+\end{equation}
+
+The estimate for the within-subject variance covariance matrix is
+given by
+\begin{equation}
+\hat{\Sigma}= \left[ \begin{array}{cc}
+  0.1072 & 0.0372  \\
+  0.0372 & 0.1379  \\
+\end{array}\right]
+\end{equation}
+The estimated overall variance covariance matrix for the the 'RV
+vs IC' comparison is given by
+\begin{equation}
+Block \Omega_{i}= \left[ \begin{array}{cc}
+  1.7396 & 1.1799  \\
+  1.1799 & 1.5877  \\
+\end{array} \right].
+\end{equation}
+
+ The power of the
+likelihood ratio test may depends on specific sample size and the
+specific number of  replications, and the author proposes
+simulation studies to examine this further.
+
+
+% \begin{equation}
+% data here
+% \end{equation}
+
+\newpage
+\section{Lai Shiao}
+\citet{LaiShiao} use mixed models to determine the factors that
+affect the difference of two methods of measurement using the
+conventional formulation of linear mixed effects models.
+
+If the parameter \textbf{b}, and the variance components are not
+significantly different from zero, the conclusion that there is no
+inter-method bias can be drawn. If the fixed effects component
+contains only the intercept, and a simple correlation coefficient
+is used, then the estimate of the intercept in the model is the
+inter-method bias. Conversely the estimates for the fixed effects
+factors can advise the respective influences each factor has on
+the differences. It is possible to pre-specify different
+correlation structures of the variance components \textbf{G} and
+\textbf{R}.
+
+
+Oxygen saturation is one of the most frequently measured variables
+in clinical nursing studies. `Fractional saturation' ($HbO_{2}$)
+is considered to be the gold standard method of measurement, with
+`functional saturation' ($SO_{2}$) being an alternative method.
+The method of examining the causes of differences between these
+two methods is applied to a clinical study conducted by
+\citet{Shiao}. This experiment was conducted by 8 lab
+practitioners on blood samples, with varying levels of
+haemoglobin, from two donors. The samples have been in storage for
+varying periods ( described by the variable `Bloodage') and are
+categorized according to haemoglobin percentages(i.e
+$0\%$,$20\%$,$40\%$,$60\%$,$80\%$,$100\%$). There are 625
+observations in all.
+
+\citet{LaiShiao} fits two models on this data, with the lab
+technicians and the replicate measurements as the random effects
+in both models. The first model uses haemoglobin level as a fixed
+effects component. For the second model, blood age is added as a
+second fixed factor.
+
+\subsubsection{Single fixed effect} The first model fitted by \citet{LaiShiao} takes the
+blood level as the sole fixed effect to be analyzed. The following
+coefficient estimates are estimated by `Proc Mixed';
+\begin{eqnarray}
+\mbox{fixed effects :   } 2.5056 - 0.0263\mbox{Fhbperct}_{ijtl} \\
+(\mbox{p-values :   } = 0.0054, <0.0001, <0.0001)\nonumber\\\nonumber\\
+\mbox{random effects :   } u(\sigma^{2}=3.1826) + e_{ijtl}
+(\sigma^{2}_{e}=0.1525, \rho= 0.6978) \nonumber\\
+(\mbox{p-values :   } = 0.8113, <0.0001, <0.0001)\nonumber
+\end{eqnarray}
+
+With the intercept estimate being both non-zero and statistically
+significant ($p=0.0054$), this models supports the presence
+inter-method bias is $2.5\%$ in favour of $SO_{2}$. Also, the
+negative value of the haemoglobin level coefficient indicate that
+differences will decrease by $0.0263\%$ for every percentage
+increase in the haemoglobin .
+
+In the random effects estimates, the variance due to the
+practitioners is $3.1826$, indicating that there is a significant
+variation due to technicians ($p=0.0311$) affecting the
+differences. The variance for the estimates is given as $0.1525$,
+($p<0.0001$).
+
+\subsubsection{Two fixed effects}
+Blood age is added as a second fixed factor to the model,
+whereupon new estimates are calculated;
+\begin{eqnarray}
+\mbox{fixed effects :   } -0.2866 + 0.1072 \mbox{Bloodage}_{ijtl}
+- 0.0264\mbox{Fhbperct}_{ijtl}\nonumber\\
+( \mbox{p-values :   } = 0.8113, <0.0001, <0.0001)\nonumber\\\nonumber\\
+\mbox{random effects :   } u(\sigma^{2}=10.2346) + e_{ijtl}
+(\sigma^{2}_{e}=0.0920, \rho= 0.5577) \nonumber\\
+(\mbox{p-values :   } = 0.0446, <0.0001, <0.0001)
+\end{eqnarray}
+
+
+With this extra fixed effect added to the model, the intercept
+term is no longer statistically significant. Therefore, with the
+presence of the second fixed factor, the model is no longer
+supporting the presence of inter-method bias. Furthermore, the
+second coefficient indicates that the blood age of the observation
+has a significant bearing on the size of the difference between
+both methods ($p <0.0001$). Longer storage times for blood will
+lead to higher levels of particular blood factors such as MetHb
+and HbCO (due to the breakdown and oxidisation of the
+haemoglobin). Increased levels of MetHb and HbCO are concluded to
+be the cause of the differences. The coefficient for the
+haemoglobin level doesn't differ greatly from the single fixed
+factor model, and has a much smaller effect on the differences.
+The random effects estimates also indicate significant variation
+for the various technicians; $10.2346$ with $p=0.0446$.
+
+\citet{LaiShiao} demonstrates how that linear mixed effects models
+can be used to provide greater insight into the cause of the
+differences. Naturally the addition of further factors to the
+model provides for more insight into the behavior of the data.
+
+
+
+\newpage
+\section{Carstensen's Mixed Models}
+
+\citet{BXC2004} proposes linear mixed effects models for deriving
+conversion calculations similar to Deming's regression, and for
+estimating variance components for measurements by different
+methods. The following model ( in the authors own notation) is
+formulated as follows, where $y_{mir}$ is the $r$th replicate
+measurement on subject $i$ with method $m$.
+
+\begin{equation}
+y_{mir}  = \alpha_{m} + \beta_{m}\mu_{i} + c_{mi} + e_{mir} \qquad
+( e_{mi} \sim N(0,\sigma^{2}_{m}), c_{mi} \sim N(0,\tau^{2}_{m}))
+\end{equation}
+The intercept term $\alpha$ and the $\beta_{m}\mu_{i}$ term follow
+from \citet{DunnSEME}, expressing constant and proportional bias
+respectively , in the presence of a real value $\mu_{i}.$
+ $c_{mi}$ is a interaction term to account for replicate, and
+ $e_{mir}$ is the residual associated with each observation.
+Since variances are specific to each method, this model can be
+fitted separately for each method.
+
+The above formulation doesn't require the data set to be balanced.
+However, it does require a sufficient large number of replicates
+and measurements to overcome the problem of identifiability. The
+import of which is that more than two methods of measurement may
+be required to carry out the analysis. There is also the
+assumptions that observations of measurements by particular
+methods are exchangeable within subjects. (Exchangeability means
+that future samples from a population behaves like earlier
+samples).
+
+%\citet{BXC2004} describes the above model as a `functional model',
+%similar to models described by \citet{Kimura}, but without any
+%assumptions on variance ratios. A functional model is . An
+%alternative to functional models is structural modelling
+
+\citet{BXC2004} uses the above formula to predict observations for
+a specific individual $i$ by method $m$;
+
+\begin{equation}BLUP_{mir} = \hat{\alpha_{m}} + \hat{\beta_{m}}\mu_{i} +
+c_{mi} \end{equation}. Under the assumption that the $\mu$s are
+the true item values, this would be sufficient to estimate
+parameters. When that assumption doesn't hold, regression
+techniques (known as updating techniques) can be used additionally
+to determine the estimates. The assumption of exchangeability can
+be unrealistic in certain situations. \citet{BXC2004} provides an
+amended formulation which includes an extra interaction term ($
+d_{mr} \sim N(0,\omega^{2}_{m}$)to account for this.
+
+
+\newpage
+\citet{BXC2008} sets out a methodology of computing the limits of
+agreement based upon variance component estimates derived using
+linear mixed effects models. Measures of repeatability, a
+characteristic of individual methods of measurements, are also
+derived using this method.
+
+\citet{BXC2004} also advocates the use of linear mixed models in
+the study of method comparisons. The model is constructed to
+describe the relationship between a value of measurement and its
+real value. The non-replicate case is considered first, as it is
+the context of the Bland-Altman plots. This model assumes that
+inter-method bias is the only difference between the two methods.
+A measurement $y_{mi}$ by method $m$ on individual $i$ is
+formulated as follows;
+\begin{equation}
+y_{mi}  = \alpha_{m} + \mu_{i} + e_{mi} \qquad ( e_{mi} \sim
+N(0,\sigma^{2}_{m}))
+\end{equation}
+The differences are expressed as $d_{i} = y_{1i} - y_{2i}$ For the
+replicate case, an interaction term $c$ is added to the model,
+with an associated variance component. All the random effects are
+assumed independent, and that all replicate measurements are
+assumed to be exchangeable within each method.
+
+\begin{equation}
+y_{mir}  = \alpha_{m} + \mu_{i} + c_{mi} + e_{mir} \qquad ( e_{mi}
+\sim N(0,\sigma^{2}_{m}), c_{mi} \sim N(0,\tau^{2}_{m}))
+\end{equation}
+
+\citet{BXC2008} proposes a methodology to calculate prediction
+intervals in the presence of replicate measurements, overcoming
+problems associated with Bland-Altman methodology in this regard.
+It is not possible to estimate the interaction variance components
+$\tau^{2}_{1}$ and $\tau^{2}_{2}$ separately. Therefore it must be
+assumed that they are equal. The variance of the difference can be
+estimated as follows:
+\begin{equation}
+var(y_{1j}-y_{2j})
+\end{equation}
+
+
+\section{Case Deletion Diagnostics for LME models}
+
+\citet{HaslettDillane} remark that linear mixed effects models
+didn't experience a corresponding growth in the use of deletion
+diagnostics, adding that \citet{McCullSearle} makes no mention of
+diagnostics whatsoever.
+
+\citet{Christensen} describes three propositions that are required
+for efficient case-deletion in LME models. The first proposition
+decribes how to efficiently update $V$ when the $i$th element is
+deleted.
+\begin{equation}
+V_{[i]}^{-1} = \Lambda_{[i]} - \frac{\lambda
+\lambda\prime}{\nu^{}ii}
+\end{equation}
+
+
+The second of christensen's propostions is the following set of
+equations, which are variants of the Sherman Wood bury updating
+formula.
+\begin{eqnarray}
+X'_{[i]}V_{[i]}^{-1}X_{[i]} &=& X' V^{-1}X -
+\frac{\hat{x}_{i}\hat{x}'_{i}}{s_{i}}\\
+(X'_{[i]}V_{[i]}^{-1}X_{[i]})^{-1} &=& (X' V^{-1}X)^{-1} +
+\frac{(X' V^{-1}X)^{-1}\hat{x}_{i}\hat{x}' _{i}
+(X' V^{-1}X)^{-1}}{s_{i}- \bar{h}_{i}}\\
+X'_{[i]}V_{[i]}^{-1}Y_{[i]} &=& X\prime V^{-1}Y -
+\frac{\hat{x}_{i}\hat{y}' _{i}}{s_{i}}
+\end{eqnarray}
+
+
+\citet{schabenberger} examines the use and implementation of
+influence measures in LME models.
+
+Influence is understood to be the ability of a single or multiple
+data points, through their presences or absence in the data, to
+alter important aspects of the analysis, yield qualitatively
+different inferences, or violate assumptions of the statistical
+model \citep{schabenberger}.
+
+Outliers are the most noteworthy data points in an analysis, and
+an objective of influence analysis is how influential they are,
+and the manner in which they are influential.
+
+\citet{schabenberger} describes a simple procedure for quantifying
+influence. Firstly a model should be fitted to the data, and
+estimates of the parameters should be obtained. The second step is
+that either single of multiple data points, specifically outliers,
+should be omitted from the analysis, with the original parameter
+estimates being updated. This is known as `leave one out \ leave k
+out' analysis. The final step of the procedure is comparing the
+sets of estimates computed from the entire and reduced data sets
+to determine whether the absence of observations changed the
+analysis.
+
+
+
+A residual is the difference between an observed quantity and its
+estimated or predicted value. In LME models, there are two types
+of residuals, marginal residuals and conditional residuals. A
+marginal residual is the difference between the observed data and
+the estimated marginal mean. A conditional residual is the
+difference between the observed data and the predicted value of
+the observation. In a model without random effects, both sets of
+residuals coincide.
+
+\citet{schabenberger} notes that it is not always possible to
+derive influence statistics necessary for comparing full- and
+reduced-data parameter estimates. \citet{HaslettDillane} offers an
+procedure to assess the influences for the variance components
+within the linear model, complementing the existing methods for
+the fixed components. The essential problem is that there is no
+useful updating procedures for $\hat{V}$, or for $\hat{V}^{-1}$.
+\citet{HaslettDillane} propose an alternative , and
+computationally inexpensive approach, making use of the
+`delete=replace' identity.
+
+\citet{Haslett99} considers the effect of `leave k out'
+calculations on the parameters $\beta$ and $\sigma^{2}$, using
+several key results from \citet{HaslettHayes} on partioned
+matrices.
+
+
+
+
+
+
+In LME models, fitted by either ML or REML, an important overall
+influence measure is the likelihood distance \citep{cook82}. The
+procedure requires the calculation of the full data estimates
+$\hat{\psi}$ and estimates based on the reduced data set
+$\hat{\psi}_{(U)}$. The likelihood distance is given by
+determining
+
+
+\begin{eqnarray}
+LD_{(U)} &=& 2\{l(\hat{\psi}) - l( \hat{\psi}_{(U)}) \}\\
+RLD_{(U)} &=& 2\{l_{R}(\hat{\psi}) - l_{R}(\hat{\psi}_{(U)})\}
+\end{eqnarray}
+
+
+\addcontentsline{toc}{section}{Bibliography}
+
+\bibliography{transferbib}
+\end{document}

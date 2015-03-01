@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Master Chapter 1 and 2  full.aux
+The style file: chicago.bst
+Case mismatch error between cite keys DunnSEME and dunnSEME
+---line 155 of file Master Chapter 1 and 2  full.aux
+ : \citation{DunnSEME
+ :                   }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys DunnSEME and dunnSEME
+---line 157 of file Master Chapter 1 and 2  full.aux
+ : \citation{DunnSEME
+ :                   }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys DunnSEME and dunnSEME
+---line 190 of file Master Chapter 1 and 2  full.aux
+ : \citation{DunnSEME
+ :                   }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys DunnSEME and dunnSEME
+---line 191 of file Master Chapter 1 and 2  full.aux
+ : \citation{DunnSEME
+ :                   }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys DunnSEME and dunnSEME
+---line 196 of file Master Chapter 1 and 2  full.aux
+ : \citation{DunnSEME
+ :                   }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys pb and PB
+---line 267 of file Master Chapter 1 and 2  full.aux
+ : \citation{pb
+ :             }
+I'm skipping whatever remains of this command
+Database file #1: DB-txfrbib.bib
+I was expecting a `,' or a `}'---line 869 of file DB-txfrbib.bib
+ :  
+ :  pages = "2039�-2046"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1122 of file DB-txfrbib.bib
+ :   
+ :   YEAR =         "2003"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "ludbrook"
+Warning--I didn't find a database entry for "Henderson1963"
+Warning--no author, editor, or organization in IUPAC
+Warning--no author, editor, or organization in NIST
+Warning--no author, editor, or organization in ACR
+Warning--no author, editor, or organization in ACR
+Warning--no author, editor, or organization in ACR
+Warning--no author, editor, or organization in IUPAC
+Warning--no author, editor, or organization in IUPAC
+Warning--no author, editor, or organization in NIST
+Warning--no author, editor, or organization in NIST
+Warning--no author, editor, or organization in ACR
+Warning--page numbers missing in BXC2008
+Warning--empty year in Cohen
+Warning--no author, editor, or organization in IUPAC
+Warning--no number and no volume in lam
+Warning--no author, editor, or organization in NIST
+(There were 8 error messages)

@@ -1,0 +1,142 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Research notes: linear mixed effects models}
+\author{ } \date{ }
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Regression-based LoAs}
+
+\tableofcontents \setcounter{tocdepth}{2}
+%-------------------------------------------------
+
+\chapter{BA99}
+
+\section{Regression-based Limits of Agreement} Assuming that
+there will be no curvature in the scatter-plot, the methodology
+regresses the difference of methods ($d$) on the average of those
+methods ($a$) with a simple intercept slope model; $\hat{d} =
+b_{0}+ b_{1}a.$ Should the slope $b_{1}$ be found to be
+negligible, $\hat{d}$ takes the value $\bar{d}$.
+
+The next step to take in calculating the limits is also a
+regression, this time of the residuals as a function of the scale
+of the measurements, expressed by the averages $a_{i}$;
+ $ \hat{R} = c_{0}+ c_{1}a_{i}$
+
+With reference to absolute values following a half-normal
+distribution with mean $\sigma\sqrt{\frac{2}{\pi}}$, \citet{BA99} formulate the regression based limits of agreement as
+follows
+ \begin{equation}
+  \hat{d} \pm 1.96\sqrt{\frac{\pi}{2}}\hat{R} = \hat{d} \pm 2.46\hat{R}
+ \end{equation}
+
+ %------------------------------------------------%
+\newpage
+
+\chapter{BXC2010}
+
+\section{1. Introduction}
+
+\section{2. Model for LoA}
+
+$95\%$ prediction interval
+
+\[ \bar{D} \pm 1.96 \times s.d.(D_i) \sqrt{\frac{n+1}{n}} \]
+
+The correct factor is $\sigma^2_1 + \sigma^2_2 \frac{n+1}{n}$
+
+\section{3.Non constant difference}
+
+3.1 Model
+
+$D_i = (\alpha_1 - \alpha_2) + (\beta_1 + \beta_2)\mu_i +(e_{1i} + e_{2i})$
+
+3.2 Regression of differences on averages
+
+$\beta_{2|1} = \frac{1-b/2}{1+b/2} \geq 1-b $
+
+$Y_{2|1} = -a +(1-b)y_1  \pm 2 \tau $
+
+\section{4. Worked Examples}
+4.1 Blood Glucose (Plasma and Capillary)
+
+\begin{itemize}
+\item 46 non diabetic obese people at 120 minutes after a 75g oral glucose challenge
+\item $D = -2.24 + 0.33A$ with residual standard deviation of 1.08
+\item Prediction  interval for the difference of sizes.
+\item $Y_{C|P}  = 1.92 + 0.71Y_N \pm 1.86$ and $Y_{P|C}  =2.69 +1.40Y_N \pm 2.60$
+\end{itemize}
+4.2 Plasma volume (Nadler Hurley)
+
+\section{5. Why is it wrong to use the regression of the differences on the averages.}
+
+5.1 Substantially wrong
+
+5.2 Statistically wrong
+It is assumed that the averages are independent of the error terms.
+
+\[
+\frac{\sigma_1 - \sigma_2}
+{\sigma_1 + \sigma_2}
+=
+\frac{\beta_1 - \beta_2}
+{\beta_1 + \beta_2}
+\] \therefore \[
+\frac{\sigma_1 - \sigma_2}
+{\sigma_1 + \sigma_2}
+=
+\frac{\beta_1 - \beta_2}
+{\beta_1 + \beta_2}
+\]
+5.3 Why are the limits straight lines
+The prediction limits are straight lines because the estimation variance $\sigma2,1$ and $\beta2,1$ is ignored.
+
+5.4 What is the relation to Standard regression
+The model (2) is not a standard model
+
+Classical regression models are based on the conditional distribution of one method given another.
+5.5 What is the relation to Deming Regression
+Deming Regression does not solve the prediction problem
+unless we are willing to assume a known value for the ratio of the variances.
+In studies without replicates, there is no information about the variance ratio for the two methods.
+6. How wrong is it to do it anyway?
+
+\section{7. Discussion}
+
+\section{8. Recommendation}
+\addcontentsline{toc}{section}{Bibliography}
+\bibliography{2012bib}
+\end{document} 

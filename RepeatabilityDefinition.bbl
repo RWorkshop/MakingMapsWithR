@@ -1,0 +1,45 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Barnhart, Haber, and Lin}{Barnhart
+  et~al.}{2007}]{barnhart}
+Barnhart, H., M.~Haber, and L.~Lin (2007).
+\newblock An overview of assessing agreement with continuous measurements.
+\newblock {\em Journal of Biopharmaceutical Statistics\/}~{\em 17}, 529--569.
+
+\bibitem[\protect\citeauthoryear{Bland and Altman}{Bland and
+  Altman}{1999}]{BA99}
+Bland, J. and D.~Altman (1999).
+\newblock Measuring agreement in method comparison studies.
+\newblock {\em Statistical Methods in Medical Research\/}~{\em 8\/}(2),
+  135--160.
+
+\bibitem[\protect\citeauthoryear{Carstensen, Simpson, and Gurrin}{Carstensen
+  et~al.}{2008}]{BXC2008}
+Carstensen, B., J.~Simpson, and L.~C. Gurrin (2008).
+\newblock Statistical models for assessing agreement in method comparison
+  studies with replicate measurements.
+\newblock {\em The International Journal of Biostatistics\/}~{\em 4\/}(1).
+
+\bibitem[\protect\citeauthoryear{Dunn}{Dunn}{2002}]{dunnSEME}
+Dunn, G. (2002).
+\newblock {\em Statistical Evaluation of Measurement Error\/} (Second ed.).
+\newblock Stanford: American Mathematical Society and Digital Press.
+
+\bibitem[\protect\citeauthoryear{??}{IUPAC}{2009}]{IUPAC}
+IUPAC (2009).
+\newblock {IUPAC} {C}ompendium of {C}hemical {T}erminology - the {G}old {B}ook.
+\newblock \texttt{http://goldbook.iupac.org/R05293.html}.
+
+\bibitem[\protect\citeauthoryear{Roy}{Roy}{2009a}]{roy}
+Roy, A. (2009a).
+\newblock An application of linear mixed effects model to assess the agreement
+  between two methods with replicated observations.
+\newblock {\em Journal of Biopharmaceutical Statistics\/}~{\em 19}, 150--173.
+
+\bibitem[\protect\citeauthoryear{Roy}{Roy}{2009b}]{ARoy2009}
+Roy, A. (2009b).
+\newblock An application of the linear mixed effects model to ass the agreement
+  between two methods with replicated observations.
+\newblock {\em Journal of Biopharmaceutical Statistics\/}~{\em 19}, 150--173.
+
+\end{thebibliography}

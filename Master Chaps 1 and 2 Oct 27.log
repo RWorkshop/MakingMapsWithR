@@ -1,0 +1,811 @@
+This is pdfTeX, Version 3.1415926-1.40.9 (MiKTeX 2.7) (preloaded format=pdflatex 2010.4.3)  3 NOV 2011 14:59
+entering extended mode
+**C:/Documents*and*Settings/kevin.obrien/My*Documents/WRITEUP/Master*Chaps*1*an
+d*2*Oct*27.tex
+
+("C:/Documents and Settings/kevin.obrien/My Documents/WRITEUP/Master Chaps 1 an
+d 2 Oct 27.tex"
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2008-06-18, ngerman-x-2008-06-18, french, loaded.
+("C:\Program Files\MiKTeX 2.7\tex\latex\base\report.cls"
+Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.7\tex\latex\base\size12.clo"
+File: size12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\graphics.sty"
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2008/09/08 v0.04l Graphics/color for pdfTeX
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen107
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen108
+\subfiglabelskip=\skip46
+\c@subfigure=\count89
+\c@lofdepth=\count90
+\c@subtable=\count91
+\c@lotdepth=\count92
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files\MiKTeX 2.7\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2002/01/22 v2.2d
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen109
+)
+\pmbraise@=\dimen110
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks17
+\thm@bodyfont=\toks18
+\thm@headfont=\toks19
+\thm@notefont=\toks20
+\thm@headpunct=\toks21
+\thm@preskip=\skip49
+\thm@postskip=\skip50
+\thm@headsep=\skip51
+\dth@everypar=\toks22
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count93
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count94
+\leftroot@=\count95
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count96
+\DOTSCASE@=\count97
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
+\dotsspace@=\muskip10
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks23
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks24
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks25
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\listings\listings.sty"
+\lst@mode=\count105
+\lst@gtempboxa=\box28
+\lst@token=\toks27
+\lst@length=\count106
+\lst@currlwidth=\dimen118
+\lst@column=\count107
+\lst@pos=\count108
+\lst@lostspace=\dimen119
+\lst@width=\dimen120
+\lst@newlines=\count109
+\lst@lineno=\count110
+\lst@maxwidth=\dimen121
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count111
+\lst@skipnumbers=\count112
+\lst@framebox=\box29
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\listings\listings.cfg"
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\natbib\natbib.sty"
+Package: natbib 2009/02/02 8.3 (PWD, AO)
+\bibhang=\skip55
+\bibsep=\skip56
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count113
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\ieeepes\vmargin.sty"
+Package: vmargin 1999/06/01
+
+Package `vmargin', V2.2, <1999/06/01>
+\PaperWidth=\dimen122
+\PaperHeight=\dimen123
+)
+\c@theorem=\count114
+\c@axiom=\count115
+\c@definition=\count116
+\c@notation=\count117
+\c@remark=\count118
+\c@example=\count119
+ ("Master Chaps 1 and 2 Oct 27.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+
+("C:\Program Files\MiKTeX 2.7\tex\context\base\supp-pdf.tex"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count120
+\scratchdimen=\dimen124
+\scratchbox=\box30
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen125
+\MPnumerator=\count124
+\everyMPtoPDFconversion=\toks29
+)
+\c@lstlisting=\count125
+LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+ ("C:\Program Files\MiKTeX 2.7\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+) [1
+
+{C:/Documents and Settings/All Users/Application Data/MiKTeX/2.7/pdftex/config/
+pdftex.map}]
+("Master Chaps 1 and 2 Oct 27.toc")
+\tf@toc=\write3
+ [1
+
+]
+Chapter 1.
+
+Package natbib Warning: Citation `ludbrook97' on page 2 undefined on input line
+ 66.
+
+
+Package natbib Warning: Citation `Myles' on page 2 undefined on input line 67.
+
+
+Package natbib Warning: Citation `Krumm' on page 2 undefined on input line 67.
+
+
+Package natbib Warning: Citation `Grubbs73' on page 2 undefined on input line 7
+1.
+
+[2
+
+]
+
+Package natbib Warning: Citation `Barnhart' on page 3 undefined on input line 1
+17.
+
+[3] [4] [5]
+
+Package natbib Warning: Citation `BA83' on page 6 undefined on input line 205.
+
+<GrubbsScatter.jpeg, id=23, 655.44875pt x 655.44875pt>
+File: GrubbsScatter.jpeg Graphic file (type jpg)
+
+<use GrubbsScatter.jpeg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `Dewitte' on page 6 undefined on input line 21
+8.
+
+[6]
+
+Package natbib Warning: Citation `BA83' on page 7 undefined on input line 228.
+
+
+Package natbib Warning: Citation `BA83' on page 7 undefined on input line 234.
+
+
+Package natbib Warning: Citation `BA83' on page 7 undefined on input line 234.
+
+[7 <GrubbsScatter.jpeg>]
+
+Package natbib Warning: Citation `BA86' on page 8 undefined on input line 243.
+
+[8] [9] <GrubbsBAplot-noLOA.jpeg, id=41, 655.44875pt x 655.44875pt>
+File: GrubbsBAplot-noLOA.jpeg Graphic file (type jpg)
+
+<use GrubbsBAplot-noLOA.jpeg>
+<GrubbsDataTwoBAplots.jpeg, id=42, 1027.84pt x 694.595pt>
+File: GrubbsDataTwoBAplots.jpeg Graphic file (type jpg)
+
+<use GrubbsDataTwoBAplots.jpeg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <GrubbsBAplot-noLOA.jpeg>]
+
+Package natbib Warning: Citation `BA86' on page 11 undefined on input line 346.
+
+
+
+Package natbib Warning: Citation `BAcite' on page 11 undefined on input line 34
+8.
+
+
+Package natbib Warning: Citation `Dewitte' on page 11 undefined on input line 3
+48.
+
+
+Package natbib Warning: Citation `Dewitte' on page 11 undefined on input line 3
+50.
+
+Missing character: There is no – in font cmr12!
+Missing character: There is no – in font cmr12!
+
+Package natbib Warning: Citation `hollis' on page 11 undefined on input line 35
+8.
+
+
+Package natbib Warning: Citation `BritHypSoc' on page 11 undefined on input lin
+e 359.
+
+[11 <GrubbsDataTwoBAplots.jpeg>]
+
+Package natbib Warning: Citation `ludbrook97' on page 12 undefined on input lin
+e 373.
+
+
+Package natbib Warning: Citation `BH' on page 12 undefined on input line 387.
+
+<BAFanEffect.jpeg, id=49, 1027.84pt x 694.595pt>
+File: BAFanEffect.jpeg Graphic file (type jpg)
+ <use BAFanEffect.jpeg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<PropBias.jpeg, id=50, 1027.84pt x 694.595pt>
+File: PropBias.jpeg Graphic file (type jpg)
+ <use PropBias.jpeg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<BAOutliers.jpeg, id=51, 1027.84pt x 694.595pt>
+File: BAOutliers.jpeg Graphic file (type jpg)
+ <use BAOutliers.jpeg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12]
+
+Package natbib Warning: Citation `BA99' on page 13 undefined on input line 417.
+
+
+
+Package natbib Warning: Citation `Bartko' on page 13 undefined on input line 42
+6.
+
+
+Package natbib Warning: Citation `AltmanEllipse' on page 13 undefined on input 
+line 428.
+
+[13 <BAFanEffect.jpeg>]
+
+LaTeX Warning: Text page 14 contains only floats.
+
+
+Overfull \vbox (0.62645pt too high) has occurred while \output is active []
+
+
+[14 <PropBias.jpeg> <BAOutliers.jpeg>]
+<GrubbsBartko.jpeg, id=62, 1027.84pt x 694.595pt>
+File: GrubbsBartko.jpeg Graphic file (type jpg)
+ <use GrubbsBartko.jpeg>
+<GrubbsBartko2.jpeg, id=63, 1027.84pt x 694.595pt>
+File: GrubbsBartko2.jpeg Graphic file (type jpg)
+ <use GrubbsBartko2.jpeg>
+[15 <GrubbsBartko.jpeg>] [16 <GrubbsBartko2.jpeg>] [17]
+
+Package natbib Warning: Citation `BA86' on page 18 undefined on input line 521.
+
+
+
+Package natbib Warning: Citation `BA86' on page 18 undefined on input line 524.
+
+
+
+Package natbib Warning: Citation `BA95' on page 18 undefined on input line 527.
+
+
+
+Package natbib Warning: Citation `mantha' on page 18 undefined on input line 55
+0.
+
+
+Package natbib Warning: Citation `BA86' on page 18 undefined on input line 556.
+
+
+[18] <GrubbsBAplot-LOA.jpeg, id=79, 1027.84pt x 694.595pt>
+File: GrubbsBAplot-LOA.jpeg Graphic file (type jpg)
+
+<use GrubbsBAplot-LOA.jpeg>
+
+Package natbib Warning: Citation `BA99' on page 19 undefined on input line 578.
+
+
+[19 <GrubbsBAplot-LOA.jpeg>]
+
+Package natbib Warning: Citation `BA99' on page 20 undefined on input line 597.
+
+
+
+Package natbib Warning: Citation `BA99' on page 20 undefined on input line 614.
+
+
+
+Package natbib Warning: Citation `BXC2008' on page 20 undefined on input line 6
+28.
+
+
+Package natbib Warning: Citation `BXC2008' on page 20 undefined on input line 6
+36.
+
+[20]
+
+Package natbib Warning: Citation `luiz' on page 21 undefined on input line 647.
+
+
+
+Package natbib Warning: Citation `Barnhart' on page 21 undefined on input line 
+651.
+
+
+Package natbib Warning: Citation `mantha' on page 21 undefined on input line 65
+7.
+
+
+Package natbib Warning: Citation `lin2002' on page 21 undefined on input line 6
+81.
+
+
+Package natbib Warning: Citation `Barnhart' on page 21 undefined on input line 
+693.
+
+
+Package natbib Warning: Citation `Barnhart' on page 21 undefined on input line 
+699.
+
+[21]
+
+Package natbib Warning: Citation `Barnhart' on page 22 undefined on input line 
+712.
+
+
+Package natbib Warning: Citation `lin2000' on page 22 undefined on input line 7
+33.
+
+
+Package natbib Warning: Citation `lin2002' on page 22 undefined on input line 7
+33.
+
+[22]
+
+Package natbib Warning: Citation `BA99' on page 23 undefined on input line 748.
+
+
+
+Package natbib Warning: Citation `BA99' on page 23 undefined on input line 760.
+
+
+
+Package natbib Warning: Citation `Eksborg' on page 23 undefined on input line 7
+69.
+
+
+Package natbib Warning: Citation `Dewitte' on page 23 undefined on input line 7
+71.
+
+
+Package natbib Warning: Citation `BXC2008' on page 23 undefined on input line 7
+80.
+
+[23]
+
+Package natbib Warning: Citation `BA86' on page 24 undefined on input line 783.
+
+
+
+Package natbib Warning: Citation `BA86' on page 24 undefined on input line 796.
+
+
+
+Package natbib Warning: Citation `BXC2008' on page 24 undefined on input line 7
+98.
+
+
+Package natbib Warning: Citation `BXC2008' on page 24 undefined on input line 8
+03.
+
+[24]
+
+Package natbib Warning: Citation `Kinsella' on page 25 undefined on input line 
+817.
+
+
+Package natbib Warning: Citation `Kinsella' on page 25 undefined on input line 
+818.
+
+
+Package natbib Warning: Citation `Kinsella' on page 25 undefined on input line 
+840.
+
+
+Package natbib Warning: Citation `Grubbs48' on page 25 undefined on input line 
+840.
+
+
+Package natbib Warning: Citation `Grubbs73' on page 25 undefined on input line 
+840.
+
+
+Package natbib Warning: Citation `Grubbs48' on page 25 undefined on input line 
+840.
+
+[25]
+
+Package natbib Warning: Citation `Thompson' on page 26 undefined on input line 
+858.
+
+
+Package natbib Warning: Citation `Kinsella' on page 26 undefined on input line 
+880.
+
+
+Package natbib Warning: Citation `morgan' on page 26 undefined on input line 91
+5.
+
+
+Package natbib Warning: Citation `pitman' on page 26 undefined on input line 91
+5.
+
+[26]
+
+Package natbib Warning: Citation `Bartko' on page 27 undefined on input line 93
+2.
+
+
+Package natbib Warning: Citation `Bartko' on page 27 undefined on input line 93
+9.
+
+
+Package natbib Warning: Citation `BA83' on page 27 undefined on input line 958.
+
+
+
+Package natbib Warning: Citation `Cohen' on page 27 undefined on input line 964
+.
+
+
+Package natbib Warning: Citation `BA86' on page 27 undefined on input line 968.
+
+
+
+Package natbib Warning: Citation `BA99' on page 27 undefined on input line 968.
+
+
+
+Package natbib Warning: Citation `BA99' on page 27 undefined on input line 969.
+
+
+
+Package natbib Warning: Citation `BA99' on page 27 undefined on input line 971.
+
+
+[27]
+
+Package natbib Warning: Citation `DunnSEME' on page 28 undefined on input line 
+975.
+
+
+Package natbib Warning: Citation `linnet98' on page 28 undefined on input line 
+981.
+
+
+Package natbib Warning: Citation `DunnSEME' on page 28 undefined on input line 
+981.
+
+
+Package natbib Warning: Citation `BB89' on page 28 undefined on input line 990.
+
+
+[28]
+
+Package natbib Warning: Citation `BB89' on page 29 undefined on input line 1002
+.
+
+
+Package natbib Warning: Citation `Bartko' on page 29 undefined on input line 10
+06.
+
+
+Package natbib Warning: Citation `CornCoch' on page 29 undefined on input line 
+1062.
+
+
+Package natbib Warning: Citation `ludbrook97' on page 29 undefined on input lin
+e 1062.
+
+
+Package natbib Warning: Citation `BA83' on page 29 undefined on input line 1065
+.
+
+
+Package natbib Warning: Citation `ludbrook97' on page 29 undefined on input lin
+e 1065.
+
+[29]
+
+Package natbib Warning: Citation `CornCoch' on page 30 undefined on input line 
+1071.
+
+
+Package natbib Warning: Citation `ludbrook97' on page 30 undefined on input lin
+e 1071.
+
+
+Package natbib Warning: Citation `ludbrook' on page 30 undefined on input line 
+1085.
+
+
+Package natbib Warning: Citation `CornCoch' on page 30 undefined on input line 
+1092.
+
+
+Package natbib Warning: Citation `linnet99' on page 30 undefined on input line 
+1096.
+
+[30]
+
+Package natbib Warning: Citation `Kummel' on page 31 undefined on input line 11
+04.
+
+
+Package natbib Warning: Citation `CarollRupert' on page 31 undefined on input l
+ine 1113.
+
+[31]
+
+Package natbib Warning: Citation `zhang' on page 32 undefined on input line 114
+3.
+
+
+Package natbib Warning: Citation `AltmanBook' on page 32 undefined on input lin
+e 1145.
+
+<ZhangDeming.jpeg, id=125, 560.0925pt x 559.08875pt>
+File: ZhangDeming.jpeg Graphic file (type jpg)
+ <use ZhangDeming.jpeg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `CarollRupert' on page 32 undefined on input l
+ine 1180.
+
+[32]
+
+Package natbib Warning: Citation `lewis' on page 33 undefined on input line 118
+7.
+
+
+Package natbib Warning: Citation `lewis' on page 33 undefined on input line 119
+1.
+
+
+Package natbib Warning: Citation `lewis' on page 33 undefined on input line 120
+1.
+
+
+Package natbib Warning: Citation `BA83' on page 33 undefined on input line 1204
+.
+
+[33 <ZhangDeming.jpeg>]
+
+Package natbib Warning: Citation `lewis' on page 34 undefined on input line 121
+7.
+
+
+Package natbib Warning: Citation `DunnSEME' on page 34 undefined on input line 
+1220.
+
+
+Package natbib Warning: Citation `DunnSEME' on page 34 undefined on input line 
+1226.
+
+
+Package natbib Warning: Citation `pizzi' on page 34 undefined on input line 122
+6.
+
+
+Package natbib Warning: Citation `NIST' on page 34 undefined on input line 1234
+.
+
+
+Package natbib Warning: Citation `DunnSEME' on page 34 undefined on input line 
+1240.
+
+
+Package natbib Warning: Citation `ACR' on page 34 undefined on input line 1246.
+
+
+[34]
+
+Package natbib Warning: Citation `phelps' on page 35 undefined on input line 12
+49.
+
+[35] [36]
+Chapter 2.
+
+Package natbib Warning: Citation `Fisher4' on page 37 undefined on input line 1
+280.
+
+
+Package natbib Warning: Citation `tippett' on page 37 undefined on input line 1
+283.
+
+
+Package natbib Warning: Citation `eisenhart' on page 37 undefined on input line
+ 1283.
+
+
+Package natbib Warning: Citation `Henderson:1950' on page 37 undefined on input
+ line 1283.
+
+
+Package natbib Warning: Citation `Henderson53' on page 37 undefined on input li
+ne 1284.
+
+
+Package natbib Warning: Citation `Henderson59' on page 37 undefined on input li
+ne 1284.
+
+
+Package natbib Warning: Citation `Henderson63' on page 37 undefined on input li
+ne 1284.
+
+
+Package natbib Warning: Citation `Henderson73' on page 37 undefined on input li
+ne 1284.
+
+
+Package natbib Warning: Citation `Henderson84a' on page 37 undefined on input l
+ine 1284.
+
+[37
+
+]
+
+Package natbib Warning: Citation `HartleyRao' on page 38 undefined on input lin
+e 1286.
+
+
+Package natbib Warning: Citation `PattersonThompson' on page 38 undefined on in
+put line 1286.
+
+
+Package natbib Warning: Citation `LW82' on page 38 undefined on input line 1288
+.
+
+
+Package natbib Warning: Citation `singer' on page 38 undefined on input line 12
+88.
+
+
+Package natbib Warning: Citation `PB' on page 38 undefined on input line 1288.
+
+
+! Package amsmath Error: Old form `\pmatrix' should be \begin{pmatrix}.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1300 \pmatrix
+               {
+? 

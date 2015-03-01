@@ -1,0 +1,83 @@
+
+\documentclass[12pt, a4paper]{report}
+\usepackage{natbib}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+%\usepackage[dvips]{graphicx}
+\bibliographystyle{chicago}
+\renewcommand{\baselinestretch}{1.8}
+
+% left top textwidth textheight headheight % headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\pagenumbering{arabic}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Bland Altman Methodologies}
+\date{\today}
+\maketitle
+
+\tableofcontents \setcounter{tocdepth}{3}
+
+\chapter{Bland and Altman's approach to MCS}
+\section*{Overview}
+\begin{itemize}
+\item Difference Plot
+\item Limits of Agreement
+\item Further Approaches
+\item Criticisms
+\end{itemize}
+%-------------------------------------------------------------%
+\section{Difference Plot}
+\citet{BA83} recommended the use of graphical techniques to assess agreement.
+Principally their method is calculating, for each pair of corresponding two methods of measurement of some underlying quantity, with no replicate measurements, the difference and mean.
+
+Differences are then plotted against the mean.
+Hopkins argued that the bias in a subsequent Bland-Altman plot was
+due, in part, to using least-squares regression at the calibration
+phase.
+
+
+\subsection{Model Specification}
+The model underpinning the Bland-Altman approach can be presented as follows:
+
+The case-wise means
+
+The case-wise differences $d_i = x_i - y_i$
+\[
+\Sigma = \left( \begin{array}{cc}
+                  \sigma^2_1 + \sigma^2_2 &  \frac{1}{2}(\sigma^2_1 - \sigma^2_2) \\
+                   \frac{1}{2}(\sigma^2_1 - \sigma^2_2) &   \sigma^2_b + \frac{1}{4}(\sigma^2_1 + \sigma^2_2)
+                \end{array}\right)
+\]
+
+\subsection{Pitman-Morgan Testing}
+\citet{Pitman} and \citet{morgan} separately developed a test for the equality of two variances. Bland and Altman demonstrate how a regression based test is equivalent to the pitman-Morgan test.
+\newpage
+%-------------------------------------------------------------%
+\section{Limits of Agreement}
+\citet{BA86} introduces an enhancement on their previous work; Limits of Agreement.
+
+%-------------------------------------------------------------%
+\section{Further Approaches}
+\citet{BA99} provides a regression-based approach for dealing with the scenario of non-constancy.
+
+
+%-------------------------------------------------------------%
+\section{Criticisms}
+\citet{DunnSEME} criticises the over-reliance of analysts on the Bland-Altman methodology.
+
+
+\addcontentsline{toc}{section}{Bibliography}
+
+\bibliography{transferbib}
+\end{document}
+

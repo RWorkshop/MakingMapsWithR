@@ -1,0 +1,42 @@
+
+%-----------------------------------------------------------------------------------%
+
+
+\newpage
+\subsection{Remarks on the Multivariate Normal Distribution}
+
+Diligence is required when considering the models. Carstensen specifies his models in terms of the univariate normal distribution. Roy's model is specified using the bivariate normal distribution.
+This gives rises to a key difference between the two model, in that a bivariate model accounts for covariance between the variables of interest.
+The multivariate normal distribution of a $k$-dimensional random vector $X = [X_1, X_2, \ldots, X_k]$
+can be written in the following notation:
+\[
+    X\ \sim\ \mathcal{N}(\mu,\, \Sigma),
+\]
+or to make it explicitly known that $X$ is $k$-dimensional,
+\[
+    X\ \sim\ \mathcal{N}_k(\mu,\, \Sigma).
+\]
+with $k$-dimensional mean vector
+\[ \mu = [ \operatorname{E}[X_1], \operatorname{E}[X_2], \ldots, \operatorname{E}[X_k]] \]
+and $k \times k$ covariance matrix
+\[ \Sigma = [\operatorname{Cov}[X_i, X_j]], \; i=1,2,\ldots,k; \; j=1,2,\ldots,k \]
+
+\bigskip
+
+\begin{enumerate}
+\item Univariate Normal Distribution
+
+\[
+    X\ \sim\ \mathcal{N}(\mu,\, \sigma^2),
+\]
+
+\item Bivariate Normal Distribution
+
+\begin{itemize}
+\item[(a)] \[  X\ \sim\ \mathcal{N}_2(\mu,\, \Sigma), \vspace{1cm}\]
+\item[(b)] \[    \mu = \begin{pmatrix} \mu_x \\ \mu_y \end{pmatrix}, \quad
+    \Sigma = \begin{pmatrix} \sigma_x^2 & \rho \sigma_x \sigma_y \\
+                             \rho \sigma_x \sigma_y  & \sigma_y^2 \end{pmatrix}.\]
+\end{itemize}
+\end{enumerate}
+\newpage

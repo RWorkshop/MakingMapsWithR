@@ -1,0 +1,366 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{natbib}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm, amsmath}
+%\usepackage[dvips]{graphicx}
+\bibliographystyle{chicago}
+\renewcommand{\baselinestretch}{1.8}
+
+% left top textwidth textheight headheight % headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\pagenumbering{arabic}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Formal Testing}
+
+
+\tableofcontents \setcounter{tocdepth}{2}
+\date{\today}
+\maketitle
+
+
+\section{Model Formulation and Formal Testing}
+
+\citet{Kinsella} formulates a model for un-replicated observations
+for a method comparison study as a mixed model.
+\begin{eqnarray}
+Y_{ij} =\quad \mu_{j} + S_{i} + \epsilon_{ij} \quad i=1,2...n\quad
+j=1,2\\
+S \sim N(0,\sigma^{2}_{s})\qquad \epsilon_{ij} \sim
+N(0,\sigma^{2}_{j}) \nonumber
+\end{eqnarray}
+
+As with all mixed models, the variance of each observation is the
+sum of all the associated variance components.
+\begin{eqnarray}
+var(Y_{ij}) =\quad \sigma^{2}_{s} + \sigma^{2}_{j} \\
+cov(Y_{i1},Y_{i2})=\quad \sigma^{2}_{s} \nonumber
+\end{eqnarray}
+
+\citet{Grubbs48} offers maximum likelihood estimators, commonly
+known as Grubbs estimators, for the various variance components:
+\begin{eqnarray}
+\hat{\sigma^{2}_{s}} \quad= \sum{\frac{(x_{i}-\bar{x})(y_{i}-\bar{y})}{n-1}}\quad=Sxy\\
+\hat{\sigma^{2}_{1}} \quad= \sum{\frac{(x_{i}-\bar{x})^{2}}{n-1}} \quad=S^{2}x-Sxy \nonumber\\
+\hat{\sigma^{2}_{2}} \quad=
+\sum{\frac{(y_{i}-\bar{y})^{2}}{n-1}}\quad=S^{2}y-Sxy \nonumber
+\nonumber
+\end{eqnarray}
+
+The standard error of these variance estimates are:
+\begin{eqnarray}
+var(\sigma^{2}_{1}) =\quad \frac{2\sigma^{4}_{1}}{n-1} +\quad
+\frac{\sigma^2_{S}\sigma^2_{1}+\sigma^2_{S}\sigma^2_{2}+\sigma^2_{1}\sigma^2_{2}
+}{n-1}\\
+var(\sigma^{2}_{2}) =\quad \frac{2\sigma^{4}_{2}}{n-1} +\quad
+\frac{\sigma^2_{S}\sigma^2_{1}+\sigma^2_{S}\sigma^2_{2}+\sigma^2_{1}\sigma^2_{2}
+}{n-1}\nonumber
+\end{eqnarray}
+
+\citet{Thompson}presents confidence intervals for the relative
+precisions of the measurement methods, $\Delta_{j}=
+\sigma^2_{S}/\sigma^2_{j}$ (where $j=1,2$), as well as the
+variances $\sigma^{2}_{S}, \sigma^{2}_{1}$ and $\sigma^{2}_{2}$.
+
+\begin{eqnarray}
+\Delta_{1} >\quad \frac{C_{xy}-
+t(|A|/n-2))^{\frac{1}{2}}}{C_{x}-C_{xy}+
+t(|A|/n-2))^{\frac{1}{2}}}
+\end{eqnarray}
+where
+
+\begin{eqnarray}
+C_{x}=\quad(n-1)S^2_{x}\nonumber\\
+C_{xy}=\quad(n-1)S_{xy}\nonumber\\
+C_{y}=\quad(n-1)S^2_{y}\nonumber\\
+A=\quad C_{x}\times C_{y} - (C_{xy})^2 \nonumber
+\end{eqnarray}
+
+$t$ is the $100(1-\alpha/2)\%$ quantile of Student's $t$
+distribution with $n-2$ degrees of freedom. $\Delta_{2}$ can be
+found by changing $C_{y}$ for $C_{x}$. A lower confidence limit
+can be found by calculating the square root. This inequality may
+also be used for hypothesis testing.
+
+For the interval estimates for the variance components,
+\citet{Thompson} presents three relations that hold simultaneously
+with probability $1-2\alpha$ where $2\alpha=0.01$ or $0.05$.
+
+\begin{eqnarray}
+|\sigma^2-C_{xy}K|\leqslant M(C_{x}C_{y})^{\frac{1}{2}}\\
+|\sigma^2_{1}-(C_{x}-C_{xy})K|\leqslant M(C_{x}(C_{x}+C_{y}-2C_{xy}))^{\frac{1}{2}}\nonumber\\
+|\sigma^2_{2}-(C_{y}-C_{xy})K|\leqslant
+M(C_{y}(C_{x}+C_{y}-2C_{xy}))^{\frac{1}{2}}\nonumber
+\end{eqnarray}
+
+The case-wise differences and means are $D_{i} = Y_{i1}-Y_{i2}$
+and $A_{i} = (Y_{i1}+Y_{i2})/2$  respectively. Both $D_{i}$ and
+$A_{i}$ follow a bivariate normal distribution with $E(D_{i})=
+\mu_{D} = \mu_{1} - \mu_{2}$ and $E(A_{i})= \mu_{A} = (\mu_{1} +
+\mu_{2})/2$. The variance matrix $\Sigma$ is
+
+\begin{equation}
+\Sigma = \left[\begin{matrix}
+\sigma^{2}_{1}+\sigma^{2}_{2}&\frac{1}{2}(\sigma^{2}_{1}-\sigma^{2}_{2})\\
+\frac{1}{2}(\sigma^{2}_{1}-\sigma^{2}_{2})&\sigma^{2}_{S}+
+\frac{1}{4}(\sigma^{2}_{1}+\sigma^{2}_{2})
+\end{matrix} \right]
+\end{equation}
+
+
+
+
+
+\citet{Kinsella} demonstrates how the Grubbs estimators for the
+error variances can be calculated using the difference values,
+providing a worked example on a data set.
+\begin{eqnarray}
+\hat{\sigma^{2}_{1}}
+\quad=\sum{(y_{i1}-\bar{y{1}})(D_{i}-\bar{D})}\\
+\hat{\sigma^{2}_{2}} \quad=
+\sum{(y_{i2}-\bar{y_{2}})(D_{i}-\bar{D})} \nonumber
+\end{eqnarray}
+
+\subsection{Paired sample T-test} \citet{Bartko} discusses the use
+of the well known paired sample $t$ test to test for inter-method
+bias; $H: \mu_{D}=0$. The test statistic is distributed a $t$
+random variable with $n-1$ degrees of freedom and is calculated as
+follows;
+
+\begin{equation}
+t^{*} = \bar{D}/ \frac{S_{D}}{\sqrt{n}}
+\end{equation}
+
+where $\bar{D}$ and $S_{D}$ is the average of the differences of
+the $n$ observations.
+
+\subsection{Morgan Pitman}
+
+The test of the hypothesis that the variance of both methods are
+equal is based on the correlation value $\rho_{D,A}$ which is
+evaluated as follows;
+
+\begin{equation}
+\rho(D,A)=\quad\frac{\sigma^{2}_{1}-\sigma^{2}_{2}}{\sqrt{(\sigma^{2}_{1}+\sigma^{2}_{2})(4\sigma^{2}_{S}+\sigma^{2}_{1}+\sigma^{2}_{2})}}
+\end{equation}
+
+The correlation constant takes the value zero if, and only if, the
+two variances are equal. Therefore a test of the hypothesis $H:
+\sigma^{2}_{1}=\sigma^{2}_{2}$ is equivalent to a test of the
+hypothesis $H: \rho(D,A) = 0$. The corresponds to the well-known
+$t$ test for a correlation coefficient with $n-2$ degrees of
+freedom.
+
+\citet{Bartko} describes the Morgan-Pitman test as identical to
+the test of the slope equal to zero in the regression of $Y_{i1}$
+on $Y_{12}$, adding that this result can be shown using
+straightforward algebra.
+
+
+\section{Thompson 1963}
+
+
+
+\citet{Thompson} defines $\Delta_{j}$ to be a measure of the
+relative precision of the measurement methods, with $\Delta_{j}=
+\sigma^2_{S}/\sigma^2_{j}$(where $j=1,2$). Confidence intervals
+for $\Delta_{j}$ are also presented.
+
+\begin{eqnarray}
+\Delta_{1} > \frac{C_{xy}-
+t(\frac{|A|}{n-1}))^{\frac{1}{2}}}{C_{x}-C_{xy}+
+t(\frac{|A|}{n-1}))^{\frac{1}{2}}},
+\end{eqnarray}
+where
+
+\begin{eqnarray}
+C_{x}&=&(n-1)S^2_{x},\nonumber\\
+C_{xy}&=&(n-1)S_{xy},\nonumber\\
+C_{y}&=&(n-1)S^2_{y},\nonumber\\
+A &=& C_{x}\times C_{y} - (C_{xy})^2 . \nonumber
+\end{eqnarray}
+
+The value $t$ is the $100(1-\alpha/2)\%$ quantile of Student's $t$
+distribution with $n-2$ degrees of freedom. The ratio $\Delta_{2}$
+can be found by interchanging $C_{y}$ and $C_{x}$. A lower
+confidence limit can be found by calculating the square root. The
+inequality in equation $1.10$ may also be used for hypothesis
+testing.
+
+For the interval estimates for the variance components,
+\citet{Thompson} presents three relations that hold simultaneously
+with probability $1-2\alpha$ where $2\alpha=0.01$ or $0.05$.
+
+
+\begin{eqnarray*}
+|\sigma^2-C_{xy}K| &\leqslant& M(C_{x}C_{y})^{\frac{1}{2}}\\
+|\sigma^2_{1}-(C_{x}-C_{xy})K|&\leqslant M(C_{x}(C_{x}+C_{y}-2C_{xy}))^{\frac{1}{2}}\nonumber\\
+|\sigma^2_{2}-(C_{y}-C_{xy})K|&\leqslant
+M(C_{y}(C_{x}+C_{y}-2C_{xy}))^{\frac{1}{2}}\nonumber
+\end{eqnarray*}
+
+\citet{Thompson} contains tables for $K$ and $M$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Bartko's BB
+\citet{BB89} offers a formal simultaneous hypothesis test for the
+mean and variance of two paired data sets. Using simple linear
+regression of the differences of each pair against the sums, a
+line is fitted to the model, with estimates for intercept and
+slope ($\hat{\beta}_{0}$ and $\hat{\beta}_{1}$). The null
+hypothesis of this test is that the mean ($\mu$) and variance
+($\sigma^{2}$) of both data sets are equal if the slope and
+intercept estimates are equal to zero(i.e $\sigma^{2}_{1} =
+\sigma^{2}_{2}$ and $\mu_{1}=\mu_{2}$ if and only if $\beta_{0}=
+\beta_{1}=0$ )
+
+A test statistic is then calculated from the regression analysis
+of variance values \citep{BB89} and is distributed as `F' random
+variable. The degrees of freedom thereof are $\nu_{1}=2$ and
+$\nu_{1}=n-2$ (where n is the number of pairs). The critical value
+is chosen for $\alpha\%$ significance with those same degrees of
+freedom. \citet{Bartko} amends this methodology for use in method
+comparison studies, using the averages of the pairs, as opposed to
+the sums, and their differences. This approach can facilitate
+simultaneous usage of test with the Bland-Altman methodology.
+Bartko's test statistic take the form:
+\begin{equation} F.test = \frac{(\Sigma d^{2})-SSReg}{2MSReg}
+\end{equation}
+% latex table generated in R 2.6.0 by xtable 1.5-5 package
+% Mon Aug 31 15:53:51 2009
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{lrrrrr}
+  \hline
+ & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\
+  \hline
+Averages & 1 & 0.04 & 0.04 & 0.74 & 0.4097 \\
+  Residuals & 10 & 0.60 & 0.06 &  &  \\
+   \hline
+\end{tabular}
+\caption{Regression ANOVA of case-wise differences and averages
+for Grubbs Data}
+\end{center}
+\end{table}
+%(calculate using R code $qf(0.95,2,10)$).
+
+For the Grubbs data, $\Sigma d^{2}=5.09 $, $SSReg = 0.60$ and
+$MSreg=0.06$ Therefore the test statistic is $37.42$, with a
+critical value of $4.10$. Hence the means and variance of the
+Fotobalk and Counter chronometers are assumed to be simultaneously
+equal.
+
+Importantly, this methodology determines whether there is both
+inter-method bias and precision present, or alternatively if there
+is neither present. It has previously been demonstrated that there
+is a inter-method bias present, but as this procedure does not
+allow for separate testing, no conclusion can be drawn on the
+comparative precision of both methods.
+
+\subsection{Formal Testing}
+The Bland Altman plot is a simple tool for inspection of the data,
+but in itself it offers no formal testing procedure in this
+regard. To this end, the approach proposed by \citet{BA83} is a
+formal test on the Pearson correlation coefficient  of casewise
+differences and means ($\rho_{AD}$). According to the authors,
+this test is equivalent to a well established tests for equality
+of variances, known as the `Pitman Morgan Test' \citep{Pitman,
+Morgan}.
+
+For the Grubbs data, the correlation coefficient estimate
+($r_{AD}$) is 0.2625, with a 95\% confidence interval of (-0.366,
+0.726) estimated by Fishers 'r to z' transformation \citep{Cohen}.
+The null hypothesis ($\rho_{AD}$ =0) would fail to be rejected.
+Consequently the null hypothesis of equal variances of each method
+would also fail to be rejected.
+
+There has no been no further mention of this particular test in
+the subsequent article published by Bland and Altman, although
+\citet{BA99} refers to Spearmans' rank correlation coefficient.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{Bartko's Regression and Ellipse}
+\citet{BB89} offers a formal simultaneous hypothesis test for the
+mean and variance of two paired data sets. Using simple linear
+regression of the differences of each pair against the sums, a
+line is fitted to the model, with estimates for intercept and
+slope ($\beta_{0}$ and $\beta_{1}$). The null hypothesis of this
+test is that the mean ($\mu$) and variance ($\sigma^{2}$) of both
+data sets are equal if the slope and intercept estimates are equal
+to zero(i.e $\sigma^{2}_{1} = \sigma^{2}_{2}$ and
+$\mu_{1}=\mu_{2}$ if and only if $\beta_{0}= \beta_{1}=0$ )
+
+A test statistic is then calculated from the regression analysis
+of variance values \citep{BB89} and is distributed as `F' random
+variable. The degrees of freedom thereof are $\nu_{1}=2$ and
+$\nu_{1}=n-2$ (where n is the number of pairs). The critical value
+is chosen for $\alpha\%$ significance with those same degrees of
+freedom. \citet{Bartko} amends this metholodogy for calculation
+using the from the averages of the pairs, as opposed to the sums,
+and their differences. This would facilitate simultaneous usage of
+test with the Bland Altman methodology. Bartko's test statistic
+take the form:
+\begin{equation} F.test = \frac{(\Sigma D^{2})-SSReg}{2MSReg}
+\end{equation}
+
+\newpage
+
+% latex table generated in R 2.6.0 by xtable 1.5-5 package
+% Mon Aug 31 15:53:51 2009
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{lrrrrr}
+  \hline
+ & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\
+  \hline
+Averages & 1 & 0.04 & 0.04 & 0.74 & 0.4097 \\
+  Residuals & 10 & 0.60 & 0.06 &  &  \\
+   \hline
+\end{tabular}
+\caption{Regression ANOVA of case-wise differences and averages
+for Grubbs Data}
+\end{center}
+\end{table}
+
+
+
+
+For the Grubbs data, $\Sigma D^{2}=5.09 $, $SSReg = 0.60$ and
+$MSreg=0.06$ Therefore the test statistic is $37.42$, with a
+critical value of $4.102821$ (calculate using r code
+$qf(0.95,2,10)$). Hence the means and variance of the Fotobalk and
+Counter chronometers are assumed to be simultaneously equal.
+
+Importantly, this methodology determines whether there is both
+inter-method bias and precision present, or alternatively if there
+is neither present. It has previously been demonstrated that there
+is a inter-method bias present, but as this procedure does not
+allow for seperate testing, no conclusion can be drawn on the
+comparative precision of both methods.
+\newpage
+\subsection{Bartko's Ellipse}
+\citet{Bartko} offers a graphical complement to the Bland-Altman
+plot, in the form of a bivariate confidence ellipse.
+\citet{AltmanEllipse} provides the relevant calculations.
+
+\begin{figure}[h!]
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=130mm]{GrubbsBartko.jpeg}
+  \caption{Bartko's Ellipse For Grubbs Data}\label{GrubbsBartko}
+\end{figure}
+
+
+\addcontentsline{toc}{section}{Bibliography}
+\bibliography{2012bib}
+\end{document}

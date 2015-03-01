@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0069)http://www.stat.washington.edu/lstan/Courses/stat502_2007/lab102307.R -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>
+<BODY><PRE>###########################################	
+#	Checking assumptions: normality	# 
+###########################################
+
+par(mfcol=c(2,3), pty='s')
+for (n in c(10,100,1000)){
+	x.sim&lt;-rnorm(n)
+	hist(x.sim, main=paste("Hist: n=", n), prob=T, col="bisque")
+	lines(density(x.sim), col="red", lwd=2)
+
+	qqnorm(x.sim, main=paste("QQ-plot: n=", n))
+	qqline(x.sim, col="red", lwd=2)
+}
+
+par(mfcol=c(2,3), pty='s')
+for (tdf in c(2,9,100)){
+	x.sim&lt;-rt(1000, df=tdf)
+	hist(x.sim, main=(expression(paste("Hist: df[",tdf,"]"))), ylim=c(0,0.5), prob=T, col="bisque")
+	lines(density(x.sim), col="red", lwd=2)
+
+	qqnorm(x.sim, main="")
+	qqline(x.sim, col="red", lwd=2)
+}
+
+par(mfrow=c(1,2), pty='s')
+x.sim &lt;- rgamma(1000, shape=4, rate=1)
+hist(x.sim, col="bisque", prob=T, main=expression(Hist: Gamma(4,1)))
+lines(density(x.sim),col="red", lwd=2)
+qqnorm(x.sim, main=expression(Gamma(4,1)))
+qqline(x.sim, col="red", lwd=2)
+
+
+###################
+#	ANOVA		#
+###################
+
+# Simulate two samples of size 50 from N(5,1) and N(6,1)
+set.seed(1652468056)
+y1&lt;-rnorm(50, mean=5, sd=1)
+y2&lt;-rnorm(50, mean=6, sd=1)
+
+y&lt;-c(y1, y2)
+group&lt;-c(rep(1,50),rep(2,50))
+
+par(mfrow=c(1,3), pty='s')
+
+hist(y1, prob=T,col="bisque", main="Hist: group 1")
+lines(density(y1), lwd=2, col="red")
+
+hist(y2, prob=T,col="bisque", main="Hist: group 2")
+lines(density(y2), lwd=2, col="red")
+
+boxplot(y~group, col="bisque")
+
+
+
+# Fit a linear model
+
+mod.lm&lt;-lm(y~as.factor(group))
+
+summary(mod.lm)
+anova(mod.lm)
+
+names(mod.lm)
+qqnorm(resid(mod.lm))
+qqline(resid(mod.lm), col="red", lwd=2)
+
+# why as.factor()? 
+# consider 3 groups: the previous two, plus a group from N(4,1)
+
+y3&lt;-rnorm(50, mean=4, sd=1)
+y&lt;-c(y,y3)
+group&lt;-c(group, rep(3,50))
+
+mod.lm&lt;-lm(y~group)
+summary(mod.lm)
+
+mod.lm&lt;-lm(y~as.factor(group))
+summary(mod.lm)
+anova(mod.lm)
+
+#########################
+#	ANOVA: manually	#
+#########################
+
+y1.bar&lt;-mean(y1)
+y2.bar&lt;-mean(y2)
+y3.bar&lt;-mean(y3)
+group.mean&lt;-c(rep(y1.bar,50),rep(y2.bar,50),rep(y3.bar,50))
+
+total&lt;-y-mean(y)
+treatment&lt;-group.mean-mean(y)
+error&lt;-y-group.mean
+
+SST &lt;- sum(treatment^2)
+SSE &lt;- sum(error^2)
+
+dft&lt;-3-1
+dfe&lt;-150-3
+
+MST &lt;- SST/dft
+MSE &lt;- SSE/dfe
+
+F.val &lt;- MST/MSE
+
+1-pf(F.val, dft, dfe)
+</PRE></BODY></HTML>

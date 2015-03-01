@@ -1,0 +1,182 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{amscd,amssymb,amsthm}
+\usepackage{amssymb}
+\usepackage{vmargin}
+\usepackage{epsfig}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+
+
+\title{Kevin O'Brien meeting}
+
+%\renewcommand{\baselinestretch}{1.2}
+
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\pagenumbering{arabic}
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{enumerate}
+
+\item  Where does the figure  2.83 come from in the 1983
+Altman-Bland  paper?   Might look at the book by Eamonn Mullins
+``Statistical methods in the chemistry quality control
+laboratory."
+
+\item You will need to learn a good bit about linear mixed effects
+models. The books by Faraway and the book by Pinheiro and Bates
+should provide a structured approach for doing this. I have the
+code that does with the Faraway books -- remind me to send this to
+you.
+
+\item \cite{Kinsella:1986} addresses the lack of a formal
+treatment in the Bland-Altman approach. The underlying model is a
+mixed effects linear model with heterogenous variances. The full
+model can be written
+\begin{eqnarray}
+y_{ij} = \beta_j + b_i + \varepsilon_{ij}, \ \ i=1,\ldots,n,  \ \
+                    j = 1,2,\label{TwoWay:MixedModel} \\
+b_i \sim \mathcal{N}(0,\sigma^2_b), \ \ \varepsilon_{ij} \sim
+\mathcal{N}(0,\sigma^2_j). \qquad \  \nonumber
+\end{eqnarray}
+The case-wise differences $d_i = y_{i1} - y_{i2}$ and  case-wise
+means $m_i = (y_{i1} + y_{i2})/2$ follow a bivariate normal
+distribution with $\mathrm{E} \left[d_i \right] = \beta  = \beta_1
+- \beta_2,$ and $\mathrm{E} \left[m_i \right] = \tau  = \left(
+\beta_1 + \beta_2 \right) / 2, $ and variance covariance matrix of
+$\left( d, m \right)^\mathrm{T}$ equal to
+$$
+\Sigma = \pmatrix{\sigma_1^2+ \sigma_2^2 &
+\frac{1}{2}\left(\sigma_1^2- \sigma_2^2 \right) \cr
+\frac{1}{2}\left(\sigma_1^2 - \sigma_2^2 \right) & \sigma^2 +
+\frac{1}{4}\left(\sigma_1^2+ \sigma_2^2 \right) }.
+$$
+The test of the hypothesis that the method variances are equal,
+which was devised concurrently by \cite{Pitman:1939} and
+\cite{Morgan:1939}, is based on the product moment correlation of
+$d$ and $m,$ the coefficient being
+$$
+\rho (d, m) = {(\sigma^2_1 - \sigma^2_2) \over \sqrt{ (\sigma^2_1
++ \sigma^2_2)(4\sigma^2 + \sigma^2_1 + \sigma^2_2) } },
+$$
+which is zero if, and only if, $\sigma^2_1 = \sigma^2_2.$
+Consequently a test of Ho: $\sigma^2_1 = \sigma^2_2$ is equivalent
+to a test of Ho: $\rho(d,m)=0$ and the test statistic is the
+familiar {\it t} test for a correlation coefficient with $(n-2)$
+degrees of freedom. The plot of $d_i$ against $m_i,$ discussed by
+\cite{Altm:Bland:1983} is a visual analogue of this test. \\
+Convince yourself that $\Sigma$ here is correct.
+
+
+\item As an example of simulation studies in \textsf{R}, and
+totally unrelated with your Bland-Altman problem, consider the
+following simple example simulating a two group t-test comparing
+means. What do you see when you increase the sd of the $y$s?
+\begin{verbatim}
+alpha=0.1;m=10;n=10
+N=10000
+n.reject=0
+t.crit = qt(1-alpha/2,n+m-2)
+for(i in 1:N)
+{
+    x=rnorm(m,mean=0,sd=1)
+    y=rnorm(n,mean=0,sd=1)
+    t.val = t.test(x,y)$statistic
+    if (abs(t.val) > t.crit ) n.reject = n.reject + 1
+}
+true.sig.level = n.reject/N
+true.sig.level
+\end{verbatim}
+
+Next, consider the following simple example simulating a two group
+Z confidence interval comparing proportions. This is done over a
+range of values:
+
+\begin{verbatim}
+z=qnorm(p=0.95)
+bin.conf.interval = function(y,n)
+{
+phat=y/n
+SEphat = sqrt(phat*(1-phat)/n)
+return(c(phat-z*SEphat,phat+z*SEphat))
+}
+SimResults=matrix(0,3,3)
+Ns=c(10,25,100)
+Ps=c(0.05,0.25,0.50)
+N=100000
+for(i in 1:3)
+{
+n=Ns[i]
+    for(j in 1:3)
+    {
+    p=Ps[j]
+    CIgood = 0
+        for(k in 1:N)
+        {
+        y = rbinom(1,size=n,prob=p)
+        CI = bin.conf.interval(y,n)
+        if((CI[1]<=p)&(CI[2]>=p)) CIgood = CIgood + 1
+        }
+    SimResults[i,j]=CIgood
+    }
+}
+Pgood = SimResults/N;
+Pgood
+\end{verbatim}
+
+
+\item Your homework is to start structuring something similar for
+the Bland-Altman plot. To get started, consider
+
+
+\begin{verbatim}
+
+Random.BAplot = function()
+{
+BetaOne = 0
+BetaTwo = 0     # might want to increase this later
+sigma.b = 1
+lambda = 1      # variability of instrument 1 wrt REs Sigma
+rho = 1         # variability of instrument 2 wrt instrument 1
+sigma.one = lambda*sigma.b
+sigma.two = rho*sigma.one
+n = 20
+REs = rnorm( n , mean = 0, sd = sigma.b)
+Yone = BetaOne + REs + rnorm( n , mean = 0, sd = sigma.one)
+Ytwo = BetaTwo + REs + rnorm( n , mean = 0, sd = sigma.two)
+Ds = Ytwo - Yone
+Ms = (Ytwo + Yone)/2
+mean.Ds = mean(Ds)
+sd.Ds = sd(Ds)
+plot(x=Ms,y=Ds,ylim=c(-2.5,2.5)*sd.Ds,title="")
+abline(h=mean.Ds,col=2,lty=2)
+abline(h=c(mean.Ds-1.96*sd.Ds,mean.Ds+1.96*sd.Ds),col=4,lty=3)
+cor.test(Ds,Ms)
+if( cor.test(Ds,Ms)$p.value < 0.10) text(0,2.3,"STATISTICALLY SIGNIFICANT",
+                cex = 0.7)
+}
+
+par(mfrow=c(2,3))
+for(i in 1:6) Random.BAplot()
+
+\end{verbatim}
+
+
+
+\end{enumerate}
+
+
+\clearpage
+
+\bibliography{refs}
+
+
+\end{document}

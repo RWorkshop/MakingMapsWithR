@@ -1,0 +1,12 @@
+model
+  {
+  for (i in 1:I)
+      {
+      y[i]~dnorm(mu[i],tau)
+      mu[i]<-alpha+beta*x[i]
+      }
+    alpha ~ dnorm(0,1.0E-6)
+    beta ~ dnorm(0,1.0E-6)
+    sigma ~ dunif(0,100)
+    tau<-1/pow(sigma,2)
+  }

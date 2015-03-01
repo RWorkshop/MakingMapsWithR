@@ -1,0 +1,67 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Research notes: linear mixed effects models}
+\author{ } \date{ }
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Mixed Models for Method Comparison Studies}
+
+\section{Variance components}
+Variance parameter must take an non-negative value. However an individual variance component, i.e. a component of the overall variance, may be negative.
+
+\section{Deming Regression}
+
+As stated previously, the fundamental flaw of simple linear regression is that it allows for measurement error in one variable only. This causes a downward biased slope estimate.
+
+Deming regression is a regression fitting approach that assumes error in both variables.
+The sum of squared distances from measured sets of values to the regression line is minimized at an angles specified by the ratio $\lambda$ of the residual variance of both variables. In ordinary linear regression, the distances are minimized in the vertical directions \citep{linnet99}.
+
+
+The variance of the ratio,$\lambda$, specifies the angle.
+
+When $\lambda$ is one, the angle is 45 degrees. 
+
+\citet{linnet93} defines analytical standard deviation as the standard deviation of measures values around the target value.
+
+In cases involving only single measurements by each method, $\lambda$ may be unknown and is therefore assumes a value of one. While this will bias the estimates, it is less biased than ordinary linear regression.
+
+
+
+%------------------------------------------------%
+\newpage
+\addcontentsline{toc}{section}{Bibliography}
+\bibliography{transferbib}
+\end{document} 

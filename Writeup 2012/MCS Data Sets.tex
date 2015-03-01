@@ -1,0 +1,104 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Research notes: linear mixed effects models}
+\author{ } \date{ }
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{MCS Data Sets}
+
+%-------------------------------------------------
+\begin{itemize}
+\item \textbf{Blood (JSR) data:} 
+\item \textbf{PEFR Data:} Roy2009
+\item \textbf{Oximetry data:} BXC2004
+\item \textbf{Fat data:} BXC2004
+\item \textbf{Trig Gerber Data:} BXC2008
+\item \textbf{Nadler Hurley:}
+\item \textbf{Hamlett:}
+\end{itemize}
+\newpage
+\section{PEFR and Cardiac}
+
+
+Two further data sets applied to both methodologies are the``Cardiac" and ``PEFR" , which are both contained on Carstensen's MethComp package. This data is from Bland and Altman (1986): two measurements of peak expiratory flow rate (PEFR) are compared. One of these measurements uses a ``Large" meter and the other a ``Mini" meter.
+
+Two measurements were made with a Wright peak flow meter and two with a mini Wright meter, in random order.  All measurements were taken by the same observer, using the same two instruments. (These data were collected to demonstrate the statistical method and provide no evidence on the comparability of these two instruments.)
+
+\subsection{Hamletts'data}
+
+\section{Roy}
+Roy proposes a novel method using the LME model with Kronecker product covariance structure in a doubly multivariate set-up to assess the agreement between a new method and an established
+method with unbalanced data and with unequal replications for different subjects.
+
+In this article we assume that the replicated measurements are true replicates. Sometimes true or genuine replicates cannot be obtained.
+
+\section{results}
+
+Using Carstensen's method, the standard deviations of the casewise
+differences were computed as 20.43139089,20.26824078,2.260886283
+respectively. Using Roy's model, these deviations are estimated to
+be 20.32756749, 20.16326412, 2.252869282 respectively.
+
+Similarly for the fat and ox data Carstensen computes the
+difference deviations as and 6.16867323 , whereas under
+roy's model they are estimated to be 6.139275202 and
+respectively.
+
+However, using the PEFR and cardiac data, differences emerge.
+
+\begin{tabular}{|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+ Data & Carstensen & Roy \\
+  \hline
+  Fat &  0.1352 & 0.1373\\
+  Ox & 6.1686 & 6.1392 \\
+  Blood JS & 20.4314 & 20.3275
+ \\
+  Blood JR & 2.26088 & 2.2528
+ \\
+  Blood RS & 20.2682 & 20.16326412
+ \\
+  Hamlett & 0.9031 & 0.8922
+
+ \\
+  \hline
+\end{tabular}
+
+
+
+
+\end{document}

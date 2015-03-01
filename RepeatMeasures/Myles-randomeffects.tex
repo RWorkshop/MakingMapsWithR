@@ -1,0 +1,81 @@
+Using the Bland–Altman method to measure agreement with repeated measures
+http://bja.oxfordjournals.org/content/99/3/309.full
+
+P. S. Myles
+Department of Anaesthesia and Perioperative Medicine, Alfred Hospital, Commercial Road, Melbourne, Victoria 3004, Australia
+Department of Epidemiology and Preventive Medicine, Monash University, Melbourne, Australia
+
+
+
+\section{Repeated Measurements}
+The original BlandAltman paper (1983) has been cited on more than
+$11,500$ occasions indicative of its importance in medical
+research.
+\\
+\\
+Myers also remarks up on this : \emph{The BlandAltman method can
+even include estimation of confidence intervals for the bias and
+limits of agreement, but these are often omitted in research
+papers.}
+\\
+\\
+When repeated measures data are available, it is desirable to use
+all the data to compare the two methods. However, the original
+BlandAltman method was developed for two sets of measurements
+done on one occasion (i.e. independent data), and so this approach
+is not suitable for repeated measures data. However, as a naý¨ve
+analysis, it may be used to explore the data because of the
+simplicity of the method.
+\\
+\\
+Myers comments upon the misuse of the Bland Altman methods is
+literature, citing several research papers.
+\\
+\\
+Myers et al propose using random effects models.
+\\
+\\
+
+% P.S. Myles
+% Using the Bland Altman Method to measure agreement with repeated measures
+% British Journal of Anaesthesia
+% Volume 99, number 3, September 2007 pages 309-311
+%-------------------------------------------------------------------------------%
+
+%PREVALENCE OF BLAND ALTMAN
+
+\begin{quote}
+The original Bland Altman Publication has been cited on more than 11,500 occasions, compelling evidence of its 
+importance in medical research.
+\end{quote}
+
+The Bland Altman method can even include estimation of confidence intervals for the bias and limits of agreement, 
+but these are often omitted in research papers.
+
+The presentation of the 95% limits of agreement is for visual judgement of how well two methods of measurement agree.
+The smaller the range between the two, the better the agreement is 
+The question of small is small is a question of clinical judgement
+
+Repeated measurements for each subjects are often used in clinical research.
+
+
+The original Bland Altman Method was developed for two sets of measurements done on one occasion (i.e. independent data), and so this approach is not suitable for repeated measures data. However, as a naïve analysis, it may be used to explore the data because of the simplicity of the method. Myles states that such misuse of the standards Bland Altman method is widespread in Anaesthetic and critical care literature.
+
+Bland and Altman have provided a modification for analysing repeated measures under stable or chaninging conditions, where repearted data is collected over a period of time. 
+Myers proposes an alternative Random effects model for this purpose.
+
+%--------------------------------------------------------------------------%
+\section{Random Effects Model  (Myers)}
+\begin{itemize}
+\item	With repeated measures data, we can calculate the mean of the repeated measurements by each method on each individuals
+\item	The pairs of means can then be used to compare the two methods based on the 95% limits of agreement for the difference of means. The bias between the two methods will not be affected by averaging the repeated measurements.
+\item	However the variation of the differences will be underestimated by this practice because the measurement error is, to some extent, removed. Some advanced statistical calculations are needed to take into account these measurement errors.
+\item	Random effects models can be used to estimate the within-subject variation after accounting for other observed and unobserved variations, in which each subject has a different intercept and slope over the observation period
+\item	On the basis of the within-subject variance estimated by the random effects model, we can then create an appropriate Bland Altman Plot.
+\item	The sequence or the time of the measurement over the observation period can be taken as a random effect.
+\end{itemize}
+% {note – need to explain this better}
+\end{document}
+The main difference between  Myers proposed method and the Bland Altman is that the random effects model is used to estimate the within-subject variance after adjusting for known and unknown variables. The Bland Altman approach uses one way analysis of variance to estimate the within subject variance.
+In general, the random effects model is an extension of the analysis of the ANOVA method and it can adjust for many more covariates than the ANOVA method
+

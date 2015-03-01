@@ -1,0 +1,248 @@
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+
+
+\section{Introduction to Roy's Tests}
+
+\citet{roy} uses an approach based on linear mixed effects (LME) models for the purpose of comparing the agreement between two methods of measurement, where replicate measurements on items, typically individuals, by both methods are available. She provides three tests of hypothesis appropriate for evaluating the agreement between the two methods of measurement under this sampling scheme. These tests consider null hypotheses that assume: absence of inter-method bias; equality of between-subject variabilities of the two methods; equality of within-subject variabilities of the two methods. By inter-method bias we mean that a systematic difference exists between observations recorded by the two methods. Differences in between-subject variabilities of the two methods arise when one method is yielding average response levels for individuals than are more variable than the average response levels for the same sample of individuals taken by the other method.  Differences in within-subject variabilities of the two methods arise when one method is yielding responses for an individual than are more variable than the responses for this same individual taken by the other method. The two methods of measurement can be considered to agree, and subsequently can be used interchangeably, if all three null hypotheses are true.
+
+
+\bigskip
+
+Let $y_{mir} $ be the $r$th replicate measurement on the $i$th item by the $m$th method, where $m=1,2,$ $i=1,\ldots,N,$ and $r = 1,\ldots,n_i.$ When the design is balanced and there is no ambiguity we can set $n_i=n.$ The LME model can be written
+\begin{equation}
+y_{mir} = \beta_{0} + \beta_{m} + b_{mi} + \epsilon_{mir}.
+\end{equation}
+Here $\beta_0$ and $\beta_m$ are fixed-effect terms representing, respectively, a model intercept and an overall effect for method $m.$ The $b_{1i}$ and $b_{2i}$ terms represent random effect parameters corresponding to the two methods, having $\mathrm{E}(b_{mi})=0$ with $\mathrm{Var}(b_{mi})=g^2_m$ and $\mathrm{Cov}(b_{mi}, b_{m^\prime i})=g_{12}.$ The random error term for each response is denoted $\epsilon_{mir}$ having $\mathrm{E}(\epsilon_{mir})=0$, $\mathrm{Var}(\epsilon_{mir})=\sigma^2_m$, $\mathrm{Cov}(b_{mir}, b_{m^\prime ir})=\sigma_{12}$, $\mathrm{Cov}(\epsilon_{mir}, \epsilon_{mir^\prime})= 0$ and $\mathrm{Cov}(\epsilon_{mir}, \epsilon_{m^\prime ir^\prime})= 0.$
+When two methods of measurement are in agreement, there is no significant differences between $\beta_1$ and $\beta_2,$ $g^2_1 $ and$ g^2_2$, and $\sigma^2_1 $ and$ \sigma^2_2$.
+\bigskip
+
+% Complete paragraph by specifying variances and covariances for epsilons.
+% I thing that these are your sigmas?
+% Also, state equality of the parameters in this model when each of the three hypotheses above are true.
+
+
+\newpage
+
+\section{Roy's Hypotheses Tests}
+
+In order to express Roy's LME model in matrix notation we gather all $2n_i$ observations specific to item $i$ into a single vector  $\boldsymbol{y}_{i} = (y_{1i1},y_{2i1},y_{1i2},\ldots,y_{mir},\ldots,y_{1in_{i}},y_{2in_{i}})^\prime.$ The LME model can be written
+\[
+\boldsymbol{y_{i}} = \boldsymbol{X_{i}\beta} + \boldsymbol{Z_{i}b_{i}} + \boldsymbol{\epsilon_{i}},
+\]
+where $\boldsymbol{\beta}=(\beta_0,\beta_1,\beta_2)^\prime$ is a vector of fixed effects, and $\boldsymbol{X}_i$ is a corresponding $2n_i\times 3$ design matrix for the fixed effects. The random effects are expressed in the vector $\boldsymbol{b}=(b_1,b_2)^\prime$, with $\boldsymbol{Z}_i$ the corresponding $2n_i\times 2$ design matrix. The vector $\boldsymbol{\epsilon}_i$ is a $2n_i\times 1$ vector of residual terms.
+
+It is assumed that $\boldsymbol{b}_i \sim N(0,\boldsymbol{G})$, $\boldsymbol{\epsilon}_i$ is a matrix of random errors distributed as $N(0,\boldsymbol{R}_i)$ and that the random effects and residuals are independent of each other.
+% Assumptions made on the structures of $\boldsymbol{G}$ and $\boldsymbol{R}_i$ will be discussed in due course.
+
+% \texttt{finish}
+
+$\boldsymbol{G}$ is the variance covariance matrix for the random effects $\boldsymbol{b}$.
+i.e. between-item sources of variation. The between-item variance covariance matrix $\boldsymbol{G}$ is constructed as follows:
+
+\[ \mbox{Var}  \left[
+            \begin{array}{c}
+              b_1   \\
+              b_2  \\
+            \end{array}
+          \right] =  \boldsymbol{G} =\left(
+            \begin{array}{cc}
+              g^2_1  & g_{12} \\
+              g_{12} & g^2_2 \\
+            \end{array}
+          \right) \]
+It is important to note that no special assumptions about the structure of $\boldsymbol{G}$ are made. An example of such an assumption would be that $\boldsymbol{G}$ is the product of a scalar value and the identity matrix.
+
+$\boldsymbol{R}_{i}$ is the variance covariance matrix for the residuals, i.e. the within-item sources of variation between both methods. Computational analysis of linear mixed effects models allow for the explicit analysis of both $\boldsymbol{G}$ and $\boldsymbol{R_i}$.
+
+\citet{hamlett} shows that $\boldsymbol{R}_{i}$  can be expressed as $\boldsymbol{R}_{i} = \boldsymbol{I}_{n_{i}} \otimes \boldsymbol{\Sigma}$. The partial within-item variance?covariance matrix of two methods at any replicate is denoted $\boldsymbol{\Sigma}$, where $\sigma^2_{1}$ and $\sigma^2_{2}$ are the within-subject variances of the respective methods, and $\sigma_{12}$ is the within-item covariance between the two methods. It is assumed that the within-item variance?covariance matrix $\boldsymbol{\Sigma}$ is the same for all replications. Again it is important to note that no special assumptions are made about the structure of the matrix.
+
+\begin{equation}
+\boldsymbol{\Sigma} = \left( \begin{array}{cc}
+  \sigma^2_{1} & \sigma_{12} \\
+  \sigma_{12} & \sigma^2_{2} \\
+\end{array}\right)
+\end{equation}
+
+\vspace{1in}
+
+For expository purposes consider the case where each item provides three replicates by each method. Then in matrix notation the model has the structure
+\begin{equation}
+\boldsymbol{y}_{i} =
+\left(
+\begin{array}{ccc}
+ 1 & 1 & 0 \\
+ 1 & 0 & 1 \\
+ 1 & 1 & 0 \\
+ 1 & 0 & 1 \\
+ 1 & 1 & 0 \\
+ 1 & 0 & 1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{c}         \beta_0 \\ \beta_1 \\ \beta_2 \\
+                                \end{array}
+                              \right)
+                        +  \left(
+                         \begin{array}{cc}
+                           1 & 0 \\
+                           0 & 1 \\
+                           1 & 0 \\
+                           0 & 1 \\
+                           1 & 0 \\
+                           0 & 1 \\
+                         \end{array}
+                       \right)\left(
+                                \begin{array}{c}
+                                  b_{1i} \\   b_{2i} \\
+                                \end{array}
+                              \right)
+                              +
+                              \left(
+                                          \begin{array}{c}
+                                            \epsilon_{1i1} \\
+                                            \epsilon_{2i1} \\
+                                            \epsilon_{1i2} \\
+                                            \epsilon_{2i2} \\
+                                            \epsilon_{1i3} \\
+                                            \epsilon_{2i3} \\
+                                          \end{array}
+                                        \right) ,
+\end{equation}
+where
+\[
+\boldsymbol{G} =
+\]
+and
+\[
+\boldsymbol{R}_i =
+\]
+
+It is assumed that $\boldsymbol{b}_i \sim N(0,\boldsymbol{G})$,
+$\boldsymbol{\epsilon}_i$ is a matrix of random errors distributed as $N(0,\boldsymbol{R}_i)$ and
+that the random effects and residuals are independent of each other. Assumptions made on the structures of $\boldsymbol{G}$ and $\boldsymbol{R}_i$ will be discussed in due course.
+
+\newpage
+
+
+
+
+
+The overall variability between
+the two methods is the sum of between-item variability
+$\boldsymbol{G}$ and within-item variability
+$\boldsymbol{\Sigma}$. \citet{roy} denotes the overall variability
+as ${\mbox{Block - }\boldsymbol \Omega_{i}}$. The overall
+variation for methods $1$ and $2$ are given by
+
+\begin{center}
+\[\left(\begin{array}{cc}
+                \omega^2_1  & \omega_{12} \\
+              \omega_{12} & \omega^2_2 \\
+            \end{array}  \right)
+            =  \left(
+            \begin{array}{cc}
+              g^2_1  & g_{12} \\
+              g_{12} & g^2_2 \\
+            \end{array} \right)+
+            \left(
+            \begin{array}{cc}
+              \sigma^2_1  & \sigma_{12} \\
+              \sigma_{12} & \sigma^2_2 \\
+            \end{array}\right)
+\]
+\end{center}
+The computation of the limits of agreement require that the variance of the difference of measurements. This variance is easily computable from the estimate of the ${\mbox{Block - }\boldsymbol \Omega_{i}}$ matrix. Lack of agreement can arise if there is a disagreement in overall variabilities. This may be due to due to the disagreement in either between-item
+variabilities or within-item variabilities, or both. \citet{roy} allows for a formal test of each.
+
+
+
+\newpage
+\section{Carstensen's Limits of agreement}
+\citet{bxc2008} presents a methodology to compute the limits of
+agreement based on LME models. Importantly, Carstensen's underlying model differs from Roy's model in some key respects, and therefore a prior discussion of Carstensen's model is required.
+
+\subsection{Carstensen's Model}
+
+\citet{BXC2004} presents a model to describe the relationship between a value of measurement and its
+real value. The non-replicate case is considered first, as it is the context of the Bland Altman plots. This model assumes that inter-method bias is the only difference between the two methods.
+
+A measurement $y_{mi}$ by method $m$ on individual $i$ is formulated as follows;
+\begin{equation}
+y_{mi}  = \alpha_{m} + \mu_{i} + e_{mi} \qquad  e_{mi} \sim
+\mathcal{N}(0,\sigma^{2}_{m})
+\end{equation}
+The differences are expressed as $d_{i} = y_{1i} - y_{2i}$. For the replicate case, an interaction term $c$ is added to the model, with an associated variance component. All the random effects are assumed independent, and that all replicate measurements are assumed to be exchangeable within each method.
+
+\begin{equation}
+y_{mir}  = \alpha_{m} + \mu_{i} + c_{mi} + e_{mir}, \qquad  e_{mi}
+\sim \mathcal{N}(0,\sigma^{2}_{m}), \quad c_{mi} \sim \mathcal{N}(0,\tau^{2}_{m}).
+\end{equation}
+%----
+
+Of particular importance is terms of the model, a true value for item $i$ ($\mu_{i}$).  The fixed effect of Roy's model comprise of an intercept term and fixed effect terms for both methods, with no reference to the true value of any individual item. A distinction can be made between the two models: Roy's model is a standard LME model, whereas Carstensen's model is a more complex additive model.
+
+
+\subsection{Assumptions on Variability}
+
+Aside from the fixed effects, another important difference is that Carstensen's model requires that particular assumptions be applied, specifically that the off-diagonal elements of the between-item
+and within-item variability matrices are zero. By extension the
+overall variability off diagonal elements are also zero.
+
+Also, implementation requires that the between-item variances are
+estimated as the same value: $g^2_1 = g^2_2 = g^2$. Necessarily
+Carstensen's method does not allow for a formal test of the
+between-item variability.
+
+\[\left(\begin{array}{cc}
+                \omega^1_2  & 0 \\
+              0 & \omega^2_2 \\
+            \end{array}  \right)
+            =  \left(
+            \begin{array}{cc}
+              g^2  & 0 \\
+              0 & g^2 \\
+            \end{array} \right)+
+            \left(
+            \begin{array}{cc}
+              \sigma^2_1  & 0 \\
+              0 & \sigma^2_2 \\
+            \end{array}\right)
+\]
+
+In cases where the off-diagonal terms in the overall variability
+matrix are close to zero, the limits of agreement due to
+\citet{bxc2008} are very similar to the limits of agreement that
+follow from the general model.
+
+\newpage
+
+
+\section{Note 1: Coefficient of Repeatability}
+The coefficient of repeatability is a measure of how well a
+measurement method agrees with itself over replicate measurements
+\citep{BA99}. Once the within-item variability is known, the
+computation of the coefficients of repeatability for both methods
+is straightforward.
+
+
+\section{Note 2: Model terms}
+It is important to note the following characteristics of this model.
+\begin{itemize}
+\item Let the number of replicate measurements on each item $i$ for both methods be $n_i$, hence $2 \times n_i$ responses. However, it is assumed that there may be a different number of replicates made for different items. Let the maximum number of replicates be $p$. An item will have up to $2p$ measurements, i.e. $\max(n_{i}) = 2p$.
+
+% \item $\boldsymbol{y}_i$ is the $2n_i \times 1$ response vector for measurements on the $i-$th item.
+% \item $\boldsymbol{X}_i$ is the $2n_i \times  3$ model matrix for the fixed effects for observations on item $i$.
+% \item $\boldsymbol{\beta}$ is the $3 \times  1$ vector of fixed-effect coefficients, one for the true value for item $i$, and one effect each for both methods.
+
+\item Later on $\boldsymbol{X}_i$ will be reduced to a $2 \times 1$ matrix, to allow estimation of terms. This is due to a shortage of rank. The fixed effects vector can be modified accordingly.
+\item $\boldsymbol{Z}_i$ is the $2n_i \times  2$ model matrix for the random effects for measurement methods on item $i$.
+\item $\boldsymbol{b}_i$ is the $2 \times  1$ vector of random-effect coefficients on item $i$, one for each method.
+\item $\boldsymbol{\epsilon}$  is the $2n_i \times  1$ vector of residuals for measurements on item $i$.
+\item $\boldsymbol{G}$ is the $2 \times  2$ covariance matrix for the random effects.
+\item $\boldsymbol{R}_i$ is the $2n_i \times  2n_i$ covariance matrix for the residuals on item $i$.
+\item The expected value is given as $\mbox{E}(\boldsymbol{y}_i) = \boldsymbol{X}_i\boldsymbol{\beta}.$ \citep{hamlett}
+\item The variance of the response vector is given by $\mbox{Var}(\boldsymbol{y}_i)  = \boldsymbol{Z}_i \boldsymbol{G} \boldsymbol{Z}_i^{\prime} + \boldsymbol{R}_i$ \citep{hamlett}.
+\end{itemize}
+
+\end{document}

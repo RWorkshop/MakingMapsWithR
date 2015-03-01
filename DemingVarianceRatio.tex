@@ -1,0 +1,102 @@
+
+\documentclass[Chap3amain.tex]{subfiles}
+\begin{document}
+
+
+\section{Estimating the Variance ratio}
+
+
+\begin{eqnarray*}
+x_{i} = \mu +  \beta_{0} + \epsilon_{xi}\\
+y_{i} = \mu +  \beta_{1} + \epsilon_{yi}\\
+\end{eqnarray*}
+
+The inter-method bias is the difference of these biases. In order
+to determine an estimate for the residual variances, one of the
+method biases must be assumed to be zero, i.e. $\beta_{0} = 0$.
+The inter-method bias is now represented by $\beta_{1}$.
+
+\begin{eqnarray*}
+x_{i} &=& \mu + \epsilon_{xi}\\
+y_{i} &=& \mu +  \beta_{1} + \epsilon_{yi}\\
+\end{eqnarray*}
+
+
+The residuals can be expressed as
+\begin{eqnarray*}
+\epsilon_{xi} &=& x_{i} - \mu  \\
+\epsilon_{yi} &=& y_{i} - (\mu + \beta_{1}) \\
+\end{eqnarray*}
+
+The variance of the residuals are equivalent to the variance of
+the corresponding observations, $\sigma^{2}_{\epsilon x} =
+\sigma^{2}_{x}$ and $\sigma^{2}_{\epsilon y} = \sigma^{2}_{y}$.
+\begin{equation}
+\lambda = \frac{\sigma^{2}_{yx}}{\sigma^{2}_{y}}.
+\end{equation}
+
+%------------------------------------------------------------------------------------%
+\newpage
+\section{Using LMEs to estimate the ratio}
+
+\begin{eqnarray*}
+y_{mi} &=& \mu + \beta_{m} + b_{i} + \epsilon_{mi}\\
+\end{eqnarray*}
+
+with $\beta_{m}$ is a fixed effect for the method $m$ and $b_{i}$
+is a random effect associated with patient $i$, and
+$\epsilon_{mi}$ as the measurement error.
+
+This is a simple single level LME model. \citet{pb} provides for
+the implementation of fitting a model.
+
+The variance ratio of the residual variances is immediately
+determinable from the output. This variance ratio can be use to
+fit a Deming regression, as described in chapter 1.
+
+
+%------------------------------------------------------------------------------------%
+\newpage
+\section{Estimating the variance ratio}
+
+Using duplicate measurements, one can estimate the analytical
+standard deviations and compute their ratio. This ratio is then
+used for computing the slope by the Deming method.[Linnet]
+
+\subsection{RMSE} The root mean square error, RMSE,  is given by
+\begin{equation*}
+\mbox{RMSE} = \sqrt{\sum{(b-1)^2/nruns}} =
+\sqrt{\mbox{(Bias)}^{2}+ \mbox{(SE)}^{2}}
+\end{equation*}
+
+where `nruns' is the number of runs.
+
+\section{determining lambda}
+assuming constant standard deviations, and given duplicate
+measurements, the analytical standard deviations are given by
+
+\begin{eqnarray*}
+SD^{2}_{ax} = \frac{1}{2n} \sum (x_{2i} - x_{1i})^{2}\\
+SD^{2}_{ay} = \frac{1}{2n} \sum (y_{2i} - y_{1i})^{2}\\
+\end{eqnarray*}
+
+\section{performance in the presence of oultiers}
+All least square estimation methods are sensitive to outliers.
+
+\subsection{Rejection Rule}
+Rejection rule for outliers.
+
+\section{Ordinary Linear regression}
+
+%------------------------------------------------------------------------------------%
+\newpage
+\section{weighted least square regression}
+The constancy of variance is a necessary assumption for ordinary
+linear regression.
+
+\begin{equation}
+\mbox{SD}_{ay}  = ch(x_{i})
+\end{equation}
+
+
+\end{document}

@@ -1,0 +1,35 @@
+Linear Mixed Effects models
+Models where both fixed effects and Random effects occur linearly in the model function
+described by Laird and Ware 1982
+
+Beta is a p dimension vector of fixed effects
+Z X Regressor matrices for both fixed effects and random effects
+the B matrix is defined to have a mean 0 
+relative precision factor (@DEL) expresses the variance covariance matrix
+The Precision matrix (@phi^-1)
+(@sigma(error))
+
+Single Level or Multilevel
+
+
+profiled log likeihood is maximized with respect to @Theta, producing the maximum likelihood estimate @theta_hat
+profiled log likeihod consists of three additive components -  
+a constant
+a scaled logarithm of the RSS and 
+a sum of theratios of the logarithms of the determinants
+
+Restricted likelihood estimation (REML)
+
+several ways to compute the estimation criterion.
+
+optimization algorithms
+-through EM iterations
+-through Newton Raphon Algorithms
+EM used for incomplete data
+
+
+Each NR iteration requires a caclualton of the score function and its derivativethe hessian matrix
+of the log likelihood
+
+The NR algorithm converges quadratically under general conditions
+

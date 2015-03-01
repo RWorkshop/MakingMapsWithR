@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}The Identity plot}{2}
+\contentsline {section}{\numberline {2}Variations of the BA plot}{2}
+\contentsline {section}{\numberline {3}Survival Agreement Plot (Luiz et al)}{2}
+\contentsline {section}{\numberline {4}Eksborg's Plot}{2}
+\contentsline {section}{\numberline {5}Bartko's Ellipse}{3}
+\contentsline {section}{\numberline {6}Mountain Plot}{4}
+\contentsline {section}{Bibliography}{4}

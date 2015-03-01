@@ -1,0 +1,264 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{??}{ACR}{2008}]{ACR}
+ACR (2008).
+\newblock Acute {C}hest {P}ain ( suspected aortic dissection) - {A}merican
+  {C}ollege of {R}adiology {E}xpert {G}roup {R}eport.
+
+\bibitem[\protect\citeauthoryear{Altman}{Altman}{1978}]{AltmanEllipse}
+Altman, D. (1978).
+\newblock Plotting probability ellipses.
+\newblock {\em Journal of the Royal Statistical Society. Series C (Applied
+  Statistics)\/}~{\em 27\/}(3), 347--349.
+
+\bibitem[\protect\citeauthoryear{Altman and Bland}{Altman and
+  Bland}{1983}]{BA83}
+Altman, D. and J.~Bland (1983).
+\newblock Measurement in medicine: The analysis of method comparison studies.
+\newblock {\em Journal of the Royal Statistical Society. Series D (The
+  Statistician)\/}~{\em 32\/}(3), 307--317.
+
+\bibitem[\protect\citeauthoryear{Altman}{Altman}{1991}]{AltmanBook}
+Altman, D.~G. (1991).
+\newblock {\em Practical Statistics for Medical Research}.
+\newblock Chapman and Hall.
+
+\bibitem[\protect\citeauthoryear{Barnhart, Haber, and Lin}{Barnhart
+  et~al.}{2007}]{Barnhart}
+Barnhart, H., M.~Haber, and L.~Lin (2007).
+\newblock An overview of assessing agreement with continuous measurements.
+\newblock {\em Journal of Biopharmaceutical Statistics\/}~{\em 17}, 529--569.
+
+\bibitem[\protect\citeauthoryear{Bartko}{Bartko}{1994}]{Bartko}
+Bartko, J. (1994).
+\newblock Measures of agreement: A single procedure.
+\newblock {\em Statistics in Medicine\/}~{\em 13}, 737--745.
+
+\bibitem[\protect\citeauthoryear{Benjamini and Hochberg}{Benjamini and
+  Hochberg}{1995}]{BH}
+Benjamini, Y. and Y.~Hochberg (1995).
+\newblock Controlling the false discovery rate: A practical and powerful
+  approach to multiple testing.
+\newblock {\em J. Roy. Statist. Soc. Ser. B\/}~{\em 57\/}(1), 289--300.
+
+\bibitem[\protect\citeauthoryear{Bland and Altman}{Bland and
+  Altman}{1986}]{BA86}
+Bland, J. and D.~Altman (1986).
+\newblock Statistical methods for assessing agreement between two methods of
+  clinical measurement.
+\newblock {\em The Lancet\/}~{\em i}, 307--310.
+
+\bibitem[\protect\citeauthoryear{Bland and Altman}{Bland and
+  Altman}{1995}]{BA95}
+Bland, J. and D.~Altman (1995).
+\newblock Comparing methods of measurement - why plotting difference against
+  standard method is misleading.
+\newblock {\em The Lancet\/}~{\em 346}, 1085--87.
+
+\bibitem[\protect\citeauthoryear{Bland and Altman}{Bland and
+  Altman}{1999}]{BA99}
+Bland, J. and D.~Altman (1999).
+\newblock Measuring agreement in method comparison studies.
+\newblock {\em Statistical Methods in Medical Research\/}~{\em 8\/}(2),
+  135--160.
+
+\bibitem[\protect\citeauthoryear{Bradley and Blackwood}{Bradley and
+  Blackwood}{1989}]{BB89}
+Bradley, E.~L. and L.~G. Blackwood (1989).
+\newblock Comparing paired data: A simultaneous test for means and variances.
+\newblock {\em The American Statistician\/}~{\em 43\/}(4), 234--235.
+
+\bibitem[\protect\citeauthoryear{Carroll and Ruppert}{Carroll and
+  Ruppert}{1996}]{CarollRupert}
+Carroll, R. and D.~Ruppert (1996).
+\newblock The use and misuse of orthogonal regression in linear
+  errors-in-variables models.
+\newblock {\em The American Statistician\/}~{\em 50\/}(1), 1--6.
+
+\bibitem[\protect\citeauthoryear{Carstensen, Simpson, and Gurrin}{Carstensen
+  et~al.}{2008}]{BXC2008}
+Carstensen, B., J.~Simpson, and L.~C. Gurrin (2008).
+\newblock Statistical models for assessing agreement in method comparison
+  studies with replicate measurements.
+\newblock {\em The International Journal of Biostatistics\/}~{\em 4\/}(1).
+
+\bibitem[\protect\citeauthoryear{Cohen, Cohen, West, and Aiken}{Cohen
+  et~al.}{}]{Cohen}
+Cohen, J., P.~Cohen, S.~West, and L.~Aiken.
+\newblock {\em Applied multiple regression / correlation analysis for the
+  behavioral sciences\/} (Third ed.).
+\newblock Laurence Erlbaum Associates.
+
+\bibitem[\protect\citeauthoryear{Cornbleet and Cochrane}{Cornbleet and
+  Cochrane}{1979}]{CornCoch}
+Cornbleet, P.~J. and D.~Cochrane (1979).
+\newblock Regression methods for assessing agreement between two methods of
+  clinical measurement.
+\newblock {\em Journal of Clinical Chemistry\/}~{\em 24\/}(2), 342--345.
+
+\bibitem[\protect\citeauthoryear{Dewitte, Fierens, Stöckl, and
+  Thienpont}{Dewitte et~al.}{2002}]{Dewitte}
+Dewitte, K., C.~Fierens, D.~Stöckl, and L.~M. Thienpont (2002).
+\newblock Application of the {B}land {A}ltman plot for interpretation of
+  method-comparison studies: A critical investigation of its practice.
+\newblock {\em Clinical Chemistry\/}~{\em 48}, 799--801.
+
+\bibitem[\protect\citeauthoryear{Dunn}{Dunn}{2002}]{DunnSEME}
+Dunn, G. (2002).
+\newblock {\em Statistical Evaluation of Measurement Error\/} (Second ed.).
+\newblock Stanford: American Mathematical Society and Digital Press.
+
+\bibitem[\protect\citeauthoryear{Eksborg}{Eksborg}{1981}]{Eksborg}
+Eksborg, S. (1981).
+\newblock Evaluation of method-comparison data [letter].
+\newblock {\em Clinical Chemistry\/}~{\em 27}, 1311--1312.
+
+\bibitem[\protect\citeauthoryear{Grubbs}{Grubbs}{1948}]{Grubbs48}
+Grubbs, F. (1948).
+\newblock On estimating precision of measuring instruments and product
+  variability.
+\newblock {\em Journal of the American Statistical Association\/}~{\em 43},
+  243--264.
+
+\bibitem[\protect\citeauthoryear{Grubbs}{Grubbs}{1973}]{Grubbs73}
+Grubbs, F. (1973).
+\newblock Errors of measurement, precision, accuracy and the statistical
+  comparison of measuring instruments.
+\newblock {\em Technometrics\/}~{\em 15\/}(1), 53--66.
+
+\bibitem[\protect\citeauthoryear{Hollis}{Hollis}{1996}]{hollis}
+Hollis, S. (1996).
+\newblock Analysis of method comparison studies.
+\newblock {\em Ann Clin Biochem\/}~{\em 33}, 1--4.
+
+\bibitem[\protect\citeauthoryear{Kinsella}{Kinsella}{1986}]{Kinsella}
+Kinsella, A. (1986).
+\newblock Estimating method precision.
+\newblock {\em The Statistician\/}~{\em 35}, 421--427.
+
+\bibitem[\protect\citeauthoryear{Krummenauer, Genevriere, and
+  Nixdorff}{Krummenauer et~al.}{2000}]{Krumm}
+Krummenauer, F., I.~Genevriere, and U.~Nixdorff (2000).
+\newblock The biometrical comparison of cardiac imaging methods.
+\newblock {\em Computer Methods and Programs in Biomedicine\/}~{\em 62},
+  21–--34.
+
+\bibitem[\protect\citeauthoryear{Kummel}{Kummel}{1879}]{Kummel}
+Kummel, C. (1879).
+\newblock Reduction of observation equations which contain more than one
+  observed quantity.
+\newblock {\em The Analyst\/}~{\em 6}, 97--105.
+
+\bibitem[\protect\citeauthoryear{Lewis, Jones, Polak, and Tillitson}{Lewis
+  et~al.}{1991}]{lewis}
+Lewis, P., P.~Jones, J.~Polak, and H.~Tillitson (1991).
+\newblock The problem of conversion in method comparison studies.
+\newblock {\em Applied Statistics\/}~{\em 40}, 105--112.
+
+\bibitem[\protect\citeauthoryear{Lin}{Lin}{2000}]{lin2000}
+Lin, L. (2000).
+\newblock Total deviation index for measuring individual agreement with
+  applications in laboratory performance and bioequivalence.
+\newblock {\em Statistics in medicine\/}~{\em 97}, 255--270.
+
+\bibitem[\protect\citeauthoryear{Lin, Hedayat, Sinha, and Yang}{Lin
+  et~al.}{2002}]{lin2002}
+Lin, L., A.~Hedayat, B.~Sinha, and M.~Yang (2002).
+\newblock Statistical methods in assessing agreement: Models issues and tools.
+\newblock {\em Journal of American Statistical Association\/}~{\em 97},
+  257--270.
+
+\bibitem[\protect\citeauthoryear{Linnet}{Linnet}{1998}]{linnet98}
+Linnet, K. (1998).
+\newblock Performance of deming regression analysis in case of misspecified
+  analytical error ratio in method comparison studies.
+\newblock {\em Clinical Chemistry\/}~{\em 44}, 1024--1031.
+
+\bibitem[\protect\citeauthoryear{Linnet}{Linnet}{1999}]{linnet99}
+Linnet, K. (1999).
+\newblock Necessary sample size for method comparison studies based on
+  regression analysis.
+\newblock {\em Clinical Chemistry\/}~{\em 45\/}(6), 882--894.
+
+\bibitem[\protect\citeauthoryear{Ludbrook}{Ludbrook}{1997}]{ludbrook97}
+Ludbrook, J. (1997).
+\newblock Comparing methods of measurement.
+\newblock {\em Clinical and Experimental Pharmacology and Physiology\/}~{\em
+  24}, 193–--203.
+
+\bibitem[\protect\citeauthoryear{Luiz, Costa, Kale, and Werneck}{Luiz
+  et~al.}{2003}]{luiz}
+Luiz, R., A.~Costa, P.~Kale, and G.~Werneck (2003).
+\newblock Assessment of agreement of a quantitative variable: a new graphical
+  approach.
+\newblock {\em Journal of Clinical Epidemiology\/}~{\em 56}, 963–--967.
+
+\bibitem[\protect\citeauthoryear{Mantha, Roizen, Fleisher, Thisted, and
+  Foss}{Mantha et~al.}{2000}]{mantha}
+Mantha, S., M.~F. Roizen, L.~A. Fleisher, R.~Thisted, and J.~Foss (2000).
+\newblock Comparing methods of clinical measurement: Reporting standards for
+  bland and altman analysis.
+\newblock {\em Anaesthesia and Analgesia\/}~{\em 90}, 593--602.
+
+\bibitem[\protect\citeauthoryear{Morgan}{Morgan}{1939}]{morgan}
+Morgan, W.~A. (1939).
+\newblock A test for the signicance of the difference between two variances in
+  a sample from a normal bivariate population.
+\newblock {\em Biometrika\/}~{\em 31}, 13--19.
+
+\bibitem[\protect\citeauthoryear{Myles}{Myles}{2007}]{Myles}
+Myles, P. (2007).
+\newblock Using the {B}land {A}ltman method to measure agreement with repeated
+  measures.
+\newblock {\em British Journal of Anaesthesia\/}~{\em 99\/}(3), 309--311.
+
+\bibitem[\protect\citeauthoryear{??}{NIST}{2009}]{NIST}
+NIST (2009).
+\newblock {C}esium fountain atomic clock : The primary time and frequency
+  standard for the {U}nited {S}tates.
+\newblock http://tf.nist.gov/timefreq/cesium/fountain.htm.
+
+\bibitem[\protect\citeauthoryear{O'Brien, Petrie, Littler, de~Swiet, Padfield,
+  Altman, Bland, Coats, and Atkins}{O'Brien et~al.}{1990}]{BritHypSoc}
+O'Brien, E., J.~Petrie, W.~Littler, M.~de~Swiet, P.~L. Padfield, D.~Altman,
+  M.~Bland, A.~Coats, and N.~Atkins (1990).
+\newblock The {B}ritish {H}ypertension {S}ociety protocol for the evaluation of
+  blood pressure measuring devices.
+\newblock {\em Journal of Hypertension\/}~{\em 8}, 607–--619.
+
+\bibitem[\protect\citeauthoryear{Phelps and Hutson}{Phelps and
+  Hutson}{1995}]{phelps}
+Phelps, C. and A.~Hutson (1995).
+\newblock Estimating diagnostic test accuracy using a fuzzy gold standard.
+\newblock {\em Medical decision making\/}~{\em 15}, 144–--57.
+
+\bibitem[\protect\citeauthoryear{Pitman}{Pitman}{1939}]{pitman}
+Pitman, E. J.~G. (1939).
+\newblock A note on normal correlation.
+\newblock {\em Biometrika\/}~{\em 31}, 9--12.
+
+\bibitem[\protect\citeauthoryear{Pizzi}{Pizzi}{1999}]{pizzi}
+Pizzi, N. (1999).
+\newblock Fuzzy pre-processing of gold standards as applied to biomedical
+  spectra classification.
+\newblock {\em Artificial Intelligence in Medicine\/}~{\em 16}, 171–--182.
+
+\bibitem[\protect\citeauthoryear{Ryan and Woodall}{Ryan and
+  Woodall}{2005}]{BAcite}
+Ryan, T.~P. and W.~H. Woodall (2005).
+\newblock The most-cited statistical papers.
+\newblock {\em Journal of Applied Statistics\/}~{\em 32\/}(5), 461 —-- 474.
+
+\bibitem[\protect\citeauthoryear{Thompson}{Thompson}{1963}]{Thompson}
+Thompson, W. (1963).
+\newblock Precision of simultaneous measurement procedures.
+\newblock {\em Journal of American Statistical Association\/}~{\em 58},
+  474–--479.
+
+\bibitem[\protect\citeauthoryear{Zhang, Nitter-Hauge, Ihlen, Rootwelt, and
+  Myhre}{Zhang et~al.}{1986}]{zhang}
+Zhang, Y., S.~Nitter-Hauge, H.~Ihlen, K.~Rootwelt, and E.~Myhre (1986).
+\newblock Measurement of aortic regurgitation by doppler echocardiography.
+\newblock {\em British Heart Journal\/}~{\em 55}, 32--38.
+
+\end{thebibliography}

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0069)http://www.stat.washington.edu/lstan/Courses/stat502_2007/lab100207.R -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>
+<BODY><PRE># R Start in directory
+
+# R Help manuals
+
+help(mean)
+?mean
+help.search("anova")
+
+# R Examples from the help files
+example(mean)
+
+# R Conventions
+	# Case sensitive
+	# Variable/function names (A-Z, a-z, 0-9, .)
+	# Command separators: ';' or newline
+	# Comments: #
+	# Promt for incomplete command: +
+
+# R Calculator
+
+1 + 1
+
+2*(7+3)^2 # =2*((7+3)^2)
+
+(2*(7+3))^2
+
+
+# R assignments/var init
+	# assignment can be done using either "=" or "&lt;-"
+	# "_" used to be used for assignment as well, but no longer works
+
+x&lt;-3
+x
+x*5
+
+
+# Vectors:
+
+x&lt;-1:10
+x
+
+x&lt;-10:1
+x
+
+x&lt;-c(1,2,3,4,5,6,7,8,9,10)
+x
+
+x&lt;-c(1:10)
+x
+
+x&lt;-c('stat', 'five', '-oh-','2')
+x
+
+#Sequences
+help(seq)
+
+x &lt;- seq(1,10, by=0.1)
+x
+
+x &lt;- seq(1,10, length=5)
+x
+
+#Repetitions
+help(rep)
+
+x &lt;- rep(0, times = 5)
+x
+
+x &lt;- rep(c(1:5), times=3)
+x
+
+x &lt;- rep(c(1:5), each=3)
+x
+
+x &lt;- rep(c(1:5), c(1:5))
+x
+
+x&lt;-c(rep(1,10), 5:10)
+x
+
+# Accessing members of a vector/matrix: []/[,]
+x[1]
+x[12:15]
+x[c(1,12,16)]
+
+x&gt;2
+x[x&gt;2]
+
+
+# Loops: for, while
+
+x[1]&lt;-x[2]&lt;-1
+
+for(i in 3:20){
+  x[i]&lt;-x[i-1]+x[i-2]
+}
+
+
+# Conditional statements: if, ifelse
+
+for(i in 1:length(x)){
+  if(x[i] &gt;10){
+    x[i] &lt;- x[i]/10
+  }
+}
+x
+
+x[x&gt;10]&lt;-x[x&gt;10]/10
+x
+
+help(ifelse)
+ifelse(x&gt;10,2,5)
+
+
+
+# Functions
+
+poly&lt;-function(a,b,c,x)
+#evaluate a*x^2+b*x+c
+{
+  return(a*(x^2)+b*x+c)
+}
+
+poly(0,1,0,10)
+poly(1,2,1,10)
+
+
+#Graphics
+x&lt;-seq(-12,10, by=0.1)
+y&lt;-poly(1,2,1,x)
+plot(x, y, type='l')
+
+x&lt;-seq(-12,10, by=0.5)
+y&lt;-poly(1,2,1,x)
+y&lt;-y+rnorm(length(y), 0,10)
+plot(x, y, pch='m', col=2)
+
+
+# Reading in data: read.table()
+	# either specify the location of the file, 
+	# use file.choose() to bring up a window
+
+hershey &lt;- read.table(file.choose(), header=T, sep=",")
+hershey
+
+#indexing
+
+class(hershey)
+hershey$type
+hershey$protein
+
+hershey[1,]
+hershey[,2]
+hershey[3,4]
+
+#scatter plot
+plot(hershey$fat, hershey$calories, xlab='fat', ylab='calories')
+
+#scatter plots
+pairs(hershey[,-1])
+# the "[,-1]" tells it to not try to plot the first column, the types
+
+# summaries
+summary(hershey)
+mean(hershey[,-1])
+sd(hershey[,-1])
+cor(hershey[,-1], hershey[,-1])
+
+mean(hershey$calories)
+sd(hershey$calories)
+cor(hershey$calories, hershey$fat)
+
+# Linear regression
+
+mod.lm&lt;- lm(hershey$calories~hershey$fat)
+summary(mod.lm)
+par(mfrow&lt;-c(2,2), pty='s')
+plot(mod.lm)
+
+plot(hershey$fat, hershey$calories)
+abline(mod.lm)
+
+</PRE></BODY></HTML>

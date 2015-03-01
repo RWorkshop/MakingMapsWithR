@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0069)http://www.stat.washington.edu/lstan/Courses/stat502_2007/lab100907.R -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>
+<BODY><PRE>#########################################################################
+#				READ IN DATA FILE						#	
+#########################################################################
+
+gpas&lt;-read.table("gpas.dat",header=F,sep="\t")
+#gpas&lt;-read.table(file.choose(),header=F,sep="\t")
+
+gpas[1:10,]
+dimnames(gpas)[[2]]&lt;-c("GPA", "Group")		#assign column names: 1 - GPA, 2 - Group
+
+
+#########################################################################
+#				EDA: EXPLORATORY DATA ANALYSIS			#	
+#########################################################################
+
+summary(gpas)
+dim(gpas)
+
+summary.group&lt;-rbind(tapply(gpas$GPA, gpas$Group, "mean"), tapply(gpas$GPA, gpas$Group, "median"), tapply(gpas$GPA, gpas$Group, "sd"))
+dimnames(summary.group)[[1]]&lt;-c("Mean", "Median", "SD")
+dimnames(summary.group)[[2]]&lt;-c("Group 1", "Group 2")
+summary.group
+
+
+#EDA plots
+par(mfrow=c(1,3), pty='s')
+hist(gpas$GPA[gpas$Group==1], xlab="GPA score group 1", main="")
+hist(gpas$GPA[gpas$Group==2], xlab="GPA score group 2", main="")
+
+
+#make the histograms consistent with one another to compare 
+plot.new()
+hist(gpas$GPA[gpas$Group==1], freq=TRUE, xlab="GPA score group 1", main="", col="bisque", ylim=c(0, 10.0), breaks=seq(2,4,by=.1))
+hist(gpas$GPA[gpas$Group==2], freq=TRUE, xlab="GPA score group 2", main="", col="bisque", ylim=c(0, 10.0), breaks=seq(2,4,by=.1))
+boxplot(GPA ~ Group, data = gpas, col="bisque", names=xlabs)
+
+#########################################################################
+#				RANDOMIZATION TESTS					#	
+#########################################################################
+
+par(mfrow=c(1,3), pty='s')
+
+#########################
+#	H0: mu1 = mu2	#
+#########################
+
+stat.data&lt;- abs(mean(gpas$GPA[gpas$Group==1])-mean(gpas$GPA[gpas$Group==2]))
+stat.data
+
+S&lt;-NULL 
+
+#1st sample
+group.sim &lt;- sample(gpas$Group)							#take a sample without replacement
+group.sim
+gpas$GPA[group.sim==1]
+gpas$GPA[group.sim==2]
+S[1]&lt;-abs(mean(gpas$GPA[group.sim==1])-mean(gpas$GPA[group.sim==2]))	#compute the statistic
+S
+
+#2nd sample
+group.sim &lt;- sample(gpas$Group)							#take a sample without replacement
+group.sim
+S[2]&lt;-abs(mean(gpas$GPA[group.sim==1])-mean(gpas$GPA[group.sim==2]))	#compute the statistic
+S
+
+#3nd sample
+group.sim &lt;- sample(gpas$Group)							#take a sample without replacement
+group.sim
+S[3]&lt;-abs(mean(gpas$GPA[group.sim==1])-mean(gpas$GPA[group.sim==2]))	#compute the statistic
+S
+
+for(i in 1:5000) {
+	group.sim &lt;- sample(gpas$Group)							#take a sample without replacement
+	S[i]&lt;-abs(mean(gpas$GPA[group.sim==1])-mean(gpas$GPA[group.sim==2]))	#compute the statistic
+}
+hist(S, main=expression(H[0]: mu[1] == mu[2]), col="bisque")
+abline(v=stat.data,col="red", lty=2)
+mean(S&gt;=stat.data)
+
+#########################
+#	H0: mu1 &gt;= mu2	#
+#########################
+
+stat.data&lt;-mean(gpas$GPA[gpas$Group==1])-mean(gpas$GPA[gpas$Group==2])
+stat.data
+
+S&lt;-NULL 
+for(i in 1:5000) {
+	group.sim &lt;- sample(gpas$Group)							#take a sample without replacement
+	S[i]&lt;-mean(gpas$GPA[group.sim==1])-mean(gpas$GPA[group.sim==2])		#compute the statistic
+}
+
+hist(S, main=expression(H[0]: mu[1] &gt;= mu[2]), col="bisque")
+abline(v=stat.data,col="red", lty=2)
+mean(S&gt;=stat.data)
+
+
+###############################
+#	H0: sigma1 &gt;= sigma2	#
+###############################
+
+stat.data&lt;-sd(gpas$GPA[gpas$Group==1])-sd(gpas$GPA[gpas$Group==2])
+stat.data
+
+S&lt;-NULL
+for(i in 1:5000) {
+	group.sim &lt;- sample(gpas$Group)							#take a sample without replacement
+	S[i]&lt;-abs(sd(gpas$GPA[group.sim==1])-sd(gpas$GPA[group.sim==2]))		#compute the statistic
+}
+hist(S, main=expression(H[0]: sigma[1] &gt;= sigma[2]), col="bisque")
+abline(v=stat.data,col="red", lty=2)
+mean(S&gt;=stat.data)
+
+#########################################################################
+#		t-test									#	
+#########################################################################
+# t.test(x, y = NULL,
+#            alternative = c("two.sided", "less", "greater"),
+#            mu = 0, paired = FALSE, var.equal = FALSE,
+#            conf.level = 0.95, ...)
+
+
+#H0: mu1==3.0
+t.test(gpas$GPA[gpas$Group==1], alternative="two.sided", mu=3.0, conf.level = 0.99)
+t.test(gpas$GPA[gpas$Group==1], alternative="two.sided", mu=3.0, conf.level = 0.80)
+
+
+#H0: mu1=mu2 iff mu1-mu2==0
+t.test(GPA ~ Group, data = gpas, conf.level = 0.99)
+
+#H0: mu1&gt;=mu2  iff mu1-mu2==0
+t.test(GPA ~ Group, data = gpas, alternative = "less", conf.level = 0.80)
+
+
+#########################################################################
+#				Distribution Functions					#	
+#########################################################################
+
+# "d" corresponds to the pdf
+# "p" corresponds to the cdf
+# "q" corresponds to the quantile
+# "r" corresponds to random numbers
+
+dnorm(2, mean=3, sd=1.2)	#the height at x = 2 | x ~ N(3, 1.2^2)
+
+pt(1, df=7)				#Pr(x&lt;=1|x~t_7)
+
+qnorm(.30, mean=0, sd = 10)	#30th percentile for N(0,100)
+
+samp&lt;-runif(500, min=-5, max=5)	#Random sample from U([-5, 5])
+hist(samp, col="bisque")
+
+
+
+#####################################
+#	H0: mu1=mu2 iff mu1-mu2==0	#
+#####################################
+
+# The form of the t-statistic for two-sample t-test, VAR are EQUAL:
+# t.stat= (mean(x)-mean(y)- (mu1-mu2))/s1
+# s1 = sp*sqrt(1/length(x) + 1/length(y))
+# sp = sqrt(((length(x)-1)*var(x)+(length(y)-1)*var(y))/(nx+ny-2))
+# df = length(x)+length(y)-2
+
+t.test(GPA ~ Group, data = gpas, var.equal = TRUE, conf.level = 0.95)
+
+
+# Modified Welsh two-sample t-test , VAR are NOT EQUAL (CB, p.409, ex. 8.42):
+# t.stat= (mean(x)-mean(y)- (mu1-mu2))/s2
+# s2 = sqrt(var(x)/length(x) + var(y)/length(y))
+# df = (var(x)/length(x)+var(y)/length(y))^2/((var(x)^2/(length(x)^2*(length(x)-1))+
+#		+var(y)^2/(length(y)^2*(y-1)))
+
+gpa1 &lt;- gpas$GPA[gpas$Group==1]
+gpa2 &lt;- gpas$GPA[gpas$Group==2]
+df&lt;-29*(var(gpa1)+var(gpa2))^2/(var(gpa1)^2+var(gpa2)^2)
+df
+
+t.test(GPA ~ Group, data = gpas, conf.level = 0.95)
+
+
+
+
+</PRE></BODY></HTML>
