@@ -1,36 +1,88 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# R Studio files
+.Rproj.user
+.Rhistory
+.RData
+.Rproj
 
-# Folder config file
-Desktop.ini
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+## Intermediate documents:
+*.dvi
+*-converted-to.*
+# these rules might exclude image files for figures etc.
+# *.ps
+# *.eps
+# *.pdf
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
 
-# =========================
-# Operating System Files
-# =========================
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
 
-# OSX
-# =========================
+## Auxiliary and intermediate files from other packages:
 
-.DS_Store
-.AppleDouble
-.LSOverride
+# algorithms
+*.alg
+*.loa
 
-# Icon must ends with two \r.
-Icon
+# achemso
+acs-*.bib
 
-# Thumbnails
-._*
+# amsthm
+*.thm
 
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+# beamer
+*.nav
+*.snm
+*.vrb
+
+#(e)ledmac/(e)ledpar
+*.end
+*.[1-9]
+*.[1-9][0-9]
+*.[1-9][0-9][0-9]
+*.[1-9]R
+*.[1-9][0-9]R
+*.[1-9][0-9][0-9]R
+*.eledsec[1-9]
+*.eledsec[1-9]R
+*.eledsec[1-9][0-9]
+*.eledsec[1-9][0-9]R
+*.eledsec[1-9][0-9][0-9]
+*.eledsec[1-9][0-9][0-9]R
+
+# glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+
+# hyperref
+*.brf
+
+# knitr
+*-concordance.tex
+*.tikz
+*-tikzDictionary
+
+# listings
+*.lol
