@@ -1,3 +1,0 @@
-\contentsline {chapter}{\numberline {1}Cross Validation and Updating}{2}
-\contentsline {subsection}{\numberline {1.0.1}updating standard deviation}{2}
-\contentsline {section}{\numberline {1.1}Cross Validation}{3}
