@@ -1,3 +1,0 @@
-\frametitle {\bf \tcb {profilelike.lme}}\begin {itemize}
-\item The  \emph{\texttt{profilelike.lme()}} function provides values for a profile likelihood and a normalized profile likelihood for a parameter of interest in a linear mixed-effects model.
-\end{itemize}
