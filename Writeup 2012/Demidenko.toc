@@ -1,4 +1,0 @@
-\contentsline {section}{\numberline {1}REML [pg 58]}{2}
-\contentsline {section}{\numberline {2}Likelihood Ratio Tests[pg 135]}{3}
-\contentsline {section}{\numberline {3}Errors in Variables[pg 118]}{4}
-\contentsline {section}{Bibliography}{4}
