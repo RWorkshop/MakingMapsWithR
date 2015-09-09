@@ -1,0 +1,297 @@
+
+\section{Roy's examples}
+Roy provides three case studies, using data sets well known in method comparison studies, to demonstrate how the methodology should be used.
+
+
+%--------------------------------------------------------------------------Example 1a  ----  JSR Data %
+
+The first case study is the Systolic blood pressure data, taken from \citet{BA99}.
+
+
+%--------------------------------------------------------------------------Example 1b  ----  JSR Data %
+
+To complete the study, the relevant values are provided for the $R \mbox{vs} S$ comparison also.
+
+%--------------------------------------------------------------------------Example 2  ----  PEFR Data %
+
+The second data set, a comparison of two peak expiratory flow rate measurements, is referenced by \citet{BA86}.
+
+
+%--------------------------------------------------------------------------Example 3 Cardiac Ejection Fraction Data %
+The last case study is also based on a data set from  \citet{BA99}. It contains the measurements of left ventricular cardiac eject fraction, measured by impedance cartography and radionuclide ventriculography, on twelve patients.
+The number of replicated differs for each patient.
+
+The bias is shown to be $0.7040$, with a p-value of $0.0204$. The MLEa of the between-method and within-method variance-covariance matrices of methods $RV$ and $IC$ are given by
+
+\begin{equation}\hat{D}=\left(
+\begin{array}{cc}
+1.6323 & 1.1427 \\
+1.1427 & 1.4498 \\
+\end{array}
+\right),
+\end{equation}
+
+
+
+\begin{equation}\hat{\Sigma}=\left(
+\begin{array}{cc}
+1.6323 & 1.1427 \\
+1.1427 & 1.4498 \\
+\end{array}
+\right).
+\end{equation}
+
+\citet{roy} notes that these are the same estimate for variance as given by \citet{BA99}.
+
+
+The repeatability coefficients are determined to be $0.9080$ for the RV method and $1.0293$ for the IC method.
+
+From the estimated $\boldsymbol{\Omega_{i}}$ correlation matrix, the overall correlation coefficient is $0.7100$.
+The overall correllation coefficients between two methods RV and IC are $0.9384$ and $0.9131$ respectively.
+
+\citet{roy} concludes that is appropriate to switch between the two methods if needed.
+
+%--------------------------------------------------------------------------Example 4 Coronary Artery Calcium data%
+
+\citet{haber}
+
+\citet{roy} recommends to not switch between the two method.
+
+\section{LME}
+
+Fitting model according to Roy
+
+\newpage
+\begin{verbatim}
+Linear mixed-effects model fit by REML
+Data: BA99
+AIC      BIC    logLik
+4319.707 4336.629 -2155.853
+
+Random effects:
+Formula: ~1 | subj
+(Intercept) Residual
+StdDev:    29.39085 12.44454
+
+Fixed effects: ob.js ~ method
+Value Std.Error  DF  t-value p-value
+(Intercept) 127.40784  3.281757 424 38.82306       0
+
+methodS     15.61961   1.102107 424 14.17250       0
+
+Correlation:
+(Intr)
+methodS -0.168
+
+Standardized Within-Group Residuals:
+Min          Q1         Med          Q3         Max
+-3.61292639 -0.42538402 -0.02467651  0.40166235  4.84280044
+
+Number of Observations: 510 Number of Groups: 85
+
+\end{verbatim}
+%----------------------------------------------------------------------------------------%
+
+\newpage
+\section{Roy's examples}
+Roy provides three case studies, using data sets well known in method comparison studies, to demonstrate how the methodology should be used.
+
+
+%--------------------------------------------------------------------------Example 1a  ----  JSR Data %
+
+The first case study is the Systolic blood pressure data, taken from \citet{BA99}.
+
+
+%--------------------------------------------------------------------------Example 1b  ----  JSR Data %
+
+To complete the study, the relevant values are provided for the $R \mbox{vs} S$ comparison also.
+
+%--------------------------------------------------------------------------Example 2  ----  PEFR Data %
+
+The second data set, a comparison of two peak expiratory flow rate measurements, is referenced by \citet{BA86}.
+
+
+%--------------------------------------------------------------------------Example 3 Cardiac Ejection Fraction Data %
+The last case study is also based on a data set from  \citet{BA99}. It contains the measurements of left ventricular cardiac eject fraction, measured by impedance cartography and radionuclide ventriculography, on twelve patients.
+The number of replicated differs for each patient.
+
+The bias is shown to be $0.7040$, with a p-value of $0.0204$. The MLEa of the between-method and within-method variance-covariance matrices of methods $RV$ and $IC$ are given by
+
+\begin{equation}\hat{D}=\left(
+\begin{array}{cc}
+1.6323 & 1.1427 \\
+1.1427 & 1.4498 \\
+\end{array}
+\right),
+\end{equation}
+
+
+
+\begin{equation}\hat{\Sigma}=\left(
+\begin{array}{cc}
+1.6323 & 1.1427 \\
+1.1427 & 1.4498 \\
+\end{array}
+\right).
+\end{equation}
+
+\citet{roy} notes that these are the same estimate for variance as given by \citet{BA99}.
+
+
+The repeatability coefficients are determined to be $0.9080$ for the RV method and $1.0293$ for the IC method.
+
+From the estimated $\boldsymbol{\Omega_{i}}$ correlation matrix, the overall correlation coefficient is $0.7100$.
+The overall correllation coefficients between two methods RV and IC are $0.9384$ and $0.9131$ respectively.
+
+\citet{roy} concludes that is appropriate to switch between the two methods if needed.
+
+%--------------------------------------------------------------------------Example 4 Coronary Artery Calcium data%
+
+\citet{haber}
+
+\citet{roy} recommends to not switch between the two method.
+
+
+\section{LME}
+
+Fitting model according to Roy
+
+\newpage
+\begin{verbatim}
+Linear mixed-effects model fit by REML
+Data: BA99
+AIC      BIC    logLik
+4319.707 4336.629 -2155.853
+
+Random effects:
+Formula: ~1 | subj
+(Intercept) Residual
+StdDev:    29.39085 12.44454
+
+Fixed effects: ob.js ~ method
+Value Std.Error  DF  t-value p-value
+(Intercept) 127.40784  3.281757 424 38.82306       0
+
+methodS     15.61961   1.102107 424 14.17250       0
+
+Correlation:
+(Intr)
+methodS -0.168
+
+Standardized Within-Group Residuals:
+Min          Q1         Med          Q3         Max
+-3.61292639 -0.42538402 -0.02467651  0.40166235  4.84280044
+
+Number of Observations: 510 Number of Groups: 85
+
+\end{verbatim}
+
+%---------------------------------------------------------------------------------------------------%
+\newpage
+
+\section{IC/RV comparison}
+
+
+
+For the the RV-IC comparison, $\hat{D}$ is given by
+
+
+\begin{equation}
+\hat{D}= \left[ \begin{array}{cc}
+1.6323 & 1.1427  \\
+1.1427 & 1.4498 \\
+\end{array} \right]
+\end{equation}
+
+The estimate for the within-subject variance covariance matrix is
+given by
+\begin{equation}
+\hat{\Sigma}= \left[ \begin{array}{cc}
+0.1072 & 0.0372  \\
+0.0372 & 0.1379  \\
+\end{array}\right]
+\end{equation}
+The estimated overall variance covariance matrix for the the 'RV
+vs IC' comparison is given by
+\begin{equation}
+Block \Omega_{i}= \left[ \begin{array}{cc}
+1.7396 & 1.1799  \\
+1.1799 & 1.5877  \\
+\end{array} \right].
+\end{equation}
+
+The power of the
+likelihood ratio test may depends on specific sample size and the
+specific number of  replications, and the author proposes
+simulation studies to examine this further.
+
+\newpage
+For the the RV-IC comparison, $\hat{D}$ is given by
+
+
+\begin{equation}
+\hat{D}= \left[ \begin{array}{cc}
+1.6323 & 1.1427  \\
+1.1427 & 1.4498 \\
+\end{array} \right]
+\end{equation}
+
+The estimate for the within-subject variance covariance matrix is
+given by
+\begin{equation}
+\hat{\Sigma}= \left[ \begin{array}{cc}
+0.1072 & 0.0372  \\
+0.0372 & 0.1379  \\
+\end{array}\right]
+\end{equation}
+The estimated overall variance covariance matrix for the the 'RV
+vs IC' comparison is given by
+\begin{equation}
+Block \Omega_{i}= \left[ \begin{array}{cc}
+1.7396 & 1.1799  \\
+1.1799 & 1.5877  \\
+\end{array} \right].
+\end{equation}
+
+The power of the
+likelihood ratio test may depends on specific sample size and the
+specific number of  replications, and the author proposes
+simulation studies to examine this further.
+
+
+% \begin{equation}
+% data here
+% \end{equation}
+%==================================================================%
+
+For the the RV-IC comparison, $\hat{D}$ is given by
+
+
+\begin{equation}
+\hat{D}= \left[ \begin{array}{cc}
+1.6323 & 1.1427  \\
+1.1427 & 1.4498 \\
+\end{array} \right]
+\end{equation}
+
+The estimate for the within-subject variance covariance matrix is
+given by
+\begin{equation}
+\hat{\Sigma}= \left[ \begin{array}{cc}
+0.1072 & 0.0372  \\
+0.0372 & 0.1379  \\
+\end{array}\right]
+\end{equation}
+The estimated overall variance covariance matrix for the the 'RV
+vs IC' comparison is given by
+\begin{equation}
+Block \Omega_{i}= \left[ \begin{array}{cc}
+1.7396 & 1.1799  \\
+1.1799 & 1.5877  \\
+\end{array} \right].
+\end{equation}
+
+The power of the
+likelihood ratio test may depends on specific sample size and the
+specific number of  replications, and the author proposes
+simulation studies to examine this further.
