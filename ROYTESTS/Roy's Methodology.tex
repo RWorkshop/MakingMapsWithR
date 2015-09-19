@@ -147,12 +147,21 @@ real value. The non-replicate case is considered first, as it is the context of 
 	
 	%========================================================================================%
 	\newpage
-	\subsection{Linked and Unlinked Replicates}
+
+	\subsubsection{Sampling Scheme : Linked and Unlinked Replicates}
+	Measurements taken in quick succession by the same observer using the same instrument on the same subject can be considered true replicates. \citet{ARoy2009} notes that some measurements may not be `true' replicates.
+	
+	Roy's methodology assumes the use of `true replicates'. However data may not be collected in this way. In such cases, the correlation matrix on the replicates may require a different structure, such as the autoregressive order one $AR(1)$ structure. However determining MLEs with such a structure would be computational intense, if possible at all.
+
+
+
 \emph{
 	One important feature of replicate observations is that they should be independent
 	of each other. In essence, this is achieved by ensuring that the observer makes each
 	measurement independent of knowledge of the previous value(s). This may be difficult
-	to achieve in practice.}
+	to achieve in practice.} (Check who said this
+)
+	%----------------------------------------------------------------------------%
 
 	
 %-----------------------------------------------------------------------------------------------------%
@@ -1038,22 +1047,6 @@ In computing limits of agreement, it is first necessary to have an estimate for 
 
 
 
-	\subsubsection{Sampling Scheme : Replicates}
-	Measurements taken in quick succession by the same observer using the same instrument on the same subject can be considered true replicates. \citet{ARoy2009} notes that some measurements may not be `true' replicates.
-	
-	Roy's methodology assumes the use of `true replicates'. However data may not be collected in this way. In such cases, the correlation matrix on the replicates may require a different structure, such as the autoregressive order one $AR(1)$ structure. However determining MLEs with such a structure would be computational intense, if possible at all.
-
-
-\bigskip
-%\section{Computing LoAs from LME models}
-
-\emph{
-	One important feature of replicate observations is that they should be independent
-	of each other. In essence, this is achieved by ensuring that the observer makes each
-	measurement independent of knowledge of the previous value(s). This may be difficult
-	to achieve in practice.} (Check who said this
-)
-	%----------------------------------------------------------------------------%
 
 	\subsection{Difference Variance further to Carstensen}
 	
