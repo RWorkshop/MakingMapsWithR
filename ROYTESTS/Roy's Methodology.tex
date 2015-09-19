@@ -95,6 +95,34 @@ real value. The non-replicate case is considered first, as it is the context of 
 	estimated, only theiir difference can be estimated as
 	$\bar{D}$
 	
+	\subsection{Limits of Agreement in LME models}
+	\citet{BXC2008} uses LME models to determine the limits of agreement. Between-subject variation for method $m$ is given by $d^2_{m}$ and within-subject variation is given by $\lambda^2_{m}$.  \citet{BXC2008} remarks that for two methods $A$ and $B$, separate values of $d^2_{A}$ and $d^2_{B}$ cannot be estimated, only their average. Hence the assumption that $d_{x}= d_{y}= d$ is necessary. The between-subject variability $\boldsymbol{D}$ and within-subject variability $\boldsymbol{\Lambda}$ can be presented in matrix form,\[
+	\boldsymbol{D} = \left(%
+	\begin{array}{cc}
+	d^2_{A}& 0 \\
+	0 & d^2_{B} \\
+	\end{array}%
+	\right)=\left(%
+	\begin{array}{cc}
+	d^2& 0 \\
+	0 & d^2\\
+	\end{array}%
+	\right),
+	\hspace{1.5cm}
+	\boldsymbol{\Lambda} = \left(%
+	\begin{array}{cc}
+	\lambda^2_{A}& 0 \\
+	0 & \lambda^2_{B} \\
+	\end{array}%
+	\right).
+	\]
+	
+	The variance for method $m$ is $d^2_{m}+\lambda^2_{m}$. Limits of agreement are determined using the standard deviation of the case-wise differences between the sets of measurements by two methods $A$ and $B$, given by
+	\begin{equation}
+	\mbox{var} (y_{A}-y_{B}) = 2d^2 + \lambda^2_{A}+ \lambda^2_{B}.
+	\end{equation}
+	Importantly the covariance terms in both variability matrices are zero, and no covariance component is present.
+	
 	
 	\subsection{Statement of the LME model}
 	
@@ -119,7 +147,13 @@ real value. The non-replicate case is considered first, as it is the context of 
 	
 	%========================================================================================%
 	\newpage
-	\subsection{Roy's methodology}
+	\subsection{Linked and Unlinked Replicates}
+\emph{
+	One important feature of replicate observations is that they should be independent
+	of each other. In essence, this is achieved by ensuring that the observer makes each
+	measurement independent of knowledge of the previous value(s). This may be difficult
+	to achieve in practice.}
+
 	
 %-----------------------------------------------------------------------------------------------------%
 
@@ -579,16 +613,11 @@ The estimated overall variance covariance matrix `Block $\Omega_{i}$' is the add
 	
 	
 	\newpage
-	\section{Roy's Use of Vaarious VC Structures}
+	\section{Roy's Use of Various VC Structures}
 \subsection{Roy's variability tests}
-
-
 The tests are implemented by fitting a specific LME model, and three variations thereof, to the data. These three variant models introduce equality constraints that act null hypothesis cases.
 
 Other important aspects of the method comparison study are consequent. The limits of agreement are computed using the results of the first model.
-
-
-
 
 The methodology uses a linear mixed effects regression fit using
 compound symmetry (CS) correlation structure on \textbf{V}.
@@ -828,11 +857,33 @@ as
 \hat{\alpha}_1 - \hat{\alpha}_2 \pm \sqrt{2 \hat{\tau}^2 +
 	\hat{\sigma}^2_1 + \hat{\sigma}^2_2}
 \]
-%======================================================================================%
-\subsection{Roy's LOAs}
-
+\subsection{Computation of limits of agreement under Roy's model}
 The limits of agreement computed by Roy's method are derived from the variance covariance matrix for overall variability.
 This matrix is the sum of the between subject VC matrix and the within-subject VC matrix.
+	The computation thereof require that the variance of the difference of measurements. This variance is easily computable from the  variance estimates in the ${\mbox{Block - }\boldsymbol \Omega_{i}}$ matrix, i.e.
+	
+	
+	\[
+	% Check this
+	\operatorname{Var}(y_1 - y_2) = \sqrt{ \omega^2_1 + \omega^2_2 - 2\omega_{12}}.
+	\]
+	
+	
+	%With regards to the specification of the variance terms, Carstensen  remarks that using their approach is common, %remarking that \emph{ The only slightly non-standard (meaning ``not often used") feature is 
+
+
+
+\citet{ARoy2009} has demonstrated a methodology whereby $d^2_{A}$ and $d^2_{B}$ can be estimated separately. Also covariance terms are present in both $\boldsymbol{D}$ and $\boldsymbol{\Lambda}$. Using Roy's methodology, the variance of the differences is
+\begin{equation}
+\mbox{var} (y_{iA}-y_{iB})= d^2_{A} + \lambda^2_{B} + d^2_{A} + \lambda^2_{B} - 2(d_{AB} + \lambda_{AB})
+\end{equation}
+All of these terms are given or determinable in computer output.
+The limits of agreement can therefore be evaluated using
+\begin{equation}
+\bar{y_{A}}-\bar{y_{B}} \pm 1.96 \times \sqrt{ \sigma^2_{A} + \sigma^2_{B}  - 2(\sigma_{AB})}.
+\end{equation}
+
+
 
 The standard deviation of the differences of methods $x$ and $y$ is computed using values from the overall VC matrix.
 \[
@@ -875,13 +926,8 @@ In computing limits of agreement, it is first necessary to have an estimate for 
 \newpage
 
 In computing limits of agreement, it is first necessary to have an estimate for the standard deviations of the differences. When the agreement of two methods is analyzed using LME models, a clear method of how to compute the standard deviation is required. As the estimate for inter-method bias and the quantile would be the same for both methodologies, the focus is solely on the standard deviation.
-\subsection{Computing LoAs from LME models}
 
-\emph{
-	One important feature of replicate observations is that they should be independent
-	of each other. In essence, this is achieved by ensuring that the observer makes each
-	measurement independent of knowledge of the previous value(s). This may be difficult
-	to achieve in practice.}
+%\subsection{Computing LoAs from LME models}
 
 
 
@@ -890,7 +936,7 @@ In computing limits of agreement, it is first necessary to have an estimate for 
 
 
 
-\citet{Roy2006} uses the ``Blood" data set, which featured in \citet{BA99}.
+% %\citet{Roy2006} uses the ``Blood" data set, which featured in \citet{BA99}.
 
 
 
@@ -899,57 +945,6 @@ In computing limits of agreement, it is first necessary to have an estimate for 
 
 
 
-\subsection{Computation of limits of agreement under Roy's model}
-
-	The computation thereof require that the variance of the difference of measurements. This variance is easily computable from the  variance estimates in the ${\mbox{Block - }\boldsymbol \Omega_{i}}$ matrix, i.e.
-	
-	
-	\[
-	% Check this
-	\operatorname{Var}(y_1 - y_2) = \sqrt{ \omega^2_1 + \omega^2_2 - 2\omega_{12}}.
-	\]
-	
-	
-	%With regards to the specification of the variance terms, Carstensen  remarks that using their approach is common, %remarking that \emph{ The only slightly non-standard (meaning ``not often used") feature is 
-
-\subsection{Limits of Agreement in LME models}
-\citet{BXC2008} uses LME models to determine the limits of agreement. Between-subject variation for method $m$ is given by $d^2_{m}$ and within-subject variation is given by $\lambda^2_{m}$.  \citet{BXC2008} remarks that for two methods $A$ and $B$, separate values of $d^2_{A}$ and $d^2_{B}$ cannot be estimated, only their average. Hence the assumption that $d_{x}= d_{y}= d$ is necessary. The between-subject variability $\boldsymbol{D}$ and within-subject variability $\boldsymbol{\Lambda}$ can be presented in matrix form,\[
-\boldsymbol{D} = \left(%
-\begin{array}{cc}
-d^2_{A}& 0 \\
-0 & d^2_{B} \\
-\end{array}%
-\right)=\left(%
-\begin{array}{cc}
-d^2& 0 \\
-0 & d^2\\
-\end{array}%
-\right),
-\hspace{1.5cm}
-\boldsymbol{\Lambda} = \left(%
-\begin{array}{cc}
-\lambda^2_{A}& 0 \\
-0 & \lambda^2_{B} \\
-\end{array}%
-\right).
-\]
-
-The variance for method $m$ is $d^2_{m}+\lambda^2_{m}$. Limits of agreement are determined using the standard deviation of the case-wise differences between the sets of measurements by two methods $A$ and $B$, given by
-\begin{equation}
-\mbox{var} (y_{A}-y_{B}) = 2d^2 + \lambda^2_{A}+ \lambda^2_{B}.
-\end{equation}
-Importantly the covariance terms in both variability matrices are zero, and no covariance component is present.
-
-
-\citet{ARoy2009} has demonstrated a methodology whereby $d^2_{A}$ and $d^2_{B}$ can be estimated separately. Also covariance terms are present in both $\boldsymbol{D}$ and $\boldsymbol{\Lambda}$. Using Roy's methodology, the variance of the differences is
-\begin{equation}
-\mbox{var} (y_{iA}-y_{iB})= d^2_{A} + \lambda^2_{B} + d^2_{A} + \lambda^2_{B} - 2(d_{AB} + \lambda_{AB})
-\end{equation}
-All of these terms are given or determinable in computer output.
-The limits of agreement can therefore be evaluated using
-\begin{equation}
-\bar{y_{A}}-\bar{y_{B}} \pm 1.96 \times \sqrt{ \sigma^2_{A} + \sigma^2_{B}  - 2(\sigma_{AB})}.
-\end{equation}
 
 
 	
@@ -994,27 +989,6 @@ The limits of agreement can therefore be evaluated using
 	
 
 
-	
-	
-	\subsection{Correlation}
-
-
-Bivariate correlation coefficients have been shown to be of
-limited use in method comparison studies \citep{BA86}. However,
-recently correlation analysis has been developed to cope with
-repeated measurements, enhancing their potential usefulness. Roy
-incorporates the use of correlation into his methodology.
-
-	In addition to the variability tests, Roy advises that it is preferable that a correlation of greater than $0.82$ exist for two methods to be considered interchangeable. However if two methods fulfil all the other conditions for agreement, failure to comply with this one can be overlooked. Indeed Roy demonstrates that placing undue importance to it can lead to incorrect conclusions. \citet{ARoy2009} remarks that current computer implementations only gives overall correlation coefficients, but not their variances. Consequently it is not possible to carry out inferences based on all overall correlation coefficients.
-
-		
-		
-		
-	
-	
-	
-	
-	
 	
 	
 
@@ -1161,8 +1135,28 @@ incorporates the use of correlation into his methodology.
 %	%----------------------------------------------------------------------------------------%
 %	\newpage
 %	\chapter{Limits of Agreement}
+\section{Correlation}
+
+
+Bivariate correlation coefficients have been shown to be of
+limited use in method comparison studies \citep{BA86}. However,
+recently correlation analysis has been developed to cope with
+repeated measurements, enhancing their potential usefulness. Roy
+incorporates the use of correlation into his methodology.
+
+	In addition to the variability tests, Roy advises that it is preferable that a correlation of greater than $0.82$ exist for two methods to be considered interchangeable. However if two methods fulfil all the other conditions for agreement, failure to comply with this one can be overlooked. Indeed Roy demonstrates that placing undue importance to it can lead to incorrect conclusions. \citet{ARoy2009} remarks that current computer implementations only gives overall correlation coefficients, but not their variances. Consequently it is not possible to carry out inferences based on all overall correlation coefficients.
+
+		
+		
+		
 	
 	
+	
+	
+	
+	
+	
+
 	\section{Hamlett}
 	Hamlett re-analyses the data of \citet{lam} to generalize their model to cover other settings not covered by the Lam method.
 	
@@ -1181,13 +1175,14 @@ incorporates the use of correlation into his methodology.
 	
 	\citet{Roy2006} uses the ``Blood" data set, which featured in \citet{BA99}.
 	
-\subsection{Daibetes Example}
-	\citet{bxc2008} describes the sampling method when discussing of a motivating example
-		
-	Diabetes patients attending an outpatient clinic in Denmark have their $HbA_{1c}$ levels routinely measured at every visit. Venous and Capillary blood samples were obtained from all patients appearing at the clinic over two days. Samples were measured on four consecutive days on each machines, hence there are five analysis days.
-		
+\subsection{Diabetes Example}
+\citet{bxc2008} describes the sampling method when discussing of a motivating example
+
+Diabetes patients attending an outpatient clinic in Denmark have their $HbA_{1c}$ levels routinely measured at every visit.Venous and Capillary blood samples were obtained from all patients appearing at the clinic over two days.
+Samples were measured on four consecutive days on each machines, hence there are five analysis days.
+
 \citet{bxc2008} notes that every machine was calibrated every day to  the manufacturers guidelines.
-		Measurements are classified by method, individual and replicate. In this case the replicates are clearly not exchangeable, neither within patients nor simulataneously for all patients.
+Measurements are classified by method, individual and replicate. In this case the replicates are clearly not exchangeable, neither within patients nor simulataneously for all patients.
 		
 \subsection{Examples: LoAs for Carstensen's data}
 
@@ -1207,20 +1202,14 @@ For Carstensen's `fat' data, the limits of agreement computed using Roy's
 method are consistent with the estimates given by \citet{BXC2008}; $0.044884  \pm 1.96 \times  0.1373979 = (-0.224,  0.314).$
 
 
+\subsection{Oximetry Data}
 Carstensen demonstrates the use of the interaction term when computing the limits of agreement for the `Oximetry' data set. When the interaction term is omitted, the limits of agreement are $(-9.97, 14.81)$. Carstensen advises the inclusion of the interaction term for linked replicates, and hence the limits of agreement are recomputed as $(-12.18,17.12)$.
 \newpage
 For Carstensen's `fat' data, the limits of agreement computed using Roy's
 method are consistent with the estimates given by \citet{BXC2008}; $0.044884  \pm 1.96 \times  0.1373979 = (-0.224,  0.314).$
 
+%============================================================================================== %
 
-\newpage
-\citet{bxc2008} describes the sampling method when discussing of a motivating example
-
-Diabetes patients attending an outpatient clinic in Denmark have their $HbA_{1c}$ levels routinely measured at every visit.Venous and Capillary blood samples were obtained from all patients appearing at the clinic over two days.
-Samples were measured on four consecutive days on each machines, hence there are five analysis days.
-
-\citet{bxc2008} notes that every machine was calibrated every day to  the manufacturers guidelines.
-Measurements are classified by method, individual and replicate. In this case the replicates are clearly not exchangeable, neither within patients nor simulataneously for all patients.
 	\bibliography{DB-txfrbib}
 \end{document}
 %---------------------------------------------------------------------------------------------------%
