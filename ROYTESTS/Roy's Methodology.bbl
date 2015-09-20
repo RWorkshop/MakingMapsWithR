@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{Akaike}{Akaike}{1974}]{akaike}
+Akaike, H. (1974).
+\newblock A new look at the statistical model identification.
+\newblock {\em IEEE Transactions on Automatic Control\/}~{\em 19\/}(6),
+  716–--723.
+
 \bibitem[\protect\citeauthoryear{Barnhart, Haber, and Lin}{Barnhart
   et~al.}{2007}]{Barnhart}
 Barnhart, H., M.~Haber, and L.~Lin (2007).
@@ -20,17 +26,41 @@ Bland, J. and D.~Altman (1999).
 \newblock {\em Statistical Methods in Medical Research\/}~{\em 8\/}(2),
   135--160.
 
+\bibitem[\protect\citeauthoryear{Carstensen}{Carstensen}{2004}]{BXC2004}
+Carstensen, B. (2004).
+\newblock Comparing and predicting between several methods of measurement.
+\newblock {\em Biostatistics\/}~{\em 5\/}(3), 399--413.
+
 \bibitem[\protect\citeauthoryear{Carstensen, Simpson, and Gurrin}{Carstensen
-  et~al.}{2008}]{bxc2008}
+  et~al.}{2008}]{BXC2008}
 Carstensen, B., J.~Simpson, and L.~C. Gurrin (2008).
 \newblock Statistical models for assessing agreement in method comparison
   studies with replicate measurements.
 \newblock {\em The International Journal of Biostatistics\/}~{\em 4\/}(1).
 
+\bibitem[\protect\citeauthoryear{Cook}{Cook}{1986}]{cook86}
+Cook, R. (1986).
+\newblock Assessment of local influence.
+\newblock {\em Journal of the Royal Statistical Society. Series B
+  (Methodological)\/}~{\em 48\/}(2), 133--169.
+
+\bibitem[\protect\citeauthoryear{Hamlett, Ryan, and Wolfinger}{Hamlett
+  et~al.}{2004}]{hamlett}
+Hamlett, A., L.~Ryan, and R.~Wolfinger (2004).
+\newblock On the use of {PROC MIXED} to estimate correlation in the presence of
+  repeated measures.
+\newblock {\em Proceedings of the Statistics and Data Analysis Section, SAS
+  Users Group International\/}~{\em 198-229}, 1–--7.
+
 \bibitem[\protect\citeauthoryear{Lai and Shiao}{Lai and Shiao}{2005}]{LaiShiao}
 Lai, D. and S.-Y. P.~K. Shiao (2005).
 \newblock Comparing two clinical measurements: a linear mixed model approach.
 \newblock {\em Journal of Applied Statistics\/}~{\em 32\/}(8), 855--860.
+
+\bibitem[\protect\citeauthoryear{Laird and Ware}{Laird and Ware}{1982}]{LW82}
+Laird, N.~M. and J.~H. Ware (1982).
+\newblock Random-effects models for longitudinal data.
+\newblock {\em Biometrics\/}~{\em 38\/}(4), 963--974.
 
 \bibitem[\protect\citeauthoryear{Lam, Webb, and O'Donnell}{Lam
   et~al.}{1999}]{lam}
@@ -39,16 +69,29 @@ Lam, M., K.~Webb, and D.~O'Donnell (1999).
 \newblock {\em American Statistical Association, Proceedings of the Biometric
   Session\/}, 213--218.
 
-\bibitem[\protect\citeauthoryear{Roy}{Roy}{2009a}]{roy}
-Roy, A. (2009a).
-\newblock An application of linear mixed effects model to assess the agreement
-  between two methods with replicated observations.
-\newblock {\em Journal of Biopharmaceutical Statistics\/}~{\em 19}, 150--173.
+\bibitem[\protect\citeauthoryear{Pinheiro and Bates}{Pinheiro and
+  Bates}{1994}]{PB}
+Pinheiro, J. and D.~Bates (1994).
+\newblock {\em Mixed Effects Models in S and S plus\/} (2nd ed.).
+\newblock Reading, Massachusetts: Springer.
 
-\bibitem[\protect\citeauthoryear{Roy}{Roy}{2009b}]{ARoy2009}
-Roy, A. (2009b).
+\bibitem[\protect\citeauthoryear{Roy}{Roy}{2006}]{Roy2006}
+Roy, A. (2006).
+\newblock Estimating correlation coefficient between two variables with
+  repeated observations using mixed effects models.
+\newblock {\em Biometric Journal\/}~{\em 2}, 286--301.
+
+\bibitem[\protect\citeauthoryear{Roy}{Roy}{2009}]{ARoy2009}
+Roy, A. (2009).
 \newblock An application of the linear mixed effects model to ass the agreement
   between two methods with replicated observations.
 \newblock {\em Journal of Biopharmaceutical Statistics\/}~{\em 19}, 150--173.
+
+\bibitem[\protect\citeauthoryear{West, Welch, and Galecki}{West
+  et~al.}{2007}]{west}
+West, B., K.~Welch, and A.~Galecki (2007).
+\newblock {\em Linear Mixed Models: a Practical Guide Using Statistical
+  Software}.
+\newblock Chapman and Hall CRC.
 
 \end{thebibliography}

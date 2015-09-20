@@ -1,11 +1,56 @@
-\contentsline {subsection}{\numberline {0.1}Roy's methodology}{2}
-\contentsline {section}{\numberline {1}Roy's LME approach}{3}
-\contentsline {section}{\numberline {2}Roy's LME methodology for assessing agreement}{5}
-\contentsline {section}{\numberline {3}Replicates}{6}
-\contentsline {section}{\numberline {4}Roy's methodology with single measurements}{7}
-\contentsline {section}{\numberline {5}Roy's examples}{7}
-\contentsline {section}{\numberline {6}LME}{8}
-\contentsline {subsection}{\numberline {6.1}Difference Variance further to Carstensen}{10}
-\contentsline {subsection}{\numberline {6.2}Relevance of Roy's Methodology}{10}
-\contentsline {section}{\numberline {7}LME models in method comparison studies}{12}
-\contentsline {section}{\numberline {8}Roy's LME methodology for assessing agreement}{13}
+\contentsline {section}{\numberline {1}LME models in method comparison studies}{4}
+\contentsline {section}{\numberline {2}Linear mixed effects models}{5}
+\contentsline {subsection}{\numberline {2.1}Model terms}{5}
+\contentsline {subsection}{\numberline {2.2}Model Specification}{6}
+\contentsline {section}{\numberline {3}Using LME for method comparison}{8}
+\contentsline {subsection}{\numberline {3.1}Carstensen's Model}{9}
+\contentsline {section}{\numberline {4}Carstensen's Limits of agreement}{10}
+\contentsline {subsection}{\numberline {4.1}Limits of Agreement in LME models}{12}
+\contentsline {subsection}{\numberline {4.2}Statement of the LME model}{12}
+\contentsline {subsubsection}{\numberline {4.2.1}Sampling Scheme : Linked and Unlinked Replicates}{14}
+\contentsline {section}{\numberline {5}Roy's LME methodology for assessing agreement}{14}
+\contentsline {section}{\numberline {6}Introduction to Roy's Tests}{17}
+\contentsline {subsection}{\numberline {6.1}Roy's Hypotheses Tests}{18}
+\contentsline {section}{\numberline {7}Agreement Criteria}{21}
+\contentsline {subsubsection}{\numberline {7.0.1}Inter-Method Bias}{22}
+\contentsline {section}{\numberline {8}Roy's Hypotheses Tests}{24}
+\contentsline {subsection}{\numberline {8.1}Assumptions on Variability}{28}
+\contentsline {subsubsection}{\numberline {8.1.1}Model Terms (Roy 2009)}{29}
+\contentsline {subsection}{\numberline {8.2}Differences Between Approaches : Assumptions on Variability}{30}
+\contentsline {subsection}{\numberline {8.3}Limits of Agreement in LME models}{32}
+\contentsline {section}{\numberline {9}Roy's Use of Various VC Structures}{33}
+\contentsline {subsection}{\numberline {9.1}Introduction}{33}
+\contentsline {subsection}{\numberline {9.2}Variance Covariance Matrices }{33}
+\contentsline {subsection}{\numberline {9.3}VC structures}{36}
+\contentsline {subsection}{\numberline {9.4}Variability test 1}{40}
+\contentsline {subsection}{\numberline {9.5}Variability test 2}{40}
+\contentsline {subsection}{\numberline {9.6}Variability test 3 - Omnibus Test}{42}
+\contentsline {section}{\numberline {10}Limits of Agreement in LME models}{43}
+\contentsline {section}{\numberline {11}Computing LoAs from LME models}{43}
+\contentsline {subsection}{\numberline {11.1}Featured approaches}{43}
+\contentsline {subsection}{\numberline {11.2}Carstensen's Limits of agreement}{45}
+\contentsline {subsection}{\numberline {11.3}Computation of limits of agreement under Roy's model}{46}
+\contentsline {subsection}{\numberline {11.4}Interaction Terms in Model}{47}
+\contentsline {subsection}{\numberline {11.5}Difference Variance further to Carstensen}{50}
+\contentsline {subsection}{\numberline {11.6}Relevance of Roy's Methodology}{51}
+\contentsline {section}{\numberline {12}Roy's LME methodology for assessing agreement}{51}
+\contentsline {section}{\numberline {13}Limits of agreement in LME models}{54}
+\contentsline {subsection}{\numberline {13.1}Linked replicates}{55}
+\contentsline {section}{\numberline {14}Extension of Roy's methodology}{56}
+\contentsline {section}{\numberline {15}Conclusion}{57}
+\contentsline {subsection}{\numberline {15.1}Calculation of limits of agreement }{57}
+\contentsline {section}{\numberline {16}Classical model for single measurements}{58}
+\contentsline {subsection}{\numberline {16.1}Difference Variance further to Carstensen}{61}
+\contentsline {subsection}{\numberline {16.2}Relevance of Roy's Methodology}{61}
+\contentsline {section}{\numberline {17}Correlation}{62}
+\contentsline {subsection}{\numberline {17.1}Correlation terms}{62}
+\contentsline {section}{\numberline {18}Hamlett}{63}
+\contentsline {section}{\numberline {19}Lai Shiao}{63}
+\contentsline {subsubsection}{\numberline {19.0.1}Single fixed effect}{65}
+\contentsline {subsubsection}{\numberline {19.0.2}Two fixed effects}{65}
+\contentsline {section}{\numberline {20}Demonstration of Roy's testing}{67}
+\contentsline {subsection}{\numberline {20.1}Implementation in \texttt {R}}{69}
+\contentsline {section}{\numberline {21}Worked Eamples}{73}
+\contentsline {subsection}{\numberline {21.1}Diabetes Example}{73}
+\contentsline {subsection}{\numberline {21.2}Examples: LoAs for Carstensen's data}{73}
+\contentsline {subsection}{\numberline {21.3}Oximetry Data}{74}

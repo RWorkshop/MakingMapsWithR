@@ -1,12 +1,4 @@
 
-MAY 2012 : Research Notes
-Roy (2009) proposes a suite of hypothesis tests for assessing the agreement of two methods of measurement, when replicate measurements are obtained for each item, using a LME approach. (An item would commonly be a patient).  Two methods of measurement can be said to be in agreement if there is no significant difference between in three key respects. Firstly, there is no inter-method bias between the two methods, i.e. there is no persistent tendency for one method to give higher values than the other.
-Secondly, both methods of measurement have the same  within-subject variability. In such a case the variance of the replicate measurements would consistent for both methods.
-Lastly, the methods have equal between-subject variability.  Put simply, for the mean measurements for each case, the variances of the mean measurements from both methods are equal.
-Testing for Inter-method Bias
-Firstly, a practitioner would investigate whether a significant inter-method bias is present between the methods. This bias is specified as a fixed effect in the LME model.  For a practitioner who has a reasonable level of competency in R and undergraduate statistics (in particular simple linear regression model) this is a straight-forward procedure.
-Reference Model (Ref.Fit)
-Conventionally LME models can be tested using Likelihood Ratio Tests, wherein a reference model is compared to a nested model.
 > Ref.Fit = lme(y ~ meth-1, data = dat,   #Symm , Symm#
 +     random = list(item=pdSymm(~ meth-1)), 
 +     weights=varIdent(form=~1|meth),
