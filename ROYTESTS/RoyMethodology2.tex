@@ -510,6 +510,7 @@ It is important to note the following characteristics of this model.
 	\item The variance of the response vector is given by $\mbox{Var}(\boldsymbol{y}_i)  = \boldsymbol{Z}_i \boldsymbol{G} \boldsymbol{Z}_i^{\prime} + \boldsymbol{R}_i$ \citep{hamlett}.
 \end{itemize}
 
+\newpage
 
 \section{Model Formula}
 
@@ -518,7 +519,7 @@ Let $y_{mir} $ denote the $r$th replicate measurement on the $i$th item by the $
 y_{mir} = \beta_{0} + \beta_{m} + b_{mi} + \epsilon_{mir}.
 \end{equation}
 Here $\beta_0$ and $\beta_m$ are fixed-effect terms representing, respectively, a model intercept and an overall effect for method $m.$ The model can be reparameterized by gathering the $\beta$ terms together into (fixed effect) intercept terms $\alpha_m=\beta_0+\beta_m.$ The $b_{1i}$ and $b_{2i}$ terms are correlated random effect parameters having $\mathrm{E}(b_{mi})=0$ with $\mathrm{Var}(b_{mi})=g^2_m$ and $\mathrm{Cov}(b_{1i}, b_{2 i})=g_{12}.$ The random error term for each response is denoted $\epsilon_{mir}$ having $\mathrm{E}(\epsilon_{mir})=0$, $\mathrm{Var}(\epsilon_{mir})=\sigma^2_m$, $\mathrm{Cov}(\epsilon_{1ir}, \epsilon_{2 ir})=\sigma_{12}$, $\mathrm{Cov}(\epsilon_{mir}, \epsilon_{mir^\prime})= 0$ and $\mathrm{Cov}(\epsilon_{1ir}, \epsilon_{2 ir^\prime})= 0.$ Two methods of measurement are in complete agreement if the null hypotheses $\mathrm{H}_1\colon \alpha_1 = \alpha_2$ and $\mathrm{H}_2\colon \sigma^2_1 = \sigma^2_2 $ and $\mathrm{H}_3\colon g^2_1= g^2_2$ hold simultaneously. \citet{roy} uses a Bonferroni correction to control the familywise error rate for tests of $\{\mathrm{H}_1, \mathrm{H}_2, \mathrm{H}_3\}$ and account for difficulties arising due to multiple testing. Roy also integrates $\mathrm{H}_2$ and $\mathrm{H}_3$ into a single testable hypothesis $\mathrm{H}_4\colon \omega^2_1=\omega^2_2,$ where $\omega^2_m = \sigma^2_m + g^2_m$ represent the overall variability of method $m.$  Disagreement in overall variability may be caused by different between-item variabilities, by different within-item variabilities, or by both.  If the exact cause of disagreement between the two methods is not of interest, then the overall variability test $H_4$ is an alternative to testing $H_2$ and $H_3$ separately.
-
+\newpage
 \section{Model Formula}
 
 Let $y_{mir} $ be the $r$th replicate measurement on the $i$th item by the $m$th method, where $m=1,2,$ $i=1,\ldots,N,$ and $r = 1,\ldots,n_i.$ When the design is balanced and there is no ambiguity we can set $n_i=n.$ The LME model can be written
@@ -527,7 +528,7 @@ y_{mir} = \beta_{0} + \beta_{m} + b_{mi} + \epsilon_{mir}.
 \end{equation}
 Here $\beta_0$ and $\beta_m$ are fixed-effect terms representing, respectively, a model intercept and an overall effect for method $m.$ The $b_{1i}$ and $b_{2i}$ terms represent random effect parameters corresponding to the two methods, having $\mathrm{E}(b_{mi})=0$ with $\mathrm{Var}(b_{mi})=g^2_m$ and $\mathrm{Cov}(b_{mi}, b_{m^\prime i})=g_{12}.$ The random error term for each response is denoted $\epsilon_{mir}$ having $\mathrm{E}(\epsilon_{mir})=0$, $\mathrm{Var}(\epsilon_{mir})=\sigma^2_m$, $\mathrm{Cov}(b_{mir}, b_{m^\prime ir})=\sigma_{12}$, $\mathrm{Cov}(\epsilon_{mir}, \epsilon_{mir^\prime})= 0$ and $\mathrm{Cov}(\epsilon_{mir}, \epsilon_{m^\prime ir^\prime})= 0.$
 When two methods of measurement are in agreement, there is no significant differences between $\beta_1$ and $\beta_2,$ $g^2_1 $ and$ g^2_2$, and $\sigma^2_1 $ and$ \sigma^2_2$.
-\bigskip
+\newpage
 
 \section{Model Formula}
 Let $y_{mir} $ be the $r$th replicate measurement on the $i$th item by the $m$th method, where $m=1,2,$ $i=1,\ldots,N,$ and $r = 1,\ldots,n_i.$ When the design is balanced and there is no ambiguity we can set $n_i=n.$ The LME model can be written
@@ -536,7 +537,6 @@ y_{mir} = \beta_{0} + \beta_{m} + b_{mi} + \epsilon_{mir}.
 \end{equation}
 Here $\beta_0$ and $\beta_m$ are fixed-effect terms representing, respectively, a model intercept and an overall effect for method $m.$ The $b_{1i}$ and $b_{2i}$ terms represent random effect parameters corresponding to the two methods, having $\mathrm{E}(b_{mi})=0$ with $\mathrm{Var}(b_{mi})=g^2_m$ and $\mathrm{Cov}(b_{mi}, b_{m^\prime i})=g_{12}.$ The random error term for each response is denoted $\epsilon_{mir}$ having $\mathrm{E}(\epsilon_{mir})=0$, $\mathrm{Var}(\epsilon_{mir})=\sigma^2_m$, $\mathrm{Cov}(b_{mir}, b_{m^\prime ir})=\sigma_{12}$, $\mathrm{Cov}(\epsilon_{mir}, \epsilon_{mir^\prime})= 0$ and $\mathrm{Cov}(\epsilon_{mir}, \epsilon_{m^\prime ir^\prime})= 0.$
 When two methods of measurement are in agreement, there is no significant differences between $\beta_1$ and $\beta_2,$ $g^2_1 $ and$ g^2_2$, and $\sigma^2_1 $ and$ \sigma^2_2$.
-\bigskip
 
 % Complete paragraph by specifying variances and covariances for epsilons.
 % I thing that these are your sigmas?
@@ -569,6 +569,7 @@ When two methods of measurement are in agreement, there is no significant differ
 
 
 %------------------------------------------------------------------------------%
+\newpage
 \subsection{Formulation of the response vector}
 Information of individual $i$ is recorded in a response vector $\boldsymbol{y}_{i}$. The response vector is constructed by stacking the response of the $2$ responses at the first instance, then the $2$ responses at the second instance, and so on. Therefore the response vector is a $2n_{i} \times 1$ column vector.
 The covariance matrix of $\boldsymbol{y_{i}}$ is a $2n_{i} \times 2n_{i}$ positive definite matrix $\boldsymbol{\Omega}_{i}$.
@@ -1839,7 +1840,32 @@ Bias is determinable by examination of the 't-table'. Estimate for both methods 
 	
 	
 	
-
+		
+		\section{Roy Testing}
+		
+		Roy proposes a novel method using the LME model with Kronecker product covariance structure in a doubly multivariate set-up to assess the agreement between a new method and an established method with unbalanced data and with unequal replications for different subjects \citep{Roy}.
+		
+		Using Roy's method, four candidate models are constructed, each differing by constraints applied to the variance covariance matrices. In addition to computing the inter-method bias, three significance tests are carried out on the respective formulations to make a judgement on whether or not two methods are in agreement.
+		
+		\newpage
+		\begin{itemize}
+			\item Let $y_{mir}$ be the response of method $m$ on the $i$th subject
+			at the $r-$th replicate.
+			\item Let $\boldsymbol{y}_{ir}$ be the $2 \times 1$ vector of measurements
+			corresponding to the $i-$th subject at the $r-$th replicate.
+			\item Let $\boldsymbol{y}_{i}$ be the $R_i \times 1$ vector of
+			measurements corresponding to the $i-$th subject, where $R_i$ is number of replicate measurements taken on item $i$.
+			\item Let $\alpha_mi$ be the fixed effect parameter for method for subject $i$.
+			\item Formally Roy uses a separate fixed effect parameter to describe the true value $\mu_i$, but later combines it with the other fixed effects when implementing the model.
+			\item Let $u_{1i}$ and $u_{2i}$ be the random effects corresponding to methods for item $i$.
+			
+			\item $\boldsymbol{\epsilon}_{i}$ is a $n_{i}$-dimensional vector
+			comprised of residual components. For the blood pressure data $n_{i} = 85$.
+			
+			\item $\boldsymbol{\beta}$ is the solutions of the means of the two methods. In the LME output, the bias ad corresponding
+			t-value and p-values are presented. This is relevant to Roy's first test.\end{itemize}
+		
+		\newpage
 
 	\subsection{Variance Covariance Matrices }
 	
@@ -1926,20 +1952,38 @@ with $2 \times 2$ dimensions.
 %---------------------------------------------------------------------------------%
 
 
-	\section{Roy's Use of Various VC Structures}
-		Importantly these variance covariance structures are central to Roy methodology.
-
-
-		No special form of the random effects VC matrix $\boldsymbol{\Psi}$ is assumed.
-		Form cans be specified.
-		The \texttt{pdMat} class is used by the `nlme' package to specify patterned VC matrices.
-		\begin{itemize}
-			\item pdDiag - Assumes random effects are independent, with different variance.
-			\item pdIdent - Assumes random effects are independent, with same variance.
-			\item pdSymm - General symmetric positive definite matrix.
-			\item pdCompSymm
-		\end{itemize}
-	\newpage
+%	\section{Roy's Use of Various VC Structures}
+%		Importantly these variance covariance structures are central to Roy methodology.
+%
+%
+%		No special form of the random effects VC matrix $\boldsymbol{\Psi}$ is assumed.
+%		Form cans be specified.
+%		The \texttt{pdMat} class is used by the `nlme' package to specify patterned VC matrices.
+%		\begin{itemize}
+%			\item pdDiag - Assumes random effects are independent, with different variance.
+%			\item pdIdent - Assumes random effects are independent, with same variance.
+%			\item pdSymm - General symmetric positive definite matrix.
+%			\item pdCompSymm
+%		\end{itemize}
+%	\newpage
+	
+	%----------------------------------------------------------- %
+	\subsection{Introduction}
+	The tests are implemented by fitting a four variants of a specific LME model to the data. For the purpose of comparing models, one of the models acts as a reference model while the three other variant are nested models that introduce equality constraints to serves as null hypothesis cases. The methodology uses a linear mixed effects regression fit using a combination of symmetric and 
+	compound symmetry (CS) correlation structure the variance covariance matrices.
+	
+	Other important aspects of the method comparison study are consequent. The limits of agreement are computed using the results of the reference model.
+	
+	% $\Lambda = \frac{\mbox{max}_{H_{0}}L}{\mbox{max}_{H_{1}}L}$
+	% \citet{ARoy2009} uses examples from \citet{BA86} to be able to compare both types of analysis.
+	
+	
+	%----------------------------------------------------------- %
+	%------------------------------------------------------------- %
+	
+	
+	
+	
 	\subsection{Variance Covariance Matrices }
 	
 	Under Roy's model, random effects are defined using a bivariate normal distribution. Consequently, the variance-covariance structures can be described using $2 \times 2$  matrices. A discussion of the various structures a variance-covariance matrix can be specified under is required before progressing. The following structures are relevant: the identity structure, the compound symmetric structure and the symmetric structure.
@@ -1956,7 +2000,7 @@ with $2 \times 2$ dimensions.
 	
 	
 	%In the presented example, it is shown that Roy's LOAs are lower than those of (\ref{BXC-model}), when covariance between methods is present.
-	
+
 	
 \section{VC structures}
 	
@@ -1997,39 +2041,7 @@ with $2 \times 2$ dimensions.
 	\right)
 	\end{equation}
 	
-	%------------------------------------------------------------- %
-	
-	
-	%----------------------------------------------------------- %
-		\subsection{Introduction}
-	The tests are implemented by fitting a four variants of a specific LME model to the data. For the purpose of comparing models, one of the models acts as a reference model while the three other variant are nested models that introduce equality constraints to serves as null hypothesis cases. The methodology uses a linear mixed effects regression fit using a combination of symmetric and 
-	compound symmetry (CS) correlation structure the variance covariance matrices.
-	
-	Other important aspects of the method comparison study are consequent. The limits of agreement are computed using the results of the reference model.
-	
-	% $\Lambda = \frac{\mbox{max}_{H_{0}}L}{\mbox{max}_{H_{1}}L}$
-	% \citet{ARoy2009} uses examples from \citet{BA86} to be able to compare both types of analysis.
-	
-	
-	%----------------------------------------------------------- %
 
-
-	\subsection{Variance Covariance Matrices }
-	
-	Under Roy's model, random effects are defined using a bivariate normal distribution. Consequently, the variance-covariance structures can be described using $2 \times 2$  matrices. A discussion of the various structures a variance-covariance matrix can be specified under is required before progressing. The following structures are relevant: the identity structure, the compound symmetric structure and the symmetric structure.
-	
-	The identity structure is simply an abstraction of the identity matrix. The compound symmetric structure and symmetric structure can be described with reference to the following matrix (here in the context of the overall covariance Block-$\boldsymbol{\Omega}_i$, but equally applicable to the component variabilities $\boldsymbol{G}$ and $\boldsymbol{\Sigma}$);
-	
-	\[\left( \begin{array}{cc}
-	\omega^2_1  & \omega_{12} \\
-	\omega_{12} & \omega^2_2 \\
-	\end{array}\right) \]
-	
-	Symmetric structure requires the equality of all the diagonal terms, hence $\omega^2_1 = \omega^2_2$. Conversely compound symmetry make no such constraint on the diagonal elements. Under the identity structure, $\omega_{12} = 0$.
-	A comparison of a model fitted using symmetric structure with that of a model fitted using the compound symmetric structure is equivalent to a test of the equality of variance.
-	
-	
-	%In the presented example, it is shown that Roy's LOAs are lower than those of (\ref{BXC-model}), when covariance between methods is present.
 	
 	%\section{VC Matrix Types}
 	%-----------------------------------------------------------------------------------%
@@ -2038,10 +2050,8 @@ with $2 \times 2$ dimensions.
 	
 	
 	%In the presented example, it is shown that Roy's LOAs are lower than those of (\ref{BXC-model}), when covariance between methods is present.
-	
-	
-	
-	%\section{VC structures}
+
+
 	
 	There is three alternative structures for
 	$\boldsymbol{\Psi}$, the diagonal form, the identity form and the general form.
@@ -2092,32 +2102,7 @@ with $2 \times 2$ dimensions.
 		\right)
 		\end{equation}
 		
-		%============================================================= %
-		There is three alternative structures for
-		$\boldsymbol{\Psi}$, the diagonal form, the identity form and the general form.
-		\[
-		\boldsymbol{\Psi} =
-		\left(%
-		\begin{array}{c c}
-		\psi^2_1 & 0  \\
-		0 & \psi^2_2  \\
-		\end{array}%
-		\right)\qquad \mathrm{or} \qquad \boldsymbol{\Psi} =
-		\left(%
-		\begin{array}{c c}
-		\psi_{11} & \psi_{12}  \\
-		\psi_{21} & \psi_{22}  \\
-		\end{array}%
-		\right)
-		\qquad \mathrm{or} \qquad \boldsymbol{\Psi} =
-		\left(%
-		\begin{array}{c c}
-		\psi_{11} & \psi_{12}  \\
-		\psi_{21} & \psi_{22}  \\
-		\end{array}%
-		\right)
-		\]
-		
+
 		
 	%------------------------------------------------------------- %
 	
@@ -2203,7 +2188,8 @@ are more correlated than measures that are more distant.
 	
 	\newpage		
 	% Three hypothesis tests follow from this equation.
-Lack of agreement can arise if there is a disagreement in overall variabilities. This lack of agreement may be due to differing between-item variabilities, differing within-item variabilities, or both. The formulation presented above usefully facilitates a series of significance tests that assess if and where such differences arise. \citet{ARoy2009} allows for a formal test of each. These tests are comprised of a formal test for the equality of between-item variances,
+	Lack of agreement can arise if there is a disagreement in overall variabilities. This lack of agreement may be due to differing between-item variabilities, differing within-item variabilities, or both. The formulation presented above usefully facilitates a series of significance tests that assess if and where such differences arise. \citet{ARoy2009} allows for a formal test of each. These tests are comprised of a formal test for the equality of between-item variances.
+
 	
 The formulation presented above usefully facilitates a series of significance tests that advise as to how well the two methods agree. These tests are as follows:
 	\begin{itemize}
@@ -2250,72 +2236,6 @@ These tests are complemented by the ability to consider the inter-method bias an
 	compare both types of analysis.
 	
 	
-	\newpage		
-	% Three hypothesis tests follow from this equation.
-	Lack of agreement can arise if there is a disagreement in overall variabilities. This lack of agreement may be due to differing between-item variabilities, differing within-item variabilities, or both. The formulation presented above usefully facilitates a series of significance tests that assess if and where such differences arise. \citet{ARoy2009} allows for a formal test of each. These tests are comprised of a formal test for the equality of between-item variances,
-	
-	The formulation presented above usefully facilitates a series of significance tests that advise as to how well the two methods
-	agree. These tests are as follows:
-	\begin{itemize}
-		\item A formal test for the equality of between-item variances,
-		\item A formal test for the equality of within-item variances,
-		\item A formal test for the equality of overall variances.
-	\end{itemize}
-	These tests are complemented by the ability to consider the inter-method bias and the overall correlation coefficient. Two methods can be considered to be in agreement if criteria based upon these methodologies are met. Additionally Roy makes reference to the overall correlation coefficient of the two methods, which is determinable from variance estimates.
-	
-
-	
-	
-
-	
-	
-	%In the presented example, it is shown that Roy's LOAs are lower than those of (\ref{BXC-model}), when covariance between methods is present.
-	
-	
-	
-	
-
-	
-
-	%--------------------------------------------------%
-	\subsection{Variability test 1}
-	The first test determines whether or not both methods $A$ and $B$ have the same between-subject variability, further to the second of Roy's criteria.
-	\begin{eqnarray*}
-		H_{0}: \mbox{ }d_{A}  = d_{B} \\
-		H_{A}: \mbox{ }d_{A}  \neq d_{B}
-	\end{eqnarray*}
-	This test is facilitated by constructing a model specifying a symmetric form for $D$ (i.e. the alternative model) and comparing it with a model that has compound symmetric form for $D$ (i.e. the null model). For this test $\boldsymbol{\hat{\Lambda}}$ has a symmetric form for both models, and will be the same for both.
-	
-
-	
-	
-	%---------------------------------------------%
-	\subsection{Variability test 2}
-	
-	This test determines whether or not both methods $A$ and $B$ have the same within-subject variability, thus enabling a decision on the third of Roy's criteria.
-	
-	\begin{eqnarray*}
-		H_{0}: \mbox{ }\lambda_{A}  = \lambda_{B} \\
-		H_{A}: \mbox{ }\lambda_{A}  = \lambda_{B}
-	\end{eqnarray*}
-	
-	This model is performed in the same manner as the first test, only reversing the roles of $\boldsymbol{\hat{D}}$ and $\boldsymbol{\hat{\Lambda}}$. The null model is constructed a symmetric form for $\boldsymbol{\hat{\Lambda}}$ while the alternative model uses a compound symmetry form. This time $\boldsymbol{\hat{D}}$ has a symmetric form for both models, and will be the same for both.
-	
-	The first test allows of the comparison the begin-subject variability of two methods. As the within-subject variabilities are fundamental to the coefficient of repeatability, this variability test likelihood ratio test is equivalent to testing the equality of two coefficients of repeatability of two methods. In presenting the results of this test, \citet{roy} includes the coefficients of repeatability for both methods.
-	
-	%---------------------------------------------%
-	\subsection*{Variability test 2}
-	
-	This test determines whether or not both methods $A$ and $B$ have the same within-subject variability, thus enabling a decision on the third of Roy's criteria.
-	
-	\begin{eqnarray*}
-		H_{0}: \mbox{ }\lambda_{A}  = \lambda_{B} \\
-		H_{A}: \mbox{ }\lambda_{A}  = \lambda_{B}
-	\end{eqnarray*}
-	
-	Similarly, the second test
-	assesses the within-subject variability of two methods. A third test is a test that compares the overall variability of the two methods.
-	
 	The tests are implemented by fitting a specific LME model, and three variations thereof, to the data. These three variant models introduce equality constraints that act null hypothesis cases.
 	
 	Other important aspects of the method comparison study are consequent. The limits of agreement are computed using the results of the first model.
@@ -2335,11 +2255,53 @@ These tests are complemented by the ability to consider the inter-method bias an
 		\operatorname{H_0} : \omega^2_1 = \omega^2_2 \\
 		\operatorname{H_1} : \omega^2_1 \neq \omega^2_2
 	\end{eqnarray*}
-	
+
 	
 	These tests are complemented by the ability to consider the inter-method bias and the overall correlation coefficient.
 	Two methods can be considered to be in agreement if criteria based upon these methodologies are met. Additionally Roy makes reference to the overall correlation coefficient of the two methods, which is determinable from variance estimates.
+
+
+
+
 	
+	
+	%--------------------------------------------------%
+	\subsection{Variability test 1}
+	The first test determines whether or not both methods $A$ and $B$ have the same between-subject variability, further to the second of Roy's criteria.
+	\begin{eqnarray*}
+		H_{0}: \mbox{ }d_{A}  = d_{B} \\
+		H_{A}: \mbox{ }d_{A}  \neq d_{B}
+	\end{eqnarray*}
+	This test is facilitated by constructing a model specifying a symmetric form for $D$ (i.e. the alternative model) and comparing it with a model that has compound symmetric form for $D$ (i.e. the null model). For this test $\boldsymbol{\hat{\Lambda}}$ has a symmetric form for both models, and will be the same for both.
+	
+	The first test allows of the comparison the begin-subject variability of two methods. 
+
+
+	%---------------------------------------------%
+	\subsection{Variability test 2}
+	
+	This test determines whether or not both methods $A$ and $B$ have the same within-subject variability, thus enabling a decision on the third of Roy's criteria.
+	
+	\begin{eqnarray*}
+		H_{0}: \mbox{ }\lambda_{A}  = \lambda_{B} \\
+		H_{A}: \mbox{ }\lambda_{A}  = \lambda_{B}
+	\end{eqnarray*}
+	
+	This model is performed in the same manner as the first test, only reversing the roles of $\boldsymbol{\hat{D}}$ and $\boldsymbol{\hat{\Lambda}}$. The null model is constructed a symmetric form for $\boldsymbol{\hat{\Lambda}}$ while the alternative model uses a compound symmetry form. This time $\boldsymbol{\hat{D}}$ has a symmetric form for both models, and will be the same for both.
+	
+	As the within-subject variabilities are fundamental to the coefficient of repeatability, this variability test likelihood ratio test is equivalent to testing the equality of two coefficients of repeatability of two methods. In presenting the results of this test, \citet{roy} includes the coefficients of repeatability for both methods.
+	
+	The first test allows of the comparison the begin-subject variability of two methods. As the within-subject variabilities are fundamental to the coefficient of repeatability, this variability test likelihood ratio test is equivalent to testing the equality of two coefficients of repeatability of two methods. In presenting the results of this test, \citet{roy} includes the coefficients of repeatability for both methods.
+	
+
+	
+	Similarly, the second test
+	assesses the within-subject variability of two methods. A third test is a test that compares the overall variability of the two methods.
+	
+	
+	
+	\newpage
+	%-----------------------------------------------%
 	%-----------------------------------------------%
 	\subsection{Variability test 3}
 	The last of the variability test examines whether or not methods $A$ and $B$ have the same overall variability. This enables the joint consideration of second and third criteria.
@@ -2348,9 +2310,70 @@ These tests are complemented by the ability to consider the inter-method bias an
 		H_{A}: \mbox{ }\sigma_{A}  = \sigma_{B}
 	\end{eqnarray*}
 	
+
 	The null model is constructed a symmetric form for both $\boldsymbol{\hat{D}}$ and $\boldsymbol{\hat{\Lambda}}$ while the alternative model uses a compound symmetry form for both.
-	\newpage
-	the differing residual %variances between methods }\citep{bxc2010}.
+	%	\subsection{Variability test 3 - Omnibus Test}
+	The maximum likelihood estimate of the between-subject variance
+	covariance matrix of two methods is given as $D$. The estimate for
+	the within-subject variance covariance matrix is $\hat{\Sigma}$.
+	The estimated overall variance covariance matrix `Block
+	$\Omega_{i}$' is the addition of $\hat{D}$ and $\hat{\Sigma}$.
+	
+	\[\left(\begin{array}{cc}
+	\omega^1_2  & 0 \\
+	0 & \omega^2_2 \\
+	\end{array}  \right)
+	=  \left(
+	\begin{array}{cc}
+	\tau^2  & 0 \\
+	0 & \tau^2 \\
+	\end{array} \right)+
+	\left(
+	\begin{array}{cc}
+	\sigma^2_1  & 0 \\
+	0 & \sigma^2_2 \\
+	\end{array}\right)
+	\]
+	
+	\[\left(\begin{array}{cc}
+	\omega^1_2  & 0 \\
+	0 & \omega^2_2 \\
+	\end{array}  \right)
+	=  \left(
+	\begin{array}{cc}
+	\tau^2  & 0 \\
+	0 & \tau^2 \\
+	\end{array} \right)+
+	\left(
+	\begin{array}{cc}
+	\sigma^2_1  & 0 \\
+	0 & \sigma^2_2 \\
+	\end{array}\right)
+	\]
+			The computation of the limits of agreement require that the variance of the difference of measurements. This variance is easily computable from the estimate of the ${\mbox{Block - }\boldsymbol \Omega_{i}}$ matrix. Lack of agreement can arise if there is a disagreement in overall variabilities. This may be due to due to the disagreement in either between-item
+			variabilities or within-item variabilities, or both. \citet{ARoy2009} allows for a formal test of each.
+				\begin{equation}
+					\mbox{Block  }\Omega_{i} = \hat{D} + \hat{\Sigma}
+				\end{equation}
+				
+			\begin{equation}
+				\left( \begin{array}{cc}
+					\omega^2_{e} & \omega^{en} \\
+					\omega_{en} & \omega^2_{n} \\
+				\end{array}\right)
+				=
+				\left( \begin{array}{cc}
+					\psi^2_{e} & \psi^{en} \\
+					\psi_{en} & \psi^2_{n} \\
+				\end{array}\right)
+				+
+				\left( \begin{array}{cc}
+					\sigma^2_{e} & \sigma^{en} \\
+					\sigma_{en} & \sigma^2_{n} \\
+				\end{array}\right)
+			\end{equation}
+	
+
 	%-----------------------------------------------------------------------------------------------------%
 	\newpage
 	
@@ -2384,20 +2407,9 @@ The first model acts as an alternative hypothesis to be compared against each of
 %---------------------------------------- %
 The probability distribution of the test statistic is approximated by the $\chi^2$ distribution with ($\nu_{1} - \nu_{2}$) degrees of freedom, where $\nu_{1}$ and $\nu_{2}$ are the degrees of freedom of models 1 and 2 respectively. Each of these three test shall be examined in more detail shortly.
 
-\subsection{Correlation}
-In addition to the variability tests, Roy advises that it is preferable that a correlation of greater than $0.82$ exist for two methods to be considered interchangeable. However if two methods fulfil all the other conditions for agreement, failure to comply with this one can be overlooked. Indeed Roy demonstrates that placing undue importance to it can lead to incorrect conclusions. \citet{roy} remarks that current computer implementations only gives overall correlation coefficients, but not their variances. Consequently it is not possible to carry out inferences based on all overall correlation coefficients.
 
 
-\subsection{Hypothesis Testing}
-The formulation presented above usefully facilitates a series of
-significance tests that advise as to how well the two methods
-agree. These tests are as follows:
-\begin{itemize}
-	\item A formal test for the equality of between-item variances,
-	\item A formal test for the equality of within-item variances,
-	\item A formal test for the equality of overall variances.
-\end{itemize}
-These tests are complemented by the ability to consider the inter-method bias and the overall correlation coefficient. Two methods can be considered to be in agreement if criteria based upon these methodologies are met. Additionally Roy makes reference to the overall correlation coefficient of the two methods, which is determinable from variance estimates.
+
 
 \newpage
 
@@ -2411,211 +2423,7 @@ Roy proposes a novel method using the LME model with Kronecker product covarianc
 
 Using Roy's method, four candidate models are constructed, each differing by constraints applied to the variance covariance matrices. In addition to computing the inter-method bias, three significance tests are carried out on the respective formulations to make a judgement on whether or not two methods are in agreement.
 
-%---------------------------------------------------------------------------------%
 
-\subsection{Hypothesis Testing}
-The formulation presented above usefully facilitates a series of
-significance tests that advise as to how well the two methods
-agree. These tests are as follows:
-\begin{itemize}
-	\item A formal test for the equality of between-item variances,
-	\item A formal test for the equality of within-item variances,
-	\item A formal test for the equality of overall variances.
-\end{itemize}
-These tests are complemented by the ability to consider the inter-method bias and the overall correlation coefficient. Two methods can be considered to be in agreement if criteria based upon these methodologies are met. Additionally Roy makes reference to the overall correlation coefficient of the two methods, which is determinable from variance estimates.
-
-
-
-
-
-\section{Roy Testing}
-
-Roy proposes a novel method using the LME model with Kronecker product covariance structure in a doubly multivariate set-up to assess the agreement between a new method and an established method with unbalanced data and with unequal replications for different subjects \citep{Roy}.
-
-Using Roy's method, four candidate models are constructed, each differing by constraints applied to the variance covariance matrices. In addition to computing the inter-method bias, three significance tests are carried out on the respective formulations to make a judgement on whether or not two methods are in agreement.
-
-\newpage
-\begin{itemize}
-	\item Let $y_{mir}$ be the response of method $m$ on the $i$th subject
-	at the $r-$th replicate.
-	\item Let $\boldsymbol{y}_{ir}$ be the $2 \times 1$ vector of measurements
-	corresponding to the $i-$th subject at the $r-$th replicate.
-	\item Let $\boldsymbol{y}_{i}$ be the $R_i \times 1$ vector of
-	measurements corresponding to the $i-$th subject, where $R_i$ is number of replicate measurements taken on item $i$.
-	\item Let $\alpha_mi$ be the fixed effect parameter for method for subject $i$.
-	\item Formally Roy uses a separate fixed effect parameter to describe the true value $\mu_i$, but later combines it with the other fixed effects when implementing the model.
-	\item Let $u_{1i}$ and $u_{2i}$ be the random effects corresponding to methods for item $i$.
-	
-	\item $\boldsymbol{\epsilon}_{i}$ is a $n_{i}$-dimensional vector
-	comprised of residual components. For the blood pressure data $n_{i} = 85$.
-	
-	\item $\boldsymbol{\beta}$ is the solutions of the means of the two methods. In the LME output, the bias ad corresponding
-	t-value and p-values are presented. This is relevant to Roy's first test.\end{itemize}
-
-\newpage
-
-
-%--------------------------------------------------%
-\subsection{Variability test 1}
-The first test determines whether or not both methods $A$ and $B$ have the same between-subject variability, further to the second of Roy's criteria.
-\begin{eqnarray*}
-	H_{0}: \mbox{ }d_{A}  = d_{B} \\
-	H_{A}: \mbox{ }d_{A}  \neq d_{B}
-\end{eqnarray*}
-This test is facilitated by constructing a model specifying a symmetric form for $D$ (i.e. the alternative model) and comparing it with a model that has compound symmetric form for $D$ (i.e. the null model). For this test $\boldsymbol{\hat{\Lambda}}$ has a symmetric form for both models, and will be the same for both.
-
-	
-
-	
-	
-	
-	The first test allows of the comparison the begin-subject variability of two methods. 
-		%---------------------------------------------%
-		\subsection{Variability test 2}
-		
-		This test determines whether or not both methods $A$ and $B$ have the same within-subject variability, thus enabling a decision on the third of Roy's criteria.
-		
-		\begin{eqnarray*}
-			H_{0}: \mbox{ }\lambda_{A}  = \lambda_{B} \\
-			H_{A}: \mbox{ }\lambda_{A}  = \lambda_{B}
-		\end{eqnarray*}
-		
-		This model is performed in the same manner as the first test, only reversing the roles of $\boldsymbol{\hat{D}}$ and $\boldsymbol{\hat{\Lambda}}$. The null model is constructed a symmetric form for $\boldsymbol{\hat{\Lambda}}$ while the alternative model uses a compound symmetry form. This time $\boldsymbol{\hat{D}}$ has a symmetric form for both models, and will be the same for both.
-		
-		As the within-subject variabilities are fundamental to the coefficient of repeatability, this variability test likelihood ratio test is equivalent to testing the equality of two coefficients of repeatability of two methods. In presenting the results of this test, \citet{roy} includes the coefficients of repeatability for both methods.
-		
-		
-	
-	%---------------------------------------------%
-	\subsection{Variability test 2}
-	
-	This test determines whether or not both methods $A$ and $B$ have the same within-subject variability, thus enabling a decision on the third of Roy's criteria.
-	
-	\begin{eqnarray*}
-		H_{0}: \mbox{ }\lambda_{A}  = \lambda_{B} \\
-		H_{A}: \mbox{ }\lambda_{A}  = \lambda_{B}
-	\end{eqnarray*}
-	
-	
-	This model is performed in the same manner as the first test, only reversing the roles of $\boldsymbol{\hat{D}}$ and $\boldsymbol{\hat{\Lambda}}$. The null model is constructed a symmetric form for $\boldsymbol{\hat{\Lambda}}$ while the alternative model uses a compound symmetry form. This time $\boldsymbol{\hat{D}}$ has a symmetric form for both models, and will be the same for both.
-	
-	As the within-subject variabilities are fundamental to the coefficient of repeatability, this variability test likelihood ratio test is equivalent to testing the equality of two coefficients of repeatability of two methods. In presenting the results of this test, \citet{ARoy2009} includes the coefficients of repeatability for both methods.
-	
-	
-	Similarly, the second test
-	assesses the within-subject variability of two methods. A third test is a test that compares the overall variability of the two methods.
-	
-	The tests are implemented by fitting a specific LME model, and three variations thereof, to the data. These three variant models introduce equality constraints that act null hypothesis cases.
-	
-	Other important aspects of the method comparison study are consequent. The limits of agreement are computed using the results of the first model.
-	
-	
-	\begin{eqnarray*}
-		\operatorname{H_0} : g^2_1 = g^2_2 \\
-		\operatorname{H_1} : g^2_1 \neq g^2_2
-	\end{eqnarray*}
-	a formal test for the equality of within-item variances,
-	\begin{eqnarray*}
-		\operatorname{H_0} : \sigma^2_1 = \sigma^2_2 \\
-		\operatorname{H_1} : \sigma^2_1 \neq \sigma^2_2
-	\end{eqnarray*}
-	and finally, a formal test for the equality of overall variances.
-	\begin{eqnarray*}
-		\operatorname{H_0} : \omega^2_1 = \omega^2_2 \\
-		\operatorname{H_1} : \omega^2_1 \neq \omega^2_2
-	\end{eqnarray*}
-	
-	
-	These tests are complemented by the ability to consider the inter-method bias and the overall correlation coefficient.
-	Two methods can be considered to be in agreement if criteria based upon these methodologies are met. Additionally Roy makes reference to the overall correlation coefficient of the two methods, which is determinable from variance estimates.
-	
-	\newpage
-	%-----------------------------------------------%
-	%-----------------------------------------------%
-	\subsection{Variability test 3}
-	The last of the variability test examines whether or not methods $A$ and $B$ have the same overall variability. This enables the joint consideration of second and third criteria.
-	\begin{eqnarray*}
-		H_{0}: \mbox{ }\sigma_{A}  = \sigma_{B} \\
-		H_{A}: \mbox{ }\sigma_{A}  = \sigma_{B}
-	\end{eqnarray*}
-	
-	The null model is constructed a symmetric form for both $\boldsymbol{\hat{D}}$ and $\boldsymbol{\hat{\Lambda}}$ while the alternative model uses a compound symmetry form for both.
-	%	\subsection{Variability test 3 - Omnibus Test}
-The maximum likelihood estimate of the between-subject variance
-covariance matrix of two methods is given as $D$. The estimate for
-the within-subject variance covariance matrix is $\hat{\Sigma}$.
-The estimated overall variance covariance matrix `Block
-$\Omega_{i}$' is the addition of $\hat{D}$ and $\hat{\Sigma}$.
-
-\[\left(\begin{array}{cc}
-\omega^1_2  & 0 \\
-0 & \omega^2_2 \\
-\end{array}  \right)
-=  \left(
-\begin{array}{cc}
-\tau^2  & 0 \\
-0 & \tau^2 \\
-\end{array} \right)+
-\left(
-\begin{array}{cc}
-\sigma^2_1  & 0 \\
-0 & \sigma^2_2 \\
-\end{array}\right)
-\]
-
-\[\left(\begin{array}{cc}
-\omega^1_2  & 0 \\
-0 & \omega^2_2 \\
-\end{array}  \right)
-=  \left(
-\begin{array}{cc}
-\tau^2  & 0 \\
-0 & \tau^2 \\
-\end{array} \right)+
-\left(
-\begin{array}{cc}
-\sigma^2_1  & 0 \\
-0 & \sigma^2_2 \\
-\end{array}\right)
-\]
-
-
-\newpage
-
-
-\begin{equation}
-\mbox{Block  }\Omega_{i} = \hat{D} + \hat{\Sigma}
-\end{equation}
-
-	The last of the variability test examines whether or not methods $A$ and $B$ have the same overall variability. This enables the joint consideration of second and third criteria.
-	\begin{eqnarray*}
-		H_{0}: \mbox{ }\sigma_{A}  = \sigma_{B} \\
-		H_{A}: \mbox{ }\sigma_{A}  = \sigma_{B}
-	\end{eqnarray*}
-	
-	The null model is constructed a symmetric form for both $\boldsymbol{\hat{D}}$ and $\boldsymbol{\hat{\Lambda}}$ while the alternative model uses a compound symmetry form for both.
-	
-
-	The computation of the limits of agreement require that the variance of the difference of measurements. This variance is easily computable from the estimate of the ${\mbox{Block - }\boldsymbol \Omega_{i}}$ matrix. Lack of agreement can arise if there is a disagreement in overall variabilities. This may be due to due to the disagreement in either between-item
-	variabilities or within-item variabilities, or both. \citet{ARoy2009} allows for a formal test of each.
-	
-	\begin{equation}
-	\left( \begin{array}{cc}
-	\omega^2_{e} & \omega^{en} \\
-	\omega_{en} & \omega^2_{n} \\
-	\end{array}\right)
-	=
-	\left( \begin{array}{cc}
-	\psi^2_{e} & \psi^{en} \\
-	\psi_{en} & \psi^2_{n} \\
-	\end{array}\right)
-	+
-	\left( \begin{array}{cc}
-	\sigma^2_{e} & \sigma^{en} \\
-	\sigma_{en} & \sigma^2_{n} \\
-	\end{array}\right)
-	\end{equation}
-	
 		%-----------------------------------------------------------------------------------%
 		\newpage
 \section{Carstensen's Model}
@@ -2965,42 +2773,25 @@ In computing limits of agreement, it is first necessary to have an estimate for 
 	%	\citet{Roy2006} uses the ``Blood" data set, which featured in \citet{BA99}.
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	\newpage
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			
+			%-----------------------------------------------------------------------------------%
+			\subsection{Featured approaches}
+			
+			\citet{BXC2008} computes the limits of agreement to the case with repeated measurements by using LME models.
+			
+			\citet{ARoy2009} formulates a very powerful method of assessing whether two methods of measurement, with replicate measurements, also using LME models. Roy's approach is based on the construction of variance-covariance matrices.
+			Importantly, Roy's approach does not address the issue of limits of agreement (though another related analysis , the coefficient of repeatability, is mentioned).
+			
+			This paper seeks to use Roy's approach to estimate the limits of agreement. These estimates will be compared to estimates computed under Carstensen's formulation.
+			
+			In computing limits of agreement, it is first necessary to have an estimate for the variance of differences. When the agreement of two methods is analyzed using LME models, a clear method of how to compute the variance is required. As the estimate for inter-method bias and the quantile would be the same for both methodologies, the focus hereon is solely on the variance of differences.
+
 	
 	
 	
 	
 	%-----------------------------------------------------------------------------------%
-	\subsection{Featured approaches}
-	
-	\citet{BXC2008} computes the limits of agreement to the case with repeated measurements by using LME models.
-	
-	\citet{ARoy2009} formulates a very powerful method of assessing whether two methods of measurement, with replicate measurements, also using LME models. Roy's approach is based on the construction of variance-covariance matrices.
-	Importantly, Roy's approach does not address the issue of limits of agreement (though another related analysis , the coefficient of repeatability, is mentioned).
-	
-	This paper seeks to use Roy's approach to estimate the limits of agreement. These estimates will be compared to estimates computed under Carstensen's formulation.
-	
-	In computing limits of agreement, it is first necessary to have an estimate for the variance of differences. When the agreement of two methods is analyzed using LME models, a clear method of how to compute the variance is required. As the estimate for inter-method bias and the quantile would be the same for both methodologies, the focus hereon is solely on the variance of differences.
-	
-	\newpage
-	
+
 	
 	
 	%-----------------------------------------------------------------------------------%
@@ -3147,32 +2938,6 @@ Of particular importance is terms of the model, a true value for item $i$ ($\mu_
 
 
 
-\section{BXC2004 presents Carstensen's LOAs}
-\citet{BXC2004} presents a model to describe the relationship between a value of measurement and its real value. The non-replicate case is considered first, as it is the context of the Bland Altman plots. This model assumes that inter-method bias is the only difference between the two methods. Importantly, Carstensen's underlying model differs from Roy's model in some key respects, and therefore a prior discussion of Carstensen's model is required.
-
-\subsection{Carstensen's Model}
-
-A measurement $y_{mi}$ by method $m$ on individual $i$ is formulated as follows;
-\begin{equation}
-y_{mi}  = \alpha_{m} + \mu_{i} + e_{mi} \qquad  e_{mi} \sim
-\mathcal{N}(0,\sigma^{2}_{m})
-\end{equation}
-The differences are expressed as $d_{i} = y_{1i} - y_{2i}$. For the replicate case, an interaction term $c$ is added to the model, with an associated variance component. All the random effects are assumed independent, and that all replicate measurements are assumed to be exchangeable within each method.
-
-\begin{equation}
-y_{mir}  = \alpha_{m} + \mu_{i} + c_{mi} + e_{mir}, \qquad  e_{mi}
-\sim \mathcal{N}(0,\sigma^{2}_{m}), \quad c_{mi} \sim \mathcal{N}(0,\tau^{2}_{m}).
-\end{equation}
-%----
-
-Of particular importance is terms of the model, a true value for item $i$ ($\mu_{i}$).  The fixed effect of Roy's model comprise of an intercept term and fixed effect terms for both methods, with no reference to the true value of any individual item. A distinction can be made between the two models: Roy's model is a standard LME model, whereas Carstensen's model is a more complex additive model.
-
-
-
-
-
-\bigskip
-
 
 \bigskip
 
@@ -3193,33 +2958,7 @@ When only two methods are compared, \citet{BXC2008} notes that separate estimate
 
 
 
-\newpage
-\subsection{Roy's Reference Model}
-Conventionally LME models can be tested using Likelihood Ratio Tests, wherein a reference model is compared to a nested model.
-\begin{framed}
-	\begin{verbatim}
-	> Ref.Fit = lme(y ~ meth-1, data = dat,   #Symm , Symm#
-	+     random = list(item=pdSymm(~ meth-1)), 
-	+     weights=varIdent(form=~1|meth),
-	+     correlation = corSymm(form=~1 | item/repl), 
-	+     method="ML")
-	\end{verbatim}
-\end{framed}
 
-
-Roy(2009) presents two nested models that specify the condition of equality as required, with a third nested model for an additional test. There three formulations share the same structure, and can be specified by making slight alterations of the code for the Reference Model.
-
-\subsection{Nested Model (Between-Item Variability)}
-\begin{framed}
-	\begin{verbatim}
-	> NMB.fit  = lme(y ~ meth-1, data = dat,   #CS , Symm#
-	+     random = list(item=pdCompSymm(~ meth-1)),
-	+     correlation = corSymm(form=~1 | item/repl), 
-	+     method="ML")
-	\end{verbatim}
-\end{framed}
-
-\newpage
 
 
 %------------------------------------------------------------------------%
@@ -3288,20 +3027,7 @@ A consequence of this is that the between-method and within-method covariance ar
 			all the data to compare the two methods.
 			
 			However, the original BlandAltman method was developed for two sets of measurements done on one occasion (i.e. independent data), and so this approach is not suitable for replicate measures data. However, as a naive analysis, it may be used to explore the data because of the simplicity of the method.
-			
-			%-----------------------------------------------------------------------------------%
-			\subsection{Featured approaches}
-			
-			\citet{BXC2008} computes the limits of agreement to the case with repeated measurements by using LME models.
-			
-			\citet{ARoy2009} formulates a very powerful method of assessing whether two methods of measurement, with replicate measurements, also using LME models. Roy's approach is based on the construction of variance-covariance matrices.
-			Importantly, Roy's approach does not address the issue of limits of agreement (though another related analysis , the coefficient of repeatability, is mentioned).
-			
-			This paper seeks to use Roy's approach to estimate the limits of agreement. These estimates will be compared to estimates computed under Carstensen's formulation.
-			
-			In computing limits of agreement, it is first necessary to have an estimate for the variance of differences. When the agreement of two methods is analyzed using LME models, a clear method of how to compute the variance is required. As the estimate for inter-method bias and the quantile would be the same for both methodologies, the focus hereon is solely on the variance of differences.
-			
-			\newpage
+
 			
 \section{Carstensen's Limits of agreement}
 \citet{bxc2008} presents a methodology to compute the limits of
@@ -3620,6 +3346,8 @@ All the random effects are assumed independent, and that all replicate measureme
 
 
 
+\subsection{Correlation}
+In addition to the variability tests, Roy advises that it is preferable that a correlation of greater than $0.82$ exist for two methods to be considered interchangeable. However if two methods fulfil all the other conditions for agreement, failure to comply with this one can be overlooked. Indeed Roy demonstrates that placing undue importance to it can lead to incorrect conclusions. \citet{roy} remarks that current computer implementations only gives overall correlation coefficients, but not their variances. Consequently it is not possible to carry out inferences based on all overall correlation coefficients.
 
 
 
@@ -3717,64 +3445,7 @@ by $\tau_m$.
 	
 	
 	
-	
-	
-	% %\citet{Roy2006} uses the ``Blood" data set, which featured in \citet{BA99}.
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	%
-	%\section{Correlation indices}
-	%\citet{ARoy2009} remarks that PROC MIXED only gives overall correlation coefficients, but not their variances. Consequently it is not possible to carry out inferences based on all overall correlation coefficients.
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	\newpage
 	\begin{itemize}
@@ -3794,28 +3465,7 @@ by $\tau_m$.
 		\item $\boldsymbol{\beta}$ is the solutions of the means of the two methods. In the LME output, the bias ad corresponding
 		t-value and p-values are presented. This is relevant to Roy's first test.\end{itemize}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	%=============================================================================%
 	
@@ -4141,16 +3791,7 @@ In computing limits of agreement, it is first necessary to have an estimate for 
 
 
 
-
-
-
-
-
 \citet{Roy2006} uses the ``Blood" data set, which featured in \citet{BA99}.
-
-
-
-
 
 
 
@@ -4206,16 +3847,6 @@ The limits of agreement can therefore be evaluated using
 \begin{equation}
 \bar{y_{A}}-\bar{y_{B}} \pm 1.96 \times \sqrt{ \sigma^2_{A} + \sigma^2_{B}  - 2(\sigma_{AB})}.
 \end{equation}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4823,6 +4454,33 @@ In many cases, repeated observation are collected from each subject in sequence 
 	\newpage
 
 	\section{Worked Eamples}
+	\newpage
+	\subsection{Roy's Reference Model}
+	Conventionally LME models can be tested using Likelihood Ratio Tests, wherein a reference model is compared to a nested model.
+	\begin{framed}
+		\begin{verbatim}
+		> Ref.Fit = lme(y ~ meth-1, data = dat,   #Symm , Symm#
+		+     random = list(item=pdSymm(~ meth-1)), 
+		+     weights=varIdent(form=~1|meth),
+		+     correlation = corSymm(form=~1 | item/repl), 
+		+     method="ML")
+		\end{verbatim}
+	\end{framed}
+	
+	
+	Roy(2009) presents two nested models that specify the condition of equality as required, with a third nested model for an additional test. There three formulations share the same structure, and can be specified by making slight alterations of the code for the Reference Model.
+	
+	\subsection{Nested Model (Between-Item Variability)}
+	\begin{framed}
+		\begin{verbatim}
+		> NMB.fit  = lme(y ~ meth-1, data = dat,   #CS , Symm#
+		+     random = list(item=pdCompSymm(~ meth-1)),
+		+     correlation = corSymm(form=~1 | item/repl), 
+		+     method="ML")
+		\end{verbatim}
+	\end{framed}
+	
+	\newpage
 	\section{Worked Eamples}
 	
 	\citet{ARoy2009} uses examples from \citet{BA86} to be able to
