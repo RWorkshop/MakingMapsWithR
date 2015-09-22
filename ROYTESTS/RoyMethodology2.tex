@@ -597,6 +597,296 @@ Using Roy's method, four candidate models are constructed, each differing by con
 
 
 Variability tests proposed by \citet{ARoy2009} affords the opportunity to expand upon Carstensen's approach.
+section{Likelihood and estimation}
+
+Likelihood is the hypothetical probability that an event that has
+already occurred would yield a specific outcome. Likelihood
+differs from probability in that probability refers to future
+occurrences, while likelihood refers to past known outcomes.
+
+The likelihood function is a fundamental concept in statistical inference. It indicates how likely a particular population is to produce an observed sample. The set of values that maximize the likelihood function are considered to be optimal, and are used as the estimates of the parameters.
+
+\begin{itemize}
+	\item Maximum likelihood (ML) estimation is a method of obtaining
+	parameter estimates by optimizing the likelihood function. The likelihood function is constructed as a function of the parameters in the specified model.
+	
+	\item Restricted maximum likelihood (REML) is an alternative methods of
+	computing parameter estimated. REML is often preferred to ML because it produces unbiased estimates of covariance parameters by taking into account the loss of degrees of freedom that results
+	from estimating the fixed effects in $\boldsymbol{\beta}$.
+\end{itemize}
+
+
+REML estimation reduces the bias in the variance component, and also handles high correlations
+more effectively, and is less sensitive to outliers than ML.  The problem with REML for model building is that the "likelihoods" obtained for different fixed effects are not comparable. Hence it is not valid to compare models with different fixed effects using a likelihood ratio test or AIC when REML is used to
+estimate the model. Therefore models derived using ML must be used instead.
+%=======================================================================================%
+\newpage
+\section{Likelihood Ratio Tests}
+The relationship between the respective models presented by \citet{ARoy2009} is known as ``nesting".
+A model A to be nested in the reference model, model B, if Model A is a special case of Model B, or with some specific constraint applied.
+
+A general method for comparing models with a nesting relationship is the likelihood ratio test (LRTs). LRTs are a family of tests used to compare the value of likelihood functions for two models, whose respective formulations define a hypothesis to be tested (i.e. the nested and reference model). The significance of the likelihood ratio test can be found by comparing the likelihood ratio to the $\chi^2$ distribution, with the appropriate degrees of freedom.
+
+When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
+
+%-----------------------------------------------------------------------------------%
+\newpage
+\subsection{Likelihood Ratio Tests}
+The relationship between the respective models presented by \citet{roy} is known as ``nesting".
+A model A to be nested in the reference model, model B, if Model A is a special case of Model B, or with some specific constraint applied.
+
+A general method for comparing models with a nesting relationship is the likelihood ratio test (LRTs). LRTs are a family of tests used to compare the value of likelihood functions for two models, whose respective formulations define a hypothesis to be tested (i.e. the nested and reference model). The significance of the likelihood ratio test can be found by comparing the likelihood ratio to the $\chi^2$ distribution, with the appropriate degrees of freedom.
+
+When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
+
+
+%-----------------------------------------------------------------------------------%
+\newpage
+\subsection{Likelihood Ratio Tests}
+The relationship between the respective models presented by \citet{roy} is known as ``nesting".
+A model A to be nested in the reference model, model B, if Model A is a special case of Model B, or with some specific constraint applied.
+
+A general method for comparing nested models fitted by ML is the \textbf{\emph{likelihood ratio test}} (Cite: Lehmann 1986). Such a test can also be used for models fitted using REML, but only if both models have been fitted by REML, and if the fixed effects specification is the same for both models.
+
+If $k_i$ is the number of parameters to be estimated in model $i$, then the asymptotic, or ``large sample", distribution of the LRT statistic, under the null hypothesis that the restricted model is adequate, is a $\chi^2$ distribution with $k_2-k_1$ degrees of freedom \citep[pg.83]{pb}.
+
+We generally use LRTs to evaluate the significance of terms in the random effects structure, i.e. different nested models are fitted in which the random effects structure is changed.
+
+A general method for comparing models with a nesting relationship is the likelihood ratio test (LRTs). LRTs are a family of tests used to compare the value of likelihood functions for two models, whose respective formulations define a hypothesis to be tested (i.e. the nested and reference model). The significance of the likelihood ratio test can be found by comparing the likelihood ratio to the $\chi^2$ distribution, with the appropriate degrees of freedom.
+
+When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
+%=======================================================================================%
+\newpage
+\section{Model Selection Using Likelihood Ratio Tests}
+An important step in the process of model selection is to determine, for a given pair of models, if there is a ``nesting relationship" between the two.
+
+We define Model A to be ``nested" in Model B if Model A is a special case of Model B, i.e. Model B with a specific constraint applied.
+
+One model is said to be \emph{nested} within another model, i.e. the reference model, if it represents a special case of the reference model \citep{pb}.
+
+Likelihood ratio tests are a class of tests based on the
+comparison of the values of the likelihood functions of two
+candidate models. LRTs can be used to test hypotheses about
+covariance parameters or fixed effects parameters in the context
+of LMEs.
+
+The test statistic for the LRT is the difference of the log-likelihood functions, multiplied by $-2$.
+The probability distribution of the test statistic is approximated by the $\chi^2$ distribution with ($\nu_{1} - \nu_{2}$) degrees of freedom, where $\nu_{1}$  and $\nu_{2}$ are the degrees of freedom of models 1 and 2 respectively.
+
+The score function $S(\theta)$ is the derivative of the log likelihood with respect to $\theta$,
+
+\[
+S(\theta) = \frac{\partial}{\partial \theta}\emph{l}(\theta),
+\]
+
+and the maximum likelihood estimate is the solution to the score equation
+\[
+S(\theta) = 0.
+\]
+The Fisher information $I(\theta)$, which is defined as
+\[
+I(\theta) = - \frac{\partial^2}{\partial \theta^2}\emph{l}(\theta),
+\]
+give rise to the observed Fisher information ($I(\hat{\theta})$) and the expected Fisher information ($\mathcal{I}(\theta)$).
+
+
+
+
+
+%--------------------------------------------------------------------%
+\newpage
+
+
+
+%% -------------------------------------------------------------------------%
+
+
+\subsection{Likelihood Ratio Tests}
+The relationship between the respective models presented by \citet{roy} is known as ``nesting".
+A model A to be nested in the reference model, model B, if Model A is a special case of Model B, or with some specific constraint applied.
+
+A general method for comparing models with a nesting relationship is the likelihood ratio test (LRTs). LRTs are a family of tests used to compare the value of likelihood functions for two models, whose respective formulations define a hypothesis to be tested (i.e. the nested and reference model). The significance of the likelihood ratio test can be found by comparing the likelihood ratio to the $\chi^2$ distribution, with the appropriate degrees of freedom.
+
+When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
+
+
+%------------------------------------------------------------------- LRTS and nest models-%
+\newpage
+\section{Likelihood Ratio Tests}
+\subsubsection{ PB on LRTS for LMEs}
+%% - http://ayeimanol-r.net/2013/11/05/mixed-effects-modeling-four-hour-workshop-part-iv-lmes/
+
+Pinheiro \& Bates (2000; p. 88) argue that Likelihood Ratio Test comparisons of models varying in fixed effects tend to be anticonservative i.e. 
+will see you observe significant differences in model fit more often than you should. 
+
+I think they are talking, especially, about situations in which the number of model parameter differences (differences between the complex model and 
+the nested simpler model) is large relative to the number of observations. 
+
+This is not really a worry for this dataset, but I will come back to the substance of this view, and alternatives to the approach taken here.
+
+
+\subsection{Pinheiro Bates}
+A general method for comparing nested models fitted by ML is the \textbf{\emph{likelihood ratio test}} (Cite: Lehmann 1986). Such a test can also be used for models fitted using REML, but only if both models have been fitted by REML, and if the fixed effects specification is the same for both models.
+
+If $k_i$ is the number of parameters to be estimated in model $i$, then the asymptotic, or ``large sample", distribution of the LRT statistic, under the null hypothesis that the restricted model is adequate, is a $\chi^2$ distribution with $k_2-k_1$ degrees of freedom \citep[pg.83]{pb}.
+
+We generally use LRTs to evaluate the significance of terms in the random effects structure, i.e. different nested models are fitted in which the random effects structure is changed.
+
+\subsection{Empirical p-values of LRT tests}
+For both REML and ML estimates, the nominal $p-$values for the LRT statistics under a $\chi^2$ distribution with 2 degrees of freedom are much greater than empirical values. A number of ways of dealing with this issues are discussed \citep[pg.86]{pb}.
+
+One should be aware that these p-values may be conservative. That is, the reported p-value may be greater than the true p-value for the test and, in some cases, it may be much greater.\citep[pg.87]{pb}.
+
+
+
+\subsection{Other material}
+A general method for comparing nested models fit by maximum likelihood is the \textbf{\emph{likelihood ratio test}}. This test can be used for models fit by REML (restricted maximum liklihood), but only if the fixed terms in the two models are invariant, and both models have been fit by REML. Otherwise, the argument: method=``ML" must be employed (ML = maximum likelihood).
+
+\begin{itemize}
+	\item Example of a likelihood ratio test used to compare two models: \newline \texttt{>anova(modelA, modelB)}
+	
+	\item The output will contain a p-value, and this should be used in conjunction with the AIC scores to judge which model is preferred. Lower AIC scores are better.
+	
+	\item Generally, likelihood ratio tests should be used to evaluate the significance of terms on the
+	random effects portion of two nested models, and should not be used to determine the significance of the fixed effects.
+	\item A simple way to more reliably test for the significance of fixed effects in an LME model is to use
+	conditional F-tests, as implemented with the simple ``anova" function.
+	Example:\newline \texttt{>anova(modelA)}
+	
+	
+	will give the most reliable test of the fixed effects included in model1.
+\end{itemize}
+\subsection{Nested and Reference Models}
+Hypotheses can be formulated in the context of a pair of models that have a nesting relationship [CITE: West et al].
+
+LRTs are a class of tests used to compare the value of likelihood functions for two models defining a hypothesis to be tested (i.e. the nested and reference model).
+
+The significance of the likelihood ratio test can be found by comparing it to the  $\chi^2$ distribution, with the appropriate degrees of freedom.
+
+\subsection{LRTs for covariance parameters}
+[cite: West et al] When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters [cite: Morrel98]
+
+
+
+
+
+
+
+
+%-----------------------------------------------------------------------------------%
+\newpage
+\subsection{Likelihood Ratio Tests}
+The relationship between the respective models presented by \citet{roy} is known as ``nesting".
+A model A to be nested in the reference model, model B, if Model A is a special case of Model B, or with some specific constraint applied.
+
+A general method for comparing models with a nesting relationship is the likelihood ratio test (LRTs). LRTs are a family of tests used to compare the value of likelihood functions for two models, whose respective formulations define a hypothesis to be tested (i.e. the nested and reference model). The significance of the likelihood ratio test can be found by comparing the likelihood ratio to the $\chi^2$ distribution, with the appropriate degrees of freedom.
+
+When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
+
+
+
+\begin{itemize}
+	\item LMEs
+	\item Likelihood and and log likelihood functions
+	\item Likelihood ratio test
+	\item more on score functions etc
+	\item MLEs
+	\item Algorithms
+	
+\end{itemize}
+
+The estimate for the fixed effects are referred to as the best linear unbiased estimates (BLUE). Henderson's estimate for the random effects is known as the best linear unbiased predictor (BLUP).
+
+
+
+
+
+
+%==================================================================%
+
+
+
+\subsection{Likelihood Ratio Tests}
+
+L= - 2ln is approximately distributed as 2 under H\_0 for large sample size and under the normality assumption.
+
+The power of the likelihood ratio test may depends on specific sample size and the specific number of replications, and [Roy 2009] proposes simulation studies to examine this further.
+
+\subsection{Relevance of Estimation Methods}
+Nested LME models, fitted by ML estimation, can be compared using the likelihood ratio test [Lehmann (1986)].
+Models fitted using REML estimation can also be compared, but only if both were fitted using REML, and both have the same fixed effects specifications.
+
+Likelihood ratio tests are generally used to test the significance of terms in the random effects structure.
+Information Criteria
+Additionally nested models may be compared by using the Akaike Information Criterion,(AIC) and the Bayesian Information Criterion (BIC).
+
+When comparing the respective scores for nested models, the model with the smaller score is considered to be the preferable model.
+ML / REML
+[Morrell 1998]
+The variance components in the LME model may be estimated by ML or REML.
+Maximum Likelihood estimates do not take into account the estimation of fixed effects and so
+are biased downwards.
+REML estimates accounts for the presence of these nuisance parameters by maximising the linearly independent error contrasts to obtain more unbiased estimates.
+Treatment of items as fixed effects
+[Pinheiro Bates 2000] addresses the issue of treating items as fixed effects. Such a specification is useful only for the specific sample of items, rather than the population of items, where the interest would naturally lie.
+
+[Pinheiro Bates 2000] advises the specification of random effects to correspond to items; treating the item effects as random deviations from the population mean.
+
+%Indeed [Roy 2009] follows this approach.
+%Grubb’s One Way Classification Model 
+%Carstensen develops a model that accords with a well-established method comparison methodology, that of Grubbs’ 1946 paper.
+
+
+\newpage
+Assuming a statistical model $f_{\theta}(y)$ parameterized by a fixed and unknown set of parameters $\theta$, the likelihood $L(\theta)$ is the probability of the observed data $y$ considered as a function of $\theta$ \citep{youngjo}.
+
+The log likelihood $\emph{l}(\theta)$
+
+
+
+\newpage
+\citet{Lam} used ML estimation to estimate the true correlation between the variables when
+the measurements are linked over time. The methodology relies on the assumption that the two variables with repeated measures follow a multivariate normal distribution. The methodology currently does not extend to any more than two cases. The MLE of the correlation takes into account the dependency among repeated measures.
+
+The true correlation $\rho_{xy}$ is repeated measurements can be considered as having two components: between subject and within-subject correlation. The usefulness of estimating repeated measure correlation coefficients is the calculation of between-method and within-method variabilities are produced as by-products.
+
+
+
+\newpage
+
+\subsection{Other material}
+A general method for comparing nested models fit by maximum likelihood is the \textbf{\emph{likelihood ratio test}}. This test can be used for models fit by REML (restricted maximum liklihood), but only if the fixed terms in the two models are invariant, and both models have been fit by REML. Otherwise, the argument: method=``ML" must be employed (ML = maximum likelihood).
+
+\begin{itemize}
+	\item Example of a likelihood ratio test used to compare two models: \newline \texttt{>anova(modelA, modelB)}
+	
+	\item The output will contain a p-value, and this should be used in conjunction with the AIC scores to judge which model is preferred. Lower AIC scores are better.
+	
+	\item Generally, likelihood ratio tests should be used to evaluate the significance of terms on the
+	random effects portion of two nested models, and should not be used to determine the significance of the fixed effects.
+	\item A simple way to more reliably test for the significance of fixed effects in an LME model is to use
+	conditional F-tests, as implemented with the simple ``anova" function.
+	Example:\newline \texttt{>anova(modelA)}
+	
+	
+	will give the most reliable test of the fixed effects included in model1.
+\end{itemize}
+\subsection{Nested and Reference Models}
+Hypotheses can be formulated in the context of a pair of models that have a nesting relationship [CITE: West et al].
+
+LRTs are a class of tests used to compare the value of likelihood functions for two models defining a hypothesis to be tested (i.e. the nested and reference model).
+
+The significance of the likelihood ratio test can be found by comparing it to the  $\chi^2$ distribution, with the appropriate degrees of freedom.
+
+
+
+
+\subsection{Test for inter-method bias}
+Bias is determinable by examination of the 't-table'. Estimate for both methods are given, and the bias is simply the difference between the two. Because the $R$ implementation does not account for an intercept term, a $p-$value is not given. Should a $p-$value be required specifically for the bias, and simple restructuring of the model is required wherein an intercept term is included. Output from a second implementation will yield a $p-$value.
+\newpage
+
+
+
 \section{Likelihood Ratio Tests}
 
 
@@ -2204,7 +2494,231 @@ In many cases, repeated observation are collected from each subject in sequence 
 
 
 
+\section{LaiShiao}
 
+
+\citet{LaiShiao} advocates the use of LME models to study method comparison problems. The authors analyse a data set typical of method comparison studies using SAS software, with particular use of the \emph{`Proc Mixed'} package. The stated goal of this study is to determine which factor from a specified group of factors is the key contributor to the difference in the two methods.
+
+The study relates to oxygen saturation, the most investigated variable in clinical nursing studies \citep{LaiShiao}. The two method compared are functional saturation (SO2, percent functional oxy-hemoglobin) and fractional saturation (HbO2, percent fractional oxy-hemoglobin), which is considered to be the `gold standard' method of measurement.
+
+\citet{LaiShiao} establishes an LME model for analysing the differences $D_{ijtl}$, where $D_{ijtl}$ is the differences of the measurements (i.e = $SO2_{ijtl}$ - $HbO2_{ijtl}$) for the ith donor at the $j$th level of foetal haemoglobin percent (Fhbperct) and the $t$th repeated measurement by the $l$th practitioner of the experiment.
+
+
+(\citet{BXC2004} also advocates the use of LME models in comparing methods, but with a different emphasis.)
+
+\section{LaiShiao}
+
+
+\citet{LaiShiao} advocates the use of LME models to study method comparison problems. The authors analyse a data set typical of method comparison studies using SAS software, with particular use of the \emph{`Proc Mixed'} package. The stated goal of this study is to determine which factor from a specified group of factors is the key contributor to the difference in the two methods.
+
+The study relates to oxygen saturation, the most investigated variable in clinical nursing studies \citep{LaiShiao}. The two method compared are functional saturation (SO2, percent functional oxy-hemoglobin) and fractional saturation (HbO2, percent fractional oxy-hemoglobin), which is considered to be the `gold standard' method of measurement.
+
+\citet{LaiShiao} establishes an LME model for analysing the differences $D_{ijtl}$, where $D_{ijtl}$ is the differences of the measurements (i.e = $SO2_{ijtl}$ - $HbO2_{ijtl}$) for the ith donor at the $j$th level of foetal haemoglobin percent (Fhbperct) and the $t$th repeated measurement by the $l$th practitioner of the experiment.
+
+
+(\citet{BXC2004} also advocates the use of LME models in comparing methods, but with a different emphasis.)
+
+
+
+
+
+
+
+
+
+
+
+
+% \begin{equation}
+% data here
+% \end{equation}
+
+\newpage
+\section{Lai Shiao}
+\citet{LaiShiao} use mixed models to determine the factors that
+affect the difference of two methods of measurement using the
+conventional formulation of linear mixed effects models.
+
+If the parameter \textbf{b}, and the variance components are not
+significantly different from zero, the conclusion that there is no
+inter-method bias can be drawn. If the fixed effects component
+contains only the intercept, and a simple correlation coefficient
+is used, then the estimate of the intercept in the model is the
+inter-method bias. Conversely the estimates for the fixed effects
+factors can advise the respective influences each factor has on
+the differences. The Proc Mixed package allows users to specify
+different correlation structures of the variance components
+\textbf{G} and \textbf{R}.
+
+
+Oxygen saturation is one of the most frequently measured variables
+in clinical nursing studies. `Fractional saturation' ($HbO_{2}$)
+is considered to be the gold standard method of measurement, with
+`functional saturation' ($SO_{2}$) being an alternative method.
+The method of examining the causes of differences between these
+two methods is applied to a clinical study conducted by
+\citet{Shiao}. This experiment was conducted by 8 lab
+practitioners on blood samples, with varying levels of
+haemoglobin, from two donors. The samples have been in storage for
+varying periods ( described by the variable `Bloodage') and are
+categorized according to haemoglobin percentages(i.e
+$0\%$,$20\%$,$40\%$,$60\%$,$80\%$,$100\%$). There are 625
+observations in all.
+
+\citet{LaiShiao} fits two models on this data, with the lab
+technicians and the replicate measurements as the random effects
+in both models. The first model uses haemoglobin level as a fixed
+effects component. For the second model, blood age is added as a
+second fixed factor.
+
+\subsubsection{Single fixed effect} The first model fitted by \citet{LaiShiao} takes the
+blood level as the sole fixed effect to be analyzed. The following
+coefficient estimates are estimated by `Proc Mixed';
+\begin{eqnarray}
+\mbox{fixed effects :   } 2.5056 - 0.0263\mbox{Fhbperct}_{ijtl} \\
+(\mbox{p-values :   } = 0.0054, <0.0001, <0.0001)\nonumber\\\nonumber\\
+\mbox{random effects :   } u(\sigma^{2}=3.1826) + e_{ijtl}
+(\sigma^{2}_{e}=0.1525, \rho= 0.6978) \nonumber\\
+(\mbox{p-values :   } = 0.8113, <0.0001, <0.0001)\nonumber
+\end{eqnarray}
+
+With the intercept estimate being both non-zero and statistically
+significant ($p=0.0054$), this models supports the presence
+inter-method bias is $2.5\%$ in favour of $SO_{2}$. Also, the
+negative value of the haemoglobin level coefficient indicate that
+differences will decrease by $0.0263\%$ for every percentage
+increase in the haemoglobin .
+
+In the random effects estimates, the variance due to the
+practitioners is $3.1826$, indicating that there is a significant
+variation due to technicians ($p=0.0311$) affecting the
+differences. The variance for the estimates is given as $0.1525$,
+($p<0.0001$).
+
+\subsubsection{Two fixed effects}
+Blood age is added as a second fixed factor to the model,
+whereupon new estimates are calculated;
+\begin{eqnarray}
+\mbox{fixed effects :   } -0.2866 + 0.1072 \mbox{Bloodage}_{ijtl}
+- 0.0264\mbox{Fhbperct}_{ijtl}\nonumber\\
+( \mbox{p-values :   } = 0.8113, <0.0001, <0.0001)\nonumber\\\nonumber\\
+\mbox{random effects :   } u(\sigma^{2}=10.2346) + e_{ijtl}
+(\sigma^{2}_{e}=0.0920, \rho= 0.5577) \nonumber\\
+(\mbox{p-values :   } = 0.0446, <0.0001, <0.0001)
+\end{eqnarray}
+
+
+With this extra fixed effect added to the model, the intercept
+term is no longer statistically significant. Therefore, with the
+presence of the second fixed factor, the model is no longer
+supporting the presence of inter-method bias. Furthermore, the
+second coefficient indicates that the blood age of the observation
+has a significant bearing on the size of the difference between
+both methods ($p <0.0001$). Longer storage times for blood will
+lead to higher levels of particular blood factors such as MetHb
+and HbCO (due to the breakdown and oxidisation of the
+haemoglobin). Increased levels of MetHb and HbCO are concluded to
+be the cause of the differences. The coefficient for the
+haemoglobin level doesn't differ greatly from the single fixed
+factor model, and has a much smaller effect on the differences.
+The random effects estimates also indicate significant variation
+for the various technicians; $10.2346$ with $p=0.0446$.
+
+\citet{LaiShiao} demonstrates how that linear mixed effects models
+can be used to provide greater insight into the cause of the
+differences. Naturally the addition of further factors to the
+model provides for more insight into the behavior of the data.
+
+
+\section{Lai Shiao}
+\citet{LaiShiao} use mixed models to determine the factors that
+affect the difference of two methods of measurement using the
+conventional formulation of linear mixed effects models.
+
+If the parameter \textbf{b}, and the variance components are not
+significantly different from zero, the conclusion that there is no
+inter-method bias can be drawn. If the fixed effects component
+contains only the intercept, and a simple correlation coefficient
+is used, then the estimate of the intercept in the model is the
+inter-method bias. Conversely the estimates for the fixed effects
+factors can advise the respective influences each factor has on
+the differences. It is possible to pre-specify different
+correlation structures of the variance components \textbf{G} and
+\textbf{R}.
+
+
+Oxygen saturation is one of the most frequently measured variables
+in clinical nursing studies. `Fractional saturation' ($HbO_{2}$)
+is considered to be the gold standard method of measurement, with
+`functional saturation' ($SO_{2}$) being an alternative method.
+The method of examining the causes of differences between these
+two methods is applied to a clinical study conducted by
+\citet{Shiao}. This experiment was conducted by 8 lab
+practitioners on blood samples, with varying levels of
+haemoglobin, from two donors. The samples have been in storage for
+varying periods ( described by the variable `Bloodage') and are
+categorized according to haemoglobin percentages(i.e
+$0\%$,$20\%$,$40\%$,$60\%$,$80\%$,$100\%$). There are 625
+observations in all.
+
+\citet{LaiShiao} fits two models on this data, with the lab
+technicians and the replicate measurements as the random effects
+in both models. The first model uses haemoglobin level as a fixed
+effects component. For the second model, blood age is added as a
+second fixed factor.
+
+\subsubsection{Single fixed effect} The first model fitted by \citet{LaiShiao} takes the
+blood level as the sole fixed effect to be analyzed. The following
+coefficient estimates are estimated by `Proc Mixed';
+\begin{eqnarray}
+\mbox{fixed effects :   } 2.5056 - 0.0263\mbox{Fhbperct}_{ijtl} \\
+(\mbox{p-values :   } = 0.0054, <0.0001, <0.0001)\nonumber\\\nonumber\\
+\mbox{random effects :   } u(\sigma^{2}=3.1826) + e_{ijtl}
+(\sigma^{2}_{e}=0.1525, \rho= 0.6978) \nonumber\\
+(\mbox{p-values :   } = 0.8113, <0.0001, <0.0001)\nonumber
+\end{eqnarray}
+
+With the intercept estimate being both non-zero and statistically
+significant ($p=0.0054$), this models supports the presence
+inter-method bias is $2.5\%$ in favour of $SO_{2}$. Also, the
+negative value of the haemoglobin level coefficient indicate that
+differences will decrease by $0.0263\%$ for every percentage
+increase in the haemoglobin .
+
+In the random effects estimates, the variance due to the
+practitioners is $3.1826$, indicating that there is a significant
+variation due to technicians ($p=0.0311$) affecting the
+differences. The variance for the estimates is given as $0.1525$,
+($p<0.0001$).
+
+\subsubsection{Two fixed effects}
+Blood age is added as a second fixed factor to the model,
+whereupon new estimates are calculated;
+\begin{eqnarray}
+\mbox{fixed effects :   } -0.2866 + 0.1072 \mbox{Bloodage}_{ijtl}
+- 0.0264\mbox{Fhbperct}_{ijtl}\nonumber\\
+( \mbox{p-values :   } = 0.8113, <0.0001, <0.0001)\nonumber\\\nonumber\\
+\mbox{random effects :   } u(\sigma^{2}=10.2346) + e_{ijtl}
+(\sigma^{2}_{e}=0.0920, \rho= 0.5577) \nonumber\\
+(\mbox{p-values :   } = 0.0446, <0.0001, <0.0001)
+\end{eqnarray}
+
+
+With this extra fixed effect added to the model, the intercept term is no longer statistically significant. Therefore, with the
+presence of the second fixed factor, the model is no longer supporting the presence of inter-method bias. Furthermore, the second coefficient indicates that the blood age of the observation
+has a significant bearing on the size of the difference between
+both methods ($p <0.0001$). Longer storage times for blood will
+lead to higher levels of particular blood factors such as MetHb
+and HbCO (due to the breakdown and oxidisation of the haemoglobin). Increased levels of MetHb and HbCO are concluded to
+be the cause of the differences. The coefficient for the haemoglobin level doesn't differ greatly from the single fixed
+factor model, and has a much smaller effect on the differences.
+The random effects estimates also indicate significant variation
+for the various technicians; $10.2346$ with $p=0.0446$.
+
+\citet{LaiShiao} demonstrates how that linear mixed effects models
+can be used to provide greater insight into the cause of the
+differences. Naturally the addition of further factors to the
+model provides for more insight into the behavior of the data.
 
 
 		\section{Lai Shiao}
@@ -2380,7 +2894,130 @@ In many cases, repeated observation are collected from each subject in sequence 
 
 
 	\section{Worked Eamples}
+	
+	\subsection{LikelihoodRatio Tests}
+	
+	Conventionally LME models can be tested using Likelihood Ratio Tests, wherein a reference model is compared to a nested model.
+	\begin{framed}
+		\begin{verbatim}
+		> Ref.Fit = lme(y ~ meth-1, data = dat,   #Symm , Symm#
+		+     random = list(item=pdSymm(~ meth-1)), 
+		+     weights=varIdent(form=~1|meth),
+		+     correlation = corSymm(form=~1 | item/repl), 
+		+     method="ML")
+		\end{verbatim}
+	\end{framed}
+	Roy(2009) presents two nested models that specify the condition of equality as required, with a third nested model for an additional test. There three formulations share the same structure, and can be specified by making slight alterations of the code for the Reference Model.
+	Nested Model (Between-Item Variability)
+	\begin{framed}
+		\begin{verbatim}
+		> NMB.fit  = lme(y ~ meth-1, data = dat,   #CS , Symm#
+		+     random = list(item=pdCompSymm(~ meth-1)),
+		+     correlation = corSymm(form=~1 | item/repl), 
+		+     method="ML")
+		\end{verbatim}
+	\end{framed}
+	
+	
+	
+	\begin{framed}
+		\begin{verbatim}
+		Nested Model (Within –item Variability)
+		> NMW.fit = lme(y ~ meth-1, data = dat,   #Symm , CS# 
+		+     random = list(item=pdSymm(~ meth-1)),
+		+     weights=varIdent(form=~1|meth), 
+		+     correlation = corCompSymm(form=~1 | item/repl), 
+		+     method="ML")
+		\end{verbatim}
+	\end{framed}
+	
+	Nested Model (Overall Variability)
+	Additionally there is a third nested model, that can be used to test overall variability, substantively a a joint test for between-item and within-item variability. The motivation for including such a test in the suite is not clear, although it does circumvent the need for multiple comparison procedures in certain circumstances, hence providing a simplified procedure for non-statisticians.
+	
+	\begin{framed}
+		\begin{verbatim}
+		> NMO.fit = lme(y ~ meth-1, data = dat,   #CS , CS# 
+		+     random = list(item=pdCompSymm(~ meth-1)), 
+		+     correlation = corCompSymm(form=~1 | item/repl), 
+		+     method="ML")
+		\end{verbatim}
+	\end{framed}
+	
+	ANOVAs  for  Original Fits
+	The likelihood Ratio test is very simple to implement in R. All that is required it to specify the reference model and the relevant nested mode as arguments to the command anova().
+	The figure below displays the three tests described by Roy (2009).
+	
+	\begin{framed}
+		\begin{verbatim}
+		> testB    = anova(Ref.Fit,NMB.fit)                          # Between-Subject Variabilities
+		> testW   = anova(Ref.Fit,NMW.fit)                        # Within-Subject Variabilities
+		> testO     = anova(Ref.Fit,NMO.fit)                        # Overall Variabilities
+		
+		\end{verbatim}
+	\end{framed}
+	
+	
+	
+	
+	%-----------------------------------------------------------------------------------------------------%
 	\newpage
+	
+	
+	
+	\subsection{Reference Model (Ref.Fit)}
+	Conventionally LME models can be tested using Likelihood Ratio Tests, wherein a reference model is compared to a nested model.
+	\begin{framed}
+		\begin{verbatim}
+		> Ref.Fit = lme(y ~ meth-1, data = dat,   #Symm , Symm#
+		+     random = list(item=pdSymm(~ meth-1)), 
+		+     weights=varIdent(form=~1|meth),
+		+     correlation = corSymm(form=~1 | item/repl), 
+		+     method="ML")
+		\end{verbatim}
+	\end{framed}
+	
+	
+	Roy(2009) presents two nested models that specify the condition of equality as required, with a third nested model for an additional test. There three formulations share the same structure, and can be specified by making slight alterations of the code for the Reference Model.
+	
+	\subsection{Nested Model (Between-Item Variability)}
+	\begin{framed}
+		\begin{verbatim}
+		> NMB.fit  = lme(y ~ meth-1, data = dat,   #CS , Symm#
+		+     random = list(item=pdCompSymm(~ meth-1)),
+		+     correlation = corSymm(form=~1 | item/repl), 
+		+     method="ML")
+		\end{verbatim}
+	\end{framed}
+	
+	\section{Testing Procedures}
+	Roy's methodology requires the construction of four candidate models. The first candidate model is compared to each of the three other models successively. It is the alternative model in each of the three tests, with the other three models acting as the respective null models.
+	
+	
+	The probability distribution of the test statistic can be approximated by a chi-square distribution with ($\nu_1$ - $\nu_2$) degrees of freedom, where $\nu_1$ and $\nu_2$ are the degrees of freedom of models 1 and 2 respectively.
+	
+	Likelihood ratio tests are very simple to implement in \texttt{R}, simply use the 'anova()' commands. Sample output will be given for each variability test.
+	The likelihood ratio test is the procedure used to compare the fit of two models. For each candidate model, the `-2 log likelihood' ($M2LL$) is computed. The test statistic for each of the three hypothesis tests is the difference of the $M2LL$ for each pair of models. If the $p-$value in each of the respective tests exceed as significance level chosen by the analyst, then the null model must be rejected.
+	
+	\begin{equation}
+	-2\mbox{ ln }\Lambda_{d} =  [ M2LL \mbox{ under }H_{0} \mbox{ model}] - [ M2LL \mbox{ under }H_{A} \mbox{ model}]
+	\end{equation}
+	
+	These test statistics follow a chi-square distribution with the degrees of freedom computed as the difference of the LRT degrees of freedom.
+	
+	\begin{equation}
+	\nu = [\mbox{ LRT df under }H_{0} \mbox{ model}] - [\mbox{ LRT df under }H_{A} \mbox{ model}]
+	\end{equation}
+	
+	\newpage   
+	\begin{verbatim}
+	> anova(MCS1,MCS2)
+	>
+	>
+	Model df    AIC    BIC  logLik   Test L.Ratio p-value
+	MCS1     1  8 4077.5 4111.3 -2030.7
+	MCS2     2  7 4075.6 4105.3 -2030.8 1 vs 2 0.15291  0.6958
+	\end{verbatim}
+	
 	\subsection{Roy's Reference Model}
 	Conventionally LME models can be tested using Likelihood Ratio Tests, wherein a reference model is compared to a nested model.
 	\begin{framed}
