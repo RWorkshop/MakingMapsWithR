@@ -51,6 +51,11 @@
 	%studies.
 	%\section{Roy's LME methodology for assessing agreement}
 	
+
+
+	
+	
+	
 	\citet{Barnhart} describes the sources of disagreement in a method comparison study problem as
 	differing population means, different between-subject variances, different within-subject variances between two methods and poor
 	correlation between measurements of two methods. Further to this, \citet{ARoy2009} states three criteria for two methods to be considered in agreement. Firstly that there be no significant bias. Second that there is no difference in the between-subject variabilities, and lastly that there is no significant difference in the within-subject variabilities. 	Roy further proposes examination of the the overall variability by considering the second and third criteria be examined jointly. Should both the second and third criteria be fulfilled, then the overall variabilities of both methods would be equal.
@@ -59,6 +64,8 @@
 	%\section{Roy's LME methodology for assessing agreement}
 	
 	
+	
+	The LME model approach has seen increased use as a framework for method comparison studies in recent years (Lai $\&$ Shaio, Carstensen and Choudhary as examples)
 	
 	
 	Linear mixed effects (LME) models can facilitate greater
@@ -74,12 +81,17 @@
 	The Data Set used in their examples is unavailable for independent use. Therefore, for the sake of consistency, a data set will be simulated based on the Blood Data that will allow for extra variables.
 	% BXC
 	\citet{BXC2008} remarks that modern statistical computation, such as that used for LME models, greatly improve the efficiency of
-	calculation compared to previous `by-hand' methods. Additionally a great understanding of residual analysis and influence analysis for LME models has been adchieved thanks to authors such as \citet{schab}, \citet{CPJ}, \citet{cook86} \citet{west}, amongst others. In this chapter various LME approaches to method comparison studies shall
-	be examined. 
+	calculation compared to previous `by-hand' methods.
 	
-	Due to the prevalence of modern statistical software, \citet{BXC2008} advocates the adoption of computer based approaches, such as LME models, to method comparison studies. \citet{BXC2008} remarks upon `by-hand' approaches advocated in \citet{BA99} discouragingly, describing them as tedious, unnecessary and `outdated'. Rather than using the `by hand' methods, estimates for required LME parameters can be read directly from program output. Furthermore, using computer approaches removes constraints associated with `by-hand' approaches, such as the need for the design to be perfectly balanced.
+	Due to the prevalence of modern statistical software, \citet{BXC2008} advocates the adoption of computer based approaches, such as LME models, to method comparison studies. \citet{BXC2008} remarks upon `by-hand' approaches advocated in \citet{BA99} discouragingly, describing them as tedious, unnecessary and `outdated'. Rather than using the `by hand' methods, estimates for required LME parameters can be read directly from program output.
 	
-	
+		\citet{BXC2008} remarks upon `by-hand' approaches advocated in \citet{BA99} discouragingly, describing them as tedious, unnecessary and `outdated'. Due to the prevalence of modern statistical software, \citet{BXC2008} advocates the adoption of computer based approaches to method comparison studies, allowing the use of LME models that would not have been feasible otherwise. Rather than using the `by hand' methods, estimates for required parameters can be gotten directly from output code. Furthermore, using computer approaches removes constraints, such as the need for the design to be perfectly balanced.
+		In part this is due to the increased profile of LME models, and furthermore the availability of capable software.  
+		
+		Additionally a great understanding of residual analysis and influence analysis for LME models has been adchieved thanks to authors such as \citet{schab}, \citet{CPJ}, \citet{cook86} \citet{west}, amongst others. In this chapter various LME approaches to method comparison studies shall
+		be examined. 
+		
+		Additionally LME based approaches may utilise the diagnostic and influence analysis techniques that have been developed in recent times.
 	
 	\newpage
 	%\section{Carstensen 2004 model in the single measurement case}
@@ -1913,12 +1925,6 @@ A formal test can be performed to test the hypothesis that the off-diagonal term
 
 %----------------------------------------------------------------------------------------%
 
-\newpage
-\section{Using LMEs for Method Comparison}
-The LME model approach has seen increased use as a framework for method comparison studies in recent years (Lai $\&$ Shaio, Carstensen and Choudhary as examples)
-
-\citet{BXC2008} remarks upon `by-hand' approaches advocated in \citet{BA99} discouragingly, describing them as tedious, unnecessary and `outdated'. Due to the prevalence of modern statistical software, \citet{BXC2008} advocates the adoption of computer based approaches to method comparison studies, allowing the use of LME models that would not have been feasible otherwise. Rather than using the `by hand' methods, estimates for required parameters can be gotten directly from output code. Furthermore, using computer approaches removes constraints, such as the need for the design to be perfectly balanced.
-In part this is due to the increased profile of LME models, and furthermore the availability of capable software. Additionally LME based approaches may utilise the diagnostic and influence analysis techniques that have been developed in recent times.
 
 
 \chapter{Likelihood Ratio Tests}
@@ -1938,74 +1944,21 @@ The likelihood function is a fundamental concept in statistical inference. It in
 	computing parameter estimated. REML is often preferred to ML because it produces unbiased estimates of covariance parameters by taking into account the loss of degrees of freedom that results
 	from estimating the fixed effects in $\boldsymbol{\beta}$.
 \end{itemize}
+A general method for comparing nested models fitted by ML is the \textbf{\emph{likelihood ratio test}} (Cite: Lehmann 1986).  Likelihood ratio tests are a class of tests based on the comparison of the values of the likelihood functions of two candidate models. LRTs can be used to test hypotheses about covariance parameters or fixed effects parameters in the context of LMEs.  Each of these three test shall be examined in more detail shortly.
 
-Likelihood ratio tests are a class of tests based on the comparison of the values of the likelihood functions of two
-candidate models. LRTs can be used to test hypotheses about covariance parameters or fixed effects parameters in the context of LMEs. The test statistic for the likelihood ratio test is the difference of the log-likelihood functions, multiplied by $-2$. The probability distribution of the test statistic is approximated by the $\chi^2$ distribution with ($\nu_{1} - \nu_{2}$) degrees of freedom, where $\nu_{1}$  and $\nu_{2}$ are the degrees of freedom of models 1 and 2 respectively.
-
-\citet{akaike} introduces the Akaike information criterion ($AIC$), a model selection tool based on the likelihood function. Given a data set, candidate models are ranked according to their AIC values, with the model having the lowest AIC being considered the best fit.
-
-
-\section{Likelihood Ratio Tests}
-Likelihood ratio tests are a class of tests based on the comparison of the values of the likelihood functions of two candidate models. LRTs can be used to test hypotheses about covariance parameters or fixed effects parameters in the context of LMEs.  Each of these three test shall be examined in more detail shortly.
-
-
-A general method for comparing nested models fitted by ML is the \textbf{\emph{likelihood ratio test}} (Cite: Lehmann 1986). 
+Likelihood ratio tests are a class of tests based on the
+comparison of the values of the likelihood functions of two
+candidate models. LRTs can be used to test hypotheses about
+covariance parameters or fixed effects parameters in the context
+of LMEs.
 
 A general method for comparing models with a nesting relationship is the likelihood ratio test (LRTs). LRTs are a family of tests used to compare the value of likelihood functions for two models, whose respective formulations define a hypothesis to be tested (i.e. the nested and reference model). 
 
 
 The significance of the likelihood ratio test can be found by comparing the likelihood ratio to the $\chi^2$ distribution, with the appropriate degrees of freedom.
+ 
 
 
-\section{Likelihood Ratio Tests}
-
-The relationship between the respective models presented by \citet{roy} is known as ``nesting".
-A model A to be nested in the reference model, model B, if Model A is a special case of Model B, or with some specific constraint applied.
-
-
-
-Such a test can also be used for models fitted using REML, but only if both models have been fitted by REML, and if the fixed effects specification is the same for both models.
-
-
-
-Likelihood ratio tests are very simple to implement in \texttt{R}, simply use the 'anova()' commands. Sample output will be given for each variability test.
-
-%-----------------------------------------------------------------------------------%
-\subsection{Nested and Reference Models}
-Hypotheses can be formulated in the context of a pair of models that have a nesting relationship [CITE: West et al].
-
-LRTs are a class of tests used to compare the value of likelihood functions for two models defining a hypothesis to be tested (i.e. the nested and reference model).
-
-The relationship between the respective models presented by \citet{roy} is known as ``nesting".
-A model A to be nested in the reference model, model B, if Model A is a special case of Model B, or with some specific constraint applied.
-
-
-%-----------------------------------------------------------------------------------%
-\newpage
-\section{Likelihood Ratio Tests}
-The relationship between the respective models presented by \citet{roy} is known as ``nesting".
-A model A to be nested in the reference model, model B, if Model A is a special case of Model B, or with some specific constraint applied.
-
-
-
-When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
-
-
-% The estimate for the fixed effects are referred to as the best linear unbiased estimates (BLUE). Henderson's estimate for the random effects is known as the best linear unbiased predictor (BLUP).
-
-
-
-
-\section{Likelihood Ratio Tests}
-
-
-If $k_i$ is the number of parameters to be estimated in model $i$, then the asymptotic, or ``large sample", distribution of the LRT statistic, under the null hypothesis that the restricted model is adequate, is a $\chi^2$ distribution with $k_2-k_1$ degrees of freedom \citep[pg.83]{pb}.
-
-We generally use LRTs to evaluate the significance of terms in the random effects structure, i.e. different nested models are fitted in which the random effects structure is changed.
-
- The significance of the likelihood ratio test can be found by comparing the likelihood ratio to the $\chi^2$ distribution, with the appropriate degrees of freedom.
-
-When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
 %=======================================================================================%
 \newpage
 \section{Nesting: Model Selection Using Likelihood Ratio Tests}
@@ -2015,11 +1968,34 @@ We define Model A to be ``nested" in Model B if Model A is a special case of Mod
 
 One model is said to be \emph{nested} within another model, i.e. the reference model, if it represents a special case of the reference model \citep{pb}.
 
-Likelihood ratio tests are a class of tests based on the
-comparison of the values of the likelihood functions of two
-candidate models. LRTs can be used to test hypotheses about
-covariance parameters or fixed effects parameters in the context
-of LMEs.
+Hypotheses can be formulated in the context of a pair of models that have a nesting relationship [CITE: West et al].
+
+LRTs are a class of tests used to compare the value of likelihood functions for two models defining a hypothesis to be tested (i.e. the nested and reference model).
+
+The relationship between the respective models presented by \citet{roy} is known as ``nesting".
+A model A to be nested in the reference model, model B, if Model A is a special case of Model B, or with some specific constraint applied.
+
+
+\section{Implementation of Likelihood Ratio Tests with R}
+
+
+Likelihood ratio tests are very simple to implement in \texttt{R}, simply use the '\texttt{anova()}' commands. Sample output will be given for each variability test.
+
+
+
+\section{Statistical Assumptions for Likelihood Ratio Tests}
+
+
+If $k_i$ is the number of parameters to be estimated in model $i$, then the asymptotic, or ``large sample", distribution of the LRT statistic, under the null hypothesis that the restricted model is adequate, is a $\chi^2$ distribution with $k_2-k_1$ degrees of freedom \citep[pg.83]{pb}.
+
+We generally use LRTs to evaluate the significance of terms in the random effects structure, i.e. different nested models are fitted in which the random effects structure is changed.
+
+ The significance of the likelihood ratio test can be found by comparing the likelihood ratio to the $\chi^2$ distribution, with the appropriate degrees of freedom.
+
+When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
+
+
+
 
 
 
@@ -2050,30 +2026,27 @@ A general method for comparing nested models fit by maximum likelihood is the \t
 %==================================================================%
 
 \section{Test Statistic for Likelihood Ratio Tests}
+The likelihood ratio test is the procedure used to compare the fit of two models. For each candidate model, the `-2 log likelihood' ($M2LL$) is computed. The test statistic for each of the three hypothesis tests is the difference of the $M2LL$ for each pair of models. 
 
-The test statistic for the likelihood ratio test is the difference of the log-likelihood functions, multiplied by $-2$.
-
-The probability distribution of the test statistic is approximated by the $\chi^2$ distribution with ($\nu_{1} - \nu_{2}$) degrees of freedom, where $\nu_{1}$ and $\nu_{2}$ are the degrees of freedom of models 1 and 2 respectively.
-
-The likelihood ratio test is the procedure used to compare the fit of two models. For each candidate model, the `-2 log likelihood' ($M2LL$) is computed. The test statistic for each of the three hypothesis tests is the difference of the $M2LL$ for each pair of models. If the $p-$value in each of the respective tests exceed as significance level chosen by the analyst, then the null model must be rejected.
+The test statistic for the likelihood ratio test is the difference of the log-likelihood functions, multiplied by $-2$. 
+The test statistic for the LRT is the difference of the log-likelihood functions, multiplied by $-2$.
+L= - 2ln is approximately distributed as 2 under H\_0 for large sample size and under the normality assumption.
 
 \begin{equation}
--2\mbox{ ln }\Lambda_{d} =  [ M2LL \mbox{ under }H_{0} \mbox{ model}] - [ M2LL \mbox{ under }H_{A} \mbox{ model}]
+	-2\mbox{ ln }\Lambda_{d} =  [ M2LL \mbox{ under }H_{0} \mbox{ model}] - [ M2LL \mbox{ under }H_{A} \mbox{ model}]
 \end{equation}
-
 These test statistics follow a chi-square distribution with the degrees of freedom computed as the difference of the LRT degrees of freedom.
+The probability distribution of the test statistic is approximated by the $\chi^2$ distribution with ($\nu_{1} - \nu_{2}$) degrees of freedom, where $\nu_{1}$  and $\nu_{2}$ are the degrees of freedom of models 1 and 2 respectively.
+%The probability distribution of the test statistic can be approximated by a chi-square distribution with ($\nu_1$ - $\nu_2$) degrees of freedom, where $\nu_1$ and $\nu_2$ are the degrees of freedom of models 1 and 2 respectively.
+
+
+If the $p-$value in each of the respective tests exceed as significance level chosen by the analyst, then the null model must be rejected.
+
 
 \begin{equation}
 \nu = [\mbox{ LRT df under }H_{0} \mbox{ model}] - [\mbox{ LRT df under }H_{A} \mbox{ model}]
 \end{equation}
 
-The probability distribution of the test statistic can be approximated by a chi-square distribution with ($\nu_1$ - $\nu_2$) degrees of freedom, where $\nu_1$ and $\nu_2$ are the degrees of freedom of models 1 and 2 respectively.
-
-The test statistic for the LRT is the difference of the log-likelihood functions, multiplied by $-2$.
-
-L= - 2ln is approximately distributed as 2 under H\_0 for large sample size and under the normality assumption.
-
-The probability distribution of the test statistic is approximated by the $\chi^2$ distribution with ($\nu_{1} - \nu_{2}$) degrees of freedom, where $\nu_{1}$  and $\nu_{2}$ are the degrees of freedom of models 1 and 2 respectively.
 
 The score function $S(\theta)$ is the derivative of the log likelihood with respect to $\theta$,
 
@@ -2098,14 +2071,32 @@ give rise to the observed Fisher information ($I(\hat{\theta})$) and the expecte
 The power of the likelihood ratio test may depends on specific sample size and the specific number of replications, and [Roy 2009] proposes simulation studies to examine this further.
 
 
-\section{Pinheiro Bates}
+
+
+\section{Relevance of Estimation Methods}
+
+When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
+
+Nested LME models, fitted by ML estimation, can be compared using the likelihood ratio test [Lehmann (1986)].
+Models fitted using REML estimation can also be compared, but only if both were fitted using REML, and both have the same fixed effects specifications.
+
+Likelihood ratio tests are generally used to test the significance of terms in the random effects structure.
+
+REML estimation reduces the bias in the variance component, and also handles high correlations more effectively, and is less sensitive to outliers than ML.  
+
+The problem with REML for model building is that the "likelihoods" obtained for different fixed effects are not comparable. Hence it is not valid to compare models with different fixed effects using a likelihood ratio test or AIC when REML is used to estimate the model. Therefore models derived using ML must be used instead.
+
+
+%\section{Pinheiro Bates}
 A general method for comparing nested models fitted by ML is the \textbf{\emph{likelihood ratio test}} (Cite: Lehmann 1986). Such a test can also be used for models fitted using REML, but only if both models have been fitted by REML, and if the fixed effects specification is the same for both models.
 
 If $k_i$ is the number of parameters to be estimated in model $i$, then the asymptotic, or ``large sample", distribution of the LRT statistic, under the null hypothesis that the restricted model is adequate, is a $\chi^2$ distribution with $k_2-k_1$ degrees of freedom \citep[pg.83]{pb}.
 
 We generally use LRTs to evaluate the significance of terms in the random effects structure, i.e. different nested models are fitted in which the random effects structure is changed.
 
-\section{Empirical p-values of LRT tests}
+%-----------------------------------------------------------------------------%
+%\section{Empirical p-values of LRT tests}
+
 % - \section{Likelihood Ratio Tests: PB on LRTS for LMEs}
 %% - http://ayeimanol-r.net/2013/11/05/mixed-effects-modeling-four-hour-workshop-part-iv-lmes/
 For both REML and ML estimates, the nominal $p-$values for the LRT statistics under a $\chi^2$ distribution with 2 degrees of freedom are much greater than empirical values. A number of ways of dealing with this issues are discussed \citep[pg.86]{pb}.
@@ -2121,22 +2112,13 @@ will see you observe significant differences in model fit more often than you sh
 
 % This is not really a worry for this dataset, but I will come back to the substance of this view, and alternatives to the approach taken here.
 
-
-\section{Relevance of Estimation Methods}
-
-When testing hypotheses around covariance parameters in an LME model, REML estimation for both models is recommended by West et al. REML estimation can be shown to reduce the bias inherent in ML estimates of covariance parameters \citep{west}. Conversely, \citet{pb} advises that testing hypotheses on fixed-effect parameters should be based on ML estimation, and that using REML would not be appropriate in this context.
-
-Nested LME models, fitted by ML estimation, can be compared using the likelihood ratio test [Lehmann (1986)].
-Models fitted using REML estimation can also be compared, but only if both were fitted using REML, and both have the same fixed effects specifications.
-
-Likelihood ratio tests are generally used to test the significance of terms in the random effects structure.
-
-REML estimation reduces the bias in the variance component, and also handles high correlations more effectively, and is less sensitive to outliers than ML.  
-
-The problem with REML for model building is that the "likelihoods" obtained for different fixed effects are not comparable. Hence it is not valid to compare models with different fixed effects using a likelihood ratio test or AIC when REML is used to estimate the model. Therefore models derived using ML must be used instead.
 %=======================================================================================%
 
 \section{Information Criteria}
+
+\citet{akaike} introduces the Akaike information criterion ($AIC$), a model selection tool based on the likelihood function. Given a data set, candidate models are ranked according to their AIC values, with the model having the lowest AIC being considered the best fit.
+
+
 Additionally nested models may be compared by using the Akaike Information Criterion,(AIC) and the Bayesian Information Criterion (BIC).
 
 When comparing the respective scores for nested models, the model with the smaller score is considered to be the preferable model.
@@ -2146,7 +2128,8 @@ The variance components in the LME model may be estimated by ML or REML.
 Maximum Likelihood estimates do not take into account the estimation of fixed effects and so
 are biased downwards.
 REML estimates accounts for the presence of these nuisance parameters by maximising the linearly independent error contrasts to obtain more unbiased estimates.
-Treatment of items as fixed effects
+
+%% -Treatment of items as fixed effects
 [Pinheiro Bates 2000] addresses the issue of treating items as fixed effects. Such a specification is useful only for the specific sample of items, rather than the population of items, where the interest would naturally lie.
 
 [Pinheiro Bates 2000] advises the specification of random effects to correspond to items; treating the item effects as random deviations from the population mean.
@@ -2163,21 +2146,6 @@ Treatment of items as fixed effects
 
 
 
-
-
-
-\newpage
-
-
-
-
-
-
-
-
-
-
-
 \section{Likelihood Ratio Tests in Roy's Analysis}
 
 
@@ -2191,6 +2159,8 @@ The first model acts as an alternative hypothesis to be compared against each of
 
 
 \section{Calculation of limits of agreement }
+
+% Component 1 
 The limits of agreement \citep{BA86} are ubiquitous in method comparison studies. 
 
 However, the original BlandAltman method was developed for two sets of measurements done on one occasion (i.e. independent data), and so this approach is not suitable for replicate measures data. However, as a naive analysis, it may be used to explore the data because of the simplicity of the method.
@@ -2199,36 +2169,41 @@ The limits of agreement \citep{BA86} are ubiquitous in method comparison studies
 
 Limits of agreement are used extensively for assessing agreement, because they are intuitive and easy to use.
 
-Necessarily their prevalence in literature has meant that they are now the best known measurement for agreement, and therefore any newer methodology would benefit by making reference to them.
 
-Computing limits of agreement features prominently in many method comparison studies, further to \citet{BA86,BA99}.
+% Component 2
+Computing limits of agreement features prominently in many method comparison studies, further to \citet{BA86,BA99}. Necessarily their prevalence in literature has meant that they are now the best known measurement for agreement, and therefore any newer methodology would benefit by making reference to them.
 
-\citet{BA99} addresses the issue of computing LoAs in the presence of replicate measurements, suggesting several computationally simple approaches. When repeated measures data are available, it is desirable to use all the data to compare the two methods. 
+% Component 3
+
+
+
+
 
 However, the original Bland-Altman method was developed for two sets of measurements done on one occasion (i.e. independent data), and so this approach is not suitable for replicate measures data. However, as a naive analysis, it may be used to explore the data because of the simplicity of the method.
-\citet{BXC2008}  computes the limits of agreement to the case with replicate measurements by using LME models.
 
-  	
+\citet{BA99} addresses the issue of computing LoAs in the presence of replicate measurements, suggesting several computationally simple approaches. When repeated measures data are available, it is desirable to use all the data to compare the two methods. 
 Further to \citet{BA86}, the computation of the limits of agreement follows from the intermethod bias, and the variance of the difference of measurements. The computation of the inter-method bias is a straightforward subtraction calculation. The variance of differences is easily computable from the variance estimates in the ${\mbox{Block - }\boldsymbol \Omega_{i}}$ matrix, i.e.
-	\[
-	\mathrm{Var}(y_1 - y_2) = \sqrt{ \omega^2_1 + \omega^2_2 - 2\omega_{12}}.
-	\]
+\[
+\mathrm{Var}(y_1 - y_2) = \sqrt{ \omega^2_1 + \omega^2_2 - 2\omega_{12}}.
+\]
+
+\citet{BXC2008} demonstrate statistical flaws with two approaches proposed by \citet{BA99} for the purpose of calculating the variance of the inter-method bias when replicate measurements are available. Instead, \citet{BXC2008} use a fitted mixed effects model to obtain appropriate estimates for the variance of the inter-method bias. 
+
+
+ \citet{BXC2008}  computes the limits of agreement to the case with replicate measurements by using LME models. As their interest mainly lies in extending the Bland-Altman methodology, other formal tests are not considered.
+
+
 	
-\citet{BXC2008} demonstrate statistical flaws with two approaches proposed by \citet{BA99} for the purpose of calculating the variance of the inter-method bias when replicate measurements are available. Instead, \citet{BXC2008} use a fitted mixed effects model to obtain appropriate estimates for the variance of the inter-method bias.  As their interest mainly lies in extending the Bland-Altman methodology, other formal tests are not considered.
-	
-	
-\citet{BXC2008} also presents a methodology to compute the limits of agreement based on LME models. In many cases the limits of agreement derived from this method accord with those to Roy's model. However, in other cases dissimilarities emerge. An explanation for this differences can be found by considering how the respective models account for covariance in the observations. Specifying the relevant terms using a bivariate normal distribution, Roy's model allows for both between-method and within-method covariance. \citet{BXC2008} formulate a model whereby random effects have univariate normal distribution, and no allowance is made for correlation between observations.
+\citet{BXC2008} also presents a methodology to compute the limits of agreement based on LME models. In many cases the limits of agreement derived from this method accord with those to Roy's model. However, in other cases dissimilarities emerge. An explanation for this differences can be found by considering how the respective models account for covariance in the observations. 
+
+Specifying the relevant terms using a bivariate normal distribution, Roy's model allows for both between-method and within-method covariance. \citet{BXC2008} formulate a model whereby random effects have univariate normal distribution, and no allowance is made for correlation between observations.
 	
 A consequence of this is that the between-method and within-method covariance are zero. In cases where there is negligible covariance between methods, both sets of limits of agreement are very similar to each other. In cases where there is a substantial level of covariance present between the two methods, the limits of agreement computed using models will differ.
 	
 	
-%------------------------------------------------------------------------------%
-	
-
-\section{00-Limits of Agreement in LME models}
 
 \citet{BXC2008} computes the limits of agreement to the case with repeated measurements by using LME models.
-	
+
 \citet{ARoy2009} formulates a very powerful method of assessing whether two methods of measurement, with replicate measurements, also using LME models. Roy's approach is based on the construction of variance-covariance matrices.
 
 Importantly, Roy's approach does not address the issue of limits of agreement (though another related analysis , the coefficient of repeatability, is mentioned).
@@ -2236,10 +2211,14 @@ Importantly, Roy's approach does not address the issue of limits of agreement (t
 This paper seeks to use Roy's approach to estimate the limits of agreement. These estimates will be compared to estimates computed under Carstensen's formulation.
 
 In computing limits of agreement, it is first necessary to have an estimate for the standard deviations of the differences. When the agreement of two methods is analyzed using LME models, a clear method of how to compute the standard deviation is required. As the estimate for inter-method bias and the quantile would be the same for both methodologies, the focus hereon is solely on the variance of differences.
+
+\cite{BXC2008} also use a LME model for the purpose of comparing two methods of measurement where replicate measurements are available on each item. Their interest lies in generalizing the popular limits-of-agreement (LOA) methodology advocated by \citet{BA86} to take proper cognizance of the replicate measurements. 
+
+\citet{BXC2008} demonstrate statistical flaws with two approaches proposed by \citet{BA99} for the purpose of calculating the variance of the inter-method bias when replicate measurements are available. Instead, they recommend a fitted mixed effects model to obtain appropriate estimates for the variance of the inter-method bias. As their interest mainly lies in extending the Bland-Altman methodology, other formal tests are not considered.
+
+
 	
-\section{Carstensen et al}
-\cite{BXC2008} also use a LME model for the purpose of comparing two methods of measurement where replicate measurements are available on each item. Their interest lies in generalizing the popular limits-of-agreement (LOA) methodology advocated by \citet{BA86} to take proper cognizance of the replicate measurements. \citet{BXC2008} demonstrate statistical flaws with two approaches proposed by \citet{BA99} for the purpose of calculating the variance of the inter-method bias when replicate measurements are available. Instead, they recommend a fitted mixed effects model to obtain appropriate estimates for the variance of the inter-method bias. As their interest mainly lies in extending the Bland-Altman methodology, other formal tests are not considered.
-	
+
 
 
 \section{Computing LoAs from LME models}
@@ -2288,11 +2267,11 @@ Importantly, Carstensen's underlying model differs from Roy's model in some key 
 		\hat{\sigma}^2_1 + \hat{\sigma}^2_2}
 	\]
 	
-	Further to \citet{BA86}, the computation of the limits of agreement follows from the intermethod bias, and the variance of the difference of measurements. 	The computation thereof require that the variance of the difference of measurements. This variance is easily computable from the  variance estimates in the ${\mbox{Block - }\boldsymbol \Omega_{i}}$ matrix, i.e.
-	\[
-	% Check this
-	\operatorname{Var}(y_1 - y_2) = \sqrt{ \omega^2_1 + \omega^2_2 - 2\omega_{12}}.
-	\]
+%	Further to \citet{BA86}, the computation of the limits of agreement follows from the intermethod bias, and the variance of the difference of measurements. 	The computation thereof require that the variance of the difference of measurements. This variance is easily computable from the  variance estimates in the ${\mbox{Block - }\boldsymbol \Omega_{i}}$ matrix, i.e.
+%	\[
+%	% Check this
+%	\operatorname{Var}(y_1 - y_2) = \sqrt{ \omega^2_1 + \omega^2_2 - 2\omega_{12}}.
+%	\]
 \section{Carstensen's Model}
 
 
@@ -2354,7 +2333,6 @@ as
 \hat{\alpha}_1 - \hat{\alpha}_2 \pm \sqrt{2 \hat{\tau}^2 +
 	\hat{\sigma}^2_1 + \hat{\sigma}^2_2}
 \]
-\newpage
 
 
 
@@ -2440,40 +2418,6 @@ The limits of agreement can therefore be evaluated using
 
 
 
-
-
-	\section{BXC2008 uses - Limits of Agreement in LME models}
-	
-	\citet{BXC2008} uses an approach based on linear mixed effects (LME) models for the purpose of computing the limits of agreement for two methods of measurement, where replicate measurements are taken on items. As the emphasis of this methodology lies on the inter-method bias and the limits of agreement, the two key elements of the Bland-Altman methodology, other formal tests are not described.
-	
-	
-
-Between-subject variation for method $m$ is given by $d^2_{m}$ and within-subject variation is given by $\lambda^2_{m}$.  \citet{BXC2008} remarks that for two methods $A$ and $B$, separate values of $d^2_{A}$ and $d^2_{B}$ cannot be estimated, only their average. Hence the assumption that $d_{x}= d_{y}= d$ is necessary. The between-subject variability $\boldsymbol{D}$ and within-subject variability $\boldsymbol{\Lambda}$ can be presented in matrix form,\[
-\boldsymbol{D} = \left(%
-\begin{array}{cc}
-d^2_{A}& 0 \\
-0 & d^2_{B} \\
-\end{array}%
-\right)=\left(%
-\begin{array}{cc}
-d^2& 0 \\
-0 & d^2\\
-\end{array}%
-\right),
-\hspace{1.5cm}
-\boldsymbol{\Lambda} = \left(%
-\begin{array}{cc}
-\lambda^2_{A}& 0 \\
-0 & \lambda^2_{B} \\
-\end{array}%
-\right).
-\]
-
-The variance for method $m$ is $d^2_{m}+\lambda^2_{m}$. Limits of agreement are determined using the standard deviation of the case-wise differences between the sets of measurements by two methods $A$ and $B$, given by
-\begin{equation}
-\mbox{var} (y_{A}-y_{B}) = 2d^2 + \lambda^2_{A}+ \lambda^2_{B}.
-\end{equation}
-Importantly the covariance terms in both variability matrices are zero, and no covariance component is present.
 
 
 
