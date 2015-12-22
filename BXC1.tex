@@ -1,6 +1,8 @@
 \documentclass{report}
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 470pt
 
-\usepackage{standalone}
 \usepackage{amssymb}
 \usepackage{amsbsy}
 \usepackage{amsthm}
@@ -407,7 +409,7 @@ m: Fixed effect for method m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % \frametitle{Carstensen's Mixed Models}
-\large
+
 \begin{itemize}
 	\item The differences are expressed as $d_{i} = y_{1i} - y_{2i}$.
 	\item For the
@@ -426,9 +428,6 @@ m: Fixed effect for method m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\large
 \begin{itemize}
 	\item Carstensen \textit{et al} \cite{BXC2004} also advocates the use of linear mixed models in
 	the study of method comparisons. 
@@ -462,9 +461,7 @@ m: Fixed effect for method m
 \end{eqnarray}
 
 %------------------------------------------------------------------------------ %
-%
-% \frametitle{Carstensen's Mixed Models}
-\large
+
 \begin{itemize}
 	\item The following model (in the authors own notation) is
 	formulated as follows, where $y_{mir}$ is the $r$th replicate
@@ -513,13 +510,7 @@ m: Fixed effect for method m
 	\item The
 	import of which is that more than two methods of measurement may
 	be required to carry out the analysis. 
-\end{itemize}
 
-
-%---------------------------------------------------------------- %
-%
-% \frametitle{Carstensen's Mixed Models}
-\begin{itemize}
 	\item There is also the
 	assumptions that observations of measurements by particular
 	methods are exchangeable within subjects. \item \textbf{\textit{Exchangeability}} means
@@ -545,8 +536,7 @@ m: Fixed effect for method m
 %\end{eqnarray}
 %
 
-%
-\Large
+
 \begin{itemize}
 	\item Carstensen \textit{et al} \cite{BXC2008} proposes a methodology to calculate prediction
 	intervals in the presence of replicate measurements, overcoming
@@ -716,22 +706,16 @@ fitted separately for each method.
 The differences are expressed as $d_{i} = y_{1i} - y_{2i}$.
 
 For the replicate case, an interaction term $c$ is added to the model, with an associated variance component.
-
+%-------------------------------------------------------------------------------------%
 \subsection{Computing LoAs from LME models}
-%--------------------------%
 
 
-%
-\emph{
 	One important feature of replicate observations is that they should be independent
 	of each other. In essence, this is achieved by ensuring that the observer makes each
 	measurement independent of knowledge of the previous value(s). This may be difficult
-	to achieve in practice.}
+	to achieve in practice.
 
 
-%-------------------------------------------------------------------------------------%
-\subsection{Carstensen's LOAs}
-%
 Carstensen presents a model where the variation between items for
 method $m$ is captured by $\sigma_m$ and the within item variation
 by $\tau_m$.
@@ -745,9 +729,8 @@ as
 \]
 
 %-------------------------------------------------------------------------------------%
-%
-% \frametitle{Carstensen's LOAs}
-\large
+
+
 \begin{itemize}
 	\item The respective estimates computed by both methods are tabulated as follows. Evidently there is close correspondence between both sets of estimates.
 	
@@ -755,7 +738,7 @@ as
 	account results in over-estimation of the limits of agreement. 
 	\item For the Carstensen estimates below, an interaction term was included when computed.
 \end{itemize}
-\newpage
+
 
 \section{Carstensen's Limits of agreement}
 \citet{BXC2008} presents a methodology to compute the limits of
