@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  21 JAN 2015 14:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  4 FEB 2016 16:55
 entering extended mode
 **Draft*Chaps*1*and*2*Jan*2015.tex
-("C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Draft Chaps 1 and 2 Jan 2015.tex"
+("C:\Users\Kevin\Documents\GitHub\MCS01-Intro\Draft Chaps 1 and 2 Jan 2015.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -183,7 +183,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Draft Chaps 1 and 2 Jan 2015.aux")
+("C:\Users\Kevin\Documents\GitHub\MCS01-Intro\Draft Chaps 1 and 2 Jan 2015.aux"
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
@@ -196,8 +197,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
-
-(C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+ (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
 \scratchdimen=\dimen120
@@ -222,10 +222,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Kevin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Draft Chaps 1 and 2 Jan 2015.toc")
+("C:\Users\Kevin\Documents\GitHub\MCS01-Intro\Draft Chaps 1 and 2 Jan 2015.toc"
+)
 \tf@toc=\write3
-
-[1
+ [1
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
@@ -261,12 +261,21 @@ Package natbib Warning: Citation `Barnhart' on page 4 undefined on input line 1
 
 Package natbib Warning: Citation `BA83' on page 7 undefined on input line 180.
 
-<GrubbsScatter.jpeg, id=28, 655.44875pt x 655.44875pt>
-File: GrubbsScatter.jpeg Graphic file (type jpg)
 
-<use GrubbsScatter.jpeg>
-Package pdftex.def Info: GrubbsScatter.jpeg used on input line 188.
-(pdftex.def)             Requested size: 355.65944pt x 355.65727pt.
+LaTeX Warning: File `GrubbsScatter.jpeg' not found on input line 188.
+
+
+! Package pdftex.def Error: File `GrubbsScatter.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.188 ...graphics[width=125mm]{GrubbsScatter.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -275,7 +284,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Package natbib Warning: Citation `Dewitte' on page 7 undefined on input line 19
 3.
 
-[7] [8 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/GrubbsScatter.jpeg>]
+[7] [8]
 
 Package natbib Warning: Citation `BA83' on page 9 undefined on input line 203.
 
@@ -288,24 +297,43 @@ Package natbib Warning: Citation `BA83' on page 9 undefined on input line 209.
 
 Package natbib Warning: Citation `BA86' on page 9 undefined on input line 218.
 
-[9] [10] [11] <GrubbsBAplot-noLOA.jpeg, id=47, 655.44875pt x 655.44875pt>
-File: GrubbsBAplot-noLOA.jpeg Graphic file (type jpg)
+[9] [10] [11]
 
-<use GrubbsBAplot-noLOA.jpeg>
-Package pdftex.def Info: GrubbsBAplot-noLOA.jpeg used on input line 297.
-(pdftex.def)             Requested size: 341.43306pt x 341.4354pt.
+LaTeX Warning: File `GrubbsBAplot-noLOA.jpeg' not found on input line 297.
 
-<GrubbsDataTwoBAplots.jpeg, id=48, 1027.84pt x 694.595pt>
-File: GrubbsDataTwoBAplots.jpeg Graphic file (type jpg)
 
-<use GrubbsDataTwoBAplots.jpeg>
-Package pdftex.def Info: GrubbsDataTwoBAplots.jpeg used on input line 313.
-(pdftex.def)             Requested size: 378.94606pt x 256.0748pt.
+! Package pdftex.def Error: File `GrubbsBAplot-noLOA.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.297 ...ics[width=120mm]{GrubbsBAplot-noLOA.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `GrubbsDataTwoBAplots.jpeg' not found on input line 313.
+
+
+! Package pdftex.def Error: File `GrubbsDataTwoBAplots.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 ...s[height=90mm]{GrubbsDataTwoBAplots.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/GrubbsBAplot-noLOA.jpeg>]
+[12]
 
 Package natbib Warning: Citation `BA86' on page 13 undefined on input line 321.
 
@@ -332,7 +360,7 @@ Package natbib Warning: Citation `hollis' on page 13 undefined on input line 33
 Package natbib Warning: Citation `BritHypSoc' on page 13 undefined on input lin
 e 334.
 
-[13 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/GrubbsDataTwoBAplots.jpeg>]
+[13]
 
 Package natbib Warning: Citation `ludbrook97' on page 14 undefined on input lin
 e 348.
@@ -340,29 +368,59 @@ e 348.
 
 Package natbib Warning: Citation `BH' on page 14 undefined on input line 362.
 
-<BAFanEffect.jpeg, id=56, 1027.84pt x 694.595pt>
-File: BAFanEffect.jpeg Graphic file (type jpg)
- <use BAFanEffect.jpeg>
-Package pdftex.def Info: BAFanEffect.jpeg used on input line 366.
-(pdftex.def)             Requested size: 378.94606pt x 256.0748pt.
+
+LaTeX Warning: File `BAFanEffect.jpeg' not found on input line 366.
+
+
+! Package pdftex.def Error: File `BAFanEffect.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.366 ...degraphics[height=90mm]{BAFanEffect.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<PropBias.jpeg, id=57, 1027.84pt x 694.595pt>
-File: PropBias.jpeg Graphic file (type jpg)
- <use PropBias.jpeg>
-Package pdftex.def Info: PropBias.jpeg used on input line 373.
-(pdftex.def)             Requested size: 378.94606pt x 256.0748pt.
+
+LaTeX Warning: File `PropBias.jpeg' not found on input line 373.
+
+
+! Package pdftex.def Error: File `PropBias.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.373 ...cludegraphics[height=90mm]{PropBias.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<BAOutliers.jpeg, id=58, 1027.84pt x 694.595pt>
-File: BAOutliers.jpeg Graphic file (type jpg)
- <use BAOutliers.jpeg>
-Package pdftex.def Info: BAOutliers.jpeg used on input line 380.
-(pdftex.def)             Requested size: 355.65944pt x 240.34564pt.
+
+LaTeX Warning: File `BAOutliers.jpeg' not found on input line 380.
+
+
+! Package pdftex.def Error: File `BAOutliers.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.380 ...udegraphics[width=125mm]{BAOutliers.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -371,8 +429,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Text page 15 contains only floats.
 
-[15 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/BAFanEffect.jpeg> <C:/Users/Kevi
-n/Documents/GitHub/MCS-Chap1/PropBias.jpeg>]
+[15]
 
 Package natbib Warning: Citation `BA99' on page 16 undefined on input line 392.
 
@@ -385,21 +442,46 @@ Package natbib Warning: Citation `Bartko' on page 16 undefined on input line 40
 Package natbib Warning: Citation `AltmanEllipse' on page 16 undefined on input 
 line 403.
 
-[16 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/BAOutliers.jpeg>]
-<GrubbsBartko.jpeg, id=68, 1027.84pt x 694.595pt>
-File: GrubbsBartko.jpeg Graphic file (type jpg)
- <use GrubbsBartko.jpeg>
-Package pdftex.def Info: GrubbsBartko.jpeg used on input line 425.
-(pdftex.def)             Requested size: 369.88582pt x 249.95862pt.
+[16]
 
-[17 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/GrubbsBartko.jpeg>]
-<GrubbsBartko2.jpeg, id=72, 1027.84pt x 694.595pt>
-File: GrubbsBartko2.jpeg Graphic file (type jpg)
- <use GrubbsBartko2.jpeg>
-Package pdftex.def Info: GrubbsBartko2.jpeg used on input line 443.
-(pdftex.def)             Requested size: 369.88582pt x 249.95862pt.
+LaTeX Warning: File `GrubbsBartko.jpeg' not found on input line 425.
 
-[18 <C:/Users/Kevin/Documents/GitHub/MCS-Chap1/GrubbsBartko2.jpeg>] [19]
+
+! Package pdftex.def Error: File `GrubbsBartko.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.425 ...egraphics[width=130mm]{GrubbsBartko.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: File `GrubbsBartko2.jpeg' not found on input line 443.
+
+
+! Package pdftex.def Error: File `GrubbsBartko2.jpeg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.443 ...graphics[width=130mm]{GrubbsBartko2.jpeg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] [18] [19]
 
 Package natbib Warning: Citation `BA99' on page 20 undefined on input line 495.
 
@@ -454,115 +536,35 @@ Package natbib Warning: Citation `BXC2008' on page 22 undefined on input line 6
 Package natbib Warning: Citation `BXC2008' on page 22 undefined on input line 6
 26.
 
-
-Package natbib Warning: Citation `BA83' on page 22 undefined on input line 637.
-
-
-
-Package natbib Warning: Citation `Cohen' on page 22 undefined on input line 643
-.
-
-
-Package natbib Warning: Citation `BA86' on page 22 undefined on input line 647.
-
-
-
-Package natbib Warning: Citation `BA99' on page 22 undefined on input line 647.
-
-
-
-Package natbib Warning: Citation `BA99' on page 22 undefined on input line 648.
-
-
-
-Package natbib Warning: Citation `BA99' on page 22 undefined on input line 650.
-
-
 [22]
-
-Package natbib Warning: Citation `DunnSEME' on page 23 undefined on input line 
-654.
-
-
-Package natbib Warning: Citation `linnet98' on page 23 undefined on input line 
-660.
-
-
-Package natbib Warning: Citation `DunnSEME' on page 23 undefined on input line 
-660.
-
-
-Package natbib Warning: Citation `BB89' on page 23 undefined on input line 669.
-
-
-
-Package natbib Warning: Citation `BB89' on page 23 undefined on input line 681.
-
-
-
-Package natbib Warning: Citation `Bartko' on page 23 undefined on input line 68
-5.
-
-[23]
-
-Package natbib Warning: Citation `CornCoch' on page 24 undefined on input line 
-741.
-
-
-Package natbib Warning: Citation `ludbrook97' on page 24 undefined on input lin
-e 741.
-
-
-Package natbib Warning: Citation `BA83' on page 24 undefined on input line 744.
-
-
-
-Package natbib Warning: Citation `ludbrook97' on page 24 undefined on input lin
-e 744.
-
-[24]
-
-Package natbib Warning: Citation `CornCoch' on page 25 undefined on input line 
-750.
-
-
-Package natbib Warning: Citation `ludbrook97' on page 25 undefined on input lin
-e 750.
-
-
-Package natbib Warning: Citation `ludbrook' on page 25 undefined on input line 
-764.
-
-[25]
 
 Package natbib Warning: There were undefined citations.
 
-[26]
-("C:\Users\Kevin\Documents\GitHub\MCS-Chap1\Draft Chaps 1 and 2 Jan 2015.aux") 
-) 
+[23]
+("C:\Users\Kevin\Documents\GitHub\MCS01-Intro\Draft Chaps 1 and 2 Jan 2015.aux"
+) ) 
 Here is how much of TeX's memory you used:
- 2805 strings out of 493921
- 35625 string characters out of 3144875
+ 2767 strings out of 493921
+ 34826 string characters out of 3144875
  96759 words of memory out of 3000000
- 6069 multiletter control sequences out of 15000+200000
+ 6031 multiletter control sequences out of 15000+200000
  13525 words of font info for 52 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,9n,26p,669b,261s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Draft Chaps 1 and 2 Jan 2015.pdf" (27 pages, 830642 bytes).
+ 27i,7n,26p,669b,264s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "Draft Chaps 1 and 2 Jan 2015.pdf" (24 pages, 159013 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
