@@ -1,0 +1,42 @@
+% Escaramis et al 2010
+% http://www.biomedcentral.com/1471-2288/10/31/
+%-----------------------------------------------------%
+\subsection{Background}
+In an agreement assay, it is of interest to evaluate the degree of agreement between the different methods (devices, instruments or observers) used to measure the same characteristic. We propose in this study a technical simplification for inference about the total deviation index (TDI) estimate to assess agreement between two devices of normally-distributed measurements and describe its utility to evaluate inter- and intra-rater agreement if more than one reading per subject is available for each device.
+
+\subsection{Methods}
+We propose to estimate the TDI by constructing a probability interval of the difference in paired measurements between devices, and thereafter, we derive a tolerance interval (TI) procedure as a natural way to make inferences about probability limit estimates. We also describe how the proposed method can be used to compute bounds of the coverage probability.
+
+\subsection{Results}
+The approach is illustrated in a real case example where the agreement between two instruments, a handle mercury sphygmomanometer device and an OMRON 711 automatic device, is assessed in a sample of 384 subjects where measures of systolic blood pressure were taken twice by each device. A simulation study procedure is implemented to evaluate and compare the accuracy of the approach to two already established methods, showing that the TI approximation produces accurate empirical confidence levels which are reasonably close to the nominal confidence level.
+
+\subsection{Conclusions}
+The method proposed is straightforward since the TDI estimate is derived directly from a probability interval of a normally-distributed variable in its original scale, without further transformations. Thereafter, a natural way of making inferences about this estimate is to derive the appropriate TI. Constructions of TI based on normal populations are implemented in most standard statistical packages, thus making it simpler for any practitioner to implement our proposal to assess agreement.
+
+%-----------------------------------------------------%
+%PAGE 3 of 12 COLUMN 1
+Lin defined the TDI as the boundary, $\kappa_P$ which capyures a large proportion $p$ of paired based differences from 
+two devices or observers within the boundary.
+
+The value of $\kappa_P$ that yeilds $P(|D| <\kappa_p) = p$ where D is the paired-difference variate.
+
+%-----------------------------------------------------%
+%PAGE 3 of 12 COLUMN 2
+
+\[ \kappa_P = F^{-1}(p) = \sigma_D \sqrt{\chi^2(p,1,\mu^2_D/\sigma^2_d) }  \]
+
+\[ \kappa_P = Z_{\frac{1+p}{2}} \| \varepsilon\| \]
+
+%-----------------------------------------------------%
+
+%PAGE 5 of 12 COLUMN 1
+
+Tolerance Interval around the TDI estimate
+
+\[ \hat{\kappa_p} = \hat{\mu}_D = Z_{p_i}\sigma_d \]
+
+%-----------------------------------------------------%
+
+%PAGE 5 of 12 COLUMN 2
+Coverage Probability is another user friendly measure of agrre,ment which is related to the computation of the TDI.
+

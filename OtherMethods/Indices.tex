@@ -1,0 +1,41 @@
+\documentclass[Chap3bmain.tex]{subfiles}
+\begin{document}
+	
+	\subsection*{Coverage probability (CP)}
+	Another user friendly measure of agreement which is related to the computation of the TDI is the so called coverage probability (CP) [11,12]. 
+	The CP describes the proportion captured within a pre-specified boundary of the absolute paired-measurement differences from two devices, i.e., the value of p$\kappa$ such that $P(|D| < \kappa$) = $p_\kappa$. Therefore one can find p$\kappa$ for a specified boundary $\kappa$ using standard methods for computing probability quantities under normal assumptions [11]:
+	
+	(13)
+	and to obtain a CP estimate, p$\kappa$ can be computed by replacing $\mu_D$ and $\sigma_D$ by their REML estimate counterparts derived from model (1).
+	
+	As with the TDI, the CP criterion can also be translated into a hypothesis test specification. 
+	In this case the interest is to ensure that a specified boundary of the absolute paired-measurement differences captures at least a predetermined proportion, p0:
+	
+	
+	The proposed TI method for inference about the TDI can be utilized to perform inferences about the CP estimates. From the TI in (10) it follows that
+	
+	(14)
+	Now $\kappa$ is a fixed known boundary, and our interest lies in finding a lower confidence bound for the CP estimate. 
+	Thus, one can find a lower confidence bound for a non-central Student-t proportion with confidence level 1 - $\alpha$ by searching the non-centrality parameter, 
+	that depends on  and hence on p$\kappa$, that satisfies
+	
+	(15)
+	and once the non-centrality parameter  is achieved, a lower bound about the proportion p$\kappa$ is found using equation (5), 
+	
+	% p$\kappa$ = Φ() - Φ(-2μD/σD - ).
+	
+	However, the non-centrality parameter cannot be found in a closed form, so one may use again a modified version of the binary search algorithm as follows:
+	
+	\begin{enumerate}
+		\item begin with the interval [low = 0; high = 1], as p$\kappa$ is bounded by the interval (0,1);
+		
+		\item calculate the midpoint of the interval \textit{mid = (low + high)/2} and compute the difference ;
+		
+		\item if d is greater than 0 up to a tolerance bound $\delta$ (i.e., ), then recalculate the interval [low = mid + $\delta$; high = 1]; if it is 
+		lower than 0 up to a tolerance bound $\delta$ (i.e. ), then recalculate the interval [low = 0; high = mid - $\delta$];
+		
+		\item repeat steps 2-3 until convergence, i.e. until d satisfies .
+	\end{enumerate}
+\newpage
+
+\end{document}

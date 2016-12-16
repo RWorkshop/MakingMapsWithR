@@ -1,0 +1,76 @@
+\documentclass[Chap3amain.tex]{subfiles}
+\begin{document}
+% <magari>
+The presence of bias may impair agreement between the two analytical methods.
+
+types of bias
+
+\begin{itemize}
+\item constant bais
+\item proportionl bias
+\end{itemize}
+
+\subsection{Passing and bablok}
+proposed an linear regression procedure with no special assumptions regarding the distribution of the data.
+This non parametric method is based on ranking the observatons so it is computationally intensive.
+The result is independent of the assignment of the reference method (X) and the reference method (Y).
+
+" a new biometric method procedure for testing the equality of measurements from two different analytical methods"
+J Clin. Chem Clin.BioChem. [21], 709-720 (1983)
+%-----------------------------------------------------------%
+\section{Passing-Bablok Regression}
+
+% www.medcalc.be
+% MCR package
+
+Passing & Bablok (1983) have described a linear regression procedure with no special assumptions regarding the distribution of the samples and the measurement errors. The result does not depend on the assignment of the methods (or instruments) to X and Y. The slope B and intercept A are calculated with their 95% confidence interval. These confidence intervals are used to determine whether there is only a chance difference between B and 1 and between A and 0.
+
+\subsection{Implementation with \texttt{R}}
+
+%--------------%
+\begin{framed}
+\begin{verbatim}
+
+library(mcr)
+
+\end{verbatim}
+\end{framed}
+%--------------%
+% <magari>
+The presence of bias may impair agreement between the two analytical methods.
+
+types of bias
+
+\begin{itemize}
+	\item constant bais
+	\item proportionl bias
+\end{itemize}
+
+\subsection{Passing and bablok}
+proposed an linear regression procedure with no special assumptions regarding the distribution of the data.
+This non parametric method is based on ranking the observatons so it is computationally intensive.
+The result is independent of the assignment of the reference method (X) and the reference method (Y).
+
+" a new biometric method procedure for testing the equality of measurements from two different analytical methods"
+J Clin. Chem Clin.BioChem. [21], 709-720 (1983)
+%-----------------------------------------------------------%
+\section{Passing-Bablok Regression}
+
+% www.medcalc.be
+% MCR package
+
+Passing & Bablok (1983) have described a linear regression procedure with no special assumptions regarding the distribution of the samples and the measurement errors. The result does not depend on the assignment of the methods (or instruments) to X and Y. The slope B and intercept A are calculated with their 95% confidence interval. These confidence intervals are used to determine whether there is only a chance difference between B and 1 and between A and 0.
+
+\subsection{Implementation with \texttt{R}}
+
+%--------------%
+\begin{framed}
+	\begin{verbatim}
+	
+	library(mcr)
+	
+	\end{verbatim}
+\end{framed}
+%--------------%
+
+\end{document}

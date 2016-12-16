@@ -1,0 +1,53 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{natbib}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{amsbsy}
+\usepackage{amsthm, amsmath}
+%\usepackage[dvips]{graphicx}
+\bibliographystyle{chicago}
+\renewcommand{\baselinestretch}{1.4}
+
+% left top textwidth textheight headheight % headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\pagenumbering{arabic}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{New Work }
+
+\subsection{Extended LME model}
+% Pinheiro Bates Page 202
+The extended single level LME model relaxes the independence assumption, allowing heteroscedastic and correlated within group errors.
+
+
+\begin{equation}
+\epsilon_{i} = \mathcal{N}(0, \sigma^2 \Lambda_{i})
+\end{equation}
+
+$\Lambda_{i}$ are positive definite matrices. $\sigma^2$ is factored out of the matrix for computational reasons.
+
+
+\section{Variance functions}
+
+Variance functions are applied to LME models through the `weights' argument. $R$ supports several variance functions.
+
+`varIdent' cosntructs a model with different variances per stratum.
+
+\subsection{Diagnostic plots}
+% Pinheiro Bates Page 391
+Diagnostic plots for identifying within-group heteroscedascity and assessing the adequacy of a variance function can also be used with `nlme' objects.
+
+\newpage
+\bibliography{transferbib}
+\end{document}
+
+
+

@@ -1,0 +1,51 @@
+\documentclass[]{article}
+
+\usepackage{framed}
+
+\begin{document}
+
+Conventionally LME models can be tested using Likelihood Ratio Tests, wherein a reference model is compared to a nested model.
+> Ref.Fit = lme(y ~ meth-1, data = dat,   #Symm , Symm#
++     random = list(item=pdSymm(~ meth-1)), 
++     weights=varIdent(form=~1|meth),
++     correlation = corSymm(form=~1 | item/repl), 
++     method="ML")
+
+Roy(2009) presents two nested models that specify the condition of equality as required, with a third nested model for an additional test. There three formulations share the same structure, and can be specified by making slight alterations of the code for the Reference Model.
+Nested Model (Between-Item Variability)
+> NMB.fit  = lme(y ~ meth-1, data = dat,   #CS , Symm#
++     random = list(item=pdCompSymm(~ meth-1)),
++     correlation = corSymm(form=~1 | item/repl), 
++     method="ML")
+
+
+
+
+
+Nested Model (Within –item Variability)
+> NMW.fit = lme(y ~ meth-1, data = dat,   #Symm , CS# 
++     random = list(item=pdSymm(~ meth-1)),
++     weights=varIdent(form=~1|meth), 
++     correlation = corCompSymm(form=~1 | item/repl), 
++     method="ML")
+
+
+Nested Model (Overall Variability)
+Additionally there is a third nested model, that can be used to test overall variability, substantively a a joint test for between-item and within-item variability. The motivation for including such a test in the suite is not clear, although it does circumvent the need for multiple comparison procedures in certain circumstances, hence providing a simplified procedure for non-statisticians.
+   > NMO.fit = lme(y ~ meth-1, data = dat,   #CS , CS# 
++     random = list(item=pdCompSymm(~ meth-1)), 
++     correlation = corCompSymm(form=~1 | item/repl), 
++     method="ML")
+
+
+ANOVAs  for  Original Fits
+The likelihood Ratio test is very simple to implement in R. All that is required it to specify the reference model and the relevant nested mode as arguments to the command anova().
+The figure below displays the three tests described by Roy (2009).
+> testB    = anova(Ref.Fit,NMB.fit)                          # Between-Subject Variabilities
+> testW   = anova(Ref.Fit,NMW.fit)                        # Within-Subject Variabilities
+> testO     = anova(Ref.Fit,NMO.fit)                        # Overall Variabilities
+
+  
+
+
+\end{document}
