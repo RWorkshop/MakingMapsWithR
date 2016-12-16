@@ -1,0 +1,230 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{framed}
+
+\title{Influence Techniques for  LME models}
+\author{kobriendublin }
+\date{February 2015}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Implementation of Model Diagnostics for LME models with \texttt{R}}
+
+\tableofcontents
+%====================================================================%
+\newpage
+
+\section{Introduction to Influence Analysis}
+
+Outliers and detection of influential observations is an important step in the analysis of a data set. There are several ways of evaluating the influence of perturbations in the data set and in the model given the parameter estimates. 
+
+The basic rationale behind measuring influential cases is that when iteratively single units are omitted
+from the data, models based on these data should not produce substantially different estimates.
+%===================================================================== %
+\subsection{Well Known Influence Measures}
+
+\textit{``Regression Diagnostics: Identifying Influential Data
+and Source of Collinearity (1980)"} by Belsley,Kuh,\& Welsch is a landmark text in the field of residual diagnostics, and
+provides a foundation for much of the subsequent work.
+
+\begin{description}
+\item[Cook's Distance] Cook’s Distance is a measure indicating to what extent model parameters are influenced by (a set
+of) influential data on which the model is based.
+\item[DFBETAS] DFBETAS (standardized difference of the beta) is a measure that standardizes the absolute difference
+in parameter estimates between a (mixed effects) regression model based on a full set of
+data, and a model from which a (potentially influential) subset of data is removed. A value for
+DFBETAS is calculated for each parameter in the model separately.
+\end{description}
+
+
+%================================================================== %
+\newpage
+\section{Influence Measures with \textit{influence.ME}}
+
+%==================================================================================%
+\begin{itemize}
+\item \texttt{influence.ME} provides a collection of tools for
+detecting influential cases in generalized mixed effects
+models. 
+
+\item It analyses models that were estimated using lme4. The
+basic rationale behind identifying influential data is that
+when iteratively single units are omitted from the data, models
+based on these data should not produce substantially different
+estimates. 
+
+\item To standardize the assessment of how influential a
+(single group of) observation(s) is, several measures of
+influence are common practice, such as DFBETAS and Cook's Distance.
+
+\item In addition, we provide a measure of percentage change of the fixed point
+estimates and a simple procedure to detect changing levels of significance.
+\end{itemize}
+%=============================================================================================================%
+
+\textbf{influence.ME} calculates measures of influence for mixed effects models estimated with the lme4 R package. The
+basic rationale behind measuring influential cases is that when iteratively single units are omitted
+from the data, models based on these data should not produce substantially different estimates. 
+
+Calculating measures of influential data for an LME model requires the re-estimation
+of this model for each set of potentially influential data separately. The \texttt{estex(} function does this,
+and returns the altered estimates resulting from each re-estimation. 
+
+The main function in the influence.ME package is the \texttt{influence()}.
+
+\begin{quote} Based on a priorly estimated
+mixed effects regression model (estimated using lme4), the \texttt{influence()} function iteratively modifies
+the mixed effects model to neutralize the effect a grouped set of data has on the parameters, and
+which returns returns the fixed parameters of these iteratively modified models. These are used to
+compute measures of influential data. (Nieuwenhuis et al, 2014)
+\end{quote}
+
+\subsection*{Using the influence.ME package}
+Influence Analysis can onnly be carried out with LME models fitted using the functions in the \textbf{lme4} package. Such models are known as \texttt{mer} objects.
+Hence the \texttt{estex()} function only works on LME
+models of class \texttt{mer}.
+The package developers advise that it is required that the \texttt{mer} model was estimated using a factor variable to indicate group levels.
+When using something similar to \texttt{+ (1 | as.factor(variable))}, the function is not able of
+identifying the correct grouping factors, and returns an error.
+
+Executing this procedure can be computationally highly demanding, because \texttt{estex()} entails the re-estimation of the provided mixed effects model for each level of the specified grouping factor (after alteration of the data).
+
+
+The \texttt{estex()} function requires the specification of two parameters: 
+\begin{enumerate}
+\item a mixed effects model is to be specified,
+\item the grouping factor of which the influence of the nested observations are to be evaluated. 
+\end{enumerate}
+
+\subsection*{ The school23 Example }
+In a published tutorial, Nieuwenhuis et al provide an example using a data set that is provided with the \textbf{influence.ME} \texttt{R} package. The \textbf{school23} data contains information on students’ performance on a math test, as well as several
+explanatory variables. These data are subset of the NELS-88 data (National Education Longitudinal
+Study of 1988). Both a selected number of variables and a selected number of observations are given.
+
+
+The \textit{school23} data contains information on a math test performance of 519 students, who are nested within 23 schools. For this example,  analysts will be interested in the relationship between class structure (in this data measured at the school level) and students’ performance on a math test. The research question is: \textit{To what extend does the classroom structure determine the students’ math test outcomes?}
+
+Initially, we will estimate the effect of class structure on the result of the math performance test, without any further covariates. We do take into account the nesting structure of the data, however, and allow the intercept to be random over schools. This model is estimated using the following syntax, and is assigned to an object we call ‘model’.
+\begin{framed}
+\begin{verbatim}
+model <- lmer(math ~  structure + (1 | school.ID), data=school23)
+summary(model)
+\end{verbatim}
+\end{framed}
+The call for a \texttt{summary} of the model results in the output shown below. In this summary, the original model formula is shown, as well as the data on which this model was estimated. Both random and fixed effects are summarized. The amount of intercept variance associated with the nesting structure of students within schools is considerably large (23.8 compared with 81.2 + 23.8 = 104 in total). The effect of interest is that of the structure variable, which is -2.343 and statistically insignificant by most reasonable standards (t=-1.609).
+
+\begin{framed}
+\begin{verbatim}
+Linear mixed model fit by REML 
+Formula: math ~ structure + (1 | school.ID) 
+   Data: school23 
+  AIC  BIC logLik deviance REMLdev
+ 3802 3819  -1897     3798    3794
+ 
+Random effects:
+ Groups    Name        Variance Std.Dev.
+ school.ID (Intercept) 23.884   4.8871  
+ Residual              81.270   9.0150  
+Number of obs: 519, groups: school.ID, 23
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)   60.002      5.853  10.252
+structure     -2.343      1.456  -1.609
+
+Correlation of Fixed Effects:
+          (Intr)
+structure -0.982
+\end{verbatim}
+\end{framed}
+
+In the syntax example below, the original object 'model' is specified, and 'school.ID' is the relevant grouping factor. school.ID is the name of the variable used to indicate the grouping factor when the original model was specified. The estex() function works perfectly when more than a single grouping is present in the model, but only one grouping factor can be addressed at once.
+
+\begin{verbatim}
+data(school23)
+model <- lmer(math ~ structure + SES + (1 | school.ID), data=school23)
+alt.est <- influence(model, group="school.ID")
+cooks.distance(alt.est)
+\end{verbatim}
+
+%============================================================================= %
+\subsection{Functionality of the influence.ME pacakge}
+The R package influence.ME allows for the calculation measures of influential data for mixed effects models generated by lme4. To standardize the assessment of how influential an observation (or group of observations)is, several commonly encountered measures
+of influence are used by \textbf{influence.ME}.
+
+
+\begin{itemize}
+\item DFBETAS is a standardized measure of the absolute difference
+between the estimate with a particular case included and the estimate without that particular
+case. 
+\item Cook’s distance provides an overall measurement of the change in all parameter
+estimates, or a selection thereof.
+\end{itemize}
+
+The \texttt{estex()} command computes revised estimates can subsequently
+be entered to the \texttt{cooks.distance} and \texttt{dfbetas} commands, to calculate Cook’s Distance
+and the DFBETAS (standardized difference of the beta) measures.
+
+\subsubsection*{Example}
+
+\begin{framed}
+\begin{verbatim}
+library(lme4)
+model <- lmer(mpg ~ disp + (1 | cyl), mtcars)
+
+#The function influence is the 
+# basis for all further steps:
+
+library(influence.ME)
+infl <- influence(model, obs = TRUE)
+
+# Calculate Cook's distance:
+cooks.distance(infl)
+
+# Can Plot Cook's distance:
+
+plot(infl, which = "cook")
+\end{verbatim}
+\end{framed}
+
+%================================================================================%
+
+
+
+%--------------------------------------------------------------%
+\subsubsection*{The \texttt{pchange} command}
+
+The \texttt{pchange} command computes the percentile change, as a measure of influential data. This unstandardized measure can
+serve to help interpret the magnitude of the influence single or combined grouping levels exert on
+mixed effects models. 
+
+The percentage change in parameter estimates between an LME model based on a full set of data, and a model from which a (potentially influential)
+subset of data is removed. A value of percentage change is calculated for each parameter in the
+model separately, based on the information returned by the \texttt{estex()} function.
+
+\subsection*{sigtest}
+
+The \texttt{sigTest()} function can test for changes in the level of statistical significance resulting from
+the deletion of potentially influential observations
+
+
+\subsubsection*{The \texttt{plot.estex} command}
+This is a wrapper function to the \texttt{dotplot()} function in the \textbf{lattice} \textbf{R} package.
+%=====================================================================================================%
+
+\newpage
+%====================%
+% Diagnostics with nlmeU
+
+\section{Leave-One-Out Diagnostics with \texttt{lmeU}}
+Galecki et al provide a brief the matter of LME influence diagnostics in their book.
+
+The command \texttt{lmeU} fits a model with a particular subject removed. The identifier of the subject to be removed is passed as the only argument
+
+A plot ofthe per-observation diagnostics individual subject log-likelihood contributions can be rendered.
+
+\subsection{Cook's Distance}
+\subsection{Likelihood Displacement}
+
+\end{document}

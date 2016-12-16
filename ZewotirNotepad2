@@ -1,0 +1,35 @@
+Studentized Residuals
+\[ e^s_i = \frac{e_i}{s^2_{(i)}(1-h_i)} \]
+where
+$e^s_i $ - studentized residual
+$s^2_{(i)}$ - standard deviation where $i$th obs is deleted
+$h_i$ - leverage statistic
+Belsley et al (1980) recommend the use of studentized Residuals to determine whether there is an outlier.
+%-------------------------------------------------------------------------------%
+Data set 1: Beckmans' aerosol data ( Zewotir)
+high efficiency particulate air filter.
+toxic dust, radionuclides, and mists/
+Both Beckman and CPJ rank the 14th observation as the most influential.
+%-------------------------------------------------------------------------------%
+Data set 2: Metal oxide analysis data ( Zewotir)
+Process and measurement variation on the properties of lots of metal oxides.
+type 1 and 2
+chemist 1 and 2
+Sample 1 and 2
+Maximum likelihood variance component ratios.
+Full data and with cases removed.
+%-------------------------------------------------------------------------------%
+http://www.tandfonline.com/doi/abs/10.1080/03610910600716795
+http://www.ingentaconnect.com/content/routledg/cjas/2011/00000038/00000005/art00016
+http://www.sciencedirect.com/science/article/pii/S0047259X09001213
+
+
+
+Margina Means ( population averaged)
+$E[Y_{ij}]$
+
+Conditional means ( Cluster specific)
+$E[Y_{ij}|\gamma_{i}]$
+
+
+

@@ -1,0 +1,20 @@
+```{r}
+library(influence.ME)
+data(school23)
+```
+
+```{r}
+
+dim(school23)
+```
+
+```{r}
+model.a <- lmer(math ~ structure + SES + (1 | school.ID), data=school23)
+alt.est.a <- influence(model.a, "school.ID")
+model.b <- exclude.influence(model.a, "school.ID", "7472")
+alt.est.b <- influence(model.b, "school.ID")
+cooks.distance(alt.est.b)
+model.c <- exclude.influence(model.b, "school.ID", "54344")
+alt.est.c <- influence(model.c, "school.ID")
+cooks.distance(alt.est.c)
+```

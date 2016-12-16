@@ -1,0 +1,87 @@
+\documentclass[Main.tex]{subfiles}
+\begin{document}
+
+%------------------------------------------------------------%
+\section*{Haslett and Hayes - Residuals}
+Haslett and Hayes (1998) and Haslett (1999) considered the case of an LME model with correlated covariance structure.
+
+\subsection{Residual Diagnostics in LME models}
+\begin{itemize}
+\item A \textbf{residual} is the difference between the observed quantity and the predicted value. In LME models a distinction is made between marginal residuals and conditional residuals.
+
+\item A \textbf{Marginal residual} is the difference between the observed data and the estimated marginal mean (Schabenberger  pg3)
+The computation of case deletion diagnostics in the classical model is made simple by the fact that important estimates can be computed without refitting the model. 
+
+\item Such update formulae are available in the mixed model only if you assume that the covariance parameters are not affect by the removal of the observation in question. Schabenberger remarks that this is not a reasonable assumption.
+
+\end{itemize}
+
+
+Basic procedure for quantifying influence is simple
+
+\begin{enumerate}
+\item  	Fit the model to the data
+\item   	Remove one or more data points from the analysis and compute updated estimates of model parameters
+\item  	Based on the full and reduced data estimates, contrast quantities of interest to determine how the absence of the observations changed the analysis.
+\end{enumerate}
+The likelihood distance is a global summary measure expressing the joint influence of the observations in the set U on all parameters in $\Psi$ that were subject to updating.
+ 
+
+\section{Case Deletion Diagnostics for LME models}
+
+\citet{HaslettDillane} remark that linear mixed effects models
+didn't experience a corresponding growth in the use of deletion
+diagnostics, adding that \citet{McCullSearle} makes no mention of
+diagnostics whatsoever.
+
+\citet{Christensen} describes three propositions that are required
+for efficient case-deletion in LME models. The first proposition
+decribes how to efficiently update $V$ when the $i$th element is
+deleted.
+\begin{equation}
+V_{[i]}^{-1} = \Lambda_{[i]} - \frac{\lambda
+	\lambda\prime}{\nu^{}ii}
+\end{equation}
+
+
+The second of christensen's propostions is the following set of
+equations, which are variants of the Sherman Wood bury updating
+formula.
+\begin{eqnarray}
+X'_{[i]}V_{[i]}^{-1}X_{[i]} &=& X' V^{-1}X -
+\frac{\hat{x}_{i}\hat{x}'_{i}}{s_{i}}\\
+(X'_{[i]}V_{[i]}^{-1}X_{[i]})^{-1} &=& (X' V^{-1}X)^{-1} +
+\frac{(X' V^{-1}X)^{-1}\hat{x}_{i}\hat{x}' _{i}
+	(X' V^{-1}X)^{-1}}{s_{i}- \bar{h}_{i}}\\
+X'_{[i]}V_{[i]}^{-1}Y_{[i]} &=& X\prime V^{-1}Y -
+\frac{\hat{x}_{i}\hat{y}' _{i}}{s_{i}}
+\end{eqnarray}
+
+
+
+
+
+
+
+
+In LME models, fitted by either ML or REML, an important overall
+influence measure is the likelihood distance \citep{cook82}. The
+procedure requires the calculation of the full data estimates
+$\hat{\psi}$ and estimates based on the reduced data set
+$\hat{\psi}_{(U)}$. The likelihood distance is given by
+determining
+
+
+\begin{eqnarray}
+LD_{(U)} &=& 2\{l(\hat{\psi}) - l( \hat{\psi}_{(U)}) \}\\
+RLD_{(U)} &=& 2\{l_{R}(\hat{\psi}) - l_{R}(\hat{\psi}_{(U)})\}
+\end{eqnarray}
+%
+%
+%\addcontentsline{toc}{section}{Bibliography}
+%
+%\bibliography{transferbib}
+%\end{document}
+
+%------------------------------------------------------------%
+\end{document}

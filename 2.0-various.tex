@@ -1,0 +1,83 @@
+\documentclass[Main.tex]{subfiles}
+\begin{document}
+	%------------------------------------------------------------%
+
+\begin{equation}
+r_{mi}=x^{T}_{i}\hat{\beta}
+\end{equation}
+
+\subsection{Marginal Residuals}
+\begin{eqnarray}
+\hat{\beta} &=& (X^{T}R^{-1}X)^{-1}X^{T}R^{-1}Y \nonumber \\
+&=& BY \nonumber
+\end{eqnarray}
+
+\newpage
+\section{Covariance Parameters} %1.5
+The unknown variance elements are referred to as the covariance parameters and collected in the vector $\theta$.
+% - where is this coming from?
+% - where is it used again?
+% - Has this got anything to do with CovTrace etc?
+%---------------------------------------------------------------------------%
+
+\subsection{Methods and Measures}
+The key to making deletion diagnostics useable is the development of efficient computational formulas, allowing one to obtain the \index{case deletion diagnostics} case deletion diagnostics by making use of basic building blocks, computed only once for the full model.
+
+\citet{Zewotir} lists several established methods of analyzing influence in LME models. These methods include \begin{itemize}
+\item Cook's distance for LME models,
+\item \index{likelihood distance} likelihood distance,
+\item the variance (information) ration,
+\item the \index{Cook-Weisberg statistic} Cook-Weisberg statistic,
+\item the \index{Andrews-Prebigon statistic} Andrews-Prebigon statistic.
+\end{itemize}
+
+
+%---------------------------------------------------------------------------%
+\newpage
+
+
+
+
+
+
+
+
+\subsection{Influence measures using R} %4.4
+\texttt{R} provides the following influence measures of each observation.
+
+
+%Influence measures: This suite of functions can be used to compute
+%some of the regression (leave-one-out deletion) diagnostics for
+%linear and generalized linear models discussed in Belsley, Kuh and
+% Welsch (1980), Cook and Weisberg (1982)
+
+
+
+
+
+
+\begin{table}[ht]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			& dfb.1\_ & dfb.A & dffit & cov.r & cook.d & hat \\
+			\hline
+			1 & 0.42 & -0.42 & -0.56 & 1.13 & 0.15 & 0.18 \\
+			2 & 0.17 & -0.17 & -0.34 & 1.14 & 0.06 & 0.11 \\
+			3 & 0.01 & -0.01 & -0.24 & 1.17 & 0.03 & 0.08 \\
+			4 & -1.08 & 1.08 & 1.57 & 0.24 & 0.56 & 0.16 \\
+			5 & -0.14 & 0.14 & -0.24 & 1.30 & 0.03 & 0.13 \\
+			6 & -0.00 & 0.00 & -0.11 & 1.31 & 0.01 & 0.08 \\
+			7 & -0.04 & 0.04 & -0.08 & 1.37 & 0.00 & 0.11 \\
+			8 & 0.02 & -0.02 & 0.15 & 1.28 & 0.01 & 0.09 \\
+			9 & 0.69 & -0.68 & 0.75 & 2.08 & 0.29 & 0.48 \\
+			10 & 0.18 & -0.18 & -0.22 & 1.63 & 0.03 & 0.27 \\
+			11 & -0.03 & 0.03 & -0.04 & 1.53 & 0.00 & 0.19 \\
+			12 & -0.25 & 0.25 & 0.44 & 1.05 & 0.09 & 0.12 \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+
+\end{document}

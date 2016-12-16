@@ -1,0 +1,175 @@
+\documentclass[Main.tex]{subfiles}
+\begin{document}
+%---------------------------------------------------------------------------%
+%1.1 Introduction to Influence Analysis
+%1.2 Extension of techniques to LME Models
+%1.3 Residual Diagnostics
+%1.4 Standardized and studentized residuals
+%1.5 Covariance Parameters
+%1.6 Case Deletion Diagnostics
+%1.7 Influence Analysis
+%1.8 Terminology for Case Deletion
+%1.9 Cook's Distance (Classical Case)
+%1.10 Cook's Distance (LME Case)
+%1.11 Likelihood Distance
+%1.12 Other Measures
+%1.13 CPJ Paper
+%1.14 Matrix Notation of Case Deletion
+%1.15 CPJ's Three Propositions
+%1.16 Other measures of Influence
+
+	
+	
+
+	
+		\newpage
+		\subsection{Extension of techniques to LME Models} %1.2
+		
+		Model diagnostic techniques, well established for classical models, have since been adapted for use with linear mixed effects models. Diagnostic techniques for LME models are inevitably more difficult to implement, due to the increased complexity.
+		
+		Beckman, Nachtsheim and Cook (1987) \citet{Beckman} applied the \index{local influence}local influence method of Cook (1986) to the analysis of the linear mixed model.
+		
+		While the concept of influence analysis is straightforward, implementation in mixed models is more complex. Update formulae for fixed effects models are available only when the covariance parameters are assumed to be known.
+		
+		If the global measure suggests that the points in $U$ are influential, the nature of that influence should be determined. In particular, the points in $U$ can affect the following
+		
+		\begin{itemize}
+			\item the estimates of fixed effects,
+			\item the estimates of the precision of the fixed effects,
+			\item the estimates of the covariance parameters,
+			\item the estimates of the precision of the covariance parameters,
+			\item fitted and predicted values.
+		\end{itemize}
+		
+		
+		
+		
+	
+	
+	%---------------------------------------------------------------------------%
+	\newpage
+	\subsection{Influence Statistics for LME models} %1.1.4
+	Influence statistics can be coarsely grouped by the aspect of estimation that is their primary target:
+	\begin{itemize}
+		\item overall measures compare changes in objective functions: (restricted) likelihood distance (Cook and Weisberg 1982, Ch. 5.2)
+		\item influence on parameter estimates: Cook's  (Cook 1977, 1979), MDFFITS (Belsley, Kuh, and Welsch 1980, p. 32)
+		\item influence on precision of estimates: CovRatio and CovTrace
+		\item influence on fitted and predicted values: PRESS residual, PRESS statistic (Allen 1974), DFFITS (Belsley, Kuh, and Welsch 1980, p. 15)
+		\item outlier properties: internally and externally studentized residuals, leverage
+	\end{itemize}
+	%---------------------------------------------------------------------------%
+	
+	
+
+
+\newpage
+\subsection{Extension of techniques to LME Models} %1.2
+
+
+Model diagnostic techniques, well established for classical models, have since been adapted for use with linear mixed effects models.Diagnostic techniques for LME models are inevitably more difficult to implement, due to the increased complexity.
+
+
+Beckman, Nachtsheim and Cook (1987) \citet{Beckman} applied the \index{local influence}local influence method of Cook (1986) to the analysis of the linear mixed model.
+
+
+While the concept of influence analysis is straightforward, implementation in mixed models is more complex. Update formulae for fixed effects models are available only when the covariance parameters are assumed to be known.
+
+
+If the global measure suggests that the points in $U$ are influential, the nature of that influence should be determined. In particular, the points in $U$ can affect the following
+
+
+\begin{itemize}
+\item the estimates of fixed effects,
+\item the estimates of the precision of the fixed effects,
+\item the estimates of the covariance parameters,
+\item the estimates of the precision of the covariance parameters,
+\item fitted and predicted values.
+\end{itemize}
+
+
+
+
+
+
+
+
+\newpage
+\subsection{Standardized and studentized residuals} %1.4
+%--Studentized and Standardized Residuals
+
+To alleviate the problem caused by inconstant variance, the residuals are scaled (i.e. divided) by their standard deviations. This results in a \index{standardized residual}`standardized residual'. Because true standard deviations are frequently unknown, one can instead divide a residual by the estimated standard deviation to obtain the \index{studentized residual}`studentized residual. 
+
+
+
+%--------------------------------------------------%
+\subsection{Residual Analysis for Linear Models, LME models and GLMs}
+
+\textbf{Keywords:}
+
+\begin{itemize}
+	\item Residuals (\emph{Beginners}), 
+	\item Testing the Assumption of Normality (\emph{Beginners})
+	\item Diagnostic Plots with the \texttt{plot} function
+	\item Cook's Distance
+	\item DFFits and DFBeta
+	\item Standardized and Studentized Residuals
+	\item Influence Leverage and Outlierness
+\end{itemize}
+%=================================================================================================== %
+\newpage
+
+%http://www.artifex.org/~meiercl/R_statistics_guide.pdf
+\subsection{Identifying outliers with a LME model object}
+
+The process is slightly different than with standard LME model objects, since the \textbf{\emph{influence}}
+function does not work on lme model objects. Given \textbf{\emph{mod.lme}}, we can use the plot function to
+identify outliers.
+%----------------------%
+\subsection{Diagnostics for Random Effects}
+Empirical best linear unbiased predictors EBLUPS provide the a useful way of diagnosing random effects.
+
+EBLUPs are also known as ``shrinkage estimators" because they tend to be smaller than the estimated effects would be if they were computed by treating a random factor as if it was fixed (West et al )
+
+
+
+
+\newpage
+
+
+\subsection{Influence Diagnostics: Basic Idea and Statistics} %1.1.2
+%http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_mixed_sect024.htm
+
+The general idea of quantifying the influence of one or more observations relies on computing parameter estimates based on all data points, removing the cases in question from the data, refitting the model, and computing statistics based on the change between full-data and reduced-data estimation. 
+
+
+
+
+\subsection{Case Deletion Diagnostics for Mixed Models}
+
+\citet{Christiansen} notes the case deletion diagnostics techniques have not been applied to linear mixed effects models and seeks to develop methodologies in that respect.
+
+\citet{Christiansen} develops these techniques in the context of REML
+
+\subsection{Methods and Measures}
+The key to making deletion diagnostics useable is the development of efficient computational formulas, allowing one to obtain the \index{case deletion diagnostics} case deletion diagnostics by making use of basic building blocks, computed only once for the full model.
+
+\citet{Zewotir} lists several established methods of analyzing influence in LME models. These methods include \begin{itemize}
+	\item Cook's distance for LME models,
+	\item \index{likelihood distance} likelihood distance,
+	\item the variance (information) ration,
+	\item the \index{Cook-Weisberg statistic} Cook-Weisberg statistic,
+	\item the \index{Andrews-Prebigon statistic} Andrews-Prebigon statistic.
+\end{itemize}
+
+%===================================================================================== %
+
+\subsection{Cook's 1986 paper on Local Influence}%1.7.1
+Cook 1986 introduced methods for local influence assessment. These methods provide a powerful tool for examining perturbations in the assumption of a model, particularly the effects of local perturbations of parameters of observations.
+
+The local-influence approach to influence assessment is quitedifferent from the case deletion approach, comparisons are of
+interest.
+
+
+
+
+\end{document}

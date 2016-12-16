@@ -1,0 +1,36 @@
+contents
+%============================================================================%
+cooks.distance.estex  
+dfbetas.estex 
+exclude.influence  
+grouping.levels  
+influence.mer 
+pchange  
+plot.estex 
+school23  
+se.fixef  
+sigtest 
+%==============================================================================%
+% - http://www.inside-r.org/packages/cran/influence.ME/docs/estex
+
+Description
+\texttt{testex()} is the workhorse function of the \textbf{influence.ME} package. Based on a priorly estimated mixed effects regression model (estimated using lme4), the estex() function iteratively modifies the mixed effects model to neutralize the effect a grouped set of data has on the parameters, and which returns returns the fixed parameters of these iteratively modified models. These are used to compute measures of influential data.
+
+Details
+The basic rationale behind measuring influential cases is that when iteratively single units are omitted from the data, models based on these data should not produce substantially different estimates. To apply this logic to mixed effects models one has to measure the influence of a particular higher level unit on the estimates of a higher level predictor. This means that the mixed effects model has to be adjusted to neutralize the unit's influence on that estimate, while at the same time allowing the unit's lower-level cases to help estimate the effects of the lower-level predictors in the model. This procedure is based on a modification of the intercept and the addition of a dummy variable for the cases that might be influential. estex() is the workhorse function of this likewise called package. Based on a priorly estimated mixed effects regression model (of the 'mer' class), the estex() function iteratively modifies the mixed effects model by neutralizing the effect a grouped set of data has on the parameters, and which returns returns the fixed parameters of these iteratively modified models. The returned object (see 'value') contains information which is required for functions computing various measures of influential data.
+%==============================================================================%
+
+influence.ME provides a collection of tools for detecting influential cases in generalized mixed effects models. It analyses models that were estimated using lme4. The basic rationale behind identifying influential data is that when iteratively single units are omitted from the data, models based on these data should not produce substantially different estimates. To standardize the assessment of how influential a (single group of) observation(s) is, several measures of influence are common practice, such as DFBETAS and Cook's Distance. In addition, we provide a measure of percentage change of the fixed point estimates and a simple procedure to detect changing levels of significance
+
+
+%==============================================================================%
+Cook’s Distance is a measure indicating to what extent model parameters are influenced by (a set
+of) influential data on which the model is based. This function computes the Cook’s distance based
+on the information returned by the estex() function.
+
+
+%==============================================================================%
+
+Cook’s Distance is a measure indicating to what extent model parameters are influenced by (a set
+of) influential data on which the model is based. This function computes the Cook’s distance based
+on the information returned by the estex() function.

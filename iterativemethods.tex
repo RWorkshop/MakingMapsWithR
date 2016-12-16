@@ -1,0 +1,50 @@
+\documentclass[00-MASTER.tex]{subfiles}
+\begin{document}
+		%---------------------------------------------------------------------------%
+		\newpage
+		\section{Iterative and non-iterative influence analysis} %1.13
+		\citet{schab} highlights some of the issue regarding implementing mixed model diagnostics.
+		
+		% A measure of total influence requires updates of all model parameters.
+		% however, this doesnt increase the procedures execution time by the same degree.
+		
+		\subsection{Iterative Influence Analysis}
+		
+		%----schabenberger page 8
+		For linear models, the implementation of influence analysis is straightforward.
+		However, for LME models, the process is more complex. Update formulas for the fixed effects are available only when the covariance parameters are assumed to be known. A measure of total influence requires updates of all model parameters.
+		This can only be achieved in general is by omitting observations, then refitting the model.
+		
+		\citet{schab} describes the choice between \index{iterative influence analysis} iterative influence analysis and \index{non-iterative influence analysis} non-iterative influence analysis.
+		
+
+	
+	
+	
+	\subsection{Iterative vs Non-Iterative Influence Analysis}
+	%\subsection{ITERATIVE VS. NONITERATIVE INFLUENCE ANALYSIS}
+	While the basic idea of influence analysis is straightforward, the implementation in mixed models can be
+	tricky. For example, update formulas for the fixed effects are available only when the covariance parameters
+	are assumed to be known. At most the profiled residual variance can be updated without refitting the model.
+	
+	A measure of total influence requires updates of all model parameters, and the only way that this can be
+	achieved in general is by removing the observations in question and refitting the model. 
+	
+	Because this “\textbf{bruteforce}”
+	method involves iterative reestimation of the covariance parameters, it is termed \textbf{\textit{iterative influence
+	analysis}}. Reliance on closed-form update formulas for the fixed effects without updating the (un-profiled)
+	covariance parameters is termed a noniterative influence analysis.
+	
+	An iterative analysis seems like a costly, computationally intensive enterprise. If you compute iterative
+	influence diagnostics for all n observations, then a total of $n + 1$ mixed models are fit iteratively. This does
+	not imply, of course, that the procedure’s execution time increases n-fold. Keep in mind that
+	\begin{itemize}
+		\item iterative reestimation always starts at the converged full-data estimates. If a data point is not influential,
+		then its removal will have little effect on the objective function and parameter estimates. Within
+		one or two iterations, the process should arrive at the reduced-data estimates.
+		\item if complete reestimation does require many iterations, then this is important information in itself. The
+		likelihood surface has probably changed drastically, and the reduced-data estimates are moving away
+	\end{itemize}
+	from the full-data estimates.
+	
+	\end{document}

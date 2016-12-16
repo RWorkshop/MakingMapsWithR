@@ -1,0 +1,226 @@
+Amongst all the packages that deal with linear mixed models in R (see lmm, ASReml, MCMCglmm, glmmADMB,…), lme4 by  Bates, Maechler and Bolker, and nlme by Pinheiro and Bates are probably the most commonly used -in the frequentist arena-, with their respective main functions lmer and lme.
+
+
+%============================================================%
+\section*{Other Packages}
+
+\begin{itemize}
+\item[\textbf{lmm}] 
+%- http://cran.r-project.org/web/packages/lmm/lmm.pdf
+%- lmm
+\item[\textbf{ASReml}]
+%- ASReml-R reference manual
+%- ASReml-R estimates variance components under a general linear mixed model
+%- by residual maximum likelihood (REML)
+\item[\textbf{MCMCglmm}]
+%% - http://cran.r-project.org/web/packages/MCMCglmm/index.html
+\item[\textbf{glmmADMB}]
+\item{itmeize}
+
+
+%============================================================%
+\section*{Description of \texttt{lme} object}
+
+This generic function fits a linear mixed-effects model in the formulation described in Laird and Ware (1982) but allowing for nested random effects. 
+The within-group errors are allowed to be correlated and/or have unequal variances.
+%============================================================%
+
+I am still unsure as to which one I would choose – if I had to -, but I am sharing here a summary of some of their capabilities, in case it can be of help:
+
+\section*{Model specification}
+
+I will be using for all of the following examples the balanced dataset Orthodont from the package nlme, which reflects the change in an orthodontic measurement over time for a sample of 27 children (see Fig. 1).
+
+Spaghetti plot_Orthodont
+
+Fig. 1. Spaghetti plots. Distance vs age by gender – dataset Orthodont
+
+For simplicity´s sake, I will consider the following initial models with a simple random factor (please see ref. [3] for centering and further analysis):
+
+1
+2
+model_lmer<-lmer(distance~age+Sex+(1|Subject),data=Orthodont)
+model_lme<-lme(distance~age+Sex, random=~1|Subject,data=Orthodont)
+Tests
+
+lmer
+The results for t-tests and F-tests based on Restricted Maximum Lilkelihood (REML) can be found by using the following lines of code (you can add REML=FALSE to change this default setting):
+
+1
+summary(model_lmer)
+…
+
+Fixed effects:
+
+                           Estimate       Std. Error    t value
+
+(Intercept)          17.70671       0.83391     21.233
+
+age                      0.66019        0.06161     10.716
+
+SexFemale           -2.32102        0.76139    -3.048
+
+…
+
+(Please notice that the reference category in Sex can be changed by using relevel).
+
+1
+anova(model_lmer)
+Analysis of Variance Table
+
+       Df      Sum Sq     Mean Sq      F value
+
+age  1      235.356    235.356    114.8383
+
+Sex  1        19.034      19.034        9.2875
+
+lme
+Conditional t-tests and F-tests are used for assessing the significance of terms in the fixed effects in lme.
+
+Both F and t conditional tests results are based on REML conditional estimate of the variance. This option will be the default, but we can specify method=”ML”   for Maximum Likelihood estimates.
+
+For the results from the conditional t-test testing the marginal significance of each fixed effect coefficient with the other fixed effects in the model, we can use:
+
+1
+summary(model_lme)
+…
+
+Fixed effects: distance ~ age + Sex
+
+                                Value      Std.Error    DF         t-value       p-value
+
+(Intercept)       17.706713   0.8339225    80     21.233044      0.0000
+
+age                     0.660185   0.0616059   80     10.716263      0.0000
+
+SexFemale        -2.321023   0.7614168    25     -3.048294      0.0054
+
+…
+
+For the results from the conditional F-test testing the significance of terms in the fixed effects model (sequentially by default), we can use:
+
+1
+anova(model_lme)
+                         numDF      denDF      F-value    p-value
+
+(Intercept)           1                80      4123.156    <.0001
+
+age                       1               80      114.838     <.0001
+
+Sex                       1               25        9.292       0.0054
+
+(The argument type would also allow us to specify marginal F-tests).
+
+These conditional tests for fixed-effects terms require denominator degrees of freedom, which will be the focus of the next section.
+
+
+%============================================================%
+
+Degrees of freedom
+
+lme
+The denominator degrees of freedom correspond to “the classical decomposition of degrees of freedom in balanced, multilevel ANOVA designs” [3]. It is worth noticing that the values for these degrees of freedom do not match those provided by other software procedures such as SAS PROC MIXED (see discussions on the topic here and here).
+
+Additionally to the denominator degrees of freedom aforementioned, conditional F-tests also require numerator degrees of freedom defined by the term (see output from previous section).
+
+A good explanation regarding the reporting of degrees of freedom in lmer is given by the author of the package in this article (page 28).
+p-values
+
+lme reports p-values (see previous output), whereas
+lmer doesn’t but this has been justified by Bates.
+
+
+%============================================================%
+
+\subsection*{Random effects}
+
+lme allows for nested random effects in a very straightforward way (random=~1|a/b, where factor b is nested in a). Crossed random effects on the other hand, can be dealt with through “a combination of pdBlocked and pdldent objects” [3].
+Nested random effects can again be easily modelled in lmer (+(1|a/b)). Crossed random effects are handled in an easier way than in lme (+(1|a)+(1|b)). You can find further explanations in [2].
+Random effects plots
+
+Two different approaches to the plotting of the random effects can be obtained through the following lines of code:
+
+lme
+1
+plot(ranef(model_lme))
+lmer
+1
+qqmath(ranef(model_lmer))
+Random effects_plots
+
+Fig. 2. Random effects plots for model_lme and model_lmer.
+
+
+%============================================================%
+
+\subsection*{Residuals plots}
+
+lme allows to plot the residuals in the following ways:
+1
+2
+3
+4
+5
+res_lme=residuals(model_lme)
+plot(res_lme)
+qqnorm(res_lme)
+qqline(res_lme)
+plot(model_lme)
+Plots_lmeFig. 3. Residual plots for model_lme.
+
+We can also plot the first two graphs in lmer, but the last line of code does not seem to work with this function.
+Correlation structure
+
+We can easily incorporate correlation structures in lme.  Mostly used for temporal correlation structures are corAR1, corCAR1 (autoregressive and continuous autoregressive correlation structures of order 1), and corCompSymm (compound symmetry).
+1
+model_lme<-lme(distance ~ age + factor(Sex),random = ~ 1 | Subject, cor=corAR1(0.6,form=~1|Subject),data = Orthodont)
+…
+
+Correlation Structure: AR(1)
+
+Formula: ~1 | Subject
+
+Parameter estimate(s):
+
+Phi
+
+0.05849311
+
+…
+
+Further structures available can be found in the help for corClasses.
+
+There is not an argument in lmer for doing this, but guidance on how to incorporate the structures can be found here.
+Heteroscedasticity
+
+%=============================================================================%
+lme allows you to model heteroscedasticity using the varFunc object,  but
+ it is not covered by lmer.
+Although some other differences could be mentioned, future posts will cover those other matters.
+
+%=============================================================================%
+The following books have been found extremely useful:
+
+[1] Badiella, L., Sánchez, J.A. “Modelos mixtos con R versión 0.3” ( from the course “Modelos Mixtos utilizando R”)
+
+[2] Bates, D. (2010). lme4: Mixed-effects modelling with R. Springer
+
+[3] Pinheiro, J.C. and Bates, D.M. (2000). Mixed-Effects Models in S and S-Plus. Springer
+
+[4] Zuur, A.F. et al. (2009). Mixed effects models and extensions in ecology with R. Springer
+
+I will be more than happy to read your comments and tips! :-)
+%==============================================================================%
+
+\newpage
+\subsection*{influence.ME-package }
+cooks.distance.estex
+dfbetas.estex
+exclude.influence
+grouping.levels
+influence.mer
+pchange
+plot.estex 
+school23
+se.fixef
+sigtest

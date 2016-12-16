@@ -1,0 +1,492 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{natbib}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{amsbsy}
+\usepackage{amsthm, amsmath}
+%\usepackage[dvips]{graphicx}
+\bibliographystyle{chicago}
+\renewcommand{\baselinestretch}{1.4}
+
+% left top textwidth textheight headheight % headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\pagenumbering{arabic}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+\title{Mixed Models for Method Comparison Studies}
+\tableofcontents
+\section{Note on Roy's paper}
+\begin{enumerate}
+
+
+\item Basic model:
+\begin{center}
+$ \boldsymbol{y_{i}} = \boldsymbol{X_{i}\beta}
++ \boldsymbol{Z_{i}b_{i}} + \boldsymbol{\epsilon_{i}}, \qquad i=1,\dots,n$ \\
+$\boldsymbol{Z_{i}} \sim \mathcal{N}(\boldsymbol{0,\Sigma}),\quad
+\boldsymbol{\epsilon_{i}} \sim \mathcal{N}(\boldsymbol{0, \sigma^2
+\boldsymbol{I} })$
+\end{center}
+
+Assumptions are made about homoskedasticity.
+
+\item General model:
+\begin{center}
+$ \boldsymbol{y_{i}} = \boldsymbol{X_{i}\beta}
++ \boldsymbol{Z_{i}b_{i}} + \boldsymbol{\epsilon_{i}}, \qquad i=1,\dots,n$ \\
+$\boldsymbol{Z_{i}} \sim \mathcal{N}(\boldsymbol{0,\Psi}),\quad
+\boldsymbol{\epsilon_{i}} \sim \mathcal{N}(\boldsymbol{0,\sigma^2 \boldsymbol{\Lambda} })$
+\end{center}
+
+Assumptions about homoskedasticity are relaxed \cite[pg.202]{pb}.
+
+
+
+
+
+\item $\sigma^2 \boldsymbol{\Lambda}$ is the general form for the VC structure for residuals.
+
+\item The response vector $\boldsymbol{y}_{i}$ comprises the observations of
+the subject, as measured by two methods, taking three measurements each.
+Hence a $6 \times 1$ random vector corresponding to the $i$th subject.
+\begin{equation}
+\boldsymbol{y}_{i} = (y_{i}^{j1},y_{i}^{Jj2},y_{i}^{j3},y_{i}^{s1},y_{i}^{s2},y_{i}^{s3}) \prime
+\end{equation}
+
+\item The number of replicates is $p$. A subject will have up to
+ $2p$ measurements, for the two instrument case, i.e. $Max(n_{i}) = 2p$.
+(Let $k$ denote number of instruments, which is assumed to be $2$
+unless stated otherwise.) For the blood pressure data $p=3$.
+
+\item $\boldsymbol{\Psi}$ refers to the between-subject sources of variation. $\boldsymbol{R}_{i}$ refers to the within-subject
+source of variation between two methods. LME models allow for the explicit analysis of each.
+
+\item $\boldsymbol{\Psi}$ is the variance covariance structure for the random effects.
+
+
+There is three alternative structures for
+$\boldsymbol{\Psi}$, the diagonal form, the identity form and the general form.
+\[
+\boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi^2_1 & 0  \\
+  0 & \psi^2_2  \\
+\end{array}%
+\right)\qquad \mathrm{or} \qquad \boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi_{11} & \psi_{12}  \\
+  \psi_{21} & \psi_{22}  \\
+\end{array}%
+\right)
+\qquad \mathrm{or} \qquad \boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi_{11} & \psi_{12}  \\
+  \psi_{21} & \psi_{22}  \\
+\end{array}%
+\right)
+\]
+
+
+
+\item $\boldsymbol{\epsilon}_{i}$ is a $n_{i}$-dimensional vector
+comprised of residual components. For the blood pressure data $n_{i} = 85$.
+
+\item $\boldsymbol{\beta}$ is the solutions of the means of the two methods. In the LME output, the bias ad corresponding
+t-value and p-values are presented. This is relevant to Roy's first test.
+
+\item $\boldsymbol{b}_{i}$ is a $m-$dimensional vector comprised of
+the random effects.
+\begin{equation}
+\boldsymbol{b}_{i} = \left( \begin{array}{c}
+  b_{1i} \\
+  b_{21}  \\
+\end{array}\right)
+\end{equation}
+
+\item $\boldsymbol{\Psi}$ is the variance-covariance matrix of the random effects ,
+with $2 \times 2$ dimensions.
+\begin{equation}
+\boldsymbol{\Psi} =
+\left(%
+\begin{array}{c c}
+  \psi_{11} & \psi_{12}  \\
+  \psi_{21} & \psi_{22}  \\
+\end{array}%
+\right)
+\end{equation}
+
+\item  $\boldsymbol{\Sigma}$ represents the partial VC matrix of
+the established matrix and the new method for any replicates.
+
+\begin{equation}
+\Sigma = \left( \begin{array}{cc}
+  \sigma^2_{e} & \sigma^{en} \\
+  \sigma_{en} & \sigma^2_{n} \\
+\end{array}\right)
+\end{equation}
+
+\begin{itemize}
+\item $\sigma^2_{e}$ - partial variance of the established method.
+\item $\sigma^2_{n}$ - partial variance of the new method.
+\item $\sigma_{en}$ - partial covariance between both methods.
+\end{itemize}
+
+\item $\boldsymbol{V}$ represents the correlation matrix of the replicated measurements on a given method.
+$\boldsymbol{\Sigma}$ is the within-subject VC matrix.
+
+\item $\boldsymbol{V}$ and $\boldsymbol{\Sigma}$ are positive
+definite matrices. The dimensions of $\boldsymbol{V}$ and
+$\boldsymbol{\Sigma}$ are $3 \times 3 ( = p \times p )$ and $ 2 \times
+2 (= k \times k)$.
+
+\item It is assumed that $\boldsymbol{V}$ is the same for both methods and $\boldsymbol{\Sigma}$ is
+the same for all replications.
+
+\item $\boldsymbol{V} \bigotimes \boldsymbol{\Sigma}$ creates a $ 6 \times 6 ( = kp \times
+kp)$ matrix.
+$\boldsymbol{R}_{i}$ is a sub-matrix of this.
+
+\item The variance covariance structure $\boldsymbol{R}_{i}$ has a separable covariance structure.
+
+\item The overall variability $\boldsymbol{\mbox{Block} \Omega_{i}}$ is the sum of the
+between-subject variability $\boldsymbol{\Psi}$
+and the within subject variability $\boldsymbol{\Sigma}$
+
+\begin{equation}
+\left( \begin{array}{cc}
+  \omega^2_{e} & \omega^{en} \\
+  \omega_{en} & \omega^2_{n} \\
+\end{array}\right)
+=
+\left( \begin{array}{cc}
+  \psi^2_{e} & \psi^{en} \\
+  \psi_{en} & \psi^2_{n} \\
+\end{array}\right)
++
+\left( \begin{array}{cc}
+  \sigma^2_{e} & \sigma^{en} \\
+  \sigma_{en} & \sigma^2_{n} \\
+\end{array}\right)
+\end{equation}
+
+\item  No special form of the random effects VC matrix $\boldsymbol{\Psi}$ is assumed.
+Form cans be specified.
+The \tt{pdMat} class is used by the `nlme' package to specify patterned VC matrices.
+ \begin{itemize}
+ \item pdDiag - Assumes random effects are independent, with different variance.
+ \item pdIdent - Assumes random effects are independent, with same variance.
+ \item pdSymm - General symmetric positive definite matrix.
+ \item pdCompSymm
+ \end{itemize}
+
+\end{enumerate}
+
+\newpage
+\section{Lambda Structure}
+
+\begin{equation}
+\boldsymbol{\epsilon} \sim \mathcal{N}(\boldsymbol{0},\sigma^2 \boldsymbol{\Lambda})
+\end{equation}
+\begin{enumerate}
+\item A simple assumption is to assumes that residuals are independent and homoscedastic, i.e. $\boldsymbol{Lambda = I}$.
+
+\item For the Bland Altman blood pressure data,$\boldsymbol{\Lambda}$ has kronecker product structure
+and has dimensions $6 \times 6$.
+\end{enumerate}
+
+
+
+
+\section{Basic Models Fits}
+Further to \citet{PB}, several simple LME models are constructed
+for the blood pressure data. This data set is the subject of a
+method comparison study in \citet{BA99}.
+
+\subsection{Implementing the Mixed Models Fits}
+They are implemented using the following {\tt{R}} code, utilising the
+`nlme' package. An analysis of variance is used to compare the model fits.
+
+The {\tt{R}} script:
+\begin{verbatim}
+fit1 = lme( BP ~ method, data = dat, random = ~1 | subject )
+fit2 = update(fit1, random = ~1 | subject/method )
+fit3 = update(fit1, random = ~method - 1 | subject )
+#analysis of variance
+anova(fit1,fit2,fit3)
+\end{verbatim}
+
+
+\begin{enumerate}
+
+
+\item Simplest workable model, allows differences between methods
+and incorporates a random intercept for each subject. For subject
+1 we have
+\[
+\boldsymbol{X}_i =
+\left(%
+\begin{array}{cc}
+  1 & 0 \\
+  1 & 0 \\
+  1 & 0 \\
+  1 & 1 \\
+  1 & 1 \\
+  1 & 1 \\
+\end{array}%
+\right),\quad
+\boldsymbol{\beta} =
+\left(%
+\begin{array}{c}
+  \beta_0 \\
+  \beta_1 \\
+\end{array}%
+\right), \quad
+\boldsymbol{Z}_i =
+\left(%
+\begin{array}{c}
+  1 \\
+  1 \\
+  1 \\
+  1 \\
+  1 \\
+  1 \\
+\end{array}%
+\right), \quad \boldsymbol{b}_i = b
+\]
+where $\mathrm{E}(b)=0$ and $\mathrm{var}(b)=\psi.$
+
+\item
+\[
+\boldsymbol{Z}_i =
+\left(%
+\begin{array}{c c}
+  1 & 0 \\
+  1 & 0 \\
+  1 & 0 \\
+  0 & 1 \\
+  0 & 1 \\
+  0 & 1 \\
+\end{array}%
+\right)
+\quad \boldsymbol{b}_i =
+\left(%
+\begin{array}{c c}
+  b_1 & 0  \\
+  0 & b_2  \\
+\end{array}%
+\right)
+\]
+
+where $\mathrm{E}(b_i)=0$ and $\mathrm{var}(\boldsymbol{b})=
+\boldsymbol{\Psi}$.
+
+The variance of error terms is a $6 \times 6$ matrix.
+
+\end{enumerate}
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\subsection{Laird Ware Formulation}
+\begin{equation*}
+\boldsymbol{y_{i}} = \boldsymbol{X_{i}\beta}  + \boldsymbol{Z_{i}b_{i}} + \boldsymbol{\epsilon_{i}}, \qquad i=1,\dots,85
+\end{equation*}
+\begin{eqnarray*}
+\boldsymbol{Z_{i}} \sim \mathcal{N}(\boldsymbol{0,\Psi}),\qquad
+\boldsymbol{\epsilon_{i}} \sim \mathcal{N}(\boldsymbol{0,\sigma^2\Lambda})
+\end{eqnarray*}
+
+\newpage
+\subsection{Model Fit 1}
+
+This is a simple model with no interactions. There is a fixed effect for each method and a random effect for each subject.
+\begin{equation*}
+y_{ijk} = \beta_{j}  + b_{i} + \epsilon_{ijk}, \qquad i=1,\dots,2, j=1,\dots,85, k=1,\dots,3
+\end{equation*}
+
+\begin{eqnarray*}
+b_{i} \sim \mathcal{N}(0,\sigma^2_{b}), \qquad \epsilon_{i} \sim \mathcal{N}(0,\sigma^2)
+\end{eqnarray*}
+
+\begin{verbatim}
+Linear mixed-effects model fit by REML
+  Data: dat
+  Log-restricted-likelihood: -2155.853
+  Fixed: BP ~ method
+(Intercept)     methodS
+  127.40784    15.61961
+
+Random effects:
+ Formula: ~1 | subject
+        (Intercept) Residual
+StdDev:    29.39085 12.44454
+
+Number of Observations: 510
+Number of Groups: 85
+\end{verbatim}
+
+\newpage
+\subsection{Model Fit 2}
+
+This is a simple model, this time with an interaction effect.
+There is a fixed effect for each method. This model has random effects at two levels $b_{i}$ for the subject, and
+another, $b_{ij}$, for the respective method within each subject.
+\begin{equation*}
+y_{ijk} = \beta_{j}  + b_{i} + b_{ij} + \epsilon_{ijk}, \qquad i=1,\dots,2, j=1,\dots,85, k=1,\dots,3
+\end{equation*}
+\begin{eqnarray*}
+b_{i} \sim \mathcal{N}(0,\sigma^2_{1}), \qquad b_{ij} \sim \mathcal{N}(0,\sigma^2_{2}), \qquad \epsilon_{i} \sim \mathcal{N}(0,\sigma^2)
+\end{eqnarray*}
+
+In this model, the random interaction terms all have the same variance $\sigma^2_{2}$. These terms are assumed to be independent of each other, even
+within the same subject.
+
+\begin{verbatim}
+Linear mixed-effects model fit by REML
+  Data: dat
+  Log-restricted-likelihood: -2047.714
+  Fixed: BP ~ method
+(Intercept)     methodS
+  127.40784    15.61961
+
+Random effects:
+ Formula: ~1 | subject
+        (Intercept)
+StdDev:    28.28452
+
+ Formula: ~1 | method %in% subject
+        (Intercept) Residual
+StdDev:    12.61562 7.763666
+
+Number of Observations: 510
+Number of Groups:
+            subject method %in% subject
+                 85                 170
+\end{verbatim}
+
+
+\newpage
+\subsection{Model Fit 3}
+
+This model is a more general model, compared to 'model fit 2'. This model treats the random interactions for each subject as a vector and
+allows the variance-covariance matrix for that vector to be estimated from the set of all positive-definite matrices.
+$\boldsymbol{y_{i}}$ is the entire response vector for the $i$th subject.
+$\boldsymbol{X_{i}}$ and $\boldsymbol{Z_{i}}$  are the fixed- and random-effects design matrices respectively.
+\begin{equation*}
+\boldsymbol{y_{i}} = \boldsymbol{X_{i}\beta}  + \boldsymbol{Z_{i}b_{i}} + \boldsymbol{\epsilon_{i}}, \qquad i=1,\dots,85
+\end{equation*}
+\begin{eqnarray*}
+\boldsymbol{Z_{i}} \sim \mathcal{N}(\boldsymbol{0,\Psi}),\qquad
+\boldsymbol{\epsilon_{i}} \sim \mathcal{N}(\boldsymbol{0,\sigma^2\Lambda})
+\end{eqnarray*}
+
+For the first subject the response vector, $\boldsymbol{y_{1}}$, is:
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrllr}
+  \hline
+observation & BP & subject & method & replicate \\
+  \hline
+1 & 100.00 & 1 & J &   1 \\
+  86 & 106.00 & 1 & J &   2 \\
+  171 & 107.00 & 1 & J &   3 \\
+  511 & 122.00 & 1 & S &   1 \\
+  596 & 128.00 & 1 & S &   2 \\
+  681 & 124.00 & 1 & S &   3 \\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\newpage
+The fixed effects design matrix $\boldsymbol{X_{i}}$ is given by:
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{r|r}
+  \hline
+  (Intercept) & method S \\
+  \hline
+ 1 & 0 \\
+ 1 & 0 \\
+ 1 & 0 \\
+ 1 & 1 \\
+ 1 & 1 \\
+ 1 & 1 \\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+The random effects design matrix $\boldsymbol{Z_{i}}$ is given by:
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{r|r}
+  \hline
+ method J & method S \\
+  \hline
+ 1 & 0 \\
+ 1 & 0 \\
+ 1 & 0 \\
+ 0 & 1 \\
+ 0 & 1 \\
+ 0 & 1 \\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\newpage
+The following output was obtained.
+\begin{verbatim}
+Linear mixed-effects model fit by REML
+  Data: dat
+  Log-restricted-likelihood: -2047.582
+  Fixed: BP ~ method
+(Intercept)     methodS
+  127.40784    15.61961
+
+Random effects:
+ Formula: ~method - 1 | subject
+ Structure: General positive-definite, Log-Cholesky parametrization
+         StdDev    Corr
+methodJ  30.455093 methdJ
+methodS  31.477237 0.835
+Residual  7.763666
+
+Number of Observations: 510
+Number of Groups: 85
+
+\end{verbatim}
+\newpage
+\addcontentsline{toc}{section}{Bibliography}
+
+\bibliography{transferbib}
+\end{document}

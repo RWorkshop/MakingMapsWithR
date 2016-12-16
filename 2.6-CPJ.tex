@@ -1,0 +1,196 @@
+% CPJ.tex
+\documentclass[Main.tex]{subfiles}
+\begin{document}
+%----------------------------------------------------------------------------------------%
+\newpage
+\section{The CPJ Paper}%1.13
+
+\subsection{Case-Deletion results for Variance components}
+\citet{CPJ} examines case deletion results for estimates of the variance components, proposing the use of one-step estimates of variance components for examining case influence. The method describes focuses on REML estimation, but can easily be adapted to ML or other methods.
+
+This paper develops their global influences for the deletion of single observations in two steps: a one-step estimate for the REML (or ML) estimate of the variance components, and an ordinary case-deletion diagnostic for a weighted regression problem ( conditional on the estimated covariance matrix) for fixed effects.
+
+% Lesaffre's approach accords with that proposed by Christensen et al when applied in a repeated measurement context, with a large sample size.
+
+\subsection{CPJ Notation} %1.13.1
+
+\[ \boldsymbol{C} = \boldsymbol{H}^{-1} = \left[
+\begin{array}{cc}
+c_{ii} & \boldsymbol{c}_{i}^{\prime}\\
+\boldsymbol{c}_{i} &  \boldsymbol{C}_{[i]}
+\end{array} \right]
+\]
+
+\citet{CPJ} noted the following identity:
+
+\[ \boldsymbol{H}_{[i]}^{-1}  = \boldsymbol{C}_{[i]} - {1 \over c_{ii}}\boldsymbol{c}_{[i]}\boldsymbol{c}_{[i]}^{\prime} \]
+
+
+\citet{CPJ} use the following as building blocks for case deletion statistics.
+\begin{itemize}
+	\item $\breve{x}_i$
+	\item $\breve{z}_i$
+	\item $\breve{z}_ij$
+	\item $\breve{y}_i$
+	\item $p_ii$
+	\item $m_i$
+\end{itemize}
+All of these terms are a function of a row (or column) of $\boldsymbol{H}$ and $\boldsymbol{H}_{[i]}^{-1}$
+
+\section{Matrix Notation for Case Deletion} %1.14
+
+\subsection{Case deletion notation} %1.14.1
+
+For notational simplicity, $\boldsymbol{A}(i)$ denotes an $n \times m$ matrix $\boldsymbol{A}$ with the $i$-th row
+removed, $a_i$ denotes the $i$-th row of $\boldsymbol{A}$, and $a_{ij}$ denotes the $(i, j)-$th element of $\boldsymbol{A}$.
+
+\subsection{Partitioning Matrices} %1.14.2
+Without loss of generality, matrices can be partitioned as if the $i-$th omitted observation is the first row; i.e. $i=1$.
+
+\section{The CPJ Paper}%1.13
+
+
+\subsection{Case-Deletion results for Variance components}
+\citet{CPJ} examines case deletion results for estimates of the variance components, proposing the use of one-step estimates of variance components for examining case influence. The method describes focuses on REML estimation, but can easily be adapted to ML or other methods.
+
+
+This paper develops their global influences for the deletion of single observations in two steps: a one-step estimate for the REML (or ML) estimate of the variance components, and an ordinary case-deletion diagnostic for a weighted regression problem ( conditional on the estimated covariance matrix) for fixed effects.
+
+
+% Lesaffre's approach accords with that proposed by Christensen et al when applied in a repeated measurement context, with a large sample size.
+
+
+\subsection{CPJ Notation} %1.13.1
+
+
+\[ \boldsymbol{C} = \boldsymbol{H}^{-1} = \left[
+\begin{array}{cc}
+c_{ii} & \boldsymbol{c}_{i}^{\prime}\\
+\boldsymbol{c}_{i} &  \boldsymbol{C}_{[i]}
+\end{array} \right]
+\]
+
+
+\citet{CPJ} noted the following identity:
+
+
+\[ \boldsymbol{H}_{[i]}^{-1}  = \boldsymbol{C}_{[i]} - {1 \over c_{ii}}\boldsymbol{c}_{[i]}\boldsymbol{c}_{[i]}^{\prime} \]
+
+
+
+
+\citet{CPJ} use the following as building blocks for case deletion statistics.
+\begin{itemize}
+\item $\breve{x}_i$
+\item $\breve{z}_i$
+\item $\breve{z}_ij$
+\item $\breve{y}_i$
+\item $p_ii$
+\item $m_i$
+\end{itemize}
+All of these terms are a function of a row (or column) of $\boldsymbol{H}$ and $\boldsymbol{H}_{[i]}^{-1}$
+
+
+
+%---------------------------------------------------------------------------%
+\newpage
+\section{Matrix Notation for Case Deletion} %1.14
+
+\subsection{Case deletion notation} %1.14.1
+
+For notational simplicity, $\boldsymbol{A}(i)$ denotes an $n \times m$ matrix $\boldsymbol{A}$ with the $i$-th row
+removed, $a_i$ denotes the $i$-th row of $\boldsymbol{A}$, and $a_{ij}$ denotes the $(i, j)-$th element of $\boldsymbol{A}$.
+
+\subsection{Partitioning Matrices} %1.14.2
+Without loss of generality, matrices can be partitioned as if the $i-$th omitted observation is the first row; i.e. $i=1$.
+
+\section{CPJ's Three Propositions} %1.15
+%-----------------------------%
+
+
+
+
+\subsubsection{Proposition 1}
+
+
+\[
+\boldsymbol{V}^{-1} =
+\left[ \begin{array}{cc}
+\nu^{ii} & \lambda_{i}^{\prime}  \\
+\lambda_{i} & \Lambda_{[i]}
+\end{array}\right] \]
+
+
+
+
+\[\boldsymbol{V}_{[i]}^{-1} = \boldsymbol{\Lambda}_{[i]} - { \lambda_{i} \lambda_{i} ^{\prime} \over \lambda_{i} } \]
+
+
+%-----------------------------%
+\subsection{Proposition 2}
+
+
+\begin{itemize}
+	\item[(i)] $ \boldsymbol{X}_{[i]}^{T}\boldsymbol{V}^{-1}_{[i]}\boldsymbol{X}_{[i]}$ = $\boldsymbol{X}^{\prime}\boldsymbol{V}^{-1}\boldsymbol{X}$
+	\item[(ii)] = $(\boldsymbol{X}^{\prime}\boldsymbol{V}^{-1}\boldsymbol{Y})^{-1}$
+	\item[(iii)] $ \boldsymbol{X}_{[i]}^{T}\boldsymbol{V}^{-1}_{[i]}\boldsymbol{Y}_{[i]}$ = $\boldsymbol{X}^{\prime}\boldsymbol{V}^{-1}\boldsymbol{Y}$
+\end{itemize}
+%-----------------------------%
+\subsection{Proposition 3}
+This proposition is similar to the formula for the one-step Newtown Raphson estimate of the logistic regression coefficients given by Pregibon (1981) and discussed in Cook Weisberg.
+
+
+%-----------------------------------------------------------------------------------------------------------------------------------%
+\section{CPJ's Three Propositions} %1.15
+%-----------------------------%
+\subsubsection{Proposition 1}
+
+\[
+\boldsymbol{V}^{-1} =
+\left[ \begin{array}{cc}
+\nu^{ii} & \lambda_{i}^{\prime}  \\
+\lambda_{i} & \Lambda_{[i]}
+\end{array}\right] \]
+
+
+\[\boldsymbol{V}_{[i]}^{-1} = \boldsymbol{\Lambda}_{[i]} - { \lambda_{i} \lambda_{i} ^{\prime} \over \lambda_{i} } \]
+
+%-----------------------------%
+
+
+\subsubsection{Proposition 1}
+
+\[
+\boldsymbol{V}^{-1} =
+\left[ \begin{array}{cc}
+\nu^{ii} & \lambda_{i}^{\prime}  \\
+\lambda_{i} & \Lambda_{[i]}
+\end{array}\right] \]
+
+
+\[\boldsymbol{V}_{[i]}^{-1} = \boldsymbol{\Lambda}_{[i]} - { \lambda_{i} \lambda_{i} ^{\prime} \over \lambda_{i} } \]
+
+%-----------------------------%
+\subsection{Proposition 2}
+
+\begin{itemize}
+	\item[(i)] $ \boldsymbol{X}_{[i]}^{T}\boldsymbol{V}^{-1}_{[i]}\boldsymbol{X}_{[i]}$ = $\boldsymbol{X}^{\prime}\boldsymbol{V}^{-1}\boldsymbol{X}$
+	\item[(ii)] = $(\boldsymbol{X}^{\prime}\boldsymbol{V}^{-1}\boldsymbol{Y})^{-1}$
+	\item[(iii)] $ \boldsymbol{X}_{[i]}^{T}\boldsymbol{V}^{-1}_{[i]}\boldsymbol{Y}_{[i]}$ = $\boldsymbol{X}^{\prime}\boldsymbol{V}^{-1}\boldsymbol{Y}$
+\end{itemize}
+%---------------------------------------------------------------------------%
+\newpage
+\section{CPJ's Three Propositions} %1.15
+%-----------------------------%
+
+
+\subsection{Proposition 2}
+
+\begin{itemize}
+	\item[(i)] $ \boldsymbol{X}_{[i]}^{T}\boldsymbol{V}^{-1}_{[i]}\boldsymbol{X}_{[i]}$ = $\boldsymbol{X}^{\prime}\boldsymbol{V}^{-1}\boldsymbol{X}$
+	\item[(ii)] = $(\boldsymbol{X}^{\prime}\boldsymbol{V}^{-1}\boldsymbol{Y})^{-1}$
+	\item[(iii)] $ \boldsymbol{X}_{[i]}^{T}\boldsymbol{V}^{-1}_{[i]}\boldsymbol{Y}_{[i]}$ = $\boldsymbol{X}^{\prime}\boldsymbol{V}^{-1}\boldsymbol{Y}$
+\end{itemize}
+
+\bibliography{DB-txfrbib}
+\end{document}
