@@ -1,0 +1,156 @@
+Influence.ME: Simple Analysis
+With the introduction of our new package for influential data influence.ME, I’m currently writing a manual for the package. This manual will address topics for both the experienced, and the inexperienced users.
+
+I will also present much of the content of this manual on my blog. Of course, feel free to comment on it, and readers are encouraged to discuss the content of the manual here. All information will be accessible from the influence.ME website as well. Note that updates to the manual will be made available on that website”, instead of updating this blog post. So, please refer to the influence.ME website for the most up-to-date information.
+
+This is the first section on influence.ME, which deals with a very simply analysis of students nested within 23 schools. Only the effect of a single variable measured at the school level is estimated.
+
+
+A basic example analysis
+The school23 data contains information on a math test performance of 519 students, who are nested within 23 schools. For this example, we will be interested in the relationship between class structure (in this data measured at the school level) and students’ performance on a math test. The research question is: To what extend does the classroom structure determine the students’ math test outcomes?
+
+Initially, we will estimate the effect of class structure on the result of the math performance test, without any further covariates. We do take into account the nesting structure of the data, however, and allow the intercept to be random over schools. This model is estimated using the following syntax, and is assigned to an object we call ‘model’.
+
+model <- lmer(math ~  structure + (1 | school.ID), data=school23)
+summary(model)
+The call for a summary of the model results in the output shown below. In this summary, the original model formula is shown, as well as the data on which this model was estimated. Both random and fixed effects are summarized. The amount of intercept variance associated with the nesting structure of students within schools is considerably large (23.8 compared with 81.2 + 23.8 = 104 in total). The effect of interest is that of the structure variable, which is -2.343 and statistically insignificant by most reasonable standards (t=-1.609).
+
+Linear mixed model fit by REML 
+Formula: math ~ structure + (1 | school.ID) 
+   Data: school23 
+  AIC  BIC logLik deviance REMLdev
+ 3802 3819  -1897     3798    3794
+Random effects:
+ Groups    Name        Variance Std.Dev.
+ school.ID (Intercept) 23.884   4.8871  
+ Residual              81.270   9.0150  
+Number of obs: 519, groups: school.ID, 23
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)   60.002      5.853  10.252
+structure     -2.343      1.456  -1.609
+Correlation of Fixed Effects:
+          (Intr)
+structure -0.982
+Iteratively re-estimate model
+Building upon the example model estimated in section 2.1, the first step in the procedure of the influence.ME package is to iteratively exclude the influence of the observations nested within each school separately. This is done using the estex() function. The name estex refers to the ESTimates that are returned while EXcluding the influence of each of the grouping levels separately. Thus, in the case of the math test example, in which students are nested in 23 schools, the estex procedure re-estimates the original model 23 times, excluding the influence of a higher level unit (ie school). The function returns the relevant estimates of these 23 re-estimations, which in Figure [fig:Three-steps] is referred to with 'altered estimates'.
+
+The estex() function requires the specification of two parameters: a mixed effects model is to be specified, and the grouping factor of which the influence of the nested observations are to be evaluated. In the syntax example below, the original object 'model' is specified, and 'school.ID' is the relevant grouping factor. school.ID is the name of the variable used to indicate the grouping factor when the original model was specified. The estex() function works perfectly when more than a single grouping is present in the model, but only one grouping factor can be addressed at once.
+
+In the example below, the estimates excluding the influence of the respective grouping levels, as returned by the estex() function, are assigned to an object, which in this case is called este.model (the name of this object, however, is to be chosen arbitrarily by the user).
+
+estex.model <- estex(model, "school.ID")
+Note that in the case of complex mixed models (i.e. models with large numbers of observations, complex nesting structures, and/or many nesting groups) the execution of estex() may consume considerable amounts of time. The examples offered by the school23 data, should offer no such problems, however.
+
+Calculate measures of influence
+The object estex.model containing the altered estimates can be used to calculate several measures of influential data. To determine the Cook's distance, the ME.cook() function is to be used. In its most basic specification, the ME.cook() function only requires an object to which the altered estimates as returned by the estex() function were assigned:
+
+ME.cook(estex.model) 
+This basic specification returns a matrix with the rows representing the groups in which the observations are nested, and the single column represents the associated value of Cook's distance. Clearly, these can also be assigned to an object for later modification. The output below shows the result of the syntax above, representing the Cook's distance associated with each school in the school23 data.
+
+              [,1]
+6053  2.927552e-02
+6327  2.557810e-02
+6467  1.402948e-02
+7194  3.443392e-05
+7472  1.115626e+00
+7474  8.142758e-02
+7801  3.007558e-04
+7829  1.005329e-01
+7930  5.525680e-03
+24371 4.334659e-03
+24725 4.387907e-02
+25456 5.644399e-04
+25642 1.470130e-02
+26537 2.369898e-02
+46417 2.204840e-02
+47583 1.891108e-02
+54344 1.445087e-01
+62821 3.593314e-01
+68448 2.427028e-02
+68493 1.538479e-02
+72080 3.471805e-04
+72292 6.387956e-03
+72991 1.316049e-02
+Based on the output shown above, the Cook's distance of school number 7472 is the largest. This corresponds very well to what was concluded based on Figure [fig:Bivariate-influence-plots]. For those who prefer to evaluate the Cook's distance based on a visual representation, the ME.cook() function can also plot its output. To do so, an additional parameter is required, stating plot=TRUE. Additional parameters are allowed as well, which are passed on to the internal dotplot() function (Deepayan Sarkar, 2008) and are used to format the resulting plot. In this case, the example syntax below also specifies the xlab= and ylab= parameters, labelling the two axes. The resulting plot is shown in the figure below. These kinds of plots can be used to more easily assert the influence a grouped set of observations exert on the outcomes of analyses, relative to the influence excerted by other groups of observations.
+
+In this case, it (again) is clear that the observation of the level of class structure of school number 7472 excerts the highest influence. This is based on the calculated value for Cook's distance, as well as that this influence clearly exceeds that of other schools.
+
+ME.cook(estex.model, plot=TRUE,
+xlab="Cook's Distance, Class structure",
+ylab="School")
+
+Figure Cook's Distance
+
+Exclude influence, and Repeat
+Based on the analyses and graphs shown in the previous sections, there are strong indications that the observations in school number 7472 excert too much influence on the outcomes of the analysis, and thereby unjustifiably determine the outcomes of these analyses. To definitively decide whether or not the influence of these observations indeed is too large, the value of Cook’s distance of this school can be compared with a cut-off value given. Regarding Cook’s distance, it has been argued that observations exceeding a Cook’s distance of are too influential Belsley et al. (1980), and need to be dealt with. In this formula, ‘p’ refers to the number of predictors on which Cook’s distance was calculated. In the case of mixed effects models, this refers to the number of groups in which the observations are nested.
+
+The Cook’s distance of school number 7472 was determined to be 1.31, which readily exceeds the cut-off value of = .17. Thus, is can be concluded that the influence school number 7472 needs to be excluded form the analysis, before the results of that analyses are interpreted. This is done using the function exclude.influence(). This function basically has three parameters: first, the model from which the influence of some observations is to be excluded needs to be specified, together with the grouping factor and the specific level of that grouping factor in which the said observations are nested. The function modifies the original model and returns a new model, which can be checked again for possible influential data.
+
+In the example below, the influence of school number 7472 is excluded from the orginal regression model, which was assigned to object ‘model’ in section 2.1.
+
+The result of the exclude.influence() function again has the form of a mixed effects model and is here assigned to object model.2 (again, this name is to chosen by the user).
+
+model.2 <- exclude.influence(model, "school.ID", "7472")
+summary(model.2)
+
+Functions that work with 'normal' mixed effects models estimated with lme4, also work with models that were modified with the exclude.influence() function. So, also a summary of model.2 was requested, which is shown below. A few things are clear from this output. The estimate of the effect of class structure is now much stronger (-4.55) and statistically significant (t=2.95). This corresponds to what may have been expected based on the graphical representation of the data in Figure [fig:Bivariate-influence-plots]. Some other changes have been made to the model as well. The original intercept vector (which originally was indicated by (Intercept)) is now replaced by a variable called intercept.alt. This variable is basically an ordinary intercept vector (thus, with a value of 1 for each observation), except for the observations that are nested in the excluded nesting group. For these observations, the intercept.alt variable has score 0. Also, a new variable called estex.7472 is shown. This variable is a dummy variable, indicating the observations that are nested in school number 7472. One such dummy variable is added to the model for each nesting group the influence of which is excluded. Generally, these modifications of the model ensure that the observations nested within the excluded nesting group do not contribute to the estimation of both the level and the variance of the intercept, and do not alter the higher level estimates unjustifiably.
+
+Linear mixed model fit by REML 
+Formula: math ~ intercept.alt + estex.7472 + structure + 
+(0 + intercept.alt | school.ID) - 1 
+   Data: ..2 
+  AIC  BIC logLik deviance REMLdev
+ 3792 3814  -1891     3790    3782
+Random effects:
+ Groups    Name          Variance Std.Dev.
+ school.ID intercept.alt 17.874   4.2277  
+ Residual                81.301   9.0167  
+Number of obs: 519, groups: school.ID, 23
+
+Fixed effects:
+              Estimate Std. Error t value
+intercept.alt   69.346      6.314  10.983
+estex.7472      54.839      3.617  15.163
+structure       -4.550      1.545  -2.945
+
+Correlation of Fixed Effects:
+           intrc. e.7472
+estex.7472  0.843       
+structure  -0.987 -0.854
+As is shown in the procedural schematic in Figure [fig:Three-steps], it is advisable to repeat this procedure to the point that the user is satisfied with the stability of the model, for instance when no group of observations exceeds the cut-off value. To do this in this example, the model.2 object is again input to the estex() function, the results of which are stored in a second altered estimates object which we call estex.model.2:
+
+estex.model.2 <- estex(model.2, "school.ID")
+ME.cook(estex.model.2, plot=TRUE, 
+    xlab="Cook's Distance, Class structure",
+    ylab="School", 
+    cutoff=.18)
+Again, ME.cook() is used to calculate the values for Cook's distance, which returns the output shown below. School number 62821 is associated with the largest value for Cook's distance (.39). The cut-off value now differs (slightly) from the previous one, for the number of (effective) groups in which the observations are nested is decreased by 1, for the influence of school number 7472 was excluded. Thus, the cut-off value now is . Based on the output below, it can thus be concluded that school number 62821 is influential as well.
+
+Finally, the call for ME.cook() in the syntax example above shows one more distinguishing characteristic. Again plot=TRUE is specified, together with specifications for labels on both the x and y axes. A plot of the Cook's distances is thus created, shown in Figure [fig:Cook-2]. In addition to this, the cut-off value of .18 is now indicated as well using cutoff=.18. As a result of this, all Cook's distances with a value larger than .18 will be indicated differently in the plot, as is the case in Figure [fig:Cook-2] regarding the two schools numbered 62821 and 7474. Note that the Cook's distance for school number 7472 now equals 0, indeed, indicating that this school now no longer influences the parameter estimates.
+
+              [,1]
+6053  2.186203e-03
+6327  2.645659e-02
+6467  1.326879e-02
+7194  1.319258e-02
+7472  0.000000e+00
+7474  2.273674e-01
+7801  1.378937e-03
+7829  7.780663e-02
+7930  4.728342e-03
+24371 8.621802e-03
+24725 7.072999e-02
+25456 1.985731e-03
+25642 2.487072e-02
+26537 1.900817e-03
+46417 2.409483e-02
+47583 7.919332e-02
+54344 1.248145e-01
+62821 3.706191e-01
+68448 1.752182e-01
+68493 2.607158e-02
+72080 2.669324e-05
+72292 1.193296e-02
+72991 1.311974e-02
+Further analysis of this example would thus entail the exclusion of the influence of observations nested within school number 62821, and then to recheck the model by running through the three steps of the procedure again. This is not shown here, to not make this exercise overly lengthy.

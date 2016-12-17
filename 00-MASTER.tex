@@ -1,0 +1,494 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{subfiles}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+\usepackage{index}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Research notes: linear mixed effects models}
+\author{ } \date{ }
+
+\makeindex
+\begin{document}
+\author{Kevin O'Brien}
+\title{October 2011 Version A}
+
+%---------------------------------------------------------------------------%
+% - 1. Model Diagnostics
+% - 2. Zewotir's paper (including Haslett)
+% - 3. Augmented GLMS
+% - 4. Applying Diagnostics to MCS
+% - 5. Extra Material
+%---------------------------------------------------------------------------%
+
+
+%\addcontentsline{toc}{section}{Bibliography}
+
+\chapter{Model Diagnostics}
+%---------------------------------------------------------------------------%
+%1.1 Introduction to Influence Analysis
+%1.2 Extension of techniques to LME Models
+%1.3 Residual Diagnostics
+%1.4 Standardized and studentized residuals
+%1.5 Covariance Parameters
+%1.6 Case Deletion Diagnostics
+%1.7 Influence Analysis
+%1.8 Terminology for Case Deletion
+%1.9 Cook's Distance (Classical Case)
+%1.10 Cook's Distance (LME Case)
+%1.11 Likelihood Distance
+%1.12 Other Measures
+%1.13 CPJ Paper
+%1.14 Matrix Notation of Case Deletion
+%1.15 CPJ's Three Propositions
+%1.16 Other measures of Influence
+\tableofcontents
+%===========================================================================%
+\newpage
+
+\subsection*{Abstract}
+This chapter is broken into two parts. The first part is a review of diagnostics methods for linear models, intended to acquaint the reader with the subject, and also to provide a basis for material covered in the second part. Particular attention is drawn to graphical methods.
+
+
+\section{Framework for Model Validation using Residual Diagnostics}
+In statistical modelling, the process of model validation is a critical step, but also a step that is too often overlooked. A very simple procedure is to examine commonly encountered
+metrics, such as the $R^2$ value. However, using a small handful of simple measures and methods is insufficient to properly assess the quality of a fitted model. To do so properly, a full and comprehensive
+analysis that tests of all of the assumptions, as far as possible, must be carried out. A statistical model, whether of the fixed-effects or mixed-effects variety, represents how you think your data
+were generated. Following model specification and estimation, it is of interest to explore the model-data
+agreement by raising questions such as
+\begin{itemize}
+	\item Does the model-data agreement support the model assumptions?
+	\item Should model components be refined, and if so, which components? For example, should regressors
+	be added or removed, and is the covariation of the observations modeled properly?
+	\item Are the results sensitive to model and/or data? Are individual data points or groups of cases particularly
+	influential on the analysis?
+\end{itemize}
+
+
+\subsection{Residual Analysis}
+A residual is the difference between an observed quantity and its
+estimated or predicted value. 
+Residual analysis is a widely used model validation technique. A residual is simply the difference between an observed value and the corresponding fitted value, as predicted by the model. The rationale is that, if the model is properly fitted to the model, then the residuals would approximate the random errors that one should expect.
+that is to say, if the residuals behave randomly, with no discernible trend, the model has fitted the data well. If some sort of non-random trend is evident in the model, then the model can be considered to be poorly fitted.
+Statistical software environments, such as the \texttt{R} Programming language, provides a suite of tests and graphical procedure sfor appraising a fitted linear model, with several 
+of these procedures analysing the model residuals.
+
+In classical linear models, an examination of model-data agreement has traditionally revolved around
+
+The second part of the chapter looks at diagnostics techniques for LME models, firsly covering the theory, then proceeding to a discussion on 
+implementing these using \texttt{R} code.
+
+While a substantial body of work has been developed in this area, there is still areas worth exploring. 
+In particular the development of graphical techniques pertinent to LME models should be looked at.
+
+
+
+
+%\section{Introduction (Page 1)}
+%
+%Linear models for uncorrelated data have well established measures to gauge the influence of one or more
+%observations on the analysis. For such models, closed-form update expressions allow efficient computations
+%without refitting the model. 
+%
+%
+%When similar notions of statistical influence are applied to mixed models,
+%things are more complicated. Removing data points affects fixed effects and covariance parameter estimates.
+%Update formulas for “\textit{leave-one-out}” estimates typically fail to account for changes in covariance
+%parameters. 
+%
+%Moreover, in repeated measures or longitudinal studies, one is often interested in multivariate
+%influence, rather than the impact of isolated points. 
+
+% This paper examines extensions of influence measures
+% in linear mixed models and their implementation in the MIXED procedure.
+
+
+
+
+
+
+
+
+
+\newpage
+%=========================================================================%
+\section{Model Validation Framework}
+%\section{Model Validation using Residual Diagnostics}
+In statistical modelling, the process of model validation is a critical step of model fitting process, but also a step that is too often overlooked. A very simple procedure is to examine commonly-used
+metrics, such as the $R^2$ value. However, using a small handful of simple measures and methods is insufficient to properly assess the quality of a fitted model. To do so properly, a full and comprehensive
+analysis that tests of all of the assumptions, as far as possible, must be carried out.
+
+%=========================================================================%
+%\subsection{Model Validation Framework}
+%In classical linear models, this examination of model-data agreement has traditionally revolved around
+\citet{schab} describes the model validatin framework as comprised of the following tasks
+>>>>>>> origin/master
+\begin{itemize}
+	 \item  overall measures of goodness-of-fit
+	\item the informal, graphical examination of estimates of model errors to assess the quality of distributional
+	assumptions: residual analysis
+	
+	
+	\item the quantitative assessment of the inter-relationship of model components; for example, collinearity 	diagnostics
+	\item the qualitative and quantitative assessment of influence of cases on the analysis, i.e. influence analysis.
+\end{itemize}
+<<<<<<< HEAD
+The sensitivity of a model is studied through measures that express its stability under perturbations. You
+are not interested in a model that is either overly stable or overly sensitive. Changes in the data or model
+components should produce commensurate changes in the model output. The difficulty is to determine
+when the changes are substantive enough to warrant further investigation, possibly leading to a reformulation
+of the model or changes in the data (such as dropping outliers). This paper is primarily concerned
+with stability of linear mixed models to perturbations of the data; that is, with influence analysis. 
+=======
+%The sensitivity of a model is studied through measures that express its stability under perturbations. You
+%are not interested in a model that is either overly stable or overly sensitive. Changes in the data or model
+%components should produce commensurate changes in the model output. The difficulty is to determine
+%when the changes are substantive enough to warrant further investigation, possibly leading to a reformulation
+%of the model or changes in the data (such as dropping outliers).
+
+% This paper is primarily concerned with stability of linear mixed models to perturbations of the data; that is, with influence analysis.
+%========================================================================================================= %
+%\subsection{Residual}
+
+
+
+%========================================================================================================= %
+%\subsection{Residual Analysis}
+
+Residual analysis is a widely used model validation technique. A residual is simply the difference between an observed value and the corresponding fitted value, as predicted by the model. The rationale is that, if the model is properly fitted to the model, then the residuals would approximate the random errors that one should expect.
+that is to say, if the residuals behave randomly, with no discernible trend, the model has fitted the data well. If some sort of non-random trend is evident in the model, then the model can be considered to be poorly fitted.
+
+%========================================================================================================= %
+%\subsection{Introduction}
+%A statistical model, whether of the fixed-effects or mixed-effects variety, represents how you think your data were generated. 
+%Following model specification and estimation, it is of interest to explore the model-data
+%agreement by raising questions such as
+
+Statistical software environments, such as the \texttt{R} Programming language, provides a suite of tests and graphical procedure sfor appraising a fitted linear model, with several 
+of these procedures analysing the model residuals.
+
+
+
+ 
+
+%========================================================================================================= %
+\subsection{Outliers and Leverage}
+
+
+
+The question of whether or not a point should be considered an outlier must also be addressed. An outlier is an observation whose true value is unusual given its value on the predictor variables. The leverage of an observation is a further consideration. Leverage describes an observation with an extreme value on a predictor variable is a point with high leverage. High leverage points can have a great amount of effect on the estimate of regression coefficients.
+% - Leverage is a measure of how far an independent variable deviates from its mean.
+
+Influence can be thought of as the product of leverage and outlierness. An observation is said to be influential if removing the observation substantially changes the estimate of the regression coefficients. The \texttt{R} programming language has a variety of methods used to study each of the aspects for a linear model. While linear models and GLMS can be studied with a wide range of well-established diagnostic technqiues, the choice of methodology is much more restricted for the case of LMEs.
+
+%---------------------------------------------------------------------------%
+%\newpage
+%\section{Residual diagnostics} %1.3
+For classical linear models, residual diagnostics are typically conducted using a plot of the observed residuals and the predicted values. A visual inspection for the presence of trends inform the analyst on the validity of distributional assumptions, and to detect outliers and influential observations.
+
+%\section{Case Deletion Diagnostics}
+%
+%
+%Linear models for uncorrelated data have well established measures to gauge the influence of one or more
+%observations on the analysis. For such models, closed-form update expressions allow efficient computations
+%without refitting the model. 
+%
+%
+%Since the pioneering work of Cook in 1977, deletion measures have been applied to many statistical models for identifying influential observations. Case-deletion diagnostics provide a useful tool for identifying influential observations and outliers.
+%
+%The key to making deletion diagnostics useable is the development of efficient computational formulas, allowing one to obtain the \index{case deletion diagnostics} case deletion diagnostics by making use of basic building blocks, computed only once for the full model.
+%
+%The computation of case deletion diagnostics in the classical model is made simple by the fact that estimates of $\beta$ and $\sigma^2$, which exclude the $i-$th observation, can be computed without re-fitting the model. %\subsection{Terminology for Case Deletion diagnostics} %1.8
+%
+%\citet{preisser} describes two type of diagnostics. When the set consists of only one observation, the type is called
+%`\textit{observation-diagnostics}'. For multiple observations, Preisser describes the diagnostics as `\textit{cluster-deletion}' diagnostics. When applied to LME models, such update formulas are available only if one assumes that the covariance parameters are not affected by the removal of the observation in question. However, this is rarely a reasonable assumption.
+%
+%
+%
+%
+%%---------------------------------------------------------------------------%
+\subsection{Matrix Notation for Case Deletion} %1.14
+
+%\subsection{Case deletion notation} %1.14.1
+
+For notational simplicity, $\boldsymbol{A}(i)$ denotes an $n \times m$ matrix $\boldsymbol{A}$ with the $i$-th row
+removed, $a_i$ denotes the $i$-th row of $\boldsymbol{A}$, and $a_{ij}$ denotes the $(i, j)-$th element of $\boldsymbol{A}$.
+%
+%\subsection{Partitioning Matrices} %1.14.2
+%Without loss of generality, matrices can be partitioned as if the $i-$th omitted observation is the first row; i.e. $i=1$.
+
+
+
+%-------------------------------------------------------------------------------------------------------------------------------------%
+%--------------------------------------%
+\subsection{Extension of Diagnostic Methods to LME models}
+
+<<<<<<< HEAD
+
+When similar notions of statistical influence are applied to mixed models,
+things are more complicated. Removing data points affects fixed effects and covariance parameter estimates.
+Update formulas for “\textit{leave-one-out}” estimates typically fail to account for changes in covariance
+parameters. 
+%
+%
+%In LME models, there are two types of residuals, marginal residuals and conditional residuals. A
+%marginal residual is the difference between the observed data and the estimated marginal mean. A conditional residual is the
+%difference between the observed data and the predicted value of the observation. In a model without random effects, both sets of residuals coincide \citep{schab}.
+
+\citet{Christiansen} noted the case deletion diagnostics techniques have not been applied to linear mixed effects models and seeks to develop methodologies in that respect. \citet{Christiansen} develops these techniques in the context of REML.
+=======
+\citet{CPJ} noted the case deletion diagnostics techniques had not been applied to linear mixed effects models and seeks to develop methodologies in that respect. \citet{CPJ} develops these techniques in the context of REML.
+>>>>>>> origin/master
+
+%\citet{CPJ} develops \index{case deletion diagnostics} case deletion diagnostics, in particular the equivalent of \index{Cook's distance} Cook's distance, a well-known metric, for diagnosing influential observations when estimating the fixed effect parameters and variance components. Deletion diagnostics provide a means of assessing the influence of an observation (or groups of observations) on inference on the estimated parameters of LME models. We shall provide a fuller discussion of Cook's distance in due course.
+
+
+\citet{Demi} extends several regression diagnostic techniques commonly used in linear regression, such as leverage, infinitesimal influence, case deletion diagnostics, Cook's distance, and local influence to the linear mixed-effects model. In each case, the proposed new measure has a direct interpretation in terms of the effects on a parameter of interest, and reduces to the familiar linear regression measure when there are no random effects. 
+
+The new measures that are proposed by \citet{Demi} are explicitly defined functions and do not require re-estimation of the model, especially for cluster deletion diagnostics. The basis for both the cluster deletion diagnostics and Cook's distance is a generalization of Miller's simple update formula for case deletion for linear models. Furthermore \citet{Demi} shows how Pregibon's infinitesimal case deletion diagnostics is adapted to the linear mixed-effects model. 
+%A simple compact matrix formula is derived to assess the local influence of the fixed-effects regression coefficients. 
+
+
+%
+%
+%\section{Case Deletion Diagnostics for LME models} %1.6
+%
+%Data from single individuals, or a small group of subjects may influence non-linear mixed effects model selection. Diagnostics routinely applied in model building may identify such individuals, but these methods are not specifically designed for that purpose and are, therefore, not optimal. 
+
+\citet{Demi} proposes two likelihood-based diagnostics for identifying individuals that can influence the choice between two competing models.
+
+
+\newpage
+
+
+
+\subfile{CooksDistance.tex}
+
+
+
+=======
+\section{Analysis of  Influence}
+
+
+>>>>>>> origin/master
+
+%%\subfile{InfluenceforLMEs.tex}
+% \subfile{ApplicationsToMCS.tex}  - Not Ready
+% \subfile{SideNotes.tex} - Pregibon etc
+% \subfile{HaslettHayes.tex} - Build this up 
+%%\subfile{LikelihoodDistances.tex}
+%%<<<<<<< HEAD
+
+
+%
+%=======
+%\subfile{Influence}
+%\subfile{ResidualsLMEs.tex}
+%\subfile{iterativemethods.tex}
+
+
+
+
+%-------------------------------------------------------------------------------------------------Chapter 3------------------------%
+
+
+
+% --- \subsection{Importance-Weighted Least-Squares (IWLS)}  %3.3
+% ---   \subsection{H-Likelihood}
+
+%\chapter{Model Diagnostics}
+%---------------------------------------------------------------------------%
+%1.1 Introduction to Influence Analysis
+%1.2 Extension of techniques to LME Models
+%1.3 Residual Diagnostics
+%1.4 Standardized and studentized residuals
+%1.5 Covariance Parameters
+%1.6 Case Deletion Diagnostics
+%1.7 Influence Analysis
+%1.8 Terminology for Case Deletion
+%1.9 Cook's Distance (Classical Case)
+%1.10 Cook's Distance (LME Case)
+%1.11 Likelihood Distance
+%1.12 Other Measures
+%1.13 CPJ Paper
+%1.14 Matrix Notation of Case Deletion
+%1.15 CPJ's Three Propositions
+%1.16 Other measures of Influence
+
+%--------------------------------------%
+
+\subsection{Further Assumptions of Linear Models}
+
+As with fitted models, the assumption of normality of residuals and homogeneity of variance is applicable to LMEs also. 
+
+%--------------------------------------%
+
+
+Homoscedascity is the technical term to describe the variance of the
+residuals being constant across the range of predicted values.
+Heteroscedascity is the converse scenario : the variance differs along
+the range of values.
+
+%--Marginal and Conditional Residuals
+
+\subfile{ResidualsLMEs.tex}
+\subfile{iterativemethods.tex}
+
+
+<<<<<<< HEAD
+In recent years, mixed models have become invaluable tools in the analysis of experimental and observational
+data. In these models, more than one term can be subject to random variation. Mixed model
+technology enables you to analyze complex experimental data with hierarchical random processes, temporal,
+longitudinal, and spatial data, to name just a few important applications. 
+
+\subsection{Stating the LME Model}
+The general linear mixed
+model is
+\[
+Y = X\beta + Zu + \varepsilon\]
+where Y is a $(n\times1)$ vector of observed data, X is an $(n\times p)$ fixed-effects design or regressor matrix of rank
+k, Z is a $(n \times g)$ random-effects design or regressor matrix, $u$ is a $(g \times 1)$ vector of random effects, and $\varepsilon$ is
+an $(n\times1)$ vector of model errors (also random effects). The distributional assumptions made by the MIXED
+procedure are as follows: γ is normal with mean 0 and variance G; $\varepsilon$ is normal with mean 0 and variance
+R; the random components $u$ and $\varepsilon$ are independent. Parameters of this model are the fixed-effects β and
+all unknowns in the variance matrices G and R. The unknown variance elements are referred to as the
+covariance parameters and collected in the vector $theta$.
+%===========================================================================%
+
+The concept of critiquing the model-data agreement applies in mixed models in the same way as in linear
+fixed-effects models. In fact, because of the more complex model structure, you can argue that model and
+data diagnostics are even more important. For example, you are not only concerned with capturing the
+important variables in the model. You are also concerned with “distributing” them correctly between the
+fixed and random components of the model. The mixed model structure presents unique and interesting
+challenges that prompt us to reexamine the traditional ideas of influence and residual analysis.
+%==========================================================================%
+This paper presents the extension of traditional tools and statistical measures for influence and residual
+analysis to the linear mixed model and demonstrates their implementation in the MIXED procedure (experimental
+features in SAS 9.1). The remainder of this paper is organized as follows. The “Background” section
+briefly discusses some mixed model estimation theory and the challenges to model diagnosis that result
+from it.
+
+%	 The diagnostics implemented in the MIXED procedure are discussed in the “Residual Diagnostics
+%	in the MIXED Procedure” section (page 3) and the “Influence Diagnostics in the MIXED Procedure” section
+%	(page 5). The syntax options and suboptions you use to request the various diagnostics are briefly sketched
+%	in the “Syntax” section (page 9). The presentation concludes with an example.
+%	
+%	
+%====================================================================================================================%
+\subsection{Summary of Schabenberger's Paper}
+=======
+\newpage
+%\subsection{INFLUENCE DIAGNOSTICS IN THE MIXED PROCEDURE}
+%Key to the implementations of influence diagnostics in the MIXED procedure is the attempt to quantify
+%influence, where possible, by drawing on the basic definitions of the various statistics in the classical linear
+%model. 
+
+On occasion, quantification is not possible. Assume, for example, that a data point is removed
+and the new estimate of the G matrix is not positive definite. This may occur if a variance component
+estimate now falls on the boundary of the parameter space. Thus, it may not be possible to compute certain
+influence statistics comparing the full-data and reduced-data parameter estimates. However, knowing that
+a new singularity was encountered is important qualitative information about the data point’s influence on
+the analysis.
+
+The basic procedure for quantifying influence is simple:
+
+\begin{enumerate}
+	\item Fit the model to the data and obtain estimates of all parameters.
+	\item Remove one or more data points from the analysis and compute updated estimates of model parameters.
+	\item Based on full- and reduced-data estimates, contrast quantities of interest to determine how the absence
+	of the observations changes the analysis.
+\end{enumerate}
+We use the subscript (U) to denote quantities obtained without the observations in the set U. For example,
+%βb
+(U) denotes the fixed-effects “\textit{\textbf{leave-U-out}}” estimates. Note that the set U can contain multiple observations.
+
+
+%===================================================================================
+If the global measure suggests that the points in U are influential, you should next determine the nature of
+that influence. In particular, the points can affect
+\begin{itemize}
+	\item the estimates of fixed effects
+	\item the estimates of the precision of the fixed effects
+	\item the estimates of the covariance parameters
+	\item the estimates of the precision of the covariance parameters
+	\item fitted and predicted values
+\end{itemize}
+
+It is important to further decompose the initial finding to determine whether data points are actually troublesome.
+Simply because they are influential “somehow”, should not trigger their removal from the analysis or
+a change in the model. For example, if points primarily affect the precision of the covariance parameters
+without exerting much influence on the fixed effects, then their presence in the data may not distort hypothesis
+tests or confidence intervals about $\beta$.
+%They will only do so if your inference depends on an estimate of the
+%precision of the covariance parameter estimates, as is the case for the Satterthwaite and Kenward-Roger
+%degrees of freedom methods and the standard error adjustment associated with the DDFM=KR option.
+
+%------------------------------------------------------------%
+\subsection{Summary of Paper}
+>>>>>>> origin/master
+%Summary of Schabenberger
+Standard residual and influence diagnostics for linear models can be extended to LME models.
+The dependence of the fixed effects solutions on the covariance parameters has important ramifications on the perturbation analysis.	
+Calculating the studentized residuals-And influence statistics whereas each software procedure can calculate both conditional and marginal raw residuals, only SAs Proc Mixed is currently the only program that provide studentized residuals Which ave preferred for model diagnostics. The conditional Raw residuals ave not well suited to detecting outliers as are the studentized conditional residuals. (schabenbege r)
+
+
+LME are flexible tools for the analysis of clustered and repeated measurement data. LME extend the capabilities of standard linear models by allowing unbalanced and missing data, as long as the missing data are MAR. Structured covariance matrices for both the random effects G and the residuals R. missing at Random.
+
+A conditional residual is the difference between the observed valve and the predicted valve of a dependent variable- Influence diagnostics are formal techniques that allow the identification observation that heavily influence estimates of parameters.
+To alleviate the problems with the interpretation of conditional residuals that may have unequal variances, we consider sealing.
+Residuals obtained in this manner ave called studentized residuals.
+
+\begin{itemize}
+	\item Standard residual and inﬂuence diagnostics for linear models can be extended to linear mixed models. The dependence of ﬁxed-effects solutions on the covariance parameter estimates has important ramiﬁcations in perturbation analysis. 
+	\item To gauge the full impact of a set of observations on the analysis, covariance parameters need to be updated, which requires reﬁtting of the model. 
+%	\item The experimental INFLUENCE option of the MODEL statement in the MIXED procedure (SAS 9.1) enables you to perform iterative and noniterative inﬂuence analysis for individual observations and sets of observations.
+	
+	\item The conditional (subject-speciﬁc) and marginal (population-averaged) formulations in the linear mixed model enable you to consider conditional residuals that use the estimated BLUPs of the random effects, and marginal residuals which are deviations from the overall mean. 
+	\item Residuals using the BLUPs are useful to diagnose whether the random effects components in the model are speciﬁed correctly, marginal residuals are useful to diagnose the ﬁxed-effects components. 
+	\item Both types of residuals are available in SAS 9.1 as an experimental option of the MODEL statement in the MIXED procedure.
+	
+	\item It is important to note that influence analyses are performed under the assumption that the chosen model is correct. Changing the model structure can alter the conclusions. Many other variance models have been ﬁt to the data presented in the repeated measures example. You need to see the conclusions about which model component is affected in light of the model being fit.
+%	\item  For example, modeling these data with a random intercept and random slope for each child or an unstructured covariance matrix will affect your conclusions about which children are inﬂuential on the analysis and how this influence manifests itself.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\printindex
+\bibliographystyle{chicago}
+\bibliography{DB-txfrbib}
+\end{document}
