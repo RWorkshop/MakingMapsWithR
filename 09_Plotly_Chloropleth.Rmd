@@ -1,0 +1,95 @@
+---
+title: "Coillte Forest Automated Reporting Tool"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+   
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Load libraries
+library(dplyr)        # data wrangling
+library(cartogram)    # for the cartogram
+library(ggplot2)      # to realize the plots
+library(broom)        # from geospatial format to data frame
+library(tweenr)       # to create transition dataframe between 2 states
+library(gganimate)    # To realize the animation
+library(maptools)     # world boundaries coordinates
+library(viridis)      # for a nice color palette
+library(kableExtra)
+library(mapproj)
+library(gridExtra)
+library(DT)
+library(plotly)
+```
+
+## Plotly R Open Source Graphing Library
+
+Plotly's R graphing library makes interactive, publication-quality graphs. Examples of how to make line plots, scatter plots, area charts, bar charts, error bars, box plots, histograms, heatmaps, subplots, multiple-axes, and 3D (WebGL based) charts.
+
+## Example Data: USA Agricultural Exports 2011
+
+
+```{r,echo=FALSE}
+df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv")
+
+head(df)
+```
+
+
+
+
+
+
+```{r echo = FALSE}
+library(plotly)
+df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv")
+df$hover <- with(df, paste(state, '<br>', "Beef", beef, "Dairy", dairy, "<br>",
+                           "Fruits", total.fruits, "Veggies", total.veggies,
+                           "<br>", "Wheat", wheat, "Corn", corn))
+# give state boundaries a white border
+l <- list(color = toRGB("red"), width = 2)
+# specify some map projection/options
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('blue')
+)
+```
+
+```{r echo = FALSE}
+p <- plot_geo(df, locationmode = 'USA-states') %>%
+  add_trace(
+    z = ~total.exports, text = ~hover, locations = ~code,
+    color = ~total.exports, colors = 'Purples'
+  ) %>%
+  colorbar(title = "Millions USD") %>%
+  layout(
+    title = '2011 US Agriculture Exports by State<br>(Hover for breakdown)',
+    geo = g
+  )
+
+```
+
+```{r,echo=FALSE}
+p
+```
+
+
+## Displaying the Raw Data
+
+The table below depicts the raw data for several variables. Other variables are omitted for sake of space.
+
+```{r,echo=FALSE}
+
+df1 <- df %>% dplyr::select(code:dairy)
+datatable(df1, options = list(
+  searching = FALSE,
+  pageLength = 5,
+  lengthMenu = c(5, 10, 15, 20)
+))
+```
