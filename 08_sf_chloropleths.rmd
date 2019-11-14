@@ -1,0 +1,107 @@
+---
+title: "Chloropleths with ``sf``"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+   
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Load libraries
+library(dplyr)        # data wrangling
+library(ggplot2)      # to realize the plots
+library(broom)        # from geospatial format to data frame
+library(maptools)     # world boundaries coordinates
+library(viridis)      # for a nice color palette
+library(kableExtra)
+library(mapproj)
+
+```
+
+
+## Chloropleths
+
+Choropleth Maps display divided geographical areas or regions that are coloured, shaded or patterned in relation to a data variable. This provides a way to visualise values over a geographical area, which can show variation or patterns across the displayed location. 
+
+The data variable uses colour progression to represent itself in each region of the map. Typically, this can be a blending from one colour to another, a single hue progression, transparent to opaque, light to dark or an entire colour spectrum. 
+
+
+## North Carolina SIDS data set 
+
+* Curator: Roger Bivand
+* Source: vignettes/sids.Rmd 
+
+
+This data set was presented first in Symons, Grimson, and Yuan (1983), analysed with reference to the spatial nature of the data in Cressie and Read (1985), expanded in Cressie and Chan (1989), and used in detail in Cressie (1991). It is for the 100 counties of North Carolina, and includes counts of numbers of live births (also non-white live births) and numbers of sudden infant deaths, for the July 1, 1974 to June 30, 1978 and July 1, 1979 to June 30, 1984 periods.
+
+In Cressie and Read (1985), a listing of county neighbours based on shared boundaries (contiguity) is given, and in Cressie and Chan (1989), and in Cressie (1991, 386–89), a different listing based on the criterion of distance between county seats, with a cutoff at 30 miles. The county seat location coordinates are given in miles in a local (unknown) coordinate reference system. The data are also used to exemplify a range of functions in the spatial statistics module user’s manual (Kaluzny et al. 1996).
+
+
+
+```{r echo= FALSE, include = FALSE}
+nc <- sf::st_read(system.file("shape/nc.shp", package = "sf"), quiet = TRUE)
+
+# use only first three elements
+nc3 <- nc[ 1:3, ]
+
+# choose a point on the surface of each geometry
+nc3_points <- sf::st_point_on_surface(nc3)
+#> Warning in st_point_on_surface.sf(nc3): st_point_on_surface assumes
+#> attributes are constant over geometries of x
+#> Warning in st_point_on_surface.sfc(st_geometry(x)): st_point_on_surface may
+#> not give correct results for longitude/latitude data
+
+# retrieve the coordinates
+nc3_coords <- as.data.frame(sf::st_coordinates(nc3_points))
+nc3_coords$NAME <- nc3$NAME
+
+
+```
+
+
+## Chloropleth depicting BIR in 1974
+
+For this example, three counties are selected.
+
+```{r echo = FALSE}
+P0 <- ggplot() +
+  geom_sf(data = nc3, aes(fill = BIR74)) +
+  geom_text(data = nc3_coords, aes(X, Y, label = NAME), colour = "white")
+P0
+```
+
+## 1974 and 1979
+
+Here we compare the prevalence of BIR throughout the entire state in 1974 and 1979.
+
+```{r echo = FALSE}
+P1 <- ggplot() +
+  geom_sf(data = nc, aes(fill = BIR74)) + ggtitle("1974")
+
+P2 <- ggplot() +
+  geom_sf(data = nc, aes(fill = BIR79)) + ggtitle("1979")
+
+grid.arrange(P1,P2,nrow=2)
+```
+
+
+## References
+
+
+* Cressie, N. 1991. Statistics for Spatial Data. New York: Wiley.
+
+
+* Cressie, N., and N. H. Chan. 1989. “Spatial Modelling of Regional Variables.” Journal of the American Statistical Association 84: 393–401.
+
+
+* Cressie, N., and T. R. C. Read. 1985. “Do Sudden Infant Deaths Come in Clusters?” Statistics and Decisions Supplement Issue 2: 333–49.
+
+  Also : 1989. “Spatial Data-Analysis of Regional Counts.” Biometrical Journal 31: 699–719.
+
+* Kaluzny, S. P., S. C. Vega, T. P. Cardoso, and A. A. Shelly. 1996. S-PLUS SPATIALSTATS User’s Manual Version 1.0. Seattle: MathSoft Inc.
+
+* Symons, M. J., R. C. Grimson, and Y. C. Yuan. 1983. “Clustering of Rare Events.” Biometrics 39: 193–205.
+
