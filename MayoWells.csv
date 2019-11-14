@@ -1,0 +1,212 @@
+GSIName,OrigName,SrcName,Type,Depth_m,Dpth-Rck_m,DTRConfid,DrillDate,Easting,Northing,Loc_Acc,Townland,Town,County,SixInShtNo,SourceUse,YldClass,ProdClass,Yield_m3d,Abstr_m3d,Ovrflw_m3d,AbstrDDm,SC_m3dm,cas1dia_mm,Wtrstrk1_m,Wtrstrk2_m,Wtrstrk3_m,Wtrstrk4_m,Wtrloss1_m,GenComms,DrillComms,CasingComs,Depth,,,
+1429NWW501,ROBH089,,Borehole,6.5,6.5,Bedrock Presumed,28/09/2001,154470,300320,to 10m,CARRACASTLE,,Mayo,63,Agri & domestic use,,,,,,,,,,,,,,,,,1to50m,,,
+0827NEW001,,,Spring,5.0,,DTB Unknown,,99900,284240,to 20m,WESTPORT,,Mayo,88,,Low Spring,,218.0,,,,,,,,,,,unknown,Info from file 2.3.16. Location map included on well card,,1to50m,,,
+0831SEW004,MO WG 078,,Borehole,67.1,7.3,Bedrock Met,,109830,314860,to 20m,KINARD,Crossmolina,Mayo,38,Agri & domestic use,Excellent,,545.0,,,,,203.0,,,,,,"Drilled by Boland Bros, Enniscrone",Site map included,"Cavity at 64m
+chemical data available",1to50m,,,
+1125NEW006,MO WG 008,,Borehole,57.9,4.9,Bedrock Met,,125800,267390,to 20m,CLOONCORMICK,Hollymount,Mayo,110,Agri & domestic use,Poor,II,32.7,,,,109.0,152.0,51.8,,,,,"Drilled by Boland Bros, Enniscrone",Site map included,2 hr test; nil drawdown reported; SC value assumes dd of 0.3m; chemical data available,1to50m,,,
+1131SWW001,MO WG 058,,Borehole,22.9,,DTB Unknown,30/05/1998,110180,313800,to 20m,CREEVY,Ballina,Mayo,38,Agri & domestic use,,,,,,,,152.0,,,,,,"Drilled by Dullea, Donegal",Site map included,chemical data available,1to50m,,,
+1427NWW502,,,Borehole,88.4,,,,150380,287090,to 20m,CLOONGANNAGH,,Mayo,82,,Poor,V,12.0,,,,0.5,,,,,,,,Data source - Donal Daly's six-inch maps,Probably in Kilbryan Lst (KL Ibbottson map),1to50m,,,
+1429NWW008,TW2 (EPA MAY 23),Cloonmore Rooskey GWS,Borehole,61.4,4.0,Bedrock Met,22/11/2001,153140,302190,to 20m,CARROWNTOBER,Charlestown,Mayo,63,Group Scheme,Good,III,180.0,,,17.9,10.1,203.0,,,,,,"Drilled by Dunnes, Dundalk",,,1to50m,,,
+1429NWW009,TW 1,Cloonmore / Rooskey GWS,Borehole,103.6,7.2,Bedrock Met,20/11/2001,153230,302110,to 20m,BARROE,,Mayo,63,Group Scheme,Moderate,,76.3,,,,,203.0,2.5,5.0,23.0,39.0,,"Drilled by Dunnes, Dundalk",,"Steel Casing, Max Safe yield: 
+32.7m3/day",1to50m,,,
+0825NEW001,MO WG 275,,Borehole,91.4,3.1,Bedrock Met,07/09/2001,106210,265340,to 50m,GREENAUN,Tourmakeady,Mayo,116A,Agri & domestic use,Poor,V,16.4,,,,0.2,152.0,67.1,79.3,,,,"Drilled by Tony Lynch, Cappamore","site map included
+","72 hr test; chemical data available
+Cavities at 67.1m and 79.3m",1to50m,,,
+0827NEW002,98-BH-1,,Borehole,80.0,2.7,Bedrock Met,,109470,285090,to 50m,BALLYNAMARROGE,Castlebar,Mayo,89,Public supply (Co Co),Poor,,,,,,,,,,,,,,Site map included in report,"Yield range 15-40m3/d
+Cored from 5-80m
+Water chemical data available in report",1to50m,,,
+0827NEW003,98-BH2,,Borehole,80.0,5.0,Bedrock Met,,109890,284540,to 50m,BALLYNAMARROGE,Castlebar,Mayo,89,Public supply (Co Co),Poor,,,,,,,,,,,,,,Site map included in report,"Yield average 15-40m3/d
+Croed from 5-40m
+Water chemical data available in report",1to50m,,,
+0827NEW004,98-BH5,,Borehole,80.0,5.0,Bedrock Met,,109890,284530,to 50m,BALLYNAMARROGE,Castlebar,Mayo,89,Public supply (Co Co),Poor,,,,,,,,,,,,,,Site map included in report,"Yield range 15-40m3/d
+Cored 5-80m
+Water chemical data available in report",1to50m,,,
+0827NWW001,MO WG 205,,Borehole,91.4,0.3,Bedrock Met,31/07/2001,86170,280360,to 50m,KILSALLAGH UPPER,Westport,Mayo,86,Agri & domestic use,Poor,V,5.5,,,61.0,0.1,152.0,79.2,,,,,"Drilled by Dullea, Donegal",Directions given on well record,"8 hr test
+chemical data available",1to50m,,,
+0827SWW001,MO WG 080,,Borehole,64.0,0.9,Bedrock Met,12/04/1999,90160,274850,to 50m,LEENAVESTA,Westport,Mayo,97,Agri & domestic use,Poor,V,32.7,,,54.9,0.6,152.0,50.3,56.4,,,,"Drilled by Tony Lynch, Cappamore",Site map included. Mount Tabor Hermitage,"72 hr test; Cavities at 50.3m, 56.4m
+chemical data available",1to50m,,,
+0829NEW001,MO WG 006,,Borehole,42.7,25.9,Bedrock Met,13/11/1999,106110,307260,to 50m,COOLNABINNIA,Knockaffertagh,Mayo,46,Agri & domestic use,Poor,V,4.5,,,27.4,0.2,152.0,30.5,,,,,"Drilled by Dullea, Donegal",Between house and community centre,24 hr test; chemical data available,1to50m,,,
+0829NEW002,MO WG 017,,Borehole,42.7,22.9,Bedrock Met,02/10/1999,106210,307120,to 50m,COOLNABINNIA,Knockaffertagh,Mayo,46,Agri & domestic use,Poor,,4.5,,,,,152.0,27.4,38.1,,,,"Drilled by Dullea, Donegal",Site map included,24 hr test,1to50m,,,
+0829SEW001,ILC,Forestry Service,Borehole,19.8,14.0,Bedrock Met,,99640,295300,to 50m,CAMCLOON BEG,Newport,Mayo,68,,Moderate,III,76.4,,,,10.9,,14.1,,,,,unknown,"location map included
+EPA grid refs supplied. Info from Geoff Wrights check list CORKSCS",,1to50m,,,
+0831NEW002,BH1+ GSI,Bellacorick Power Station - GSI BH,Borehole,,,,,96900,320260,to 50m,BELLACORICK,,Mayo,27,Other,Poor,,16.5,,,,,125.0,,,,,,"Unknown
+Drilled Nov 1981",Location from site map included,GSI test 150-180pgh@most:silting up,1to50m,,,
+0831NEW003,BH2-GSI,Bellacorick Power Station,Borehole,,,Bedrock Not Met,,96850,320130,to 50m,BELLACORICK,,Mayo,27,Other,,,,,,,,,,,,,,"Unknown
+drilled Nov 1981","Adjacent pump station,near river",little water,1to50m,,,
+0831NEW004,BH13,Bellacorick Power Station,Borehole,5.2,,Bedrock Not Met,23/09/1998,97100,320830,to 50m,BELLACORICK,,Mayo,27,Other,,,,,,,,50.0,2.2,,,,,chemical data available,Location from site plan with report,"Bentonite seal 5.1-5.2m
+Grout Seal 0-1m
+Slotted pipe 1.2-5.2m
+Permeability test data available,P.S.A analysis avavilable",1to50m,,,
+0831NEW005,BH14,Bellacorick Power Station,Borehole,6.6,,Bedrock Not Met,24/09/1998,97100,321100,to 50m,BELLACORICK,,Mayo,27,Other,,,,,,,,,,,,,,Chemical data available,Location from site plan with report,"Grout seal 0-1m,slotted pipe 1.4-6.6m, Bentonite seal 6.5-6.6m, Gravel pack 1.4-6.5m, sand layer 1-1.3m.
+Permeability test data available and P.S.A analysis available",1to50m,,,
+0831SEW001,MO WG 198,,Borehole,48.8,7.6,Bedrock Met,21/10/1999,102810,310970,to 50m,KEENAGH BEG,Crossmolina,Mayo,46,Agri & domestic use,Poor,V,4.5,,,18.3,0.3,152.0,15.2,36.6,,,,"Drilled by Dullea, Donegal","past Keenagh school & church, 1st left, 1st house on right, up small lane",24 hr test; chemical data available,1to50m,,,
+0831SEW003,MO WG 059,,Borehole,44.2,22.9,Bedrock Met,03/09/1999,109860,313690,to 50m,CREEVY,Ballina,Mayo,38,Agri & domestic use,Poor,V,4.5,,,24.4,0.2,152.0,27.4,41.2,,,,"Drilled by Dullea, Donegal",Site map included,24 hr test; Cavity at 41.2m,1to50m,,,
+0831SEW006,,Crossmolina GWS - M.J. Doak Thesis 1995,Spring,,4.0,Bedrock Presumed,,109950,317100,to 50m,MOYLAW,Carrowkeel,Mayo,38,Group Scheme,Intermediate Spring,,1564.0,726.0,,,,,,,,,,Water quality data available from M J Doak Thesis 1995,"Info from M.J. Doak 1995 - Vunerablity to pollution and Hydrochemical variation of springs in W Ire.
+Location of spring 3.8kms west of Crossmolina",Max flow 4800m3/d,1to50m,,,
+0833NEW001,MO WG 003,,Borehole,53.3,8.0,Bedrock Met,24/07/1998,102410,340940,to 50m,CONAGHRA,Ballycastle,Mayo,6,Agri & domestic use,Poor,,16.4,,,,,152.0,40.0,,,,,"Drilled by Dullea, Donegal",Location map included,24 hr test; Cavity at 42-42.5m,1to50m,,,
+0833NEW002,MO WG 052,,Borehole,47.2,10.0,Bedrock Met,25/07/1998,103940,341530,to 50m,BEHY,,Mayo,6,Agri & domestic use,Poor,,21.8,,,,,152.0,15.0,34.0,,,,"Drilled by Dullea, Donegal",Location map included,24 hr test; chemistry data available,1to50m,,,
+0833SEW002,EPA May 34,Ballycastle WSS,Spring,,,,,108700,339000,to 50m,DOONFEENY UPPER,Ballyknock,Mayo,7,Public supply (Co Co),Low Spring,,360.0,,,,,,,,,,,,EPA grid refs supplied. Info from Public Supplies in Co. Mayo 02-07-02,Satisfactory quality,1to50m,,,
+0833SWW001,"GWS 226,MAY 43,IGR (F825390)","Rossport GWS, private source",Borehole,180.0,,DTB Unknown,,82500,339000,to 50m,ROSS PORT,Glenamoy,Mayo,4,Group Scheme,Moderate,,67.0,55.0,,,,50.0,,,,,,unknown,1 pump station,coliforms in 1999.Quantity 55m3/d,1to50m,,,
+1123NWW030,MY 41.48,,Borehole,14.7,,DTB Unknown,,120510,247900,to 50m,GORTBRACK,,Mayo,41,Agri & domestic use,Failure,,0.9,,,,,150.0,,,,,,,location from 6'' map,,1to50m,,,
+1125NEW007,NH2,Hollymount - Kilmaine GW Inventry - D.Drew '83,Borehole,31.1,,DTB Unknown,,130160,263370,to 50m,MUSIC FIELD,,Mayo,119,Other,,,,,,,,150.0,,,,,,,marked on half inch map,,1to50m,,,
+1125NEW008,NH1,Hollymount - Kilmaine GW Inventry - D.Drew '83,Borehole,30.5,,DTB Unknown,,126470,262360,to 50m,ARDKILL,Lisnamoyle,Mayo,119,Other,Failure,,,,,,,150.0,,,,,,,marked on half inch map,,1to50m,,,
+1125NEW009,NH3,Hollymount - Kilmaine GW Inventry - D.Drew '83,Borehole,30.5,,DTB Unknown,,125630,265480,to 50m,BALLINA,Lisnamoyle,Mayo,118,Other,,,,,,,,,,,,,,,marked on half inch map,,1to50m,,,
+1125NEW010,"ILC 1349,OPW 45",,Borehole,49.4,21.0,Bedrock Met,,128830,263870,to 50m,ANNEFIELD,Ballinrobe,Mayo,119,Domestic use only,Poor,IV,27.3,,,,10.1,,,,,,,"unknown
+Aug 1969",map included with site,,1to50m,,,
+1125NEW012,NH1,,Borehole,30.1,1.2,Bedrock Met,,126470,262350,to 50m,ARDKILL,Ballinrobe,Mayo,119,Other,Poor,V,10.9,,,,0.6,175.0,,,,,,"unknown
+Feb 1983",South of ruined Highwood mill. Location of site map included,,1to50m,,,
+1125NEW014,EPA May19,Kilmaine WSS,Spring,,,,,126200,260100,to 50m,KILLERNAN,Kilmaine,Mayo,118,Public supply (Co Co),Low Spring,,318.0,,,,,,,,,,,,"EPA grid refs supplied.
+Location at Toberpatrick",Quantity from EPA sources: 650m3/d,1to50m,,,
+1125NEW016,,Ballindine Public Supply,Spring,15.0,7.7,Bedrock Met,,136220,269830,to 50m,BALLINDINE NORTH,Ballindine,Mayo,111,Public supply (Co Co),High Spring,,3000.0,,,,,150.0,,,,,,Water quality data available in M.J. Doak 1995 Thesis,"Info from M.J. Doak 1995 - Vunerablity to pollution and Hydrochemical variation of springs in W Ireland.
+5kms SE of Claremorris, 1km NW of Ballindine",Max flow 3500m3/d,1to50m,,,
+1125NWW001,NH4,Hollymount - Kilmaine GW Inventry - D.Drew '83,Borehole,30.5,3.4,Bedrock Met,,122480,263200,to 50m,CREGDUFF,Ballinrobe,Mayo,118,Other,Moderate,I,98.0,,,,246.1,,,,,,,,"Marked on half inch map.South of Cregduff, rising beside lane.
+Collapsed to 24.4m, 150mm diameter",,1to50m,,,
+1125NWW003,OPW NH4,Cahernamallaght,Unknown,24.1,,DTB Unknown,,122800,263100,to 50m,CAHERNAMALLAGHT,Ballinrobe,Mayo,118,Unknown,,,,,,,,,,,,,,unknown,"NGR's supplied.
+Info from Geoff Wrights check list CORKSCS",,1to50m,,,
+1125SEW112,NH5,Hollymount - Kilmaine GW Inventory - D.Drew '83,Borehole,30.5,,DTB Unknown,,127250,259250,to 50m,DAUROS,Kilmaine,Mayo,122,Other,,,,,,,,150.0,,,,,,,marked on half inch map,,1to50m,,,
+1125SWW002,ILC 1381,Ballyglass,Unknown,60.8,,DTB Unknown,,117880,259180,to 50m,BALLYGLASS,Neale,Mayo,121,Agri & domestic use,Poor,V,25.1,,,,1.2,,,,,,,unknown,NGR's  supplied. Info from Geoff Wrights check list CORKSCS,,1to50m,,,
+1125SWW003,ILC 1382,Carrowoughteragh,Unknown,26.4,,DTB Unknown,,123600,250900,to 50m,CARROWOUGHTERAGH,Glencorrib,Mayo,123,Agri & domestic use,Poor,V,6.0,,,,0.4,,,,,,,unknown,NGR's supplied. Info from Geoff Wrights check list CORKSCS,,1to50m,,,
+1125SWW004,ILC 1382A,Carrowoughteragh,Unknown,21.6,,DTB Unknown,,123700,250700,to 50m,CARROWOUGHTERAGH,Glencorrib,Mayo,123,Agri & domestic use,Moderate,III,74.0,,,,20.2,,,,,,,unknown,NGR's supplied. Info from Geoff Wrights check list CORKSCS,,1to50m,,,
+1125SWW005,ILC 1383,Bunnafollistran,Unknown,53.3,,DTB Unknown,,122000,252500,to 50m,BUNNAFOLLISTRAN,Glencorrib,Mayo,123,Agri & domestic use,Poor,V,19.1,,,,0.7,,,,,,,unknown,NGR's supplied. Info from Geoff Wrights check list CORKSCS,,1to50m,,,
+1125SWW006,ILC 1383A,Bunnafollistran,Unknown,45.3,,DTB Unknown,,122200,252600,to 50m,BUNNAFOLLISTRAN,Glencorrib,Mayo,123,Agri & domestic use,Moderate,V,45.5,,,,2.0,,,,,,,unknown,NGR's supplied. Info from Geoff Wrights check list CORKSCS,,1to50m,,,
+1127NEW001,"GWS285,May20,IGR (M398834)",Knock Public Water Supply,Dug well,,,,,139800,283400,to 50m,DRUM,Knock,Mayo,92,Group Scheme,,,,773.0,,,,,,,,,,unknown,"2 Dug wells,one in DerryLough and one in Whigfield","Max capacity 318m3/d.
+Storage 409m3. Nightflow measurements low
+Actual abstraction 773m3/d.
+Coliforms occassionally present",1to50m,,,
+1127NEW002,MO WG 182,,Borehole,30.5,,Bedrock Not Met,15/10/1999,131850,287740,to 50m,BALLINAMORE,Kiltimagh,Mayo,80,Agri & domestic use,Poor,,10.9,,,,,152.0,18.3,24.4,,,,"Drilled by Patrick Briody, Rathangan",Site map included,Estimated Yield; chemical data available,1to50m,,,
+1127NEW007,EPA May1,Balla GWS,Unknown,,,,,125800,284700,to 50m,BALLA,Derryvohy,Mayo,90,Group Scheme,,,,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 180m3/d,1to50m,,,
+1127NWW004,,,Dug well,6.7,5.5,Bedrock Met,,119840,284070,to 50m,BALLYCARRA,Castlebar,Mayo,90,Domestic use only,,,,,,,,,,,,,,unknown,location on well card,water a rusty colour,1to50m,,,
+1127NWW005,98-BH3,,Borehole,80.0,3.5,Bedrock Met,,110100,285190,to 50m,BALLYNAMARROGE,Castlebar,Mayo,89,Public supply (Co Co),Poor,,,,,,,,,,,,,,Site map included in report,"Yield range:15-40m3/d
+Cored 3.5-80m
+Water chemical data available in report",1to50m,,,
+1127NWW006,98-BH4,,Borehole,80.0,6.0,Bedrock Met,,110200,284950,to 50m,BALLYNAMARROGE,Castlebar,Mayo,89,Public supply (Co Co),Poor,,,,,,,,,,,,,,Site map included in report,"Yield range 15-40m3/d
+Cored 6-80m
+Water chemical data available in report",1to50m,,,
+1127NWW007,EPA May45,,Borehole,,,,,124300,285200,to 50m,SMUTTANAGH,Manulla,Mayo,79,Group Scheme,,,,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 290m3/d,1to50m,,,
+1127SEW001,"GWS087,May21,IGR(M268784)","Mayo Abbey GWS, Private source",Spring,,,,,126800,278400,to 50m,GORTAPHUNTAUN,,Mayo,100,Group Scheme,,,,29.0,,,,,,,,,,unknown,spring on edge of river.,Ecoli in 1998. Not satisfactory,1to50m,,,
+1127SEW003,ILC 1319,,Unknown,50.9,,DTB Unknown,,133800,271400,to 50m,DERRY,Claremorris,Mayo,111,Agri & domestic use,Poor,V,23.6,,,,0.9,,,,,,,unknown,"NGR's supplied.
+Info from Geoff Wrights check list CORKSCS",,1to50m,,,
+1127SEW004,EPA May37,,Borehole,,,,,134500,274300,to 50m,CLAREMORRIS,Clare Lough,Mayo,101,Group Scheme,,,,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 545m3/d,1to50m,,,
+1127SEW005,EPA May38,,Unknown,,,,,133400,274700,to 50m,CLAREMORRIS,,Mayo,101,Group Scheme,,,,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 556m3/d,1to50m,,,
+1127SWW002,ILC 1592,,Unknown,53.3,,DTB Unknown,,124500,275400,to 50m,SUMMERHILL SOUTH,Ballyglass,Mayo,100,Agri & domestic use,Poor,V,15.3,,,,0.6,,,,,,,unknown,"NGR's supplied.
+ Info from Geoff Wrights check list CORKSCS",,1to50m,,,
+1129NEW002,EPA May 18,Killasser GWS,Unknown,,,,,135700,307700,to 50m,KNOCKFADDA,Foxford,Mayo,49,Group Scheme,,,,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 400m3/d,1to50m,,,
+1129NWW001,MO WG 162,,Borehole,48.8,5.5,Bedrock Met,10/07/1999,117820,301200,to 50m,GORT,Castlebar,Mayo,60,Agri & domestic use,Poor,V,4.5,,,30.5,0.2,152.0,18.3,41.2,,,,"Drilled by Dullea, donegal","
+","24 hr test
+chemical data available",1to50m,,,
+1129SEW002,"GWS011,May6,IGR (336953)","Bohola GWS,Private source",Spring,,,,,133600,295300,to 50m,GORTNASILLAGH,Bohola,Mayo,71,Group Scheme,,,,471.4,,,,,,,,,,unknown,"Spring in Carrowmore,underground river in Tubberlee, Tubberlee is the source
+","Min nightflow measurements from1st to 31st Sept 1996, 37%leakage
+leakage and pressure problems. Good quality water. Quantity=200m3/d",1to50m,,,
+1129SEW004,EPA  May24,Swinford WSS,Spring,,,,,138500,298000,to 50m,CARROWCANADA,Swinford,Mayo,71,Public supply (Co Co),Intermediate Spring,,1000.0,,,,,,,,,,,,EPA grid refs supplied.,At capacity during summertime. EPA cites yield at 1000m3/d,1to50m,,,
+1129SWW002,MO WG 126,,Borehole,36.6,10.7,Bedrock Met,14/09/1999,113980,298000,to 50m,BURREN,Castlebar,Mayo,69,Agri & domestic use,Poor,V,13.1,,,7.6,1.7,152.0,22.6,,,,,"Drilled by Dullea, Donegal",Location map included,6 hr test,1to50m,,,
+1129SWW005,,,Borehole,,9.1,Bedrock Met,25/08/1976,121250,295260,to 50m,PARK,Castlebar,Mayo,70,Domestic use only,Poor,,21.8,,,,,,13.7,21.3,30.1,,,unknown,location map included,Lime prevalent,1to50m,,,
+1131NWW004,,,Borehole,30.2,1.5,Bedrock Met,15/04/1974,115100,324670,to 50m,BALLYMACKEEHOLA,,Mayo,21,,Poor,,,,,,,,,,,,,WTB/MYO 4026,,,1to50m,,,
+1131SWW010,EPA May48,Crossmolina GWS,Unknown,,,,,111000,317200,to 50m,BALLINLABAUN,Crossmolina,Mayo,38,Group Scheme,,,,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 954m3/d,1to50m,,,
+1131SWW011,EPA May12,Crossmolina WS (Tubbermore),Unknown,,,,,110100,316800,to 50m,BALLINABAUN,Tobermore,Mayo,38,Group Scheme,,,,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 900m3/d,1to50m,,,
+1133SWW003,MO WG 060,,Borehole,39.6,4.5,Bedrock Presumed,20/03/1998,120480,334770,to 50m,CASTLENAGEEHA,Ballina,Mayo,15,Agri & domestic use,Moderate,,76.4,,,,,152.0,,,,,,"Drilled by Boland Bros, Enniscrone;
+Approx. DtB inferred from casing depth",Site map included,3 hr test; chemical data available,1to50m,,,
+1133SWW004,WTB/Mayo 4395,,Dug well,1.8,,DTB Unknown,,113260,332150,to 50m,BALLYBEG,Ballycastle,Mayo,14,Agri & domestic use,Good,,21.8,,,,,152.0,,,,,,unknown,,"Ok quality.
+Date of test Aug 1973",1to50m,,,
+1427NWW503,EPA May26,Treen Aughmore GWS,Unknown,,,,,147000,286400,to 50m,LARALEE,Aghamore,Mayo,82,Group Scheme,,,,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 400m3/d,1to50m,,,
+1427SWW100,EPA May4,Ballyhaunis WSS,Spring,,3.0,Bedrock Met,,149200,279100,to 50m,BALLYHAUNIS,Cloonfad,Mayo,93,Public supply (Co Co),High Spring,,12000.0,,,,,,,,,,,unknown,"EPA grid refs supplied. Info from Public Supplies in Co. Mayo 02-07-02
+Location at Hazel Hill","EPA cites yield of 900m3/d. 
+Max flow from M.J Doak = 45000m3/d",1to50m,,,
+1427SWW101,EPA May28,Tulrohaun GWS,Unknown,,,,,144800,272100,to 50m,CARROWNEDEN,Tulrohaun,Mayo,102,Group Scheme,,,,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 250m3/d,1to50m,,,
+1429NWW002,MO WG 151,,Borehole,50.3,10.7,Bedrock Met,15/08/1999,152660,300950,to 50m,CLOONFANE,Charlestown,Mayo,63,Agri & domestic use,Poor,V,27.3,,,10.4,2.6,152.0,42.7,,,,,"Drilled by Dullea, Donegal",3.5 miles from Charlestown; 2nd house Charlestown side of Cloonfane School,"8 hr test
+Chemical data available",1to50m,,,
+1429NWW003,MO WG 155,,Borehole,71.6,10.7,Bedrock Met,15/06/1999,154660,300210,to 50m,CRANMORE,Charlestown,Mayo,63,Agri & domestic use,,,,,,,,152.0,44.2,62.5,,,,"Drilled by Dullea, Donegal",site map included,Chemical data available,1to50m,,,
+1429NWW004,MO WG 014,,Borehole,61.0,9.1,Bedrock Met,15/10/1998,154050,301030,to 50m,LISSYMULGEE,Charlestown,Mayo,63,Agri & domestic use,Poor,,10.9,,,,,152.0,42.7,51.8,57.9,,,"Drilled by Patrick Briody, Rathangan",site map included,Estimated Yield; chemical data available,1to50m,,,
+1429NWW006,MO WG 54,,Borehole,41.2,11.6,Bedrock Met,15/10/1998,152690,300930,to 50m,CLOONFANE,Charlestown,Mayo,63,Agri & domestic use,Poor,IV,34.9,,,2.4,14.5,152.0,33.5,,,,,"Drilled by Dullea, Donegal",,4 hr test,1to50m,,,
+1429SWW002,MO WG 012,,Borehole,54.9,4.5,Bedrock Presumed,01/04/1999,147350,293270,to 50m,GLENTAVRAUN,Kilkelly,Mayo,73,Agri & domestic use,,,,,,,,152.0,,,,,,"Drilled by Patrick Briody, Rathangan;
+Approx. DtB inferred from Steel Casing depth",site map included,,1to50m,,,
+1429SWW003,MO WG 048,,Borehole,61.0,,DTB Unknown,01/04/1999,145810,292590,to 50m,KILMORE,Kilkelly,Mayo,72,Agri & domestic use,,,,,,,,152.0,,,,,,"Drilled by Patrick Briody, Rathangan",site map included,chemical data available,1to50m,,,
+1429SWW005,EPA May16,Kilkelly WSS,Spring,,3.0,Bedrock Met,,144200,292300,to 50m,KNOCKBRACK,Kilkelly,Mayo,72,Public supply (Co Co),High Spring,,3311.0,,,,,,,,,,,Water quality data available in M.J. Doak thesis 1995,EPA grid refs supplied  and also refs in M. J. Doak Thesis 1995,"Max capacity 3900m3/d. Info from M.J.Doak 1995- Vunerability on pollution and Hydrochemical variation of springs in W of Ire.
+Co. Co pumps:318m3/d 
+Group Scheme: 991m3/d",1to50m,,,
+1429SWW006,MO WG 179,,Borehole,73.2,6.1,Bedrock Met,15/01/2000,147700,293360,to 50m,GLENTAVRAUN,Kilkelly,Mayo,73,Agri & domestic use,Poor,,10.9,,,,,152.0,61.0,67.1,,,,"Drilled by Patrick Briody, Rathangan",Site map included,"Estimated Yield
+chemical data available",1to50m,,,
+0533SEW001,EPA MAY 36,Belmullet GWS,Dug well,,,,,67400,331900,to 100m,EMLYBEG NORTH,Belmullet,Mayo,9,Group Scheme,Good,,250.0,250.0,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 250m3/d,51to500m,,,
+0825NEW002,MO WG 241,,Borehole,67.1,3.7,Bedrock Met,16/03/2001,106510,264940,to 100m,CHURCHFIELD UPPER,Tourmakeady,Mayo,116A,Agri & domestic use,Poor,V,21.8,,,48.8,0.5,152.0,33.5,48.8,,,,"Drilled by Tony Lynch, Cappamore",,72 hr test; Cavities at 33.5m and 48.8m,51to500m,,,
+0831SEW002,MO WG 204,,Borehole,51.8,4.9,Bedrock Met,21/10/1999,102730,310670,to 100m,KEENAGH BEG,Crossmolina,Mayo,46,Agri & domestic use,Poor,V,4.6,,,24.4,0.2,152.0,15.2,33.5,,,,"Drilled by Dullea, Donegal","Past Keenagh Church and school,1st road on left, 2nd house on right up a little lane","24 hr test
+Chemical data available",51to500m,,,
+1129SWW003,,,Borehole,,,,,120780,293170,to 100m,CASTLEBAR,Gortnafolla,Mayo,78,Agri & domestic use,Good,,109.1,,,,,,,,,,,unknown,,"Plentiful supply.
+Yield of 21.8m3/d. Then blasted until 65lbs powder. 130.92m3/d, diminished a bit.
+1972",51to500m,,,
+1131SWW004,,,Borehole,37.2,4.3,Bedrock Met,,124040,316940,to 100m,BALLINA,Rehins,Mayo,39,Industrial use,Excellent,I,1308.0,,,,172.0,150.0,,,,,,unknown,Rotary,slightly sulphur,51to500m,,,
+1133SWW002,MO WG 002,,Borehole,42.7,3.1,Bedrock Met,02/10/1998,117670,338230,to 100m,CASTLETOWN,Ballina,Mayo,7,Agri & domestic use,Poor,V,16.4,,,15.2,1.1,152.0,36.6,,,,,"Drilled by Boland Bros, Enniscrone",v rough site map included. Near Castletown House,10 hr test; chemical data available,51to500m,,,
+1125NEW017,BH1,,Borehole,7.5,7.5,Bedrock Met,,136080,269760,to 500m,BALLINDINE NORTH,Ballindine,Mayo,111,Unknown,,,,,,,,,,,,,,unknown,,,51to500m,,,
+1127NEW003,,,Unknown,53.3,,DTB Unknown,,126200,284540,to 500m,BALLA,Kiltamagh,Mayo,90,Agri & domestic use,Good,,218.3,,,,,150.0,,,,,,unknown,,Excellem water. 3/1/1969,51to500m,,,
+1127NEW005,,,Borehole,29.0,4.9,Bedrock Met,,127600,281740,to 500m,MONARD,Claremorris,Mayo,91,Agri & domestic use,Excellent,,545.0,,,,,,,,,,,unknown,,,51to500m,,,
+1127NWW003,,,Borehole,61.0,,DTB Unknown,,117400,274500,to 500m,LUGAPHUILL,Castlebar,Mayo,79,Agri & domestic use,Excellent,,436.4,,,,,,,,,,,unknown,,"22/11/68, 1st well bored to 68m, no water, 2nd well 18m from the 1st.Excellen supply",51to500m,,,
+1127SEW002,,,Borehole,54.2,,DTB Unknown,,126790,278400,to 500m,KNOCKRICKARD,Claremorris,Mayo,101,Agri & domestic use,Excellent,,545.5,,,,,,,,,,,unknown,,,51to500m,,,
+1127SWW001,,,Unknown,68.6,,DTB Unknown,,121530,277470,to 500m,BALLYGLASS,Claremorris,Mayo,100,Agri & domestic use,Moderate,,54.5,,,,,,,,,,,unknown,,"23/7/69,snad spoiled well and could not put down pipe.Second well bored to 35.1m,24.4m away. Yield of 21.8m3/d (poor)",51to500m,,,
+1129NWW002,MO WG 185,,Borehole,56.4,6.7,Bedrock Met,15/09/1999,117860,300810,to 500m,GREENANS,Ross,Mayo,60,Agri & domestic use,Poor,V,14.2,,,12.2,1.2,152.0,39.6,,,,,"Drilled by Dullea, Donegal","1st turn after Ross village, about 3 miles from village, near B+B",6 hr test; chemical data available,51to500m,,,
+1129NWW003,,,Borehole,36.6,,DTB Unknown,,118290,305200,to 500m,TERRYDUFF,Lough Conn,Mayo,48,Agri & domestic use,,,,,,,,,,,,,,unknown,,,51to500m,,,
+1129SWW004,,,Borehole,114.3,,DTB Unknown,,118480,291300,to 500m,WINDSOR,Turlough,Mayo,79,Agri & domestic use,Good,,163.6,,,,,,,,,,,unknown,,Well has not yet had a pump put in it and is not topped,51to500m,,,
+1131SWW002,,,Dug well,0.9,,DTB Unknown,,111050,319030,to 500m,KNOCKBAUN,Crossmolina,Mayo,29,Agri & domestic use,Good,,109.0,,,,,,,,,,,unknown,,17-5-1972,51to500m,,,
+1131SWW003,,,Borehole,15.3,,DTB Unknown,,122990,313430,to 500m,CORROY,Ballina,Mayo,39,Agri & domestic use,Good,,158.0,,,,,250.0,,,,,,unknown,,1955,51to500m,,,
+1131SWW005,,,Unknown,32.6,,DTB Unknown,,111960,312350,to 500m,DERVIN,Castlehill,Mayo,38,Agri & domestic use,,,,,,,,,,,,,,unknown,,,51to500m,,,
+1131SWW006,,,Borehole,17.1,,DTB Unknown,,111970,312300,to 500m,DERVIN,Castlehill,Mayo,38,Agri & domestic use,,,,,,,,,15.2,,,,,unknown,,,51to500m,,,
+1429NWW005,MO WG 064,,Borehole,38.4,9.0,Bedrock Presumed,23/07/1998,149030,300640,to 500m,BULCAUN,Charlestown,Mayo,63,Agri & domestic use,Moderate,,76.4,,,,,152.0,,,,,,"Drilled by Tom Connell, Blackrock; 
+Approx. DtB inferred from steel casing depth",site map included but no accurate location,chemical data available,51to500m,,,
+1429NWW007,,,Borehole,18.6,,DTB Unknown,,140700,304940,to 500m,BELLANACURRA,Charlestown,Mayo,50,Agri & domestic use,Poor,,10.9,,,,,,,,,,,unknown,,Jan-97,51to500m,,,
+0527SEW001,MO WG 173,,Borehole,51.8,1.2,Bedrock Met,15/08/1999,75190,270900,to 1km,CORRAGAUN,Louisburg,Mayo,96,Agri & domestic use,Poor,,10.9,,,,,152.0,42.7,48.8,,,,"Drilled by Boland Bros, Enniscrone","From Killadoon P.O. travel approx 3 miles towards Silver Strand, cross small bridge, on RHS.","
+Chemical data available",over500m,,,
+0825NEW003,,Gaeltanna Eireann,Borehole,33.5,4.6,Bedrock Met,,109450,269190,to 1km,TRENLAUR,Tourmakeady,Mayo,109,Agri & domestic use,Failure,,,,,,,,,,,,,unknown,,,over500m,,,
+0833SEW001,,,Dug well,2.4,,DTB Unknown,,103410,339070,to 1km,BEHY,Belderg,Mayo,6,Agri & domestic use,Good,,109.0,,,,,,,,,,,unknown,,Date of test Sept 1972,over500m,,,
+1125NEW013,,Charlestown Wss,Spring,,,,,129670,266130,to 1km,BUSHFIELD,Lisnamoyle,Mayo,110,Public supply (Co Co),Intermediate Spring,,1200.0,,,,,,,,,,,,Info from Public Supplies in Co. Mayo 02-07-02,The yield represents half of the amount it used to supply,over500m,,,
+1125NWW002,WTB/MYO/492 and WTB/MYO/508,,Borehole,20.7,2.4,Bedrock Met,,122490,263210,to 1km,CARROWKEEL,Ballinrobe,Mayo,118,Agri & domestic use,Good,,109.1,,,,,,,,,,,,Joint work between Carrowkeel and Ballytrasna,"Oct 1966 info arrived, yield taken May 1965",over500m,,,
+1127NEW004,,,Unknown,45.7,,DTB Unknown,,126380,283140,to 1km,ARDBOLEY,Balla,Mayo,90,Agri & domestic use,Good,,109.0,,,,,150.0,,,,,,unknown,,,over500m,,,
+1127NWW001,,,Borehole,29.9,3.7,Bedrock Met,01/05/1971,123950,282740,to 1km,BROWNHALL,Ballycarra,Mayo,90,Agri & domestic use,,,,,,,,,,,,,,unknown,,,over500m,,,
+1129SEW001,,,Borehole,19.8,13.7,Bedrock Met,,133440,292430,to 1km,KILLEDAN,,Mayo,71,Domestic use only,Good,,130.9,,,,,,,,,,,unknown,infront of dwelling house,"Excellent spring at 15.24m, good quality water",over500m,,,
+1129SEW003,MO WG 262,,Borehole,79.3,13.7,Bedrock Met,15/08/2001,136420,290050,to 1km,CARRICK,Kiltimagh,Mayo,80,Agri & domestic use,Poor,,10.9,,,,,152.0,54.9,67.1,73.2,,,"Drilled by Patrick Briody, Rathangan",,Estimated Yield; cham. data available,over500m,,,
+1131NWW001,ILC 675,Land Commission,Borehole,11.1,3.1,Bedrock Met,,120950,328860,to 1km,MEELICK,Killala,Mayo,22,Agri & domestic use,Moderate,II,27.3,,,,108.0,,6.1,,,,,unknown,,"bailing @ 98.2m3/d, failed to lower water level past 4.6m. Jan 1960",over500m,,,
+1131NWW001,,,Borehole,45.1,1.2,Bedrock Met,01/05/1970,114030,325100,to 1km,BALLINTUBBER,,Mayo,21,,Poor,,98.2,,,,,,,,,,,WTB/Myo 2737,,,over500m,,,
+1131NWW002,,Culleens National School,Unknown,43.9,4.9,Bedrock Met,,123630,322360,to 1km,CULLEENS,,Mayo,30,Agri & domestic use,Good,,21.8,,,,,,,,,,,Driller Mr Boland,"For new national school, Jan 1967",109-218m3/d overflowing in Jan 1967; Later record for April 1967 says 33 m3/d,over500m,,,
+1131NWW002,,,Borehole,16.8,1.5,Bedrock Met,01/09/1973,116170,328270,to 1km,BALLYGOWAN,,Mayo,21,Domestic use only,Poor,,109.0,,,,,,,,,,,WTB/MYO 4178,,,over500m,,,
+1131NWW003,,,Borehole,19.8,6.1,Bedrock Met,12/06/1962,112150,324520,to 1km,ARDVARNEY,,Mayo,21,,Poor,,28.0,,,,,,,,,,,WTB/MYO 307,,,over500m,,,
+1131NWW003,,Land Commission Well,Borehole,14.0,10.1,Bedrock Met,01/11/1958,124280,321540,to 1km,FARRANNOO,Ballina,Mayo,30,Agri & domestic use,Good,,109.0,,,,,,,,,,,unknown,,Oct/Nov 1958,over500m,,,
+1131NWW004,EPA May17,Killala WS,Borehole,,,,,120300,329700,to 1km,KILLALA,Meelick,Mayo,22,Group Scheme,,,27.3,,,,,,,,,,,,EPA grid refs supplied. Info from EPA GW sources Mar 2002,Quantity 160m3/d,over500m,,,
+1131NWW006,,,Borehole,33.2,0.6,Bedrock Met,01/04/1970,120750,326930,to 1km,BALLLINTEEAN,,Mayo,22,,Poor,,32.7,,,,,,,,,,,"WTB/MYO 1610, 1759, 1827",,,over500m,,,
+1131NWW007,,,Borehole,29.3,1.5,Bedrock Met,01/06/1972,123830,326830,to 1km,BALLYSAKEERY,,Mayo,22,,Moderate,,55.0,,,,,,,,,,,WTB/MYO 2984,,,over500m,,,
+1131NWW008,,,Borehole,13.7,2.1,Bedrock Met,01/04/1973,123830,326730,to 1km,BALLYSAKEERY,,Mayo,22,,Poor,,32.7,,,,,,,,,,,WTB/MYO 3923,,,over500m,,,
+1131NWW009,,,Borehole,30.2,7.6,Bedrock Met,01/09/1974,123830,326630,to 1km,BALLYSAKEERY,,Mayo,22,,Poor,,21.8,,,,,,,,,,,WTB/MYO 4269,,"Steel Casing, Max Safe yield: 
+32.7m3/day",over500m,,,
+1131NWW010,,,Dug well,2.7,,DTB Unknown,01/09/1973,122600,327350,to 1km,NEWTOWN WHITE,,Mayo,22,,Poor,,28.0,,,,,,,,,,,WTB/MYO 4351,,,over500m,,,
+1131NWW011,,,Unknown,20.7,2.4,Bedrock Met,01/09/1971,121900,328950,to 1km,MOYNE,,Mayo,22,,Poor,,21.8,,,,,,,,,,,,,,over500m,,,
+1131NWW012,,,Dug well,1.5,0.0,Bedrock Met,01/09/1973,121900,328850,to 1km,MOYNE,,Mayo,22,,Moderate,,55.0,,,,,,,,,,,WTB/MYO 2331,,,over500m,,,
+1131NWW013,,,Borehole,16.8,13.1,Bedrock Met,,120670,328730,to 1km,MEELICK,,Mayo,22,,Poor,,21.8,,,,,,,,,,,,,,over500m,,,
+1131NWW014,,,Borehole,24.4,3.4,Bedrock Met,01/09/1971,117330,327170,to 1km,CLOONFADDA,,Mayo,22,,Poor,,21.8,,,,,,,,,,,,,,over500m,,,
+1131NWW015,,,Borehole,19.8,4.3,Bedrock Met,01/07/1973,121150,323170,to 1km,FARRANNASCULLOGE,,Mayo,22,,Moderate,,44.0,,,,,,,,,,,WTB/MYO 3967,,,over500m,,,
+1131NWW016,,,Borehole,45.7,2.4,Bedrock Met,01/01/1972,122030,326950,to 1km,RATHGLASS EAST,,Mayo,22,,Poor,,33.0,,,,,,,,,,,WTB/MYO 3257,,,over500m,,,
+1131NWW017,,,Borehole,40.5,1.8,Bedrock Met,01/02/1970,123350,328150,to 1km,RUSHEENS,,Mayo,22,,Poor,,22.0,,,,,,,,,,,WTB/MYO 2493,,,over500m,,,
+1131NWW018,,,Borehole,8.8,3.1,Bedrock Met,09/06/1971,122470,325300,to 1km,ROSSERK,,Mayo,22,,Poor,,22.0,,,,,,,,,,,,,,over500m,,,
+1131NWW019,,,Borehole,18.3,9.1,Bedrock Met,01/10/1970,112210,323550,to 1km,RATHGLASS WEST,,Mayo,29,,Poor,,27.3,,,,,,,,,,,WTB/MYO 3179,,,over500m,,,
+1131NWW020,,,Borehole,35.1,4.6,Bedrock Met,18/12/1973,122630,320230,to 1km,ARDOUGHAN,,Mayo,30,,Poor,,33.0,,,,,,,,,,,WTB/MYO 4268,,,over500m,,,
+1131NWW022,,,Borehole,31.7,2.4,Bedrock Met,01/03/1973,119730,322950,to 1km,RATHBALL,,Mayo,30,,Poor,,32.7,,,,,,,,,,,,,,over500m,,,
+1131NWW023,,,Dug well,3.7,3.7,Bedrock Presumed,13/09/1971,122400,322200,to 1km,CULLEENS,,Mayo,30,,Poor,,22.0,,,,,,,,,,,,,,over500m,,,
+1131NWW025,,,Borehole,19.8,3.1,Bedrock Met,20/09/1973,122400,322400,to 1km,CULLEENS,,Mayo,30,,Poor,,33.0,,,,,,,,,,,WTB/MYO 3029,,,over500m,,,
+1131NWW026,,,Dug well,0.9,0.9,Bedrock Presumed,28/06/1973,122400,322500,to 1km,CULLEENS,,Mayo,30,,Poor,,21.8,,,,,,,,,,,WTB/Myo 4048,,,over500m,,,
+1131NWW029,,,Dug well,4.6,4.3,Bedrock Met,18/06/1962,120370,322170,to 1km,CLOONAGH MORE,,Mayo,30,,Poor,,27.3,,,,,,,,,,,,,,over500m,,,
+1131NWW030,,,Borehole,25.0,4.9,Bedrock Met,12/03/1971,123250,323170,to 1km,RATHROEEN,,Mayo,30,,Good,,22.0,,,,,,,,,,,,,,over500m,,,
+1131NWW031,,,Borehole,6.7,6.7,Bedrock Presumed,,123250,323070,to 1km,RATHROEEN,,Mayo,30,,Poor,,22.0,,,,,,,,,,,,,,over500m,,,
+1131SWW007,,,Borehole,37.5,4.0,Bedrock Met,,120190,317940,to 1km,CRANNAGH,Ballina,Mayo,30,Agri & domestic use,Failure,,0.1,,,,,,,,,,,unknown,Jan-63,,over500m,,,
+1131SWW008,WTB/MYO/253,,Dug well,4.6,,Bedrock Not Met,,123380,315850,to 1km,BALLYNARAHA,Ballina,Mayo,39,Agri & domestic use,,,,,,,,,,,,,,unknown,,Apr-65,over500m,,,
+1131SWW009,,Bunnyconnellan WSS,Spring,,,,,120560,313840,to 1km,NEWTOWN,Ballina,Mayo,39,Public supply (Co Co),Intermediate Spring,,1818.0,,,,,,,,,,,,"Info from Public Supplies in Co. Mayo 02-07-02.
+Streams from springs",,over500m,,,
+1133NWW001,MO WG 095,,Borehole,36.6,2.4,Bedrock Met,14/09/1998,117640,340050,to 1km,CREEVAGH,Rathlacken,Mayo,7,Agri & domestic use,Poor,,16.4,,,,,152.0,18.3,30.5,,,,"Drilled by Boland Bros, Enniscrone",V rough site map included,3 hr test,over500m,,,
+1133SWW001,MO WG 161,,Borehole,61.0,8.5,Bedrock Met,28/06/2000,115650,339940,to 1km,DOONADOBA,Ballycastle,Mayo,7,Agri & domestic use,Poor,V,34.9,,,12.2,2.9,152.0,14.6,42.7,,,,"Drilled by Dullea, Donegal","From Ballycastle, out past graveyard, 5miles. Bungalow on RHS with red roof surrounded by trees","4 hr test
+Chemical data available",over500m,,,
+1133SWW004,MO WG 120,,Borehole,45.7,0.9,Bedrock Met,14/09/1998,117870,339510,to 1km,CREEVAGH,Carrowmore,Mayo,7,Agri & domestic use,Poor,,109.1,,,,,,24.4,39.6,,,,"Drilled by Boland Bros, Enniscrone",Directions given on form,3 hr test; chemical data avialable,over500m,,,
+1425NWW009,,,Borehole,,,,,141080,268530,to 1km,IRISHTOWN,Claremorris,Mayo,101,Agri & domestic use,,,,,,,,150.0,,,,,,unknown,,"Jan1922-March 1922, old well, yield nil @9.3m. Yield unlimited @19.7m",over500m,,,
+1427NWW501,,,Spring,,,,,149480,287280,to 1km,TOOREEN,,Mayo,82,,Intermediate Spring,,,,,,,,,,,,,,Water rises at the end of the ditch with small sand volcanoes where water is rising.,"good flow from it.
+Water Quality good.",over500m,,,
+1429SWW004,MO WG220,,Borehole,99.1,5.5,Bedrock Met,10/04/2000,153630,299300,to 1km,CASHELDUFF,Charlestown,Mayo,63,Agri & domestic use,Poor,V,2.3,,,,0.0,152.0,15.2,105.2,,,,"Drilled by Dullea, Donegal",,24 hr test,over500m,,,
+0831SEW005,Bellacorrick Power Station,E.S.B,Borehole,160.0,19.8,Bedrock Met,,96650,319220,to 2km,BELLACORICK,,Mayo,27,Industrial use,Good,,218.0,,,,,,,,,,,unknown,,"Rotary, 6 BH drilled, others were up to 36m deep in overburden",over500m,,,
+1125NEW015,ILC 1380A,,Unknown,33.5,,DTB Unknown,,130630,264370,to 2km,ROOS,Lisnamoyle,Mayo,119,Agri & domestic use,Good,III,152.7,,,,37.1,,,,,,,unknown,NGR's supplied. Info from Geoff Wrights check list CORKSCS,,over500m,,,
+1125SEW113,,,Borehole,15.2,,DTB Unknown,,129330,254050,to 2km,DALGAN,Shrule,Mayo,122,Agri & domestic use,Good,,109.0,,,,,,,,,,,,,04/10/1970,over500m,,,
+1131NWW005,,,Borehole,44.2,1.8,Bedrock Met,01/02/1971,114200,324800,to 2km,GLESGART,,Mayo,21,,Poor,,21.8,,,,,,,,,,,WTB/MYO 2502,,,over500m,,,
+0531SEW001,,,Borehole,28.0,4.3,Bedrock Met,,72950,317830,to 5km,ROY,Gweesalia,Mayo,34,Agri & domestic use,Failure,,2.7,,,,,,,,,,,unknown,,,over500m,,,
+1125NEW011,,,Borehole,64.6,2.4,Bedrock Met,23/02/1977,126230,268330,to 5km,HOLLYMOUNT,Claremorris,Mayo,100,Agri & domestic use,Poor,,21.8,,,,,150.0,,,,,,unknown,,Good quality,over500m,,,
+1127NEW006,,"Treanagleara, Kiltimagh PWS",Spring,,,,,131560,289870,to 5km,TREANNAGLEARA,Kiltamagh,Mayo,80,Public supply (Co Co),,,,,,,,,,,,,,,,,over500m,,,
+1127NWW002,,Mayo Co Op Creameries,Borehole,30.8,8.8,Bedrock Met,,115100,289200,to 5km,CASTLEBAR,,Mayo,78,Agri & domestic use,Good,,327.3,,,,,125.0,,,,,,unknown,on Castlebar road to Ballinrobe,Boring of 125mm 3/3/1931 and 25/5/1931,over500m,,,
