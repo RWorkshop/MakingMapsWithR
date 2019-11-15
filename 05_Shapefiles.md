@@ -10,13 +10,19 @@
 
 * Government Agencies
 
- - CSO
+  - Central Statistics Office
 
- - Environmental Protection Agency
+  - Environmental Protection Agency
 
- - Ireland's Open Data Portal: https://data.gov.ie/
+  - Ireland's Open Data Portal: https://data.gov.ie/
+ 
+  - Non-Government Agencies
+  
+  - http://beyond2020.cso.ie/censusasp/saps/boundaries/census2006_boundaries.htm
 
- - Non-Government Agencies
+  -  http://www.npws.ie/mapsanddata/designatedsitedata/downloadboundarydata/
+
+  - http://www.archaeology.ie/ArchaeologicalSurveyofIreland/SitesandMonumentsDatabase/NotesonDownloadingData/
 
 ### Preparing for Installation
 
