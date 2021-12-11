@@ -1,0 +1,26 @@
+---
+title: "``validateCoords`` Utility function to check if a coordinates is valid"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+
+Utility function to check if a coordinates is valid
+### Usage
+
+<pre><code>
+validateCoords(lng, lat, funcName, warn = TRUE, mode = c("point",
+"polygon"))
+</code></pre>
+
+### Arguments
+* ``lng``: vector with longitude values
+* ``lat``: vector with latitude values
+* ``funcName``: Name of calling function
+* ``warn``: A boolean. Whether to generate a warning message if there are rows with missing/ invalid data
+* ``mode``: if "point" then warn about any NA lng/lat values; if "polygon" then NA values
+are expected to be used as polygon delimiters

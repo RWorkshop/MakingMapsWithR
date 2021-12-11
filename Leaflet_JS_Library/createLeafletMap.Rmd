@@ -1,0 +1,29 @@
+---
+title: "``createLeafletMap`` Legacy functions"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+#### Description
+
+These functions are provided for backwards compatibility with the first iteration of the leaflet bindings
+(https://github.com/jcheng5/leaflet-shiny).
+
+#### Usage
+
+<pre><code>
+createLeafletMap(session, outputId)
+
+leafletMap(outputId, width, height,
+  initialTileLayer = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  initialTileLayerAttribution = NULL, options = NULL)
+</code></pre>
+
+#### Arguments
+
+* session, outputId Deprecated
+* width, height, initialTileLayer, initialTileLayerAttribution, options Deprecated

@@ -1,0 +1,35 @@
+---
+title: "``mapOptions``: Set options on a leaflet map object"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+
+## ``mapOptions``: Set options on a leaflet map object
+
+#### Description
+Set options on a leaflet map object
+
+#### Usage
+
+<pre><code>
+mapOptions(map, zoomToLimits = c("always", "first", "never"))
+</code></pre>
+
+### Arguments
+
+* ``map``: A map widget object created from ``leaflet()``
+* ``zoomToLimits``: Controls whether the map is zooms to the limits of the elements on the map. This is useful for interactive applications where the map data is updated. If "always" (the default), the map always re-zooms when new data is received; if "first", it zooms to the elements on the first rendering, but does not rezoom for subsequent data; if "never", it never re-zooms, not even for the first rendering.
+
+### Examples
+```{r}
+# Don't auto-zoom to the objects (can be useful in interactive applications)
+leaflet() %>%
+addTiles() %>%
+addPopups(174.7690922, -36.8523071, "R was born here!") %>%
+mapOptions(zoomToLimits = "first")
+```

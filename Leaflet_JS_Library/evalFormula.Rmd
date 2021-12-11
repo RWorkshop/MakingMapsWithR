@@ -1,0 +1,27 @@
+---
+title: "``leaflet::evalFormula``"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+### Description
+
+Evaluate list members that are formulae, using the map data as the environment (if provided, otherwise the formula environment)
+
+### Usage
+
+<pre><code>
+evalFormula(list, data)
+</code></pre>
+
+### Arguments
+
+* ``list``: with members as formulae
+* ``data``: map data
+
+
+

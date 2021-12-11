@@ -1,0 +1,23 @@
+---
+title: "``gadmCHE``"
+
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+### gadmCHE Administrative borders of Switzerland (level 1)
+
+#### Description
+Administrative borders of Switzerland (level 1)
+
+#### Format
+sp::SpatialPolygonsDataFrame
+
+#### Details
+This dataset comes from http://gadm.org. It was downloaded using getData.
+Source
+http://gadm.org

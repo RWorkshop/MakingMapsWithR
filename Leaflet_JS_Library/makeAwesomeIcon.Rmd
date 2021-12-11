@@ -1,0 +1,35 @@
+---
+title: "``makeAwesomeIcon``  Make Awesome Icon"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+#### Description
+Make Awesome Icon
+
+### Usage
+
+<pre><code>
+makeAwesomeIcon(icon = "home", library = "glyphicon",
+markerColor = "blue", iconColor = "white", spin = FALSE,
+extraClasses = NULL, squareMarker = FALSE, iconRotate = 0,
+fontFamily = "monospace", text = NULL)
+</code></pre>
+
+### Arguments
+* ``icon`` Name of the icon
+* ``library`` Which icon library. Default "glyphicon", other possible values are "fa" (fontawesome) or "ion" (ionicons).
+* markerColor Possible values are "red", "darkred", "lightred", "orange", "beige", "green", "darkgreen", "lightgreen", "blue", "darkblue", "lightblue", "purple",
+"darkpurple", "pink", "cadetblue", "white", "gray", "lightgray", "black" 
+* ``iconColor`` The color to use for the icon itself. Use any CSS-valid color (hex, rgba, etc.) or a named web color.
+* ``spin`` If TRUE, make the icon spin (only works when library = "fa")
+* ``extraClasses`` Additional css classes to include on the icon.
+* ``squareMarker`` Whether to use a square marker.
+* ``iconRotate`` Rotate the icon by a given angle.
+* ``fontFamily`` Used when text option is specified.
+* ``text`` Use this text string instead of an icon. argument of addAwesomeMarkers().
+* ``makeIcon`` Define icon sets

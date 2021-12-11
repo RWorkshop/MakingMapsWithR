@@ -1,0 +1,33 @@
+---
+title: "providers"
+author: "Kevin O'Brien"
+date: "27 November 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+providers Providers
+Description: List of all providers with their variations
+### Usage
+providers
+Format
+A list of characters
+Source
+https://github.com/leaflet-extras/leaflet-providers/blob/master/leaflet-providers.
+js
+providers.details 49
+providers.details Providers Details
+Description
+List of all providers with their variations and additional info
+### Usage
+<pre><code>
+providers.details
+</code></pre>
+Format
+A list of lists (JSON)
+Source
+https://github.com/leaflet-extras/leaflet-providers/blob/master/leaflet-providers.
+js

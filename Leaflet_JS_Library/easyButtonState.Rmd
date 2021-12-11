@@ -1,0 +1,65 @@
+---
+title: "``easyButtonState``: Create an easyButton statestate"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+easyButtonState Create an easyButton statestate
+#### Description
+Create an easyButton statestate
+Creates an easy button.
+Add a EasyButton on the map see https://github.com/CliffCloud/Leaflet.EasyButton
+Add a easyButton bar on the map see https://github.com/CliffCloud/Leaflet.EasyButton
+30 easyButtonState
+### Usage
+<pre><code>
+easyButtonState(stateName, icon, title, onClick)
+easyButton(icon = NULL, title = NULL, onClick = NULL,
+position = "topleft", id = NULL, states = NULL)
+addEasyButton(map, button)
+addEasyButtonBar(map, ..., position = "topleft", id = NULL)
+</code></pre>
+
+### Arguments
+
+* stateName a unique name for the state
+* icon the button icon
+* title text to show on hover
+* onClick the action to take
+* position topleft|topright|bottomleft|bottomright
+id id for the button
+states the states
+map a map widget object
+button the button object created with easyButton
+... a list of buttons created with easyButton
+Functions
+• easyButtonState: state of an easyButton.
+• addEasyButton: add an EasyButton to the map
+• addEasyButtonBar: add an EasyButton to the map
+See Also
+easyButton
+https://github.com/CliffCloud/Leaflet.EasyButton
+addEasyButton
+### Examples
+
+leaf <- leaflet() %>%
+addTiles() %>%
+addEasyButton(easyButton(
+icon = htmltools::span(class = "star", htmltools::HTML("&starf;")),
+onClick = JS("function(btn, map){ map.setZoom(1);}")))
+leaf
+leaf <- leaflet() %>%
+evalFormula 31
+addTiles() %>%
+addEasyButtonBar(
+easyButton(
+icon = htmltools::span(class = "star", htmltools::HTML("&starf;")),
+onClick = JS("function(btn, map){ alert(\"Button 1\");}")),
+easyButton(
+icon = htmltools::span(class = "star", htmltools::HTML("&target;")),
+onClick = JS("function(btn, map){ alert(\"Button 2\");}")))
+leaf

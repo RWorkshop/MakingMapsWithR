@@ -1,0 +1,39 @@
+---
+title: "leafletOutput: Wrapper functions for using leaflet in shiny"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+#### Description
+Use leafletOutput() to create a UI element, and renderLeaflet() to render the map widget.
+
+### Usage
+<pre><code>
+leafletOutput(outputId, width = "100%", height = 400)
+renderLeaflet(expr, env = parent.frame(), quoted = FALSE)
+</code></pre> 
+
+#### Arguments
+
+* outputId output variable to read from width, height the width and height of the map (see shinyWidgetOutput)
+* expr An expression that generates an HTML widget
+* env The environment in which to evaluate expr.
+* quoted Is expr a quoted expression (with quote())? This is useful if you want to save an expression in a variable.
+
+### Examples
+```{r}
+# !formatR
+library(shiny)
+ app <- shinyApp(
+    ui = fluidPage(leafletOutput('myMap')),
+    server = function(input, output) {
+      map = leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
+      output$myMap = renderLeaflet(map)
+    }
+ )
+if (interactive()) app
+```

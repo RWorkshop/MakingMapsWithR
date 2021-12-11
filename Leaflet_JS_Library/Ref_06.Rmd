@@ -1,0 +1,2 @@
+
+addMiniMap Add a minimap to the Map https://github.com/Norkart/

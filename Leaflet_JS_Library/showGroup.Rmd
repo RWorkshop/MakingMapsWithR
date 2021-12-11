@@ -1,0 +1,27 @@
+---
+title: "leaflet: ``showGroup`` Show or hide layer groups"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### Description
+
+* Hide groups of layers without removing them from the map entirely. 
+* Groups are created using the group parameter that is included on most layer adding functions.
+
+### Usage
+
+<pre><code>
+showGroup(map, group)
+hideGroup(map, group)
+</code></pre>
+
+### Arguments
+
+* ``map``: the map to modify
+* ``group``: character vector of one or more group names to show or hide addLayersControl to allow users to show/hide layer groups interactively
+

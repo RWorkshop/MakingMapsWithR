@@ -1,0 +1,43 @@
+---
+title: "``addGraticule``"
+author: "Kevin O'Brien"
+date: "28 October 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+
+Add a Graticule on the map see https://github.com/turban/
+
+### Description
+Add a Graticule on the map see https://github.com/turban/Leaflet.Graticule
+
+### Usage
+<pre><code>
+addGraticule(map, interval = 20, sphere = FALSE, style = list(color =
+"#333", weight = 1), layerId = NULL, group = NULL,
+options = pathOptions(pointerEvents = "none", clickable = FALSE))
+</code></pre>
+
+### Arguments
+
+* map a map widget object
+* interval The spacing in map units between horizontal and vertical lines.
+* sphere boolean. Default FALSE
+* style path options for the generated lines. See http://leafletjs.com/reference-1.3.1.html#path-option
+* layerId the layer id
+* group the name of the group this layer belongs to.
+* options the path options for the graticule layer
+
+### Examples
+
+```{r cars}
+leaf <- leaflet() %>%
+addTiles() %>%
+addGraticule()
+leaf
+```

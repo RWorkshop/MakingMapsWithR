@@ -1,0 +1,18 @@
+---
+title: "``previewColors``: Color previewing utility"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+filterNULL remove NULL elements from a list
+Description
+remove NULL elements from a list
+
+#### Usage
+filterNULL(x)
+Arguments
+x A list whose NULL elements will be filtered

@@ -1,0 +1,28 @@
+---
+title: "``leafletSizingPolicy``:  Leaflet sizing policy"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+#### Description
+Sizing policy used withing leaflet htmlwidgets. All arguments are passed directly to htmlwidgets::sizingPolicy
+
+#### Usage
+<pre><code>
+leafletSizingPolicy(defaultWidth = "100%", defaultHeight = 400,
+padding = 0, browser.fill = TRUE, ...)
+</code></pre>
+
+#### Arguments
+* defaultWidth defaults to "100%" of the available width
+* defaultHeight defaults to 400px tall
+* padding defaults to 0px
+* browser.fill defaults to TRUE
+* ... all other arguments supplied to htmlwidgets::sizingPolicy
+
+#### Value
+An htmlwidgets::sizingPolicy object

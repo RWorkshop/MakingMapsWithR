@@ -1,0 +1,26 @@
+addTerminator Add a daylight layer on top of the map
+
+### Description
+See https://github.com/joergdietrich/Leaflet.Terminator
+
+### Usage
+<pre><code>
+addTerminator(map, resolution = 2, time = NULL, layerId = NULL,
+group = NULL, options = pathOptions(pointerEvents = "none", clickable
+= FALSE))
+</code></pre>
+
+### Arguments
+* map a map widget object
+* resolution the step size at which the terminator points are computed. The step size is 1 degree/resolution, i.e. higher resolution values have smaller step sizes and more points in the polygon. The default value is 2.
+* time Time
+* layerId the layer id
+* group the name of the group this layer belongs to.
+* options the path options for the daynight layer
+
+### Examples
+leaf <- leaflet() %>%
+addTiles() %>%
+addTerminator()
+
+leaf

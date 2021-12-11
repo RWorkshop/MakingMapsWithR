@@ -1,0 +1,21 @@
+---
+title: "``previewColors``: Color previewing utility"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+#### Description
+Color previewing utility
+
+#### Usage
+<pre><code>
+previewColors(pal, values)
+</code></pre>
+
+#### Arguments
+* ``pal``: A color mapping function, like those returned from colorNumeric, et al
+* ``values``: A set of values to preview colors for value An HTML-based list of the colors and values

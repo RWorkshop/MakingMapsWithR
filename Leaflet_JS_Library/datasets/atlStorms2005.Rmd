@@ -1,0 +1,17 @@
+---
+title: "atlStorms2005"
+author: "Kevin O'Brien"
+date: "28 October 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+atlStorms2005 Atlantic Ocean storms 2005
+Description
+Atlantic Ocean storms 2005
+Format
+sp::SpatialLinesDataFrame
+Details
+This dataset contains storm tracks for selected storms in the Atlantic Ocean basin for the year 2005

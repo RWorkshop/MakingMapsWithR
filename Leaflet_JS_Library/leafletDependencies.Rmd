@@ -1,0 +1,28 @@
+---
+title: "leafletDependencies: Various leaflet dependency functions for use in downstream packages"
+author: "Kevin O'Brien"
+date: "28 October 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+ 
+Description
+Various leaflet dependency functions for use in downstream packages
+### Usage
+leafletDependencies
+
+Format
+An object of class list of length 13.
+### Examples
+```{r}
+## Not run:
+addBootStrap <- function(map) {
+map$dependencies <- c(map$dependencies, leafletDependencies$bootstrap())
+map
+}
+## End(Not run)
+```

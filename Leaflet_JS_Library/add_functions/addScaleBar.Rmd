@@ -1,0 +1,28 @@
+
+addScaleBar Add or remove a scale bar
+Description
+Uses Leaflet’s built-in scale bar feature to add a scale bar.
+### Usage
+<pre><code>
+addScaleBar(map, position = c("topright", "bottomright", "bottomleft",
+"topleft"), options = scaleBarOptions())
+scaleBarOptions(maxWidth = 100, metric = TRUE, imperial = TRUE,
+updateWhenIdle = TRUE)
+removeScaleBar(map)
+</code></pre>
+### Arguments
+* map the map to add the scale bar to
+* position position of control: "topleft", "topright", "bottomleft", or "bottomright"
+* options a list of additional options, intended to be provided by a call to scaleBarOptions
+* maxWidth maximum width of the control in pixels (default 100)
+* metric if TRUE (the default), show a scale bar in metric units (m/km)
+* imperial if TRUE (the default), show a scale bar in imperial units (ft/mi)
+* updateWhenIdle if FALSE (the default), the scale bar is always up-to-date (updated on move). If TRUE, the control is updated on moveend.
+
+### Examples
+
+leaflet() %>%
+ addTiles() %>%
+ addScaleBar()
+
+add

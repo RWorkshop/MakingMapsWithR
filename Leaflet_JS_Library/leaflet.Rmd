@@ -1,0 +1,249 @@
+---
+title: "leaflet Create a Leaflet map widget"
+
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+Description
+This function creates a Leaflet map widget using htmlwidgets. The widget can be rendered on
+HTML pages generated from R Markdown, Shiny, or other applications.
+
+### Usage
+
+<pre><code>
+
+leaflet(data = NULL, width = NULL, height = NULL, padding = 0,
+options = leafletOptions(), elementId = NULL,
+sizingPolicy = leafletSizingPolicy(padding = padding))
+leafletOptions(minZoom = NULL, maxZoom = NULL, crs = leafletCRS(),
+worldCopyJump = NULL, preferCanvas = NULL, ...)
+leafletCRS(crsClass = "L.CRS.EPSG3857", code = NULL, proj4def = NULL,
+projectedBounds = NULL, origin = NULL, transformation = NULL,
+
+scales = NULL, resolutions = NULL, bounds = NULL,
+tileSize = NULL)
+</code></pre> 
+
+#### Arguments
+
+data a data object. Currently supported objects are matrices, data frames, spatial objects
+from the sp package (SpatialPoints, SpatialPointsDataFrame, Polygon,
+Polygons, SpatialPolygons, SpatialPolygonsDataFrame, Line, Lines, SpatialLines,
+and SpatialLinesDataFrame), and spatial data frames from the sf package.
+* width the width of the map
+* height the height of the map
+* padding the padding of the map
+* options the map options
+* elementId Use an explicit element ID for the widget (rather than an automatically generated
+one).
+* sizingPolicy htmlwidgets sizing policy object. Defaults to leafletSizingPolicy()
+* minZoom Minimum zoom level of the map. Overrides any minZoom set on map layers.
+* maxZoom Maximum zoom level of the map. This overrides any maxZoom set on map
+layers.
+* crs Coordinate Reference System to use. Don’t change this if you’re not sure what
+it means.
+* ``worldCopyJump`` With this option enabled, the map tracks when you pan to another "copy" of the
+world and seamlessly jumps to the original one so that all overlays like markers
+and vector layers are still visible.
+preferCanvas Whether leaflet.js Paths should be rendered on a Canvas renderer.
+* ... other options used for leaflet.js map creation.
+* crsClass One of L.CRS.EPSG3857, L.CRS.EPSG4326, L.CRS.EPSG3395, L.CRS.Simple, L.Proj.CRS
+* code CRS identifier
+* proj4def Proj4 string
+* projectedBounds DEPRECATED! Use the bounds argument.
+* origin Origin in projected coordinates, if set overrides transformation option.
+* transformation to use when transforming projected coordinates into pixel coordinates
+scales Scale factors (pixels per projection unit, for example pixels/meter) for zoom
+levels; specify either scales or resolutions, not both
+resolutions factors (projection units per pixel, for example meters/pixel) for zoom levels;
+specify either scales or resolutions, not both
+* bounds Bounds of the CRS, in projected coordinates; if defined, Proj4Leaflet will use
+this in the getSize method, otherwise defaulting to Leaflet’s default CRS size
+* tileSize DEPRECATED! Specify the tilesize in the tileOptions() argument.
+
+
+#### Details
+
+The data argument is only needed if you are going to reference variables in this object later in map
+layers. For example, data can be a data frame containing columns latitude and longtitude, then
+we may add a circle layer to the map by leaflet(data) %>% addCircles(lat = ~latitude, lng = ~longtitude),
+where the variables in the formulae will be evaluated in the data.
+Value
+A HTML widget object, on which we can add graphics layers using %>% (see ### Examples).
+Functions
+• leafletOptions: Options for map creation
+• leafletCRS: class to create a custom CRS
+See Also
+leafletCRS for creating a custom CRS.
+See http://leafletjs.com/reference-1.3.1.html#map-option for details and more options.
+### Examples
+
+```{r}
+# !formatR
+library(leaflet)
+m <- leaflet() %>% addTiles()
+m # a map with the default OSM tile layer
+# set bounds
+m %>% fitBounds(0, 40, 10, 50)
+# move the center to Snedecor Hall
+m <- m %>% setView(-93.65, 42.0285, zoom = 17)
+m
+```
+```{r}
+# popup
+m %>% addPopups(-93.65, 42.0285, "Here is the <b>Department of Statistics</b>, ISU")
+rand_lng <- function(n = 10) rnorm(n, -93.65, .01)
+rand_lat <- function(n = 10) rnorm(n, 42.0285, .01)
+```
+```{r}
+# use automatic bounds derived from lng/lat data
+m <- m %>% clearBounds()
+# popup
+m %>% addPopups(rand_lng(), rand_lat(), "Random popups")
+# marker
+m %>% addMarkers(rand_lng(), rand_lat())
+m %>% addMarkers(
+rand_lng(), rand_lat(), popup = paste("A random letter", sample(LETTERS, 10))
+)
+
+```
+```{r}
+Rlogo <- file.path(R.home("doc"), "html", "logo.jpg")
+m %>% addMarkers(
+174.7690922, -36.8523071, icon = list(
+iconUrl = Rlogo, iconSize = c(100, 76)
+), popup = "R was born here!"
+)
+m %>% addMarkers(rnorm(30, 175), rnorm(30, -37), icon = list(
+iconUrl = Rlogo, iconSize = c(25, 19)
+))
+```
+```{r}
+m %>% addMarkers(
+c(-71.0382679, -122.1217866), c(42.3489054, 47.6763144), icon = list(
+iconUrl = "http://www.rstudio.com/wp-content/uploads/2014/03/blue-125.png"
+), popup = c("RStudio @ Boston", "RStudio @ Seattle")
+)
+# circle (units in metres)
+m %>% addCircles(rand_lng(50), rand_lat(50), radius = runif(50, 50, 150))
+```
+```{r}
+# circle marker (units in pixels)
+m %>% addCircleMarkers(rand_lng(50), rand_lat(50), color = "#ff0000")
+m %>% addCircleMarkers(rand_lng(100), rand_lat(100), radius = runif(100, 5, 15))
+```
+```{r}
+# rectangle
+m %>% addRectangles(
+rand_lng(), rand_lat(), rand_lng(), rand_lat(),
+color = "red", fill = FALSE, dashArray = "5,5", weight = 3
+)
+```
+```{r}
+# polyline
+m %>% addPolylines(rand_lng(50), rand_lat(50))
+# polygon
+m %>% addPolygons(rand_lng(), rand_lat(), layerId = "foo")
+```
+```{r}
+# geoJSON
+seattle_geojson <- list(
+type = "Feature",
+geometry = list(
+type = "MultiPolygon",
+coordinates = list(list(list(
+c(-122.36075812146, 47.6759920119894),
+c(-122.360781646764, 47.6668890126755),
+c(-122.360782108665, 47.6614990696722),
+c(-122.366199035722, 47.6614990696722),
+c(-122.366199035722, 47.6592874248973),
+c(-122.364582509469, 47.6576254522105),
+c(-122.363887331445, 47.6569107302038),
+c(-122.360865528129, 47.6538418253251),
+c(-122.360866157644, 47.6535254473167),
+
+c(-122.360866581103, 47.6533126275176),
+c(-122.362526540691, 47.6541872926348),
+c(-122.364442114483, 47.6551892850798),
+c(-122.366077719797, 47.6560733960606),
+c(-122.368818463838, 47.6579742346694),
+c(-122.370115159943, 47.6588730808334),
+c(-122.372295967029, 47.6604350102328),
+c(-122.37381369088, 47.660582362063),
+c(-122.375522972109, 47.6606413027949),
+c(-122.376079703095, 47.6608793094619),
+c(-122.376206315662, 47.6609242364243),
+c(-122.377610811371, 47.6606160735197),
+c(-122.379857378879, 47.6610306942278),
+c(-122.382454873022, 47.6627496239169),
+c(-122.385357955057, 47.6638573778241),
+c(-122.386007328104, 47.6640865692306),
+c(-122.387186331506, 47.6654326177161),
+c(-122.387802656231, 47.6661492860294),
+c(-122.388108244121, 47.6664548739202),
+c(-122.389177800763, 47.6663784774359),
+c(-122.390582858689, 47.6665072251861),
+c(-122.390793942299, 47.6659699214511),
+c(-122.391507906234, 47.6659200946229),
+c(-122.392883050767, 47.6664166747017),
+c(-122.392847210144, 47.6678696739431),
+c(-122.392904778401, 47.6709016021624),
+c(-122.39296705153, 47.6732047491624),
+c(-122.393000803496, 47.6759322346303),
+c(-122.37666945305, 47.6759896300663),
+c(-122.376486363943, 47.6759891899754),
+c(-122.366078869215, 47.6759641734893),
+c(-122.36075812146, 47.6759920119894)
+)))
+),
+properties = list(
+name = "Ballard",
+population = 48000,
+
+# You can inline styles if you want
+style = list(
+fillColor = "yellow",
+weight = 2,
+color = "#000000"
+)
+),
+id = "ballard"
+)
+m %>% setView(-122.36075812146, 47.6759920119894, zoom = 13) %>% addGeoJSON(seattle_geojson)
+```
+```{r}
+# use the Dark Matter layer from CartoDB
+leaflet() %>% addTiles("http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+attribution = paste(
+"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors",
+"&copy; <a href=\"http://cartodb.com/attributions\">CartoDB</a>"
+)
+) %>% setView(-122.36, 47.67, zoom = 10)
+```
+```{r}
+# provide a data frame to leaflet()
+categories <- LETTERS[1:10]
+df <- data.frame(
+lat = rand_lat(100), lng = rand_lng(100), size = runif(100, 5, 20),
+category = factor(sample(categories, 100, replace = TRUE), levels = categories),
+value = rnorm(100)
+)
+```
+```{r}
+m <- leaflet(df) %>% addTiles()
+m %>% addCircleMarkers(~lng, ~lat, radius = ~size)
+m %>% addCircleMarkers(~lng, ~lat, radius = runif(100, 4, 10), color = c("red"))
+# Discrete colors using the "RdYlBu" colorbrewer palette, mapped to categories
+RdYlBu <- colorFactor("RdYlBu", domain = categories)
+m %>% addCircleMarkers(~lng, ~lat, radius = ~size,
+color = ~RdYlBu(category), fillOpacity = 0.5)
+# Continuous colors using the "Greens" colorbrewer palette, mapped to value
+greens <- colorNumeric("Greens", domain = NULL)
+m %>% addCircleMarkers(~lng, ~lat, radius = ~size,
+color = ~greens(value), fillOpacity = 0.5)
+```

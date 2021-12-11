@@ -1,0 +1,23 @@
+---
+title: "leaflet: ``breweries91`` Selected breweries in Franconia"
+author: "Kevin O'Brien"
+date: "28 October 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+breweries91 Selected breweries in Franconia
+
+#### Description
+Selected breweries in Franconia (zip code starting with 91...)
+
+#### Format
+
+sp::SpatialPointsDataFrame
+
+#### Details
+This dataset contains selected breweries in Franconia. It is a subset of a larger database that was
+compiled by students at the University of Marburg for a seminar called "The Geography of Beer,
+sustainability in the food industry"

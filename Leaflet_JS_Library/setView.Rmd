@@ -1,0 +1,58 @@
+---
+title: "leaflet: ``setView`` Methods to manipulate the map widget"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+## Description
+
+A series of methods to manipulate the map.
+### Usage
+
+<pre><code>
+setView(map, lng, lat, zoom, options = list())
+flyTo(map, lng, lat, zoom, options = list())
+fitBounds(map, lng1, lat1, lng2, lat2, options = list())
+flyToBounds(map, lng1, lat1, lng2, lat2, options = list())
+setMaxBounds(map, lng1, lat1, lng2, lat2)
+clearBounds(map)
+</code></pre>
+
+### Arguments
+
+* ``map``: a map widget object created from leaflet()
+* ``lng``: The longitude of the map center
+* ``lat``: The latitude of the map center
+* ``zoom``: the zoom level
+* ``options``: a list of zoom/pan options (see http://leafletjs.com/reference-1.3.1.html#zoom/pan-options)
+* ``lng1, lat1, lng2, lat2``: the coordinates of the map bounds
+
+
+
+### Functions
+
+*  setView: Set the view of the map (center and zoom level)
+*  flyTo: Flys to a given location/zoom-level using smooth pan-zoom.
+*  fitBounds: Set the bounds of a map
+*  flyToBounds: Flys to given bound using smooth pan/zoom.
+*  setMaxBounds: Restricts the map view to the given bounds
+*  clearBounds: Clear the bounds of a map, and the bounds will be automatically determined from latitudes and longitudes of the map elements if available (otherwise the full world view is used)
+
+### References
+
+http://leafletjs.com/reference-1.3.1.html#map-methods-for-modifying-map-state
+
+### Examples
+
+```{r}
+m <- leaflet() %>% addTiles() %>% setView(-71.0382679, 42.3489054, zoom = 18)
+m # the RStudio 'headquarter'
+m %>% fitBounds(-72, 40, -70, 43)
+m %>% clearBounds() # world view
+```
+#### Value
+The modified map widget.

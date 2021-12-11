@@ -1,0 +1,26 @@
+---
+title: "``Leaflet::expandLimits``"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+* ``expandLimits`` Notifies the map of new latitude/longitude of items of interest on the
+map
+
+### Description
+
+Notifies the map of new latitude/longitude of items of interest on the map
+
+### Usage
+<pre><code>
+expandLimits(map, lat, lng)
+</code></pre>
+
+### Arguments
+* ``map``: map object
+* ``lat``: vector of latitudes
+* ``lng``: vector of longitudes

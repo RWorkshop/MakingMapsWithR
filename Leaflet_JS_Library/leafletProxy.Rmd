@@ -1,0 +1,55 @@
+---
+title: "``leafletProxy`` Send commands to a Leaflet instance in a Shiny app "
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+### Description
+
+Creates a map-like object that can be used to customize and control a map that has already been
+rendered. For use in Shiny apps and Shiny docs only.
+
+### Usage
+<pre><code>
+leafletProxy(mapId, session = shiny::getDefaultReactiveDomain(),
+data = NULL, deferUntilFlush = TRUE)
+</code></pre>
+
+### Arguments
+* ``mapId``: single-element character vector indicating the output ID of the map to modify (if invoked from a Shiny module, the namespace will be added automatically) session the Shiny session object to which the map belongs; usually the default value will
+suffice
+* ``data``: a data object; see Details under the leaflet help topic
+* ``deferUntilFlush``: indicates whether actions performed against this instance should be carried out right away, or whether they should be held until after the next time all of the outputs are updated; defaults to TRUE
+
+
+### Examples
+```{r}
+library(shiny)
+ui <- fluidPage(
+leafletOutput("map1")
+)
+
+map <- leaflet() %>% addCircleMarkers(
+lng = runif(10),
+lat = runif(10),
+layerId = paste0("marker", 1:10))
+server <- function(input, output, session) {
+output$map1 <- renderLeaflet(map)
+observeEvent(input$map1_marker_click, {
+leafletProxy("map1", session) %>%
+removeMarker(input$map1_marker_click$id)
+})
+}
+app <- shinyApp(ui, server)
+if (interactive()) app
+```
+
+#### Details
+Normally, you create a Leaflet map using the leaflet function. This creates an in-memory representation of a map that you can customize using functions like addPolygons and setView. Such a map can be printed at the R console, included in an R Markdown document, or rendered as a Shiny output.
+In the case of Shiny, you may want to further customize a map, even after it is rendered to an output.
+At this point, the in-memory representation of the map is long gone, and the user's web browser has already realized the Leaflet map instance.
+This is where leafletProxy comes in. It returns an object that can stand in for the usual Leaflet map object. The usual map functions like addPolygons and setView can be called, and instead of customizing an in-memory representation, these commands will execute on the live Leaflet map instance.

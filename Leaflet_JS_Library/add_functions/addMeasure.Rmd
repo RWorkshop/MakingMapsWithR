@@ -1,0 +1,62 @@
+---
+title: "addMeasure Add a measure control to the map."
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+
+### Usage
+<pre><code>
+addMeasure(map, position = "topright", primaryLengthUnit = "feet",
+secondaryLengthUnit = NULL, primaryAreaUnit = "acres",
+secondaryAreaUnit = NULL, activeColor = "#ABE67E",
+completedColor = "#C8F2BE", popupOptions = list(className =
+"leaflet-measure-resultpopup", autoPanPadding = c(10, 10)), captureZIndex = 10000, localization = "en", decPoint = ".",
+thousandsSep = ",")
+</code></pre>
+
+### Arguments
+* map a map widget object
+* position standard Leaflet control position options.
+* primaryLengthUnit, secondaryLengthUnit
+* units used to display length results. secondaryLengthUnit is optional. Valid values are "feet", "meters", "miles", and "kilometers".
+* primaryAreaUnit, secondaryAreaUnit units used to display area results. secondaryAreaUnit is optional. Valid values
+are "acres", "hectares", "sqmeters", and "sqmiles".
+* activeColor base color to use for map features rendered while actively performing a measurement.
+* Value should be a color represented as a hexadecimal string.
+* completedColor base color to use for features generated from a completed measurement. Value should be a color represented as a hexadecimal string.
+* popupOptions list of options applied to the popup of the resulting measure feature. Properties may be any standard Leaflet popup options.
+* captureZIndex Z-index of the marker used to capture measure clicks. Set this value higher than
+the z-index of all other map layers to disable click events on other layers while a measurement is active.
+* localization Locale to translate displayed text. Available locales include en (default), cn, de,
+es, fr, it, nl, pt, pt_BR, pt_PT, ru, and tr
+* decPoint Decimal point used when displaying measurements. If not specified, values are defined by the localization.
+* thousandsSep Thousands separator used when displaying measurements. If not specified, values are defined by the localization.
+
+#### Value
+modified map
+### Examples
+
+
+```{r Examples}
+leaf <- leaflet() %>%
+addTiles() %>%
+# central park
+fitBounds( -73.9, 40.75, -73.95, 40.8 ) %>%
+addMeasure()
+leaf
+# customizing
+leaf %>% addMeasure(
+position = "bottomleft",
+primaryLengthUnit = "meters",
+primaryAreaUnit = "sqmeters",
+activeColor = "#3D535D",
+completedColor = "#7D4479",
+localization = "de"
+
+)
+```

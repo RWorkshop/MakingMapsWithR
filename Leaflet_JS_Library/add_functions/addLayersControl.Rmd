@@ -1,0 +1,58 @@
+---
+title: "addLayersControl Add UI controls to switch layers on and off"
+author: "Kevin O'Brien"
+date: "28 October 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+Uses Leaflet's built-in layers control feature to allow users to choose one of several base layers, and
+to choose any number of overlay layers to view.
+
+### Usage
+<pre><code>
+addLayersControl(map, baseGroups = character(0),
+overlayGroups = character(0), position = c("topright", "bottomright",
+"bottomleft", "topleft"), options = layersControlOptions(),
+data = getMapData(map))
+layersControlOptions(collapsed = TRUE, autoZIndex = TRUE, ...)
+removeLayersControl(map)
+</code></pre>
+
+### Arguments
+
+map the map to add the layers control to
+baseGroups character vector where each element is the name of a group. The user will be
+able to choose one base group (only) at a time. This is most commonly used for
+mostly-opaque tile layers.
+overlayGroups character vector where each element is the name of a group. The user can turn
+each overlay group on or off independently.
+
+position position of control: "topleft", "topright", "bottomleft", or "bottomright"
+options a list of additional options, intended to be provided by a call to layersControlOptions
+data the data object from which the argument values are derived; by default, it is the
+data object provided to leaflet() initially, but can be overridden
+collapsed if TRUE (the default), the layers control will be rendered as an icon that expands
+when hovered over. Set to FALSE to have the layers control always appear in its
+expanded state.
+autoZIndex if TRUE, the control will automatically maintain the z-order of its various groups
+as overlays are switched on and off.
+... other options for layersControlOptions()
+
+
+### Examples
+```{r pressure, echo=FALSE}
+
+leaflet() %>%
+addTiles(group = "OpenStreetMap") %>%
+addProviderTiles("Stamen.Toner", group = "Toner by Stamen") %>%
+addMarkers(runif(20, -75, -74), runif(20, 41, 42), group = "Markers") %>%
+addLayersControl(
+baseGroups = c("OpenStreetMap", "Toner by Stamen"),
+overlayGroups = c("Markers")
+)
+```

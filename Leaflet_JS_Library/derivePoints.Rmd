@@ -1,0 +1,31 @@
+---
+title: "leaflet: derivePoints"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+Given a data object and lng/lat arguments (which may be NULL [meaning infer from data], formula [which should be evaluated with
+respect to the data], or vector data [which should be used as-is]) return a lng/lat data frame.
+
+#### Description
+
+Given a data object and lng/lat arguments (which may be NULL [meaning infer from data], formula [which should be evaluated with respect to the data], or vector data [which should be used as-is]) return a lng/lat data frame.
+
+
+#### Usage
+<pre><code>
+derivePoints(data, lng = NULL, lat = NULL, missingLng = missing(lng),
+missingLat = missing(lat), funcName = "f")
+</code></pre>
+
+#### Arguments
+* ``data``: map data
+* ``lng``: longitude
+* ``lat``: latitude
+* ``missingLng``: whether lng is missing
+* ``missingLat``: whether lat is missing
+* ``funcName``: Name of calling function (for logging)
