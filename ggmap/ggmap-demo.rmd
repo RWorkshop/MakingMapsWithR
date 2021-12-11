@@ -1,0 +1,49 @@
+ggmap example
+=====================================
+
+```{r}
+library(ggmap)
+```
+```{r fig.width=7, fig.height=6}
+qmap("Wyckham place",zoom=15)
+```
+```{r fig.width=7, fig.height=6}
+qmap("Wyckham place",zoom=17,source="osm")
+```
+
+```{r fig.width=7, fig.height=6}
+mgar<- "Mullingar"
+qmap(mgar, zoom = 14)
+```
+### Open Source Map
+```{r fig.width=7, fig.height=6}
+qmap(mgar, zoom = 14, source = "cloudmade")
+```
+geocode("Trinity College Dublin")
+         lon      lat
+ 1 -6.254759 53.34375
+
+```{r fig.width=7, fig.height=6}
+TCD <- "Trinity College Dublin"
+qmap(TCD, zoom = 15)
+```
+Zooming In
+```{r fig.width=7, fig.height=6}
+qmap(TCD, zoom = 17, source = "osm")
+#Lincoln Place
+```
+TCD Zoology
+```{r fig.width=7, fig.height=6}
+qmap(c(-6.251659,53.34309),zoom = 19, source = "osm")
+
+````
+###  Dooradoyle Limerick
+```{r fig.width=7, fig.height=6}
+ddoyle <- "Dooradoyle"
+qmap(ddoyle, zoom = 14,source="osm")
+```
+### Cloud made maps
+```{r fig.width=7, fig.height=6}
+qmap("Dublin", zoom = 15, source = "cloudmade")
+```
+

@@ -1,0 +1,22 @@
+\documentclass[12pt]{report}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{framed}
+
+\begin{document}
+\noindent The maps library for \texttt{R} is a powerful tool for creating maps of countries and regions of the world. For example, you can create a map of the USA and its states in just three lines of code:
+\section*{Simple Maps examples}
+\begin{framed}
+\begin{verbatim}
+library(maps)
+map(“state”, interior = FALSE)
+map(“state”, boundary = FALSE, col=”gray”, add = TRUE)
+\end{verbatim}
+\end{framed}
+
+
+
+\end{document}
+
